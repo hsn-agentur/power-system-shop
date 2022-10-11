@@ -1,0 +1,39 @@
+.grid > div {
+  display: none !important;
+}
+
+.grid .variable-loader {
+  display: block !important;
+}
+
+.grid > main {
+  display: none !important;
+}
+
+.variable-loader {
+  width: 6em;
+  height: 6em;
+  margin: 55px auto;
+  position: relative;
+  top: -0.1em;
+  left: -0.1em;
+}
+.variable-loader:after {
+  content: " ";
+  display: block;
+  width: 6em;
+  height: 6em;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid {{ settings.color_body_text }};
+  border-color: {{ settings.color_body_text }} transparent {{ settings.color_body_text }} transparent;
+  animation: load-animation 1.2s linear infinite;
+}
+@keyframes load-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

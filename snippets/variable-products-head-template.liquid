@@ -1,0 +1,16 @@
+{%- if collection and product == null -%}
+  <link id="variable-products-load-css" rel="stylesheet" href="{{ 'variable-products-load.css' | asset_url }}" />
+  {% if false %}
+    <link rel="stylesheet" href="{{ 'variable-products.css' | asset_url }}" />
+  {% endif %}
+{%- endif -%}
+{% if collection or product or false %}
+  <script src="{{ 'variable-products.js' | asset_url }}" type="text/javascript" defer></script>
+{% else %}
+  <script>
+    document.querySelectorAll('[data-behavior="variable-products"]').forEach(e => { e.remove() })
+    setInterval(() => {
+      document.querySelectorAll('[data-behavior="variable-products"]').forEach(e => { e.remove() })
+    }, 500);
+  </script>
+{% endif %}
