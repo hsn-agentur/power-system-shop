@@ -97,7 +97,15 @@
         {% if product.media.size > 1 %}
           <div class="thumbnails{% unless section.settings.gallery_layout contains 'carousel' %} mobile-only{% endunless %}">
             {% for media in product.media %}
-              <a class="thumbnail thumbnail--media-{{ media.media_type }}" href="{% if section.settings.enable_zoom %}{{ media.preview_image | img_url: zoom_size }}{% else %}#{% endif %}" data-media-id="{{ media.id }}">
+
+{%
+assign variantNames = 'xyz, abc'
+  
+%}
+
+
+            
+              <a class="thumbnail thumbnail--media-{{ media.media_type }}" href="{% if section.settings.enable_zoom %}{{ media.preview_image | img_url: zoom_size }}{% else %}#{% endif %}" data-media-id="{{ media.id }}" data-variants="{{ variantNames }}">
                 {% render 'responsive-image', image: media.preview_image, min_aspect_ratio: min_aspect_ratio %}
 
                 {%- if media.media_type == 'video' or media.media_type =='external_video' -%}
