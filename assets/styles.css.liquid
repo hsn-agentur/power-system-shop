@@ -3205,7 +3205,7 @@ body:not(.reveal-mobile-nav) .mobile-navigation-drawer .mobile-navigation-drawer
 .cc-accordion-item__content.rte h1, .cc-accordion-item__content.rte h2, .cc-accordion-item__content.rte h3, .cc-accordion-item__content.rte h4, .cc-accordion-item__content.rte h5, .cc-accordion-item__content.rte h6 {
   font-family: inherit;
   font-size: inherit;
-  font-weight: 600;
+  font-weight: 700;
   color: inherit;
   margin: 1.5em 0 1em;
 }
@@ -6100,8 +6100,9 @@ hr {
 {% assign base_font = settings.type_base_font %}
 {{ base_font | font_face: font_display: 'fallback' }}
 body {
-    font-family: realist, sans-serif, {{ base_font.family }}, {{ base_font.fallback_families }};
+    font-family: realist, sans-serif, {{ base_font.family }}, {{ base_font.fallback_families }};    
     font-weight: {{ base_font.weight }};
+    font-weight: 200;
     font-style: {{ base_font.style }};
 }
 
@@ -11982,10 +11983,4 @@ textarea {
 }
 #admin-bar-iframe {
   display:none !important;
-}
-
-/* Custom Headline Font */
-
-h1, .h1-style, h2, .h2-style, h3, .h3-style, h4, .h4-style, h5, .h5-style , h6, .h6-style {
-    font-weight: 700;
 }
