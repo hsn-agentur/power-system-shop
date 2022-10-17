@@ -6117,7 +6117,7 @@ body {
 {%- assign heading_font = settings.type_heading_font -%}
 {{ heading_font | font_face: font_display: 'fallback' }}
 h1, .h1-style, h2, h3, h4, h5, h6, .heading-font {
-    font-family: realist,{{ heading_font.family }}, {{ heading_font.fallback_families }};
+    font-family: realist, {{ heading_font.family }}, {{ heading_font.fallback_families }};
     font-weight: {{ heading_font.weight }};
     font-style: {{ heading_font.style }};
 }
@@ -6126,7 +6126,7 @@ h1, .h1-style, h2, h3, h4, h5, h6, .heading-font {
 {{ logo_font | font_face: font_display: 'fallback' }}
 .pageheader .logotext,
 #shoplogo .logotext {
-    font-family: {{ logo_font.family }}, {{ logo_font.fallback_families }};
+    font-family: realist, {{ logo_font.family }}, {{ logo_font.fallback_families }};
     font-weight: {{ logo_font.weight }};
     font-style: {{ logo_font.style }};
 }
