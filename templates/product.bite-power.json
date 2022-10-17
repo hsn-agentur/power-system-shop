@@ -108,8 +108,8 @@
         "gallery_layout": "carousel-beside",
         "enable_zoom": true,
         "enable_video_looping": false,
-        "enable_var_img_grouping": true,
-        "var_img_grouping_option": "Geschmack"
+        "enable_var_img_grouping": false,
+        "var_img_grouping_option": ""
       }
     },
     "1664291979783dc003": {
