@@ -6100,7 +6100,7 @@ hr {
 {% assign base_font = settings.type_base_font %}
 {{ base_font | font_face: font_display: 'fallback' }}
 body {
-    font-family: {{ base_font.family }}, {{ base_font.fallback_families }};
+    font-family: realist, sans-serif, {{ base_font.family }}, {{ base_font.fallback_families }};
     font-weight: {{ base_font.weight }};
     font-style: {{ base_font.style }};
 }
@@ -6116,7 +6116,7 @@ body {
 {%- assign heading_font = settings.type_heading_font -%}
 {{ heading_font | font_face: font_display: 'fallback' }}
 h1, .h1-style, h2, h3, h4, h5, h6, .heading-font {
-    font-family: {{ heading_font.family }}, {{ heading_font.fallback_families }};
+    font-family: realist, sans-serif, {{ heading_font.family }}, {{ heading_font.fallback_families }};
     font-weight: {{ heading_font.weight }};
     font-style: {{ heading_font.style }};
 }
@@ -11987,6 +11987,5 @@ textarea {
 /* Custom Headline Font */
 
 h1, .h1-style, h2, .h2-style, h3, .h3-style, h4, .h4-style, h5, .h5-style , h6, .h6-style {
-    font-family: realist, sans-serif;
     font-weight: 700;
 }
