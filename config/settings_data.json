@@ -1080,7 +1080,7 @@
           "mobile_logo_img_width_int": 125,
           "logo_h1": true,
           "enable_sticky": false,
-          "enable_transparent": false,
+          "enable_transparent": true,
           "transparent_color": "#ffffff",
           "transparent_logo": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
           "menu_linklist": "main-menu",
