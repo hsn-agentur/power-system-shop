@@ -18,7 +18,7 @@
 
 
   assign altTextParts = image.alt | split: "|"
-  assign altText = altTextParts.last
+  assign altText = altTextParts.last | strip
 
 -%}
 
