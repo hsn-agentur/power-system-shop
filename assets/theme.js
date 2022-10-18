@@ -1431,8 +1431,7 @@
           this.el.dispatchEvent(new CustomEvent('change', { bubbles: true, detail }));
         }
       }
-
-console.log(option);
+option.attr('data-value');
       
       this.hideListbox();
     }}
