@@ -31,11 +31,11 @@
       data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
       data-aspectratio="{{ image.aspect_ratio }}"
       data-sizes="auto"
-      alt="{{ altText | escape }}###"
+      alt="{{ altText | escape }}"
       {% if local_cover %}data-parent-fit="cover"{% endif %}>
 
     <noscript>
-      <img class="rimage__image" src="{{ image | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}">
+      <img class="rimage__image" src="{{ image | img_url: '1024x1024' }}" alt="{{ altText | escape }}">
     </noscript>
   </div>
 </div>
