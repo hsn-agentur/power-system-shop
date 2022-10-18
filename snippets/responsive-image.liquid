@@ -15,6 +15,11 @@
 
   assign min_aspect_ratio = min_aspect_ratio | default: 0
   assign local_aspect_ratio = local_aspect_ratio | at_least: min_aspect_ratio
+
+
+  assign altTextParts = image.alt | split: "|"
+  assign altText = altTextParts.last
+
 -%}
 
 <div class="rimage-outer-wrapper" {% unless local_cover or no_max_width %}style="max-width: {{ max_width }}px"{% endunless %}>
