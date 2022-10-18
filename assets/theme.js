@@ -1410,7 +1410,7 @@
           allSelectedOptionsFound &= (variants.indexOf(this) != -1)
         })
         if(allSelectedOptionsFound)  {
-          $(this).css({height: '', overflow: ''});
+ //         $(this).css({height: '', overflow: ''});
           $(this).find('.rimage-outer-wrapper').show();
         }
         else  {
