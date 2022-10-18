@@ -1411,9 +1411,11 @@
         })
         if(allSelectedOptionsFound)  {
           $(this).css({height: '', overflow: ''});
+          $(this).find('.rimage-outer-wrapper').show();
         }
         else  {
-          $(this).css({height: 0, overflow: 'hidden'});
+//          $(this).css({height: 0, overflow: 'hidden'});
+          $(this).find('.rimage-outer-wrapper').hide();
         }
       });
     }
