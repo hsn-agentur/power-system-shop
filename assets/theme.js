@@ -1411,11 +1411,17 @@
         })
         if(allSelectedOptionsFound)  {
  //         $(this).css({height: '', overflow: ''});
-          $(this).find('.rimage-outer-wrapper').show();
+          if($(this).hasClass('thumbnail'))  {
+            $(this).find('.rimage-outer-wrapper').show();
+          }
+          $(this).removeClass('hsnNotFittingSelectedVariant');
         }
         else  {
 //          $(this).css({height: 0, overflow: 'hidden'});
-          $(this).find('.rimage-outer-wrapper').hide();
+          if($(this).hasClass('thumbnail'))  {
+            $(this).find('.rimage-outer-wrapper').hide();
+          }
+          $(this).addClass('hsnNotFittingSelectedVariant');
         }
       });
     }
