@@ -3631,6 +3631,9 @@
     // add images
     for (var i = 0; i < config.images.length; i++) {
       var img = config.images[i];
+      if($(img).hasClass('hsnNotFittingSelectedVariant'))  {
+        continue;
+      }
       $('<a class="gallery-viewer__thumb" href="#">').data('zoom-url', img.zoomUrl).
       html(img.thumbTag).
       appendTo($thumbContainer);
