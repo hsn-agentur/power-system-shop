@@ -1438,8 +1438,9 @@
       $('.cc-select__option[aria-selected="true"]').each(function()  {
         selectedOptions.push($(this).attr('data-value'));
       })
-
-      console.log(selectedOptions);
+      $('a.thumbnail[data-variants]').each(function()  {
+        var variants = $(this).attr('data-variants').split(',');
+      });
 
 // ----- /VLE
 
