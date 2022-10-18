@@ -1415,6 +1415,7 @@
             $(this).find('.rimage-outer-wrapper').show();
           }
           $(this).removeClass('hsnNotFittingSelectedVariant');
+          $(this).find('.rimage-outer-wrapper').removeClass('hsnNotFittingSelectedVariant');
         }
         else  {
 //          $(this).css({height: 0, overflow: 'hidden'});
@@ -1422,6 +1423,7 @@
             $(this).find('.rimage-outer-wrapper').hide();
           }
           $(this).addClass('hsnNotFittingSelectedVariant');
+          $(this).find('.rimage-outer-wrapper').addClass('hsnNotFittingSelectedVariant');
         }
       });
     }
