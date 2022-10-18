@@ -1439,7 +1439,8 @@
         selectedOptions.push($(this).attr('data-value'));
       })
       $('a.thumbnail[data-variants]').each(function()  {
-        var variants = $(this).attr('data-variants').split(',');
+        var variants = $(this).attr('data-variants');
+        var allSelectedOptionsFound = true;
         $(this).hide();
       });
 
