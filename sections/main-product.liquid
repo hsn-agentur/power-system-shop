@@ -100,7 +100,7 @@
 
 
 {% assign altTextParts = media.alt | split: "|" %}
-{% assign variantNames = altTextParts[0] %}
+{% assign variantNames = altTextParts[0] | strip | escape %}
 {% assign altText = altTextParts.last %}
 
             
