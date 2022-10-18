@@ -1410,10 +1410,10 @@
           allSelectedOptionsFound &= (variants.indexOf(this) != -1)
         })
         if(allSelectedOptionsFound)  {
-          $(this).css({height: ''});
+          $(this).css({height: '', overflow: ''});
         }
         else  {
-          $(this).css({height: 0});
+          $(this).css({height: 0, overflow: 'hidden'});
         }
       });
     }
