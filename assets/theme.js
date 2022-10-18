@@ -1404,9 +1404,12 @@
         selectedOptions.push($(this).attr('data-value'));
       })
       $('a.thumbnail[data-variants], a.show-gallery').each(function()  {
-        var variants = $(this).attr('data-variants');
+        var variants = $(this).attr('data-variants').trim();
         var allSelectedOptionsFound = true;
         $(selectedOptions).each(function()  {
+          if(variants.length == 0)  {
+            continue;
+          }
           allSelectedOptionsFound &= (variants.indexOf(this) != -1)
         })
         if(allSelectedOptionsFound)  {
