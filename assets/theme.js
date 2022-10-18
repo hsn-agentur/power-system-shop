@@ -1440,6 +1440,7 @@
       })
       $('a.thumbnail[data-variants]').each(function()  {
         var variants = $(this).attr('data-variants').split(',');
+        $(this).hide();
       });
 
 // ----- /VLE
