@@ -1408,7 +1408,7 @@
         var allSelectedOptionsFound = true;
         $(selectedOptions).each(function()  {
           if(variants.length == 0)  {
-            continue;
+            return;
           }
           allSelectedOptionsFound &= (variants.indexOf(this) != -1)
         })
