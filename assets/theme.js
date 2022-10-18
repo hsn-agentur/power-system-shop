@@ -1396,7 +1396,28 @@
         this.selectOption(matchingOption);
       }
     }
+// ----- VLE
+    reduceThumbnails()  {
+      var selectedOptions = [];
+      $('.cc-select__option[aria-selected="true"]').each(function()  {
+        selectedOptions.push($(this).attr('data-value'));
+      })
+      $('a.thumbnail[data-variants]').each(function()  {
+        var variants = $(this).attr('data-variants');
+        var allSelectedOptionsFound = true;
+        $(selectedOptions).each(function()  {
+          allSelectedOptionsFound &= (variants.indexOf(this) != -1)
+        })
+        if(allSelectedOptionsFound)  {
+          $(this).show();
+        }
+        else  {
+          $(this).hide();
+        }
+      });
+    }
 
+// ----- /VLE
     /**
      * Selects an option
      * @param {HTMLElement} option - The option <li> element
@@ -1432,28 +1453,8 @@
         }
       }
 
-// ----- VLE
 
-      var selectedOptions = [];
-      $('.cc-select__option[aria-selected="true"]').each(function()  {
-        selectedOptions.push($(this).attr('data-value'));
-      })
-      $('a.thumbnail[data-variants]').each(function()  {
-        var variants = $(this).attr('data-variants');
-        var allSelectedOptionsFound = true;
-        $(selectedOptions).each(function()  {
-          allSelectedOptionsFound &= (variants.indexOf(this) != -1)
-        })
-        if(allSelectedOptionsFound)  {
-          $(this).show();
-        }
-        else  {
-          $(this).hide();
-        }
-      });
-
-// ----- /VLE
-
+      this.reduceThumbnails();
       
       this.hideListbox();
     }}
