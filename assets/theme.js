@@ -1441,7 +1441,15 @@
       $('a.thumbnail[data-variants]').each(function()  {
         var variants = $(this).attr('data-variants');
         var allSelectedOptionsFound = true;
-        $(this).hide();
+        $(selectedOptions).each(function()  {
+          allSelectedOptionsFound &= (variants.indexOf(this) != -1)
+        })
+        if(allSelectedOptionsFound)  {
+          $(this).show();
+        }
+        else  {
+          $(this).hide();
+        }
       });
 
 // ----- /VLE
