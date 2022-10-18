@@ -98,7 +98,12 @@
           <div class="thumbnails{% unless section.settings.gallery_layout contains 'carousel' %} mobile-only{% endunless %}">
             {% for media in product.media %}
 
+
+            {{ media | json }}
 {%
+
+
+  
 assign variantNames = 'xyz, abc'
   
 %}
