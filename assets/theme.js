@@ -1403,7 +1403,7 @@
       $('.cc-select__option[aria-selected="true"]').each(function()  {
         selectedOptions.push($(this).attr('data-value'));
       })
-      $('a.thumbnail[data-variants], a.show-gallerygg').each(function()  {
+      $('a.thumbnail[data-variants], a.show-gallery').each(function()  {
         var variants = $(this).attr('data-variants');
         var allSelectedOptionsFound = true;
         $(selectedOptions).each(function()  {
