@@ -100,13 +100,8 @@
 
 
             {{ media | json }}
-{%
-
-
-  
-assign variantNames = 'xyz, abc'
-  
-%}
+{% assign altTextParts = media.alt | split: "|" %}
+{% assign variantNames = altTextParts[0] %}
 
 
             
