@@ -1431,7 +1431,18 @@
           this.el.dispatchEvent(new CustomEvent('change', { bubbles: true, detail }));
         }
       }
-option.attr('data-value');
+
+// ----- VLE
+
+      var selectedOptions = [];
+      $('.cc-select__option[aria-selected="true"]').each(function()  {
+        selectedOptions.push($(this).attr('data-value'));
+      })
+
+      console.log(selectedOptions);
+
+// ----- /VLE
+
       
       this.hideListbox();
     }}
