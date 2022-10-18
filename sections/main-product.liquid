@@ -102,7 +102,6 @@
 {% assign altTextParts = media.alt | split: "|" %}
 {% assign variantNames = altTextParts[0] %}
 {% assign altText = altTextParts.last %}
-{{ media | json }}
 
             
               <a class="thumbnail thumbnail--media-{{ media.media_type }}" href="{% if section.settings.enable_zoom %}{{ media.preview_image | img_url: zoom_size }}{% else %}#{% endif %}" data-media-id="{{ media.id }}" data-variants="{{ variantNames }}">
