@@ -111,6 +111,11 @@
 {% assign altTextParts = media.alt | split: "|" %}
 {% assign variantNames = altTextParts[0] | strip | escape %}
 {% assign altText = altTextParts.last %}
+{%- liquid
+  if altText == media.alt
+    assign variantNames = ""
+  endif;
+ -%}
 
             
               <a class="thumbnail thumbnail--media-{{ media.media_type }}" href="{% if section.settings.enable_zoom %}{{ media.preview_image | img_url: zoom_size }}{% else %}#{% endif %}" data-media-id="{{ media.id }}" data-variants="{{ variantNames }}">
