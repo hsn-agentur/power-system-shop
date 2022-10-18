@@ -101,8 +101,7 @@
 
 {% assign altTextParts = media.alt | split: "|" %}
 {% assign variantNames = altTextParts[0] %}
-{% assign media.alt = altTextParts.last %}
-{% assign media.alt = 'test' %}
+{% assign media.alt2 = altTextParts.last %}
 {{ media | json }}
 
             
