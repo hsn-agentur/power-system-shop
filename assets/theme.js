@@ -6968,7 +6968,7 @@
     // click main product image (launch gallery)
     $(document).on('click', '.product-detail .gallery .main-image a.show-gallery', function () {
       var images = [],
-      $imgs = $(this).closest('.product-slideshow').find('.slide:not(.slide--inactive-option) .show-gallery'),
+      $imgs = $(this).closest('.product-slideshow').find('.slide:not(.slide--inactive-option) .show-gallery:not(.hsnNotFittingSelectedVariant)'),
       clickedHref = $(this).attr('href');
 
       if ($imgs.length) {
