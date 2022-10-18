@@ -1123,7 +1123,8 @@
       if (!this.selectedOption) {
         this.selectedOption = this.listbox.firstElementChild;
       }
-
+      this.reduceThumbnails();
+      
       this.bindEvents();
       this.setButtonWidth();
     }
