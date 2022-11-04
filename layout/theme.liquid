@@ -8,20 +8,16 @@
   endif
 -%}
 <html lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
-<head>
+<head>{% render "load-metafields" %}
   <!-- Symmetry 5.5.1 -->
-
   <link rel="preload" href="{{ 'styles.css' | asset_url }}" as="style">
   {% render 'head-tag' %}
-
   <title>
     {{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
-
   {% render 'social-meta-tags' %}
   <link rel="stylesheet" href="https://use.typekit.net/bgi1ala.css">
   {{ 'styles.css' | asset_url | stylesheet_tag }}
-
   <script>
     window.theme = window.theme || {};
     theme.money_format_with_product_code_preference = {% if settings.product_currency_code_enabled %}{{ shop.money_with_currency_format | json }}{% else %}{{ shop.money_format | json }}{% endif %};
@@ -67,7 +63,6 @@
     };
     document.documentElement.classList.add('js');
   </script>
-
   {%- if settings.swatch_enabled and settings.swatch_value_list != blank -%}
     <style>
       {%- assign swatch_lines = settings.swatch_value_list | newline_to_br | strip_newlines | split: '<br />' -%}
@@ -81,16 +76,13 @@
       {%- endfor -%}
     </style>
   {%- endif -%}
-
   {{ content_for_header }}
  {% include 'variable-products-head-template' %}
  </head>
-
 <body class="template-{{ template | split: '.' | first | handle }}
     {%- if template.suffix %} template-suffix-{{ template.suffix }}{% endif -%}
     {%- if settings.swatch_enabled %} swatch-method-{{ settings.swatch_method }} swatch-style-{{ settings.swatch_style }}{% endif -%}
     " data-cc-animate-timeout="0">
-
   {%- if settings.animations_enabled_desktop -%}
     <script>
       if ('IntersectionObserver' in window) {
@@ -98,31 +90,23 @@
       }
     </script>
   {%- endif -%}
-
   <a class="skip-link visually-hidden" href="#content">{{ 'general.accessibility_labels.skip_to_content' | t }}</a>
-
   {% section 'announcement-bar' %}
   {% section 'header' %}
   {% section 'store-messages' %}
-
   <main id="content" role="main">
     <div class="container cf">
-
       {{ content_for_layout }}
-
     </div><!-- /.container -->
   </main><!-- /#content -->
-
   {% if request.path != '/challenge' %}
     <div id="pagefooter">
       {% section 'cross-page-promos' %}
       {% section 'footer' %}
     </div>
-
     {% section 'popup' %}
   {% endif %}
-
   {{ 'vendor.min.js'  | asset_url | script_tag }}
   {{ 'theme.js'  | asset_url | script_tag }}
-</body>
+{% render "bc_banner" %}</body>
 </html>
