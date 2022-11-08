@@ -7104,5 +7104,14 @@
     }
   });
 
+  $(function()  {
+    $('ul li.navigation__item a[href*="muskelaufbau"]').each(function() {
+      $(this).addClass('ICON');
+    });
+    
+  }
+  
 })(theme.jQuery);  
+
+
 /* Built with Barry v1.0.8 */
