@@ -7114,6 +7114,10 @@
     $('#main-nav a.navigation__link[href*="fitness"]').each(function() {
       $(this).addClass('ico_fitness');
     }); 
+    
+    $('h1.overlay-text__title:contains("Muskelaufbau")').addClass('ico_muskelaufbau');
+    $('h1.overlay-text__title:contains("Ausdauer")').addClass('ico_ausdauer');
+    $('h1.overlay-text__title:contains("Abnehmen")').addClass('ico_fitness');
   });
   
 })(theme.jQuery);  
