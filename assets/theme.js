@@ -7105,7 +7105,7 @@
   });
 
   $(function()  {
-    $('ul li.navigation__item a[href*="muskelaufbau"]').each(function() {
+    $('#main-nav a.navigation__link[href*="muskelaufbau"]').each(function() {
       $(this).addClass('ICON');
     });
     
