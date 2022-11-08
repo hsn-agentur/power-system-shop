@@ -7105,13 +7105,13 @@
   });
 
   $(function()  {
-    $('#main-nav a.navigation__link[href*="muskelaufbau"]').each(function() {
+    $('a.navigation__link[href*="muskelaufbau"]').each(function() {
       $(this).addClass('ico_muskelaufbau');
     });    
-    $('#main-nav a.navigation__link[href*="ausdauer"]').each(function() {
+    $('a.navigation__link[href*="ausdauer"]').each(function() {
       $(this).addClass('ico_ausdauer');
     }); 
-    $('#main-nav a.navigation__link[href*="fitness"]').each(function() {
+    $('a.navigation__link[href*="fitness"]').each(function() {
       $(this).addClass('ico_fitness');
     }); 
     
