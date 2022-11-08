@@ -11,18 +11,18 @@
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
-            "subheading": "Tell your story",
-            "title": "Two line\nslide heading",
+            "subheading": "",
+            "title": "",
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>And optional subtext<\/p>",
+            "text": "",
             "enlarge_text": true,
-            "button_label_1": "Shop this",
+            "button_label_1": "Hier klicken",
             "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
-            "text_alignment": "center center"
+            "text_alignment": "bottom center"
           }
         },
         "16359276425da8ce46-1": {
