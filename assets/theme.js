@@ -7107,9 +7107,8 @@
   $(function()  {
     $('#main-nav a.navigation__link[href*="muskelaufbau"]').each(function() {
       $(this).addClass('ICON');
-    });
-    
-  }
+    });    
+  });
   
 })(theme.jQuery);  
 
