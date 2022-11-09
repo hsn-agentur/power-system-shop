@@ -32,9 +32,31 @@
         "subcoll_gall_text_alignment": "center center",
         "subcoll_gall_mobile_layout": "2"
       }
+    },
+    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15959473881247__486ff0a4-1d27-49f0-aaa2-1dbd3291f64b-1668004128e3e7e3a5-0": {
+          "type": "heading",
+          "settings": {
+            "title": "DAS BESTE FÜR DEINEN MUSKELAUFBAU",
+            "use_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15959473881247__486ff0a4-1d27-49f0-aaa2-1dbd3291f64b-1668004128e3e7e3a5-0"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "use_alt_bg": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b"
   ]
 }
