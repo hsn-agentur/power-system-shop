@@ -53,10 +53,25 @@
         "full_width": false,
         "use_alt_bg": false
       }
+    },
+    "c56929aa-7eeb-494a-8381-67347cbe4567": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "DAS BESTE FÜR DEINEN MUSKELAUFBAU",
+        "collection": "muskelaufbau",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 2,
+        "use_alt_bg": true,
+        "show_view_all": true,
+        "full_width": true
+      }
     }
   },
   "order": [
     "main",
-    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b"
+    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b",
+    "c56929aa-7eeb-494a-8381-67347cbe4567"
   ]
 }
