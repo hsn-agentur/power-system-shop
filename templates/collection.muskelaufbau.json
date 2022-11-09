@@ -101,7 +101,7 @@
       "type": "custom-liquid",
       "settings": {
         "full_width": true,
-        "code": "<style>\n.page-header .pagetitle.h3-style {margin-bottom:0;}\n.page-header  .reading-width {display:none;}\n<\/style>"
+        "code": "<style>\n.page-header .pagetitle.h3-style {margin-bottom:0;}\n.page-header .reading-width {display:none;}\n.page-header:not(.page-header--with-background) {padding:0;\n<\/style>"
       }
     },
     "5d3285ae-32e1-403b-8aaf-257c096ac638": {
