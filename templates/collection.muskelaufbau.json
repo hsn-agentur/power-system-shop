@@ -3,10 +3,11 @@
     "247c52a4-0f63-4f1e-b0dd-939af3aa3a11": {
       "type": "image-with-text-overlay",
       "settings": {
+        "image": "shopify:\/\/shop_images\/muskelaufbau.png",
         "image_position": "center center",
         "mobile_image_position": "center center",
         "height": "fixed",
-        "height_desktop": 600,
+        "height_desktop": 500,
         "height_mobile": 460,
         "image_link": "",
         "subheading": "",
