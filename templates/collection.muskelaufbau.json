@@ -95,12 +95,30 @@
         "subcoll_gall_text_alignment": "center center",
         "subcoll_gall_mobile_layout": "2"
       }
+    },
+    "819ff968-6f28-4140-90e4-45cb7425bb77": {
+      "type": "custom-liquid",
+      "settings": {
+        "full_width": true,
+        "code": "<style>.pagetitle.h3-style {display:none;}<\/style>"
+      }
+    },
+    "5d3285ae-32e1-403b-8aaf-257c096ac638": {
+      "type": "rich-text",
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "use_alt_bg": false
+      }
     }
   },
   "order": [
     "247c52a4-0f63-4f1e-b0dd-939af3aa3a11",
     "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b",
     "c56929aa-7eeb-494a-8381-67347cbe4567",
-    "main"
+    "main",
+    "819ff968-6f28-4140-90e4-45cb7425bb77",
+    "5d3285ae-32e1-403b-8aaf-257c096ac638"
   ]
 }
