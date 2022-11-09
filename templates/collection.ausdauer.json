@@ -57,14 +57,14 @@
     "2c8002de-3726-4104-a322-addfd56dd023": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "",
         "collection": "bestseller",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
         "rows": 1,
         "use_alt_bg": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "full_width": false
       }
     }
