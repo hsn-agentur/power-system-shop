@@ -100,7 +100,7 @@
       "type": "custom-liquid",
       "settings": {
         "full_width": true,
-        "code": "<style>.pagetitle.h3-style {display:none;}<\/style>"
+        "code": ""
       }
     },
     "5d3285ae-32e1-403b-8aaf-257c096ac638": {
