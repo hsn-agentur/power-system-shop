@@ -448,7 +448,7 @@
       "success": "Danke für Ihr Interesse! Wir werden Sie auf dem neuesten Stand halten!"
     },
     "general": {
-      "powered_by": "Shop powered by"
+      "powered_by": " "
     }
   },
   "store_availability": {
@@ -466,7 +466,7 @@
   },
   "shopify": {
     "links": {
-      "powered_by_shopify": " Shop powered by"
+      "powered_by_shopify": " "
     }
   }
 }
