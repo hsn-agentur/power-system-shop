@@ -29,6 +29,7 @@
     },
     "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b": {
       "type": "rich-text",
+      "disabled": true,
       "blocks": {
         "template--15959473881247__486ff0a4-1d27-49f0-aaa2-1dbd3291f64b-1668004128e3e7e3a5-0": {
           "type": "heading",
