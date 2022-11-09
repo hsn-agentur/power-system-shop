@@ -32,9 +32,31 @@
         "subcoll_gall_text_alignment": "center center",
         "subcoll_gall_mobile_layout": "2"
       }
+    },
+    "f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15959473881247__f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4-1668004814c3c3c6af-0": {
+          "type": "heading",
+          "settings": {
+            "title": "ENTDECKE UNSERE GANZE VIELFALT",
+            "use_h1": false
+          }
+        }
+      },
+      "block_order": [
+        "template--15959473881247__f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4-1668004814c3c3c6af-0"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "use_alt_bg": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4"
   ]
 }
