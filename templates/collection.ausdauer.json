@@ -53,10 +53,25 @@
         "full_width": false,
         "use_alt_bg": false
       }
+    },
+    "2c8002de-3726-4104-a322-addfd56dd023": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "bestseller",
+        "show_vendor": false,
+        "enable_carousel": true,
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": false,
+        "show_view_all": true,
+        "full_width": false
+      }
     }
   },
   "order": [
     "main",
-    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b"
+    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b",
+    "2c8002de-3726-4104-a322-addfd56dd023"
   ]
 }
