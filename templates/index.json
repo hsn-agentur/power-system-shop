@@ -30,7 +30,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_LowCarb.png",
             "mobile_image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_LowCarb.png",
-            "image_position": "center right",
+            "image_position": "center center",
             "mobile_image_position": "left center",
             "slide_link": "",
             "subheading": "",
