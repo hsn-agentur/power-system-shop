@@ -42,10 +42,18 @@
             "title": "BLEIB FIT UND IN FORM",
             "use_h1": false
           }
+        },
+        "ad5a35a4-a459-4c4b-9dff-bd2defef9982": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "enlarge_text": true
+          }
         }
       },
       "block_order": [
-        "template--15959473881247__486ff0a4-1d27-49f0-aaa2-1dbd3291f64b-1668004128e3e7e3a5-0"
+        "template--15959473881247__486ff0a4-1d27-49f0-aaa2-1dbd3291f64b-1668004128e3e7e3a5-0",
+        "ad5a35a4-a459-4c4b-9dff-bd2defef9982"
       ],
       "settings": {
         "height": "medium",

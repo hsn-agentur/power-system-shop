@@ -124,35 +124,6 @@
         "overlay_style": "full image-overlay--bg-shadow"
       }
     },
-    "98da4c9e-a4f6-4659-9f14-3a7a1be8bd35": {
-      "type": "image-with-text-overlay",
-      "disabled": true,
-      "settings": {
-        "image": "shopify:\/\/shop_images\/221111_Header_PRODUKTE_supplements-min.png",
-        "mobile_image": "shopify:\/\/shop_images\/221111_Header_PRODUKTE_supplements-min.png",
-        "image_position": "center center",
-        "mobile_image_position": "center center",
-        "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 460,
-        "image_link": "",
-        "subheading": "",
-        "title": "",
-        "title_size": 84,
-        "title_size_mobile": 46,
-        "use_h1": false,
-        "text": "",
-        "enlarge_text": true,
-        "button_label_1": "",
-        "button_url_1": "",
-        "button_label_2": "",
-        "button_url_2": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow"
-      }
-    },
     "16642917088b0c9ba4": {
       "type": "featured-collection",
       "settings": {
@@ -191,7 +162,6 @@
     "16359276425da8ce46",
     "16359278676808bea5",
     "16359285201c71bbb1",
-    "98da4c9e-a4f6-4659-9f14-3a7a1be8bd35",
     "16642917088b0c9ba4",
     "166426917788bb9d1e"
   ]
