@@ -96,9 +96,9 @@
         "button_label_2": "",
         "button_url_2": "",
         "text_alignment": "center center",
-        "height_desktop": 600,
+        "height_desktop": 740,
         "height_mobile": 500,
-        "full_width": true,
+        "full_width": false,
         "overlay_style": "shadow"
       }
     }
