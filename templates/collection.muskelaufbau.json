@@ -26,7 +26,7 @@
       "type": "main-collection",
       "settings": {
         "show_image_behind_heading": true,
-        "heading_image_height": "huge",
+        "heading_image_height": "large",
         "overlay_style": "shadow",
         "coll_num_per_page_int": 24,
         "grid": 4,
