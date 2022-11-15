@@ -1,27 +1,5 @@
 {
   "sections": {
-    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b": {
-      "type": "rich-text",
-      "disabled": true,
-      "blocks": {
-        "template--15959473881247__486ff0a4-1d27-49f0-aaa2-1dbd3291f64b-1668004128e3e7e3a5-0": {
-          "type": "heading",
-          "settings": {
-            "title": "DAS BESTE FÜR DEINEN MUSKELAUFBAU",
-            "use_h1": true
-          }
-        }
-      },
-      "block_order": [
-        "template--15959473881247__486ff0a4-1d27-49f0-aaa2-1dbd3291f64b-1668004128e3e7e3a5-0"
-      ],
-      "settings": {
-        "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
-        "use_alt_bg": false
-      }
-    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -55,15 +33,28 @@
         "subcoll_gall_mobile_layout": "2"
       }
     },
-    "819ff968-6f28-4140-90e4-45cb7425bb77": {
-      "type": "custom-liquid",
-      "settings": {
-        "full_width": true,
-        "code": "<style>\n.page-header .pagetitle.h3-style {margin-bottom:0;}\n.page-header .reading-width {display:none;}\n.page-header:not(.page-header--with-background) {padding:0;\n<\/style>"
-      }
-    },
-    "5d3285ae-32e1-403b-8aaf-257c096ac638": {
+    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b": {
       "type": "rich-text",
+      "blocks": {
+        "template--15959473881247__486ff0a4-1d27-49f0-aaa2-1dbd3291f64b-1668004128e3e7e3a5-0": {
+          "type": "heading",
+          "settings": {
+            "title": "DAS BESTE FÜR DEINEN MUSKELAUFBAU",
+            "use_h1": true
+          }
+        },
+        "910c2b70-d5ec-4c9f-b9d6-3bb5d46157a4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15959473881247__486ff0a4-1d27-49f0-aaa2-1dbd3291f64b-1668004128e3e7e3a5-0",
+        "910c2b70-d5ec-4c9f-b9d6-3bb5d46157a4"
+      ],
       "settings": {
         "height": "medium",
         "text_alignment": "center",
@@ -73,9 +64,7 @@
     }
   },
   "order": [
-    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b",
     "main",
-    "819ff968-6f28-4140-90e4-45cb7425bb77",
-    "5d3285ae-32e1-403b-8aaf-257c096ac638"
+    "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b"
   ]
 }
