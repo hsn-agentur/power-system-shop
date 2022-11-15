@@ -46,11 +46,34 @@
             "button_url_2": "",
             "text_alignment": "center center"
           }
+        },
+        "29c485a5-88d8-4491-8c78-8c1514391ce9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_LowCarb_cfa354d9-a66c-40e7-842f-34448c153c63.png",
+            "mobile_image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_LowCarb_cfa354d9-a66c-40e7-842f-34448c153c63.png",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
         }
       },
       "block_order": [
         "16359276425da8ce46-0",
-        "16359276425da8ce46-1"
+        "16359276425da8ce46-1",
+        "29c485a5-88d8-4491-8c78-8c1514391ce9"
       ],
       "settings": {
         "height": "fixed",
