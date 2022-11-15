@@ -18,7 +18,7 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": true,
-            "button_label_1": "",
+            "button_label_1": "Mehr erfahren",
             "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
@@ -104,7 +104,6 @@
     },
     "16359285201c71bbb1": {
       "type": "background-video",
-      "disabled": true,
       "settings": {
         "video": "https:\/\/youtu.be\/6TEXS0cMQ1w?t=162",
         "subheading": "LOREM IPSUM",
@@ -127,6 +126,7 @@
     },
     "98da4c9e-a4f6-4659-9f14-3a7a1be8bd35": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/221111_Header_PRODUKTE_supplements-min.png",
         "mobile_image": "shopify:\/\/shop_images\/221111_Header_PRODUKTE_supplements-min.png",
