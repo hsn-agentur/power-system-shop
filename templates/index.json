@@ -106,6 +106,7 @@
       "type": "background-video",
       "settings": {
         "video": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9400971f21874b6fadd7013a66790747.mp4",
+        "placeholder_image": "shopify:\/\/shop_images\/video-shake.jpg",
         "subheading": "",
         "title": "",
         "title_size": 84,
