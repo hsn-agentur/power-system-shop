@@ -42,10 +42,18 @@
             "title": "ENTDECKE UNSERE GANZE VIELFALT",
             "use_h1": false
           }
+        },
+        "7828a09a-f8c6-494a-b97e-ffde3441d198": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "enlarge_text": true
+          }
         }
       },
       "block_order": [
-        "template--15959473881247__f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4-1668004814c3c3c6af-0"
+        "template--15959473881247__f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4-1668004814c3c3c6af-0",
+        "7828a09a-f8c6-494a-b97e-ffde3441d198"
       ],
       "settings": {
         "height": "medium",
@@ -56,6 +64,7 @@
     },
     "2f822e03-35c4-47fa-ac28-c4b323829662": {
       "type": "collection-list",
+      "disabled": true,
       "settings": {
         "title": "Collection list",
         "enable_carousel": true,
@@ -66,6 +75,7 @@
     },
     "5da18f51-b314-492b-8229-cc38cb5481ae": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured collection",
         "collection": "",
