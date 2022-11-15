@@ -1075,14 +1075,14 @@
           "52cf1ed7-8843-46d1-a5e3-764d255565dc"
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/211018_PowerSystem_PPT_Logo_long_0eeec132-c6ba-41d2-be6d-fe026218c317.png",
+          "logo": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
           "logo_img_width_int": 265,
           "mobile_logo_img_width_int": 125,
           "logo_h1": true,
           "enable_sticky": false,
           "enable_transparent": false,
           "transparent_color": "#ffffff",
-          "transparent_logo": "shopify:\/\/shop_images\/211018_PowerSystem_PPT_Logo_long_0eeec132-c6ba-41d2-be6d-fe026218c317.png",
+          "transparent_logo": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
           "menu_linklist": "main-menu",
           "menu_linklist_mobile": "",
           "menu_layout": "inline-menu-center",
