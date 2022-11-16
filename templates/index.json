@@ -119,7 +119,7 @@
         "button_label_2": "",
         "button_url_2": "",
         "text_alignment": "center center",
-        "height_desktop": 580,
+        "height_desktop": 460,
         "height_mobile": 480,
         "full_width": true,
         "overlay_style": "full image-overlay--bg-shadow"
