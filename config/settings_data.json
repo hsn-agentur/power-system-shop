@@ -1034,6 +1034,9 @@
     "live_search_search_meta": false,
     "cart_type": "drawer",
     "product_currency_code_enabled": false,
+    "checkout_logo_image": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
+    "checkout_accent_color": "#e6a342",
+    "checkout_button_color": "#171717",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
