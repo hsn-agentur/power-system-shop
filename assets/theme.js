@@ -7118,9 +7118,17 @@
     $('h1.overlay-text__title:contains("Muskelaufbau")').addClass('ico_muskelaufbau');
     $('h1.overlay-text__title:contains("Ausdauer")').addClass('ico_ausdauer');
     $('h1.overlay-text__title:contains("Abnehmen")').addClass('ico_fitness');
+
+    var $instaLnk = $('#insta-feed h2');
+    $instaLnk.on('click', function() {
+      window.location.href = "https://www.instagram.com/powersystemsport/";
+    });
   });
+
+  
   
 })(theme.jQuery);  
+
 
 
 /* Built with Barry v1.0.8 */
