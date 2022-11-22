@@ -1036,7 +1036,7 @@
     "product_currency_code_enabled": false,
     "checkout_logo_image": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
     "checkout_accent_color": "#09728c",
-    "checkout_button_color": "#e32618",
+    "checkout_button_color": "#e31515",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
