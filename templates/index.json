@@ -73,8 +73,8 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/snack-power.png",
-            "image_position": "bottom center",
-            "mobile_image_position": "center bottom",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
             "title": "",
@@ -87,7 +87,7 @@
             "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
-            "text_alignment": "center center"
+            "text_alignment": "bottom center"
           }
         },
         "8acbcec8-59d5-44e0-9754-9d794ad42781": {
