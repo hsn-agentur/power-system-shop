@@ -94,6 +94,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/lower-carb-riegel_193fd70e-df13-4ec5-ad23-7b0dba5a3eeb.png",
+            "mobile_image": "shopify:\/\/shop_images\/lower-carb-riegel-2.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
