@@ -7121,7 +7121,8 @@
 
     var $instaLnk = $('#insta-feed h2');
     $instaLnk.on('click', function() {
-      window.location.href = "https://www.instagram.com/powersystemsport/";
+      //window.location.href = "https://www.instagram.com/powersystemsport/";
+      window.open('https://www.instagram.com/powersystemsport/', '_blank'); 
     });
   });
 
