@@ -7124,6 +7124,10 @@
       //window.location.href = "https://www.instagram.com/powersystemsport/";
       window.open('https://www.instagram.com/powersystemsport/', '_blank'); 
     });
+
+    $instaLnk.on( 'click', function() {
+    console.log( 'TEST' );
+  });
   });
 
   
