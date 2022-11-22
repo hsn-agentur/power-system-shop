@@ -191,7 +191,7 @@
           "settings": {
             "heading_size": 25,
             "feed_width": 100,
-            "html_area": ""
+            "html_area": "<script>\n(function ($) {\n  var $ = jQuery = $;\n$(function()  {\n    var $instaLnk = $('#insta-feed h2');\n    $instaLnk.on('click', function() {\n      \/\/window.location.href = \"https:\/\/www.instagram.com\/powersystemsport\/\";\n      window.open('https:\/\/www.instagram.com\/powersystemsport\/', '_blank'); \n    });\n  });\n})(theme.jQuery);  \n<\/script>"
           }
         }
       },
