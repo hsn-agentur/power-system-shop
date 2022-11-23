@@ -104,7 +104,7 @@
                 {% endif %}
                 <div class="cart-item__column cart-item__quantity">
                   <div class="quantity buttoned-input">
-                    <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if item.quantity < 2 %}unusable{% endif %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 1 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
+                    <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if item.quantity < 2 %}unusable{% endif %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 4 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
                     <input
                       class="cart-item__quantity-input"
                       type="text"
@@ -116,7 +116,7 @@
                       data-line="{{ forloop.index }}"
                       {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' %}data-max="{{ item.variant.inventory_quantity }}"{% endif %}
                       aria-label="{{ 'cart.general.quantity' | t | escape }}" />
-                    <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 1 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>
+                    <a id="updates_inc_{{ forloop.index }}" class="notabutton quantity-up {% unless can_increase %}unusable{% endunless %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | plus: 4 }}" aria-label="{{ 'cart.label.increase' | t | escape }}">{% render 'svg-plus' %}</a>
                   </div>
                   <a class="remove" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity=0">
                     {{ 'cart.general.remove' | t }}
