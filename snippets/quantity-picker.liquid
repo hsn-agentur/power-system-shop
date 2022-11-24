@@ -8,6 +8,8 @@
      assign label = vpedata[1]
      assign labels = labels | append ',' | append label
    endfor
+
+   assign option_values = amounts | split ','
 -%}
 
 {% assign vpedata = vpes | split: '-' %}
@@ -16,7 +18,7 @@
             {% render 'custom-select',
               id: 'myOwnID',
               label: 'Menge',
-              option_values: amounts | split ',',
+              option_values: option_values,
             %}
           </div>
 
