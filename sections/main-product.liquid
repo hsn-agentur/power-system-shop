@@ -353,7 +353,7 @@
                       endif
                     -%}
 
-{{ product | json }}
+{{ product.metafields.custom | json }}
 
                     
                     <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
