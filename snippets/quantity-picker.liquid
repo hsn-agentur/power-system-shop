@@ -5,11 +5,14 @@
    assign labels = ''
    for vpe in vpes
      assign vpedata = vpe | split: '-'
-     assign test = vpedata
      assign amount = vpedata[0] | strip
-     assign amounts = amounts | append: ',' | append: amount
      assign label = vpedata[1] | strip
-     assign labels = labels | append: ',' | append: label
+     if forloop.index0
+       assign amounts = amounts | append: ','
+       assign labels = labels | append: ','
+     endif
+     assign amounts = amounts | append: amount
+     assign labels = labels | append: label
    endfor
 
    assign option_values = amounts | split: ','
