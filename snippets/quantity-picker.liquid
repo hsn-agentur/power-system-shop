@@ -1,6 +1,14 @@
 {% assign vpes = product.metafields.custom.vpe | newline_to_br | split: '<br />' %}
 
-
+{%- liquid
+   assign amounts = ''
+   assign labels = ''
+   for vpedata in vpes
+     assign amounts = amounts | append ',' | append vpedata[0]
+     assign label = vpedata[1]
+     assign labels = labels | append ',' | append label
+   endfor
+-%}
 
 {% assign vpedata = vpes | split: '-' %}
 
@@ -8,7 +16,7 @@
             {% render 'custom-select',
               id: 'myOwnID',
               label: 'Menge',
-              option_values: vpes,
+              option_values: amounts | split ',',
             %}
           </div>
 
