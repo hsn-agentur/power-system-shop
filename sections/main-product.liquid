@@ -364,6 +364,7 @@
                           <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
                         </div>
                       {% endif %}
+{% endif %}
                       <div class="quantity-submit-row__submit input-row">
                         {%- capture add_to_cart_text -%}
                           {%- if product.template_suffix contains 'preorder' -%}
@@ -376,7 +377,6 @@
                           {{- add_to_cart_text -}}
                         </button>
                       </div>
-{% endif %}
 
                     
                       {% if enable_dynamic_payment_button %}
