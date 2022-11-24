@@ -353,7 +353,7 @@
                       endif
                     -%}
 
-{{ product.metafields.custom.vpe | newline_to_br | split: '<br />' }}
+{% assign vpes = product.metafields.custom.vpe | newline_to_br | split: '<br />' %}
 
                     
                     <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
