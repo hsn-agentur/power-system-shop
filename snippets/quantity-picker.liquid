@@ -8,12 +8,9 @@
 
           <div class="option-selector" data-selector-type="dropdown" data-option-index="{{ forloop.index0 }}">
             {% render 'custom-select',
-              id: option_id,
-              label: option.name,
-              option_values: option.values,
-              selected_value: selected_value,
-              swatches: uses_swatches,
-              blank_option: blank_option
+              id: 'myOwnID',
+              label: vpedata[1],
+              option_values: vpedata[0],
             %}
           </div>
 
