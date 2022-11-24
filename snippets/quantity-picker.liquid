@@ -7,7 +7,7 @@
      assign vpedata = vpe | split: '-'
      assign amount = vpedata[0] | strip
      assign label = vpedata[1] | strip
-     if forloop.index0
+     if forloop.index0 > 0
        assign amounts = amounts | append: ','
        assign labels = labels | append: ','
      endif
