@@ -353,8 +353,7 @@
                       endif
                     -%}
 
-{% assign vpes = product.metafields.custom.vpe | newline_to_br | split: '<br />' %}
-{% render 'quantity-picker', vpes: vpes %}
+{% render 'quantity-picker', product: product %}
                     
                     <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
                       {% if block.settings.show_quantity_selector %}
