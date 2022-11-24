@@ -10,7 +10,7 @@
      assign labels = labels | append: ',' | append: label
    endfor
 
-   assign option_values = amounts | split ','
+   assign option_values = amounts | split: ','
 -%}
 
 {% assign vpedata = vpes | split: '-' %}
