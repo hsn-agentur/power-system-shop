@@ -4,6 +4,7 @@
    assign amounts = ''
    assign labels = ''
    for vpedata in vpes
+   assign test = vpedata
      assign amount = vpedata[0] | strip
      assign amounts = amounts | append: ',' | append: amount
      assign label = vpedata[1] | strip
@@ -16,7 +17,7 @@
 
 {{ amounts }}
 
-{{ vpedata | json }}
+{{ test | json }}
 
 {% assign vpedata = vpes | split: '-' %}
 
