@@ -26,12 +26,13 @@
 
           <div class="option-selector" data-selector-type="dropdown" data-option-index="{{ forloop.index0 }}">
             {% render 'custom-select',
-              id: 'myOwnID',
+              id: 'customQuantitySelector',
               label: 'Menge',
               option_values: option_values,
               option_names: option_names,
               selected_value: selected_value,
-              include_native: false
+              include_native: true,
+              native_name: quantity
             %}
           </div>
 
