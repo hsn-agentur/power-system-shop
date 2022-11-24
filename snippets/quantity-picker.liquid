@@ -19,10 +19,6 @@
    assign option_names = labels | split: ','
 -%}
 
-{{ amounts }}
-
-{{ option_values | json }}
-
 {% assign vpedata = vpes | split: '-' %}
 
           <div class="option-selector" data-selector-type="dropdown" data-option-index="{{ forloop.index0 }}">
