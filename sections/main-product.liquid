@@ -352,9 +352,9 @@
                         endunless
                       endif
                     -%}
-
-{% render 'quantity-picker', product: product %}
-                    
+{% if product.metafields.custom.vpe %}
+  {% render 'quantity-picker', product: product %}
+{% else %}                    
                     <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
                       {% if block.settings.show_quantity_selector %}
                         <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
@@ -376,6 +376,9 @@
                           {{- add_to_cart_text -}}
                         </button>
                       </div>
+{% endif %}
+
+                    
                       {% if enable_dynamic_payment_button %}
                         <script class="dynamic-payment-button-template" type="text/template">
                           {{ form | payment_button }}
