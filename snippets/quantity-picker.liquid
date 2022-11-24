@@ -4,7 +4,8 @@
    assign amounts = ''
    assign labels = ''
    for vpedata in vpes
-     assign amounts = amounts | append ',' | append vpedata[0]
+     assign amount = vpedata[0]
+     assign amounts = amounts | append ',' | append amount
      assign label = vpedata[1]
      assign labels = labels | append ',' | append label
    endfor
