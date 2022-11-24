@@ -352,6 +352,10 @@
                         endunless
                       endif
                     -%}
+
+{{ product | json }}
+
+                    
                     <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
                       {% if block.settings.show_quantity_selector %}
                         <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
