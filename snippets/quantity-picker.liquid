@@ -11,6 +11,7 @@
    endfor
 
    assign option_values = amounts | split: ','
+   assign option_names = labels | split: ','
 -%}
 
 {% assign vpedata = vpes | split: '-' %}
@@ -20,6 +21,7 @@
               id: 'myOwnID',
               label: 'Menge',
               option_values: option_values,
+              option_names: option_names
             %}
           </div>
 
