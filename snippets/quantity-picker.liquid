@@ -2,18 +2,13 @@
 
 
 
-    <div class="option-selectors">
-{% for vpe in vpes %}
 {% assign vpedata = vpes | split: '-' %}
 
           <div class="option-selector" data-selector-type="dropdown" data-option-index="{{ forloop.index0 }}">
             {% render 'custom-select',
               id: 'myOwnID',
-              label: vpedata[1],
-              option_values: vpedata[0],
+              label: 'Menge',
+              option_values: vpes,
             %}
           </div>
 
-    {% endfor %}
-    
-              </div>
