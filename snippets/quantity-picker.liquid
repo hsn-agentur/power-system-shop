@@ -1,0 +1,17 @@
+{% assign vpes = product.metafields.custom.vpe | newline_to_br | split: '<br />' %}
+
+
+
+  
+            {% render 'custom-select',
+              id: 'quantity',
+              label: option.name,
+              option_values: option.values,
+              selected_value: selected_value,
+              swatches: uses_swatches,
+              blank_option: blank_option
+            %}
+          </div>
+
+    
+</div>
