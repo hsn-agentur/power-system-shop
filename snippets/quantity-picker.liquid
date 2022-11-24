@@ -3,6 +3,7 @@
 {%- liquid
    assign amounts = ''
    assign labels = ''
+   assign selected_value = ''
    for vpe in vpes
      assign vpedata = vpe | split: '-'
      assign amount = vpedata[0] | strip
@@ -10,6 +11,8 @@
      if forloop.index0 > 0
        assign amounts = amounts | append: ','
        assign labels = labels | append: ','
+     else
+       assign selected_value = amount
      endif
      assign amounts = amounts | append: amount
      assign labels = labels | append: label
@@ -26,7 +29,8 @@
               id: 'myOwnID',
               label: 'Menge',
               option_values: option_values,
-              option_names: option_names
+              option_names: option_names,
+              selected_value: selected_value
             %}
           </div>
 
