@@ -5684,7 +5684,7 @@
                 return {
                   'current': quantities[i],
                   'up': (i+2 < quantities.length ? quantities[i+1]: null),
-                  'down': (i-1 < 0 ? quantities[i-1]: null)
+                  'down': (i-1 > 0 ? quantities[i-1]: null)
                 };
               }
             }
