@@ -112,7 +112,7 @@
    for vpe in vpes
      assign vpedata = vpe | split: '-'
      assign amount = vpedata[0] | strip | plus: 0
-     assign label = vpedata[1] | strip | json | replace: '"', ' '
+     assign label = vpedata[1] | strip | json | replace: '"', '\2019'
      assign jsonpart = '{amount: ' | append: amount | append: ', label: ' | append: label | append: '}'
      if forloop.index0 > 0
        assign jsonstring = jsonstring | append: ','
