@@ -113,7 +113,7 @@
      assign vpedata = vpe | split: '-'
      assign amount = vpedata[0] | strip | plus: 0
      assign label = vpedata[1] | strip | json
-     assign jsonpart = '{"amount": ' | append: amount | append: ', "label": "' | append: label | append: '"}'
+     assign jsonpart = '{amount: ' | append: amount | append: ', label: ' | append: label | append: '}'
      if forloop.index0 > 0
        assign jsonstring = jsonstring | append: ','
      endif
