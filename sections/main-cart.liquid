@@ -103,7 +103,7 @@
                   {% assign can_increase = true %}
                 {% endif %}
                 <div class="cart-item__column cart-item__quantity">
-            {{ item | json }}
+            {{ item.metafields.custom.vpe | json }}
                   <div class="quantity buttoned-input">
                     <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if item.quantity < 2 %}unusable{% endif %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 4 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
                     <input
