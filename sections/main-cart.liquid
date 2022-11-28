@@ -104,6 +104,9 @@
                 {% endif %}
                 <div class="cart-item__column cart-item__quantity">
 
+{% assign vpes = item.product.metafields.custom.vpe | newline_to_br | split: '<br />' %}
+
+            
 {%- liquid
    assign jsonstring = '['
    for vpe in vpes
