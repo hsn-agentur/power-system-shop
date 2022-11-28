@@ -5678,10 +5678,23 @@
         }.bind(this));
 
         $(container).on('click.cartTemplateSection', '.quantity-down, .quantity-up', function (evt) {
+          var getQuantitydata = function(quatities, currentAmount)  {
+            for(i=0, i < quantities.length, i++)  {
+              if(quantities[i].amount == currentAmount)  {
+                return {
+                  'current': quantities[i],
+                  'up': (i+2 < quantities.length ? quantities[i+1]: null),
+                  'down': (i-1 < 0 ? quantities[i-1]: null)
+                };
+              }
+            }
+          }
           var $input = $(this).closest('.quantity').find('input');
           var quantities_attribute = $(this).closest('.quantity').attr('data-quantities');
           var quantities = eval(quantities_attribute);
-          console.log(quantities);
+          var currentAmount = parseInt($input.val());
+          var quantityData = getQuantitydata(quantities, currentAmount);
+          console.log(quantityData);
           step = $input.attr('step') ? parseInt($input.attr('step')) : 1;
           if ($(this).hasClass('quantity-down')) {
             $input.val(parseInt($input.val()) - step).trigger('changeFromButton', { data: this });
