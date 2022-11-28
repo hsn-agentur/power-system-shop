@@ -5679,10 +5679,23 @@
 
         $(container).on('click.cartTemplateSection', '.quantity-down, .quantity-up', function (evt) {
           var getQuantitydata = function(quatities, currentAmount)  {
+            // search for exact matching amount
             for(var i=0; i < quantities.length; i++)  {
               if(quantities[i].amount == currentAmount)  {
                 return {
                   'current': quantities[i],
+                  'up': (i+2 < quantities.length ? quantities[i+1]: null),
+                  'down': (i-1 > 0 ? quantities[i-1] : null)
+                };
+              }
+            }
+            // search for closest amount
+            for(var i=0; i < quantities.length; i++)  {
+              lowerAmount = (i-1 > 0 ? quantities[i-1].amount : 0);
+              if((quantities[i].amount > currentAmount) && (lowerAmount < currentAmount))   {
+                return {
+                  'current': null,
+                  'closest': quantities[i],
                   'up': (i+2 < quantities.length ? quantities[i+1]: null),
                   'down': (i-1 > 0 ? quantities[i-1]: null)
                 };
