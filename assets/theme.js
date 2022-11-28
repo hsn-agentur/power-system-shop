@@ -5691,7 +5691,7 @@
             }
             // search for closest amount
             for(var i=0; i < quantities.length; i++)  {
-              lowerAmount = (i-1 > 0 ? quantities[i-1].amount : 0);
+              var lowerAmount = (i-1 > 0 ? quantities[i-1].amount : 0);
               if((quantities[i].amount > currentAmount) && (lowerAmount < currentAmount))   {
                 return {
                   'current': null,
