@@ -120,6 +120,7 @@
      assign jsonstring = jsonstring | append: jsonpart
 
    endfor
+   assign jsonstring = jsonstring | append: ']'
 -%}
 
 {{ jsonstring }}
