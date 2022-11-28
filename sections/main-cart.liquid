@@ -105,14 +105,17 @@
                 <div class="cart-item__column cart-item__quantity">
 
 {%- liquid
-   assign amounts = ''
-   assign labels = ''
-   assign selected_value = ''
+   assign json = '['
    for vpe in vpes
      assign vpedata = vpe | split: '-'
      assign amount = vpedata[0] | strip
      assign label = vpedata[1] | strip
      assign jsonpart = '{"amount": ' | append: amount | append: ', "label": "' | append: label | append: '"}'
+     if forloop.index0 > 0
+       assign json = json | append: ','
+     endif
+     assign json = json | append: jsonpart
+
    endfor
 -%}
 
