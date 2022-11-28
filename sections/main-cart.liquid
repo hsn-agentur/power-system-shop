@@ -105,7 +105,7 @@
                 <div class="cart-item__column cart-item__quantity">
 
 {%- liquid
-   assign json = '['
+   assign jsonstring = '['
    for vpe in vpes
      assign vpedata = vpe | split: '-'
      assign amount = vpedata[0] | strip
@@ -119,11 +119,8 @@
    endfor
 -%}
 
-{{ json }}
+{{ jsonstring }}
 
-
-            
-            {{ item.product.metafields.custom.vpe }}
                   <div class="quantity buttoned-input">
                     <a id="updates_dec_{{ forloop.index }}" class="notabutton quantity-down {% if item.quantity < 2 %}unusable{% endif %}" href="{{ routes.cart_change_url }}?id={{ item.key }}&quantity={{ item.quantity | minus: 4 }}" aria-label="{{ 'cart.label.decrease' | t | escape }}">{% render 'svg-minus' %}</a>
                     <input
