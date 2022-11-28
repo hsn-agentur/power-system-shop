@@ -5679,7 +5679,7 @@
 
         $(container).on('click.cartTemplateSection', '.quantity-down, .quantity-up', function (evt) {
           var getQuantitydata = function(quatities, currentAmount)  {
-            for(i=0, i < quantities.length, i++)  {
+            for(var i=0, i < quantities.length, i++)  {
               if(quantities[i].amount == currentAmount)  {
                 return {
                   'current': quantities[i],
