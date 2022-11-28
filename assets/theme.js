@@ -5679,6 +5679,9 @@
 
         $(container).on('click.cartTemplateSection', '.quantity-down, .quantity-up', function (evt) {
           var $input = $(this).closest('.quantity').find('input'),
+          var quantities_attribute = $(this).closest('.quantity').attr('data-quantities');
+          var quantities = $.parseJSON(quantities_attribute);
+          console.log(quantities);
           step = $input.attr('step') ? parseInt($input.attr('step')) : 1;
           if ($(this).hasClass('quantity-down')) {
             $input.val(parseInt($input.val()) - step).trigger('changeFromButton', { data: this });
