@@ -5695,11 +5695,10 @@
           var currentAmount = parseInt($input.val());
           var quantityData = getQuantitydata(quantities, currentAmount);
           console.log(quantityData);
-          step = $input.attr('step') ? parseInt($input.attr('step')) : 1;
           if ($(this).hasClass('quantity-down')) {
-            $input.val(parseInt($input.val()) - step).trigger('changeFromButton', { data: this });
+            $input.val(quantityData.down.amount).trigger('changeFromButton', { data: this });
           } else {
-            $input.val(parseInt($input.val()) + step).trigger('changeFromButton', { data: this });
+            $input.val(quantityData.up.amount).trigger('changeFromButton', { data: this });
           }
           return false;
         });
