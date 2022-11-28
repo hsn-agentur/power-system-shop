@@ -5694,11 +5694,14 @@
           var quantities = eval(quantities_attribute);
           var currentAmount = parseInt($input.val());
           var quantityData = getQuantitydata(quantities, currentAmount);
-          console.log(quantityData);
+          var newQuantity = null;
           if ($(this).hasClass('quantity-down')) {
-            $input.val(quantityData.down.amount).trigger('changeFromButton', { data: this });
+            newQuantity = quantityData.down;
           } else {
-            $input.val(quantityData.up.amount).trigger('changeFromButton', { data: this });
+            newQuantity = quantityData.up;
+          }
+          if(newQuantity) {
+            $input.val(newQuantity.amount).trigger('changeFromButton', { data: this });
           }
           return false;
         });
