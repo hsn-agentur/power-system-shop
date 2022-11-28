@@ -115,9 +115,9 @@
      assign label = vpedata[1] | strip
      assign jsonpart = '{"amount": ' | append: amount | append: ', "label": "' | append: label | append: '"}'
      if forloop.index0 > 0
-       assign json = json | append: ','
+       assign jsonstring = jsonstring | append: ','
      endif
-     assign json = json | append: jsonpart
+     assign jsonstring = jsonstring | append: jsonpart
 
    endfor
 -%}
