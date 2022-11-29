@@ -81,6 +81,7 @@ var hsnUpdatePrices = function()  {
     }
   }
   $('.current-price').text('€' + (price * amount));
+  $('.unit-price__price').text('€' + (hsnOriginalUnitPrice * (price / hsnOriginalSinglePrice))));
 }
 
 var hsnInitPriceFunctionality = function()  {
