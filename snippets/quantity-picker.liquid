@@ -41,7 +41,7 @@ var hsnPrices = [];
 var hsnLoadPrices = function()  {
   var $rows = $('.STP-tiers td');
   $rows.each(function()  {
-    var text = this.text();
+    var text = $(this).text();
     var begin = 0;
     var info = [];
     var names = ['min', 'price'];
