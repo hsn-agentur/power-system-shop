@@ -46,7 +46,7 @@ var hsnLoadPrices = function()  {
     var info = [];
     var names = ['min', 'price'];
     for(var i=0; i < names.length; i++)  {
-      while(begin < names.lenght && isNaN(parseInt(text.substr(begin))))  {
+      while((begin < names.lenght) && isNaN(parseInt(text.substr(begin))))  {
         begin++;
       }
       var infopart = parseFloat(text.substr(begin));
