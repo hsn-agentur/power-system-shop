@@ -67,7 +67,7 @@ var hsnLoadPrices = function()  {
 
 var hsnUpdatePrices = function()  {
   $nativeElement = $('#customQuantitySelector-native');
-  var amount = $nativeElement.val();
+  var amount = parseInt($nativeElement.val());
   for(var i = 0; i < hsnPrices.length; i++)  {
     if(hsnPrices[i].min <= amount)  {
       var price = hsnPrices[i].price;
@@ -75,6 +75,6 @@ var hsnUpdatePrices = function()  {
   }
   $('.current-price').text('€' + (price * amount));
 }
-  
+
 $('#customQuantitySelector-native').on('change', hsnUpdatePrices);
 </script>
