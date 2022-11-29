@@ -42,9 +42,6 @@ var hsnOriginalUnitPrice;
 
 var hsnLoadPrices = function()  {
   hsnPrices = [];
-  hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
-  hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
-  hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
   var $rows = $('.STP-tiers tr');
   $rows.each(function()  {
     var text = $(this).text();
@@ -85,6 +82,10 @@ var hsnUpdatePrices = function()  {
 }
 
 var hsnInitPriceFunctionality = function()  {
+  hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
+  hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
+  hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
+
   $('#customQuantitySelector-native').on('change', hsnUpdatePrices);
   hsnUpdatePrices();
 }
