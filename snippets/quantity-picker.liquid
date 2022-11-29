@@ -50,7 +50,7 @@ var hsnLoadPrices = function()  {
         begin++;
       }
       info[names[i]] = parseFloat(text.substr(begin));
-      while(begin > text.length || !isNaN(parseInt(text.substr(begin))))  {
+      while(begin < text.length && !isNaN(parseInt(text.substr(begin))))  {
         begin++;
       }
     }
