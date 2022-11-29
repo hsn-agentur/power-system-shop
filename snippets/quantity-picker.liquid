@@ -37,10 +37,14 @@
           </div>
 <script>
 var hsnPrices = [];
+var hsnOriginalSinglePrice;
+var hsnOriginalUnitPrice;
 
 var hsnLoadPrices = function()  {
   hsnPrices = [];
-  hsnPrices.push({min: 1, price: parseFloat($('.current-price').text().substr(1).replace(',','.'))});
+  hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
+  hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
+  hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
   var $rows = $('.STP-tiers tr');
   $rows.each(function()  {
     var text = $(this).text();
