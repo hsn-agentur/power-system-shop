@@ -35,4 +35,24 @@
               native_name: 'quantity'
             %}
           </div>
+<script>
+var hsnPrices = [];
 
+var hsnLoadPrices = function()  {
+  var $rows = $('.STP-tiers td');
+  var $rows.each(function()  {
+    var text = this.text();
+    var begin = 0;
+    var info = [];
+    var names = ['min', 'price'];
+    for(var i=0; i < names.length; i++)  {
+      while(isNaN(parseInt(substr(text, begin))))  {
+        begin++;
+      }
+      info[names[i]] = parseFloat(substr(text, begin));
+    }
+    hsnPrices.push(info);
+  });
+}
+  
+</script>
