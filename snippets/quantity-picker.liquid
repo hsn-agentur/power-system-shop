@@ -81,6 +81,7 @@ var hsnUpdatePrices = function()  {
 
 var hsnInitPriceFunctionality = function()  {
   $('#customQuantitySelector-native').on('change', hsnUpdatePrices);
+  hsnUpdatePrices();
 }
   
 setTimeout(hsnInitPriceFunctionality, 1500);
