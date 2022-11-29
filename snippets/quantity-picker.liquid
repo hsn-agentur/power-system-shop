@@ -46,10 +46,10 @@ var hsnLoadPrices = function()  {
     var info = [];
     var names = ['min', 'price'];
     for(var i=0; i < names.length; i++)  {
-      while(isNaN(parseInt(substr(text, begin))))  {
+      while(isNaN(parseInt(text.substr(begin))))  {
         begin++;
       }
-      info[names[i]] = parseFloat(substr(text, begin));
+      info[names[i]] = parseFloat(text.substr(begin));
     }
     hsnPrices.push(info);
   });
