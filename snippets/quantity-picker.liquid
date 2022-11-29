@@ -66,6 +66,9 @@ var hsnLoadPrices = function()  {
 }
 
 var hsnUpdatePrices = function()  {
+  if(hsnPrices.length === 0)  {
+    hsnLoadPrices();
+  }
   $nativeElement = $('#customQuantitySelector-native');
   var amount = parseInt($nativeElement.val());
   for(var i = 0; i < hsnPrices.length; i++)  {
