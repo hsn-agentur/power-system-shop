@@ -39,6 +39,8 @@
 var hsnPrices = [];
 
 var hsnLoadPrices = function()  {
+  hsnPrices = [];
+  hsnPrices.push([1, parseFloat($('.current-price').text().substr(1).replace(',','.'))]);
   var $rows = $('.STP-tiers tr');
   $rows.each(function()  {
     var text = $(this).text();
