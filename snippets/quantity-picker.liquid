@@ -73,6 +73,7 @@ var hsnUpdatePrices = function()  {
       var price = hsnPrices[i].price;
     }
   }
+  $('.current-price').text('€' + (price * amount));
 }
   
 $('#customQuantitySelector-native').on('change', hsnUpdatePrices);
