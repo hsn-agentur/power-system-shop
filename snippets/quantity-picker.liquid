@@ -70,7 +70,7 @@ var hsnLoadPrices = function()  {
 }
 
 var hsnUpdatePrices = function()  {
-  if(hsnPrices.length === 0)  {
+  if(hsnPrices.length < 2)  {
     hsnLoadPrices();
   }
   $nativeElement = $('#customQuantitySelector-native');
