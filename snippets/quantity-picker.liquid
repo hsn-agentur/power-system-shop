@@ -64,5 +64,16 @@ var hsnLoadPrices = function()  {
     }
   });
 }
+
+var hsnUpdatePrices = function()  {
+  $nativeElement = $('#customQuantitySelector-native');
+  var amount = $nativeElement.val();
+  for(var i = 0; i < hsnPrices.length; i++)  {
+    if(hsnPrices[i].min <= amount)  {
+      var price = hsnPrices[i].price;
+    }
+  }
+}
   
+$('#customQuantitySelector-native').on('change', hsnUpdatePrices);
 </script>
