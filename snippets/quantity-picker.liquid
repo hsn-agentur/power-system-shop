@@ -45,15 +45,21 @@ var hsnLoadPrices = function()  {
     var begin = 0;
     var info = [];
     var names = ['min', 'price'];
+    var addPriceInfo = true;
     for(var i=0; i < names.length; i++)  {
       while((begin < text.length) && isNaN(parseInt(text.substr(begin))))  {
         begin++;
       }
       var infopart = parseFloat(text.substr(begin));
+      if(isNaN(infopart))  {
+        addPriceInfo = false;
+      }
       info[names[i]] = infopart;
       begin += ('i' + infopart).length;
     }
-    hsnPrices.push(info);
+    if(addPriceInfo)  {
+      hsnPrices.push(info);
+    }
   });
 }
   
