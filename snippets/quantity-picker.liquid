@@ -39,9 +39,9 @@
 var hsnPrices = [];
 
 var hsnLoadPrices = function()  {
-  var $rows = $('.STP-tiers td');
+  var $rows = $('.STP-tiers tr');
   $rows.each(function()  {
-    var text = $(this).text();
+    var text = $(this).find('td').first().text();
     var begin = 0;
     var info = [];
     var names = ['min', 'price'];
@@ -50,6 +50,9 @@ var hsnLoadPrices = function()  {
         begin++;
       }
       info[names[i]] = parseFloat(text.substr(begin));
+      while(!isNaN(parseInt(text.substr(begin))))  {
+        begin++;
+      }
     }
     hsnPrices.push(info);
   });
