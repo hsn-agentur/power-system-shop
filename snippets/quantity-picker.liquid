@@ -79,5 +79,9 @@ var hsnUpdatePrices = function()  {
   $('.current-price').text('€' + (price * amount));
 }
 
-$('#customQuantitySelector-native').on('change', hsnUpdatePrices);
+var hsnInitPriceFunctionality = function()  {
+  $('#customQuantitySelector-native').on('change', hsnUpdatePrices);
+}
+  
+setTimeout(hsnInitPriceFunctionality, 1500);
 </script>
