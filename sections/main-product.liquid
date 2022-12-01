@@ -198,7 +198,7 @@
 
                           {% render 'unit-price', variant: variant %}
 {% if product.metafields.custom.vpe %}
-  ...
+  {% render 'piece-price', variant: variant %}
 {% endif %}
                         </div>
                       {%- endcapture -%}
