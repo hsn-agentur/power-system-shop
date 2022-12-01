@@ -86,6 +86,7 @@ var hsnInitPriceFunctionality = function()  {
   if(!$)  {
     return;
   }
+  $('.STP-tiers').hide();
   hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
   hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
   hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
