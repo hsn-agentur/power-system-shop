@@ -77,7 +77,7 @@ var hsnUpdatePrices = function()  {
     }
   }
   $('.current-price').text('€' + (Math.round(price * amount * 100)/100).toFixed(2).replace('.', ','));
-  $('.unit-price__price').text('€' + Math.round(hsnOriginalUnitPrice * (price / hsnOriginalSinglePrice) * 100) / 100).toFixed(2).replace('.', ',');
+  $('.unit-price__price').text('€' + (Math.round(hsnOriginalUnitPrice * (price / hsnOriginalSinglePrice) * 100) / 100).toFixed(2).replace('.', ','));
 }
 
 var hsnInitPriceFunctionality = function()  {
