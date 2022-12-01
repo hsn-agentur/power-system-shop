@@ -98,9 +98,11 @@ var hsnInitPriceFunctionality = function()  {
   if(!$)  {
     return;
   }
-  hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
-  hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
-  hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
+  if(hsnPrices.length == 0)  {
+    hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
+    hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
+    hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
+  }
   if(!hsnLoadPrices())  {
     return;
   }
