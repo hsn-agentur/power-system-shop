@@ -197,6 +197,9 @@
                           </div>
 
                           {% render 'unit-price', variant: variant %}
+{% if product.metafields.custom.vpe %}
+  ...
+{% endif %}}
                         </div>
                       {%- endcapture -%}
                       {{- price_html -}}
