@@ -82,13 +82,20 @@ var hsnUpdatePrices = function()  {
 }
 
 var hsnInitPriceFunctionality = function()  {
+  if(!$)  {
+    return;
+  }
+  if($('.STP-tiers tr').lenght == 0)  {
+    return;
+  }
   hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
   hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
   hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
 
   $('#customQuantitySelector-native').on('change', hsnUpdatePrices);
   hsnUpdatePrices();
+  clearInterval(hsnInitPriceFunctionalityInterval);
 }
-  
-setTimeout(hsnInitPriceFunctionality, 1500);
+
+hsnInitPriceFunctionalityInterval = setInterval(hsnInitPriceFunctionality, 100);
 </script>
