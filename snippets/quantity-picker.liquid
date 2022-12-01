@@ -42,6 +42,9 @@ var hsnOriginalUnitPrice;
 
 var hsnLoadPrices = function()  {
   var $rows = $('.STP-tiers tr');
+  if($rows.length == 0)  {
+    return false;
+  }
   $rows.each(function()  {
     var text = $(this).text();
     var begin = 0;
@@ -63,12 +66,10 @@ var hsnLoadPrices = function()  {
       hsnPrices.push(info);
     }
   });
+  return true;
 }
 
 var hsnUpdatePrices = function()  {
-  if(hsnPrices.length < 2)  {
-    hsnLoadPrices();
-  }
   $nativeElement = $('#customQuantitySelector-native');
   var amount = parseInt($nativeElement.val());
   for(var i = 0; i < hsnPrices.length; i++)  {
@@ -85,12 +86,12 @@ var hsnInitPriceFunctionality = function()  {
   if(!$)  {
     return;
   }
-  if($('.STP-tiers tr').lenght == 0)  {
-    return;
-  }
   hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
   hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
   hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
+  if(!hsnLoadPrices())  {
+    return;
+  }
 
   $('#customQuantitySelector-native').on('change', hsnUpdatePrices);
   hsnUpdatePrices();
