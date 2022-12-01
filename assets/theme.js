@@ -1401,6 +1401,9 @@
     reduceThumbnails()  {
       var selectedOptions = [];
       $('.cc-select__option[aria-selected="true"]').each(function()  {
+        if($(this).attr('id').indexOf('customQuantitySelector') == 0)  {
+          return;
+        }
         selectedOptions.push($(this).attr('data-value'));
       })
       $('a.thumbnail[data-variants], a.show-gallery').each(function()  {
