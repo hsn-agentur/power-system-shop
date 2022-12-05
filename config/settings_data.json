@@ -1223,14 +1223,6 @@
     },
     "content_for_index": [
 
-    ],
-    "blocks": {
-      "16453551022501137584": {
-        "type": "shopify:\/\/apps\/advance-order-quantity-limits\/blocks\/eosh-advancedorder\/ddf02f3e-a448-4f79-a846-7de30e94156a",
-        "disabled": false,
-        "settings": {
-        }
-      }
-    }
+    ]
   }
 }
