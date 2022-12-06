@@ -5682,7 +5682,7 @@
 
 
         
-        $(container).on('click.cartTemplateSection', '.cart-item__quantity-input', function (evt) {
+        $(container).on('change.cartTemplateSection', '.cart-item__quantity-input', function (evt) {
           var $input = $(this);
           var quantities_attribute = $(this).closest('.quantity').attr('data-quantities');
           var quantities = eval(quantities_attribute);
