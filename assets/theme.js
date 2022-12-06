@@ -5699,7 +5699,8 @@
           }
           $('.cart-item__quantity-input').each(checkAmount);
           $('#update-cart').on('click', function(e) {
-            
+            var amountChanged = false;
+            $('.cart-item__quantity-input')
           });
         })
         
