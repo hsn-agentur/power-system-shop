@@ -5698,7 +5698,7 @@
             return false;
           }
           $('.cart-item__quantity-input').each(checkAmount);
-          $('#update-cart').on('click', function(e) {
+          $('#update-cart, #cartform').on('submit click', function(e) {
             var amountChanged = false;
             $('.cart-item__quantity-input').each(function()  {
               amountChanged |= checkAmount.call(this);
