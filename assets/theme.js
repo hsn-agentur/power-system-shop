@@ -5704,7 +5704,9 @@
               amountChanged |= checkAmount.call(this);
             });
             if(amountChanged)  {
-              console.log('amount changed!')
+              console.log('amount changed!');
+              e.stopPropagation();
+              e.preventDefault();
             }
           });
         })
