@@ -5700,7 +5700,12 @@
           $('.cart-item__quantity-input').each(checkAmount);
           $('#update-cart').on('click', function(e) {
             var amountChanged = false;
-            $('.cart-item__quantity-input')
+            $('.cart-item__quantity-input').each(function()  {
+              amountChanged |= checkAmount.call(this);
+            });
+            if(amountChanged)  {
+              console.log('amount changed!')
+            }
           });
         })
         
