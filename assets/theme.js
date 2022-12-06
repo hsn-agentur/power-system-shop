@@ -5680,6 +5680,17 @@
 
         }.bind(this));
 
+
+        
+        $(container).on('click.cartTemplateSection', '.cart-item__quantity-input', function (evt) {
+          var $input = $(this);
+          var quantities_attribute = $(this).closest('.quantity').attr('data-quantities');
+          var quantities = eval(quantities_attribute);
+          var currentAmount = parseInt($input.val());
+
+        });
+        
+
         $(container).on('click.cartTemplateSection', '.quantity-down, .quantity-up', function (evt) {
           var getQuantitydata = function(quatities, currentAmount)  {
             // search for exact matching amount
