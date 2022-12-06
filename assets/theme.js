@@ -5698,6 +5698,9 @@
             return false;
           }
           $('.cart-item__quantity-input').each(checkAmount);
+          $('#update-cart').on('click', function(e) {
+            
+          });
         })
         
 
