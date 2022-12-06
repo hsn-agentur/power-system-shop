@@ -5690,6 +5690,7 @@
           var step = quantities[0].amount;
           if((currentAmount % step) > 0)  {
             var closestAmount = Math.round(currentAmount / step) * step;
+            console.log(closestAmount);
           }
 
         });
