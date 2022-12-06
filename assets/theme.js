@@ -5687,6 +5687,10 @@
           var quantities_attribute = $(this).closest('.quantity').attr('data-quantities');
           var quantities = eval(quantities_attribute);
           var currentAmount = parseInt($input.val());
+          var step = quantities[0].amount;
+          if((currentAmount % step) > 0)  {
+            var closestAmount = Math.round(currentAmount / step) * step;
+          }
 
         });
         
