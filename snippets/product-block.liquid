@@ -162,7 +162,7 @@
                   <span class="product-price__item product-price__from">{{ 'products.listing.from' | t }}</span>
                 {% endif %}
                 <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
-              ab    {%- if settings.product_currency_code_enabled -%}
+              ab&nbsp;    {%- if settings.product_currency_code_enabled -%}
                     {{ cheapest_variant.price | money_with_currency }}
                   {%- else -%}
                     {{ cheapest_variant.price | money }}
