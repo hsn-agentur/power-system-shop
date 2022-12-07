@@ -158,11 +158,11 @@
               {%- endif -%}
 
               <div class="product-price">
-                {% if real_product.price_varies or 1 %}
+                {% if real_product.price_varies %}
                   <span class="product-price__item product-price__from">{{ 'products.listing.from' | t }}</span>
                 {% endif %}
                 <span class="product-price__item product-price__amount {% if cheapest_variant.compare_at_price > cheapest_variant.price %}product-price__amount--on-sale{% endif %} theme-money">
-                  {%- if settings.product_currency_code_enabled -%}
+              ab    {%- if settings.product_currency_code_enabled -%}
                     {{ cheapest_variant.price | money_with_currency }}
                   {%- else -%}
                     {{ cheapest_variant.price | money }}
