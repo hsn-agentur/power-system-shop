@@ -10,7 +10,7 @@ qqqq {{ collection.metafields.custom.hide_variants.type }}
 
 {% liquid
   assign hide_variant_ids = ','
-  for pv in collection.metafields.custom.hide_variants 
+  for pv in collection.metafields.custom.hide_variants.value
     assign hide_variant_ids = hide_variant_ids | append: pv.id | append: ','
   endfor
 %}
