@@ -6,8 +6,6 @@
 {%- assign whitelisted_collections = '' | split: ',' -%}
 {%- if whitelisted_collections contains collection_id_string -%}{%- assign enable_variable = true -%}{%- endif -%}
 
-qqqq {{ collection.metafields.custom.hide_variants.type }}
-
 {% liquid
   assign hide_variant_ids = ','
   for pv in collection.metafields.custom.hide_variants.value
@@ -212,7 +210,6 @@ qqqq {{ collection.metafields.custom.hide_variants.type }}
               {%- assign variable_option2_value = variant.option2 | replace: '"', '' | replace: "'", '' -%}
               {%- assign variable_option3_value = variant.option3 | replace: '"', '' | replace: "'", '' -%}
 
-       dddd   {{ hide_variant_ids }}
 {% if hide_variant_ids contains variant.id %}
 {% else %}
               {%- assign variable_product_variant = '{"id":"' | append:variant.id | append: '", "option1":"' | append:variable_option1_value | append: '", "option2":"' | append:variable_option2_value | append: '", "option3":"' | append:variable_option3_value | append: '", "available":' | append:variant.available | append: ', "ctitle":' | append:variant_hsh | append: '}' -%}
