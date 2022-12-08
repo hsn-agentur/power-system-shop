@@ -83,6 +83,7 @@
               {%- assign tmp_variant_arr = variable_product_variant | split: "," -%}
               {%- assign variants_arr = variants_arr|concat:tmp_variant_arr -%}
 {% endif %}
+            {{ product | json }}
             {% render 'product-block', full_product: full_product, product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true %}
           {%- endfor -%}
         {%- else -%}
@@ -111,7 +112,7 @@
               {%- assign tmp_variant_arr = variable_product_variant | split: "," -%}
               {%- assign variants_arr = variants_arr|concat:tmp_variant_arr -%}
 {% endif %}
-
+{{ product | json }}
             {% render 'product-block', full_product: full_product, product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true %}
           {%- endif -%}
         {%- endfor -%}
@@ -207,6 +208,7 @@
               {%- assign tmp_variant_arr = variable_product_variant | split: "," -%}
               {%- assign variants_arr = variants_arr|concat:tmp_variant_arr -%}
 {% endif %}
+            {{ product | json }}
             {% render 'product-block', full_product: full_product, product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true %}
           {%- endif -%}
         {%- endunless -%}
