@@ -7,13 +7,12 @@
 {%- if whitelisted_collections contains collection_id_string -%}{%- assign enable_variable = true -%}{%- endif -%}
 
 
-{%-
-  assign hide_variant_ids = ''
+{% liquid
+  assign hide_variant_ids = ','
   for pv in collection.metafields.custom.hide_variants 
-
+    assign hide_variant_ids = hide_variant_ids | append: pv.id | append: ','
   endfor
-  
--%}
+%}
 
 
 
