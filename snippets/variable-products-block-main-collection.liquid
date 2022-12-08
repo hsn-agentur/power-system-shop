@@ -7,6 +7,17 @@
 {%- if whitelisted_collections contains collection_id_string -%}{%- assign enable_variable = true -%}{%- endif -%}
 
 
+{%-
+  assign hide_variant_ids = ''
+  for pv in collection.metafields.custom.hide_variants 
+
+  endfor
+  
+-%}
+
+
+
+
 {%- if enable_variable -%}
   {%- assign condition_sale = false -%}
   {%- assign collection_black_list = '' | split: ',' -%}
@@ -201,7 +212,6 @@
               {%- assign variable_option2_value = variant.option2 | replace: '"', '' | replace: "'", '' -%}
               {%- assign variable_option3_value = variant.option3 | replace: '"', '' | replace: "'", '' -%}
 
-{{ collection.metafields.custom.hide_variants }}
           
 {% if variant.id != 42773383053471 %}
               {%- assign variable_product_variant = '{"id":"' | append:variant.id | append: '", "option1":"' | append:variable_option1_value | append: '", "option2":"' | append:variable_option2_value | append: '", "option3":"' | append:variable_option3_value | append: '", "available":' | append:variant.available | append: ', "ctitle":' | append:variant_hsh | append: '}' -%}
