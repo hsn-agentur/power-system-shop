@@ -299,7 +299,9 @@
             -%}
             {% render 'variable-products-block-main-collection', collection: collection, chosen_aspect_ratio: chosen_aspect_ratio, section: section %}
             {% for product in collection.products %}
+{% if false %}
               {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true %}
+{% endif %}
             {% endfor %}
           </div>
         {% endif %}
