@@ -107,7 +107,7 @@
               {%- assign variable_option3_value = variant.option3 | replace: '"', '' | replace: "'", '' -%}
 {% if variant.id != '42773383053471' %}
 
-              {%- assign variable_product_variant = '{"xid":"' | append:variant.id | append: '", "option1":"' | append:variable_option1_value | append: '", "option2":"' | append:variable_option2_value | append: '", "option3":"' | append:variable_option3_value | append: '", "available":' | append:variant.available | append: ', "ctitle":' | append:variant_hsh | append: '}' -%}
+              {%- assign variable_product_variant = '{"id":"' | append:variant.id | append: '", "option1":"' | append:variable_option1_value | append: '", "option2":"' | append:variable_option2_value | append: '", "option3":"' | append:variable_option3_value | append: '", "available":' | append:variant.available | append: ', "ctitle":' | append:variant_hsh | append: '}' -%}
               {%- assign tmp_variant_arr = variable_product_variant | split: "," -%}
               {%- assign variants_arr = variants_arr|concat:tmp_variant_arr -%}
 {% endif %}
