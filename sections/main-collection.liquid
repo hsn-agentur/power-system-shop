@@ -1,4 +1,4 @@
-<div xxx data-section-id="{{ section.id }}" data-section-type="collection-template" data-ajax-filtering="{{ section.settings.ajax_products }}" data-components="accordion,modal,price-range" data-cc-animate>
+<div data-section-id="{{ section.id }}" data-section-type="collection-template" data-ajax-filtering="{{ section.settings.ajax_products }}" data-components="accordion,modal,price-range" data-cc-animate>
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
 
 {%- liquid
@@ -297,13 +297,9 @@
                 endfor
               endif
             -%}
-{% if 1 == 0 %}
             {% render 'variable-products-block-main-collection', collection: collection, chosen_aspect_ratio: chosen_aspect_ratio, section: section %}
-{% endif %}
             {% for product in collection.products %}
-{% if 1 == 0 %}
               {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true %}
-{% endif %}
             {% endfor %}
           </div>
         {% endif %}
