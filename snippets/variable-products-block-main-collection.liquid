@@ -70,6 +70,10 @@
           {%- assign variant_hsh = '{}' -%}
           {%- for product in full_product.variants -%}
             {%- assign variant = product -%}
+
+            {{ product | json }}
+
+            
             {%- if condition_sale -%}{%- if variant.compare_at_price == nil or variant.compare_at_price <= variant.price -%}{%- continue -%}{%- endif -%}{%- endif -%}
             
               {%- assign variable_option1_value = variant.option1 | replace: '"', '' | replace: "'", '' -%}
@@ -80,7 +84,7 @@
               {%- assign tmp_variant_arr = variable_product_variant | split: "," -%}
               {%- assign variants_arr = variants_arr|concat:tmp_variant_arr -%}
 
-            ppppp{% render 'product-block', full_product: full_product, product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true %}
+            {% render 'product-block', full_product: full_product, product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true %}
           {%- endfor -%}
         {%- else -%}
 
