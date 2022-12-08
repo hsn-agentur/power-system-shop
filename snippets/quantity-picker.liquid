@@ -78,7 +78,7 @@ var hsnAppendPricelist = function($appendTo)  {
     content += '<tr><td>ab ' + d.min + ' Stück</td><td>€' + (Math.round(d.price * 100) / 100).toFixed(2).replace('.', ',') + ' pro Stück</td></tr>';
   }
   content += '</tbody></table>';
-  $appendTo.append(content); 
+  $appendTo.first().append(content); 
 } 
 
 var hsnUpdatePrices = function()  {
