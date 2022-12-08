@@ -8,6 +8,8 @@
     {%- else -%}
       {{ full_product.title }}
     {%- endif -%}
-  {{ product.title }}
+  {% if product.title %}
+  <br />{{ product.title }}
+  {% endif %}
   </span>
 {%- endif -%}
