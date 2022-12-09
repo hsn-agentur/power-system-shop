@@ -1444,7 +1444,11 @@
       })
       $('*[data-variants-select]').each(function()  {
         $(this).find('*[data-variant]').hide();
-        $fitting = $(this).find('*[data-variant="' +  + '"]').hide();
+        var $fitting = $(this).find('*[data-variant="' + selectedVariant + '"]');
+        if($fitting.length == 0)  {
+          $fitting = $(this).find('*[data-variant=""]');
+        }
+        $fitting.show();
       })
     }
 
