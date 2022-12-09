@@ -317,9 +317,9 @@
                 {% endif %}
               </div>
 
-                  {% render 'accordion', allow_multi_open: true, add_content_class: 'rte cf', first_item_open: true, item1_title: 'Nährwerttabelle', item1_content: 'content' %}
+                  {% render 'accordion', allow_multi_open: true, first_item_open: false, item1_title: 'Nährwerttabelle', item1_content: current_variant.metafields.custom.naehrwerttabelle.value %}
 
-{{ current_variant.metafields.custom.naehrwerttabelle.value }}
+{{  }}
             
 
             {% when 'vendor' %}
