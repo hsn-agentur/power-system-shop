@@ -1124,6 +1124,7 @@
         this.selectedOption = this.listbox.firstElementChild;
       }
       this.reduceThumbnails();
+      this.displayVariantTexts();
       
       this.bindEvents();
       this.setButtonWidth();
@@ -1434,15 +1435,16 @@
       });
     }
     displayVariantTexts()  {
-      var selectedOptions = [];
+      var selectedVariant = '';
       $('.cc-select__option[aria-selected="true"]').each(function()  {
         if($(this).attr('id').indexOf('customQuantitySelector') == 0)  {
           return;
         }
-        selectedOptions.push($(this).attr('data-value'));
+        selectedVariant = $(this).attr('data-value');
       })
-      $('[data-variants-select]').each(function()  {
-        
+      $('*[data-variants-select]').each(function()  {
+        $(this).find('*[data-variant]').hide();
+        $fitting = $(this).find('*[data-variant="' +  + '"]').hide();
       })
     }
 
@@ -1484,6 +1486,7 @@
 
 
       this.reduceThumbnails();
+      this.displayVariantTexts();
       
       this.hideListbox();
     }}
