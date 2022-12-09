@@ -308,7 +308,7 @@
                       {{- product.description -}}
                     </div>
                     {%- for variant in product.variants -%}
-                    <div data-variant="{{ variant.id }}">
+                    <div data-variant="{{ variant.title }}">
                       {{- variant.metafields.custom.beschreibung.value -}}
                     </div>
                     {%  endfor %}
