@@ -1445,7 +1445,7 @@
       $('*[data-select]').each(function()  {
         $(this).find('*[data-variant]').hide();
         var $fitting = $(this).find('*[data-variant="' + selectedVariant + '"]');
-        if($fitting.length == 0)  {
+        if(($fitting.length == 0) || ($fitting.text().trim().length == 0))  {
           $fitting = $(this).find('*[data-variant=""]');
         }
         $fitting.show();
