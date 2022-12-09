@@ -312,6 +312,7 @@
                       <div class="with-icon">
                         {% render 'icon', icon: block.settings.icon, size: 'small' %}
                         <span class="with-icon__beside">{{ product.description }}</span>
+                      {{- current_variant.metafields.custom.beschreibung.value -}}
                       </div>
                     {%- endif -%}
                   </div>
