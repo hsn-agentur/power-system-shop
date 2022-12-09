@@ -307,7 +307,7 @@
                   <div class="product-description rte cf">
                     {%- if block.settings.icon == blank -%}
                       {{- product.description -}}
-                      {{- current_variant.metafields.custom.beschreibung -}}
+                      {{- current_variant.metafields.custom.beschreibung.value -}}
                     {%- else -%}
                       <div class="with-icon">
                         {% render 'icon', icon: block.settings.icon, size: 'small' %}
