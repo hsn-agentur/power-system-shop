@@ -316,11 +316,11 @@
                   </div>
                 {% endif %}
               </div>
-
-                            <div class="product-detail-accordion not-in-quickbuy">
-
+            
+             <div class="product-detail-accordion not-in-quickbuy">
                   {% render 'accordion', allow_multi_open: true, first_item_open: false, item1_title: 'Nährwerttabelle', item1_content: current_variant.metafields.custom.naehrwerttabelle.value %}
-
+             </div>
+             <div class="product-detail-accordion not-in-quickbuy">
                   {% render 'accordion', allow_multi_open: true, first_item_open: false, item1_title: 'Zutaten', item1_content: current_variant.metafields.custom.zutaten.value %}
 
                             </div>
