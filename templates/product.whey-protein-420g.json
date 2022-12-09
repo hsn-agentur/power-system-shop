@@ -64,17 +64,6 @@
             "show_in_quickbuy": false
           }
         },
-        "a6e49607-955f-4019-8a2e-068af2686a24": {
-          "type": "accordion",
-          "settings": {
-            "title": "Vorlage Inhaltstoffe",
-            "icon": "",
-            "content": "<p>Collapsible tab content<\/p>",
-            "page": "inhaltstoffe-bite-power",
-            "open": false,
-            "show_in_quickbuy": false
-          }
-        },
         "8b1c25ea-7de1-4094-a539-3b332812e188": {
           "type": "accordion",
           "settings": {
@@ -93,6 +82,17 @@
             "icon": "",
             "content": "<p><strong>Protein-Müsli schnell selber machen<\/strong><br\/>Dieses Rezept können Sie als Grundlage nehmen und es nach Belieben variieren.<br\/><br\/>Zutaten für 1 Portion:<br\/>- 4 Esslöffel kernige Haferflocken<br\/>- 10 Haselnüsse<br\/>- 1 Handvoll Rosinen<br\/>- 1 Handvoll Himbeeren oder 1 klein geschnittener Apfel<br\/>- 200g Naturjoghurt oder Milch<br\/><strong>+ 20g (1 Teelöffel) von 100% Whey Protein<\/strong><br\/>nach Belieben ein wenig Honig<br\/><br\/>Mischen Sie die Haferflocken mit den Haselnüssen und den Rosinen. Geben Sie das Obst dazu und fügen Sie Joghurt oder Milch hinzu. Zum Schluss geben Sie <strong>100% Whey Protein<\/strong> einfach dazu - für Ihre tägliche Unterstützung des Proteinbedarfs.<br\/><br\/><strong>Tipp: <\/strong>Wenn Sie gleich größere Portionen Müsli selber <br\/>machen möchten, können Sie die trockenen Zutaten miteinander mischen und in einem luftdicht verschlossenen Glas lagern. Morgens geben Sie dann nur noch frisches Obst und Milch bzw. Joghurt und die gewünschte Portion <strong>100% Whey Protein<\/strong> hinzu.<br\/><\/p>",
             "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
+        },
+        "a6e49607-955f-4019-8a2e-068af2686a24": {
+          "type": "accordion",
+          "settings": {
+            "title": "Vorlage Inhaltstoffe",
+            "icon": "",
+            "content": "<p>Collapsible tab content<\/p>",
+            "page": "inhaltstoffe-bite-power",
             "open": false,
             "show_in_quickbuy": false
           }
@@ -118,9 +118,9 @@
         "buy_buttons",
         "327f443e-5ddf-46b2-8462-fb78d079e0cc",
         "description",
-        "a6e49607-955f-4019-8a2e-068af2686a24",
         "8b1c25ea-7de1-4094-a539-3b332812e188",
         "91a18334-d6d2-4d17-b9ba-0ed8f4d8e6eb",
+        "a6e49607-955f-4019-8a2e-068af2686a24",
         "1528a401-a10e-49de-b208-fb53d13bb69b"
       ],
       "settings": {
