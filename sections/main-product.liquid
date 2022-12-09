@@ -303,10 +303,16 @@
                     {%- endif -%}
                   {%- endcapture -%}
                   {% capture product_descriptions %}
+                    <div data-select="description">
                     <div data-variant="">
                       {{- product.description -}}
                     </div>
-                    {{ product.variants | json }}
+                    {%- for variant in product.variants -%}
+                    <div data-variant="{{ variant.id }}">
+                      {{- variant.metafields.custom.beschreibung.value -}}
+                    </div>
+                    {%  endfor %}
+                    </div>
                   {% endcapture %}
 
                   {% render 'accordion', allow_multi_open: true, add_content_class: 'rte cf', first_item_open: block.settings.open_tab, item1_title: accordion_title, item1_content: product_descriptions %}
