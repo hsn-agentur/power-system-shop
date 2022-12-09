@@ -1433,6 +1433,18 @@
         }
       });
     }
+    displayVariantTexts()  {
+      var selectedOptions = [];
+      $('.cc-select__option[aria-selected="true"]').each(function()  {
+        if($(this).attr('id').indexOf('customQuantitySelector') == 0)  {
+          return;
+        }
+        selectedOptions.push($(this).attr('data-value'));
+      })
+      $('[data-variants-select]').each(function()  {
+        
+      })
+    }
 
 // ----- /VLE
     /**
