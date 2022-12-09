@@ -303,10 +303,16 @@
                     {%- endif -%}
                   {%- endcapture -%}
                   {% capture product_descriptions %}
+                    <div data-select="description">
                     <div data-variant="">
                       {{- product.description -}}
                     </div>
-                    {{ product.variants | json }}
+                    {%- for variant in product.variants -%}
+                    <div data-variant="{{ variant.id }}">
+                      {{- variant.metafields.custom.beschreibung.value -}}
+                    </div>
+                    {%  endfor %}
+                    </div>
                   {% endcapture %}
 
                   {% render 'accordion', allow_multi_open: true, add_content_class: 'rte cf', first_item_open: block.settings.open_tab, item1_title: accordion_title, item1_content: product_descriptions %}
@@ -353,21 +359,8 @@
               </div>
 
             {% when 'variant_picker' %}
-              <div class="input-row buyOptions" {{ block.shopify_attributes }}>
+              <div class="input-row" {{ block.shopify_attributes }}>
                 {% render 'variant-picker', section: section, product: product, block: block %}
-                {% if product.metafields.custom.vpe %}
-                  {% render 'quantity-picker', product: product %}
-                {% else %}                    
-                                    <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
-                                      {% if block.settings.show_quantity_selector %}
-                                        <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
-                                        <div class="quantity-wrapper">
-                                          <a href="#" data-quantity="down">{% render 'svg-minus' %}</a>
-                                          <input aria-label="{{ 'products.product.quantity' | t }}" id="quantity" type="text" name="quantity" value="1" step="1" />
-                                          <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
-                                        </div>
-                                      {% endif %}
-                {% endif %}
               </div>
 
             {% when 'buy_buttons' %}
@@ -385,6 +378,19 @@
                         endunless
                       endif
                     -%}
+{% if product.metafields.custom.vpe %}
+  {% render 'quantity-picker', product: product %}
+{% else %}                    
+                    <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
+                      {% if block.settings.show_quantity_selector %}
+                        <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
+                        <div class="quantity-wrapper">
+                          <a href="#" data-quantity="down">{% render 'svg-minus' %}</a>
+                          <input aria-label="{{ 'products.product.quantity' | t }}" id="quantity" type="text" name="quantity" value="1" step="1" />
+                          <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
+                        </div>
+                      {% endif %}
+{% endif %}
                       <div class="quantity-submit-row__submit input-row">
                         {%- capture add_to_cart_text -%}
                           {%- if product.template_suffix contains 'preorder' -%}
