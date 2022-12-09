@@ -12001,6 +12001,12 @@ textarea {
   transition: all 0.3s ease;
 }
 
+.thumbnails .thumbnail::after {
+  height: 100%;
+  background: none;
+  border: 2px solid #000;  
+}
+
 /* ICONS */
 
 .navigation .navigation__columns .navigation__column:not(.navigation__column--promotion) .navigation__tier-3 .navigation__link.ico_muskelaufbau, 
@@ -12083,7 +12089,7 @@ textarea {
 }
 
 .hsn-variant-name  {
-  color: #000000;
+  color: {{ btn_alt_bg }};
 }
 
 /* Mobile Fixed Buy-Button for Products */
