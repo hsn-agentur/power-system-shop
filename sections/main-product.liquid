@@ -303,8 +303,10 @@
                     {%- endif -%}
                   {%- endcapture -%}
                   {% assign product_description = product.description %}
-                  {% if current_variant.metafields.custom.beschreibung.value != '' %}
-                    {% assign product_description = current_variant.metafields.custom.beschreibung.value %}
+                  {% assign variant_description = current_variant.metafields.custom.beschreibung.value %}
+                  {% assign variant_description_stripped = variant_description | strip %}
+                  {% if variant_description_stripped != '' %}
+                    {% assign product_description = variant_description %}
                   {% endif %}
                   {% render 'accordion', allow_multi_open: true, add_content_class: 'rte cf', first_item_open: block.settings.open_tab, item1_title: accordion_title, item1_content: product_description %}
                 {% else %}
