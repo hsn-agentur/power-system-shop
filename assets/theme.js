@@ -1442,7 +1442,7 @@
         }
         selectedVariant = $(this).attr('data-value');
       })
-      $('*[data-variants-select]').each(function()  {
+      $('*[data-select]').each(function()  {
         $(this).find('*[data-variant]').hide();
         var $fitting = $(this).find('*[data-variant="' + selectedVariant + '"]');
         if($fitting.length == 0)  {
