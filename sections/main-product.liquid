@@ -306,6 +306,9 @@
                     <div data-variant="">
                       {{- product.description -}}
                     </div>
+                    {%- for variant in product.variants -%}
+                    {{ variant.id }}
+                    {%  endfor %}
                     {{ product.variants | json }}
                   {% endcapture %}
 
