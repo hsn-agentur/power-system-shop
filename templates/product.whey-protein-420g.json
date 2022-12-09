@@ -67,7 +67,7 @@
         "a6e49607-955f-4019-8a2e-068af2686a24": {
           "type": "accordion",
           "settings": {
-            "title": "Nährwerttabellen & Inhaltstoffe",
+            "title": "Vorlage Inhaltstoffe",
             "icon": "",
             "content": "<p>Collapsible tab content<\/p>",
             "page": "inhaltstoffe-bite-power",
@@ -96,6 +96,17 @@
             "open": false,
             "show_in_quickbuy": false
           }
+        },
+        "1528a401-a10e-49de-b208-fb53d13bb69b": {
+          "type": "accordion",
+          "settings": {
+            "title": "Vorlage Nährwerttabelle",
+            "icon": "",
+            "content": "<p>Collapsible tab content<\/p>",
+            "page": "nahrwerttabellen-bite-power-schmal",
+            "open": false,
+            "show_in_quickbuy": false
+          }
         }
       },
       "block_order": [
@@ -109,7 +120,8 @@
         "description",
         "a6e49607-955f-4019-8a2e-068af2686a24",
         "8b1c25ea-7de1-4094-a539-3b332812e188",
-        "91a18334-d6d2-4d17-b9ba-0ed8f4d8e6eb"
+        "91a18334-d6d2-4d17-b9ba-0ed8f4d8e6eb",
+        "1528a401-a10e-49de-b208-fb53d13bb69b"
       ],
       "settings": {
         "show_breadcrumbs": false,
