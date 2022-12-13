@@ -1448,6 +1448,9 @@
         if(($fitting.length == 0) || ($fitting.text().trim().length == 0))  {
           $fitting = $(this).find('*[data-variant=""]');
         }
+        if(($fitting.length == 0) || ($fitting.text().trim().length == 0))  {
+          $fitting = $(this).find('*[data-variant="Default Title"]');
+        }
         $fitting.show();
       })
     }
