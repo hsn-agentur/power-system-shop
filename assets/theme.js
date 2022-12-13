@@ -7204,7 +7204,7 @@
     $('h1.overlay-text__title:contains("Ausdauer")').addClass('ico_ausdauer');
     $('h1.overlay-text__title:contains("Abnehmen")').addClass('ico_fitness');
 
-    $(.hsn-variant-name).each(function() {
+    $('.hsn-variant-name').each(function() {
       if ($(this).text().indexOf('Default Title')) {
          $(this).text('&nbsp;');
       }
