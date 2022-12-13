@@ -7206,7 +7206,7 @@
 
     $('.hsn-variant-name').each(function() {
       if ($(this).text().indexOf('Default Title')) {
-         $(this).html('&nbsp;');
+         $(this).text(' ');
       }
     })
   });
