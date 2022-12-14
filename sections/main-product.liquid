@@ -338,7 +338,8 @@
                     <div data-select="naehrwerttabelle">
                     
                     {%- for variant in product.variants -%}
-                      {% if variant.metafields.custom.naehrwerttabelle.value.strip != '' %}
+                      {% assign naehrwerttabelle_stripped = variant.metafields.custom.naehrwerttabelle.value | strip %}}
+                      {% if naehrwerttabelle_stripped != '' %}
                         <div data-variant="{{ variant.title }}">
                           {{- variant.metafields.custom.naehrwerttabelle.value -}}
                         </div>
