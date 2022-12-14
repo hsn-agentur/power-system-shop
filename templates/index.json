@@ -205,6 +205,23 @@
       "settings": {
         "full_width": false
       }
+    },
+    "7830c5b1-2416-4e6b-8e56-9f8bf40e579c": {
+      "type": "product-list",
+      "settings": {
+        "title": "UNSERE PULVER",
+        "product_list": [
+          "power-system-daily-shape-shake-360g",
+          "5k-protein-shake",
+          "protein-80",
+          "ausdauer-drink"
+        ],
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "use_alt_bg": false,
+        "full_width": false
+      }
     }
   },
   "order": [
@@ -212,6 +229,7 @@
     "16359278676808bea5",
     "16359285201c71bbb1",
     "16642917088b0c9ba4",
-    "166426917788bb9d1e"
+    "166426917788bb9d1e",
+    "7830c5b1-2416-4e6b-8e56-9f8bf40e579c"
   ]
 }
