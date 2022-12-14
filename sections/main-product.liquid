@@ -338,7 +338,7 @@
                     <div data-select="naehrwerttabelle">
                     
                     {%- for variant in product.variants -%}
-                      {% assign naehrwerttabelle_stripped = variant.metafields.custom.naehrwerttabelle.value | strip %}}
+                      {% assign naehrwerttabelle_stripped = variant.metafields.custom.naehrwerttabelle.value | strip %}
                       {% if naehrwerttabelle_stripped != '' %}
                         <div data-variant="{{ variant.title }}">
                           {{- variant.metafields.custom.naehrwerttabelle.value -}}
@@ -358,7 +358,7 @@
                     <div data-select="zutaten">
                     
                     {%- for variant in product.variants -%}
-                      {% assign zutaten_stripped = variant.metafields.custom.zutaten.value | strip %}}
+                      {% assign zutaten_stripped = variant.metafields.custom.zutaten.value | strip %}
                       {% if zutaten_stripped != '' %}
                         <div data-variant="{{ variant.title }}">
                           {{- variant.metafields.custom.zutaten.value -}}
