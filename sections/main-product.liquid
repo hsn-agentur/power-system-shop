@@ -338,13 +338,18 @@
                     <div data-select="naehrwerttabelle">
                     
                     {%- for variant in product.variants -%}
-                    <div data-variant="{{ variant.title }}">
-                      {{- variant.metafields.custom.naehrwerttabelle.value -}}
-                    </div>
+                      {% if variant.metafields.custom.naehrwerttabelle.value.strip != '' %}
+                        <div data-variant="{{ variant.title }}">
+                          {{- variant.metafields.custom.naehrwerttabelle.value -}}
+                        </div>
+                          {% assign hasNaehrwerttabelle = true %}
+                        {% endif %}
                     {%  endfor %}
                     </div>
                   {% endcapture %}
-                  {% render 'accordion', allow_multi_open: true, first_item_open: false, item1_title: 'Nährwerttabelle', item1_content: product_naehrwerttabelle %}
+                  {% if hasNaehrwerttabelle %}
+                    {% render 'accordion', allow_multi_open: true, first_item_open: false, item1_title: 'Nährwerttabelle', item1_content: product_naehrwerttabelle %}
+                  {% endif %}
              </div>
              <div class="product-detail-accordion not-in-quickbuy">
                   {% capture product_zutaten %}
