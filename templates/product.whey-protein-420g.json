@@ -66,6 +66,7 @@
         },
         "8b1c25ea-7de1-4094-a539-3b332812e188": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "title": "Zubereitung",
             "icon": "",
@@ -77,6 +78,7 @@
         },
         "91a18334-d6d2-4d17-b9ba-0ed8f4d8e6eb": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "title": "Rezept-Tipp",
             "icon": "",
@@ -88,6 +90,7 @@
         },
         "a6e49607-955f-4019-8a2e-068af2686a24": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "title": "Vorlage Inhaltstoffe",
             "icon": "",
@@ -99,6 +102,7 @@
         },
         "1528a401-a10e-49de-b208-fb53d13bb69b": {
           "type": "accordion",
+          "disabled": true,
           "settings": {
             "title": "Vorlage Nährwerttabelle",
             "icon": "",
