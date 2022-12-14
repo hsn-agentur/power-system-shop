@@ -344,7 +344,7 @@
                           {{- variant.metafields.custom.naehrwerttabelle.value -}}
                         </div>
                           {% assign hasNaehrwerttabelle = true %}
-                        {% endif %}
+                      {% endif %}
                     {%  endfor %}
                     </div>
                   {% endcapture %}
@@ -353,17 +353,24 @@
                   {% endif %}
              </div>
              <div class="product-detail-accordion not-in-quickbuy">
+                  {% assign hasZutaten = false %}
                   {% capture product_zutaten %}
                     <div data-select="zutaten">
                     
                     {%- for variant in product.variants -%}
-                    <div data-variant="{{ variant.title }}">
-                      {{- variant.metafields.custom.zutaten.value -}}
-                    </div>
+                      {% assign zutaten_stripped = variant.metafields.custom.zutaten.value | strip %}}
+                      {% if zutaten_stripped != '' %}
+                        <div data-variant="{{ variant.title }}">
+                          {{- variant.metafields.custom.zutaten.value -}}
+                        </div>
+                          {% assign hasZutaten = true %}
+                      {% endif %}
                     {%  endfor %}
                     </div>
                   {% endcapture %}
+                  {% if hasZutaten %}
                   {% render 'accordion', allow_multi_open: true, first_item_open: false, item1_title: 'Inhaltsstoffe', item1_content: product_zutaten %}
+                  {% endif %}
 
                             </div>
 
