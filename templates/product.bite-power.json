@@ -63,28 +63,6 @@
             "icon": "",
             "show_in_quickbuy": false
           }
-        },
-        "5c25409c-47bd-40ef-aeda-eee5e212fac3": {
-          "type": "accordion",
-          "settings": {
-            "title": "Nährwerttabellen",
-            "icon": "",
-            "content": "<p>Collapsible tab content<\/p>",
-            "page": "nahrwerttabellen-bite-power-schmal",
-            "open": false,
-            "show_in_quickbuy": false
-          }
-        },
-        "c8558cde-3ebd-49ff-8bb5-d69e9c0b565f": {
-          "type": "accordion",
-          "settings": {
-            "title": "Inhaltsstoffe",
-            "icon": "",
-            "content": "<p>Collapsible tab content<\/p>",
-            "page": "inhaltstoffe-bite-power",
-            "open": false,
-            "show_in_quickbuy": false
-          }
         }
       },
       "block_order": [
@@ -95,9 +73,7 @@
         "variant_picker",
         "buy_buttons",
         "327f443e-5ddf-46b2-8462-fb78d079e0cc",
-        "description",
-        "5c25409c-47bd-40ef-aeda-eee5e212fac3",
-        "c8558cde-3ebd-49ff-8bb5-d69e9c0b565f"
+        "description"
       ],
       "settings": {
         "show_breadcrumbs": false,
@@ -110,67 +86,6 @@
         "enable_video_looping": false,
         "enable_var_img_grouping": false,
         "var_img_grouping_option": ""
-      }
-    },
-    "1664291979783dc003": {
-      "type": "image-with-text-overlay",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/sam-moghadam-khamseh-Z4Q9KHw9ofE-unsplash.jpg",
-        "image_position": "center center",
-        "mobile_image_position": "center center",
-        "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 460,
-        "image_link": "",
-        "subheading": "",
-        "title": "",
-        "title_size": 84,
-        "title_size_mobile": 46,
-        "use_h1": false,
-        "text": "",
-        "enlarge_text": true,
-        "button_label_1": "",
-        "button_url_1": "",
-        "button_label_2": "",
-        "button_url_2": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow"
-      }
-    },
-    "1664292048bd52e863": {
-      "type": "image-with-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/bite-power-24er-schoko-min.jpg",
-        "image_width": 500,
-        "subheading": "",
-        "title": "Produkt USP 1",
-        "use_h1": false,
-        "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.<\/p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "link",
-        "image_position": "left",
-        "text_alignment": "left",
-        "use_alt_bg": false
-      }
-    },
-    "1664292139cedbaa37": {
-      "type": "image-with-text",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/bite-power-24er-schoko-min.jpg",
-        "image_width": 500,
-        "subheading": "",
-        "title": "Produkt USP 2",
-        "use_h1": false,
-        "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.<\/p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "image_position": "right",
-        "text_alignment": "left",
-        "use_alt_bg": false
       }
     },
     "16643512799b157a6c": {
@@ -190,9 +105,6 @@
   },
   "order": [
     "main",
-    "1664291979783dc003",
-    "1664292048bd52e863",
-    "1664292139cedbaa37",
     "16643512799b157a6c",
     "recommendations"
   ]
