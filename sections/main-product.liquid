@@ -395,9 +395,9 @@
             {% when 'variant_picker' %}
               <div class="input-row buyOptions" {{ block.shopify_attributes }}>
                 {% render 'variant-picker', section: section, product: product, block: block %}
-                {% if product.metafields.custom.vpe %}
-                  {% render 'quantity-picker', product: product %}
-                {% else %}                    
+{% if product.metafields.custom.vpe %}
+  {% render 'quantity-picker', product: product %}
+{% else %}                    
                   <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
                     {% if block.settings.show_quantity_selector %}
                       <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
@@ -407,7 +407,7 @@
                         <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
                       </div>
                     {% endif %}
-                {% endif %}
+{% endif %}
               </div>
 
             {% when 'buy_buttons' %}
