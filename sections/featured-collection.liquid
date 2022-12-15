@@ -16,6 +16,8 @@ if section.settings.explicit_order != blank
     for product in collection.products
       if product.id == variant_id
 echo product | json
+      else
+        echo product.id | append: ' - ' | append: variant_id
       endif
     endfor
   endfor
