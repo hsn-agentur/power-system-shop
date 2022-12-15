@@ -21,7 +21,7 @@
           <a class="small-feature-link" href="{{ collection.url }}">{{ 'collections.general.view_all' | t }}</a>
         </div>
       {%- endif -%}
-
+{{ section.settings.explicit_order }}
       <div class="collection-listing" data-cc-animate="cc-fade-in-up">
         <div class="product-list product-list--per-row-{{ section.settings.grid }} product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }} {% if section.settings.enable_carousel %}carousel{% endif %}">
           {% if section.settings.collection == blank %}
