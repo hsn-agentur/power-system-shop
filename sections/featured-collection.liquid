@@ -17,6 +17,7 @@ if section.settings.explicit_order != blank
     for product in collection.products
       assign comparable_product_id = product.id | append: '' | strip
       if comparable_product_id == product_id
+      echo '###'
         assign products = products | concat: product
       endif
     endfor
