@@ -117,7 +117,7 @@ hsnInitPriceFunctionalityInterval = setInterval(hsnInitPriceFunctionality, 100);
 
   $('.option-selector li[role="option"]').on('click', function()  {
     hsnPrices = [];
-    hsnInitPriceFunctionality();
+    hsnInitPriceFunctionalityInterval = setInterval(hsnInitPriceFunctionality, 1000);
   });
 
 
