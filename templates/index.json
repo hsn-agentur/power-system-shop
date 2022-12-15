@@ -49,13 +49,12 @@
         },
         "29c485a5-88d8-4491-8c78-8c1514391ce9": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_Vegan-3.png",
-            "mobile_image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_Vegan.png",
-            "image_position": "bottom center",
+            "image": "shopify:\/\/shop_images\/221214_Header_AKTION_Shape_Shake-min.png",
+            "mobile_image": "shopify:\/\/shop_images\/221214_Header_AKTION_Shape_Shake-min.png",
+            "image_position": "center center",
             "mobile_image_position": "center center",
-            "slide_link": "",
+            "slide_link": "shopify:\/\/products\/power-system-daily-shape-shake-360g",
             "subheading": "",
             "title": "",
             "title_size": 84,
