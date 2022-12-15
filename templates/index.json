@@ -141,6 +141,7 @@
       "settings": {
         "title": "UNSERE BESTSELLER",
         "collection": "bestseller",
+        "explicit_order": "",
         "show_vendor": false,
         "enable_carousel": false,
         "grid": 4,
@@ -178,6 +179,7 @@
       "settings": {
         "title": "UNSERE PULVER",
         "collection": "pulver",
+        "explicit_order": "42842777387167,42834512969887",
         "show_vendor": false,
         "enable_carousel": false,
         "grid": 4,
