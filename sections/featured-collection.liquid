@@ -13,7 +13,7 @@
 
 
 {%- liquid
-if section.settings.explicit_order
+if section.settings.explicit_order != blank
   assign collection = blank
 endif
 
