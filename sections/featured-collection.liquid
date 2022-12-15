@@ -8,25 +8,6 @@
 -%}
 
 
-{%- liquid
-if section.settings.explicit_order != blank
-  assign ordered_product_ids = section.settings.explicit_order | split: ','
-  assign products = '' | split: ''
-  for product_id in ordered_product_ids
-    assign found = false
-    for product in collection.products
-      assign comparable_product_id = product.id | append: '' | strip
-      if comparable_product_id == product_id
-        assign products = products | push: product
-      endif
-    endfor
-  endfor
-  assign products = products | append: collection.products | uniq
-  assign collection.products = products
-endif
-
-
--%}
 
 
 
