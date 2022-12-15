@@ -459,11 +459,11 @@
                   {% endif %}
                 {% endform %}
 
-          <div class="section-footer__payment-icons">
-            {% for type in shop.enabled_payment_types %}
-              {{ type | payment_type_svg_tag: class: 'section-footer__payment-icon' }}
-            {% endfor %}
-          </div>
+<div class="section-footer__payment-icons pxs">
+     {% for type in shop.enabled_payment_types %}
+       {{ type | payment_type_svg_tag: class: 'section-footer__payment-icon' }}
+     {% endfor %}
+</div>
 
             
               </div>
