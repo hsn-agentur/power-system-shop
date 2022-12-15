@@ -115,6 +115,7 @@ var hsnInitPriceFunctionality = function()  {
   $('.option-selector li[role="option"]').on('click', function()  {
     hsnPrices = [];
     setTimeout(function()  {
+      hsnLoadPrices();
     hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
     hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
     hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
