@@ -16,7 +16,6 @@ if section.settings.explicit_order != blank
     for product in collection.products
       assign comparable_product_id = product.id | append: '' | strip
       if comparable_product_id == variant_id
-echo 'y<br />'
 echo product | json
       endif
     endfor
