@@ -7,6 +7,18 @@
   assign collection = collections[section.settings.collection]
 -%}
 
+{{ section.settings.explicit_order }}
+
+{%- liquid
+if section.settings.explicit_order
+  assign collection.products = blank
+endif
+
+
+-%}
+
+
+
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.use_alt_bg %}use-alt-bg{% endif %}" data-section-type="featured-collection" data-components="accordion,modal,price-range">
   <div class="container{% if section.settings.enable_carousel %} container--not-mobile{% endif %}{% if section.settings.full_width %} container--no-max{% endif %}">
     <div class="{% if section.settings.enable_carousel %}collection-slider{% endif %}">
@@ -21,7 +33,6 @@
           <a class="small-feature-link" href="{{ collection.url }}">{{ 'collections.general.view_all' | t }}</a>
         </div>
       {%- endif -%}
-{{ section.settings.explicit_order }}
       <div class="collection-listing" data-cc-animate="cc-fade-in-up">
         <div class="product-list product-list--per-row-{{ section.settings.grid }} product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }} {% if section.settings.enable_carousel %}carousel{% endif %}">
           {% if section.settings.collection == blank %}
