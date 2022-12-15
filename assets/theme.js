@@ -3342,6 +3342,12 @@
 
           var shopifyAjaxAddURL = theme.routes.cart_add_url;
 
+// -- VLE
+$('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="true"]').attr('data-value'));
+
+
+// -- VLE
+          
           //Disable add button
           $form.find('button[type="submit"]').attr('disabled', 'disabled').each(function () {
             $(this).data('previous-value', $(this).val());
