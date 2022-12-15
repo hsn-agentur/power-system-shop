@@ -9,6 +9,9 @@
 
 {{ section.settings.explicit_order }}
 
+{{ collection | json }}
+
+
 {%- liquid
 if section.settings.explicit_order
   assign collection.products = blank
