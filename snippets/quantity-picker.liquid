@@ -111,14 +111,17 @@ var hsnInitPriceFunctionality = function()  {
   $('#customQuantitySelector-native').on('change', hsnUpdatePrices);
   hsnUpdatePrices();
   clearInterval(hsnInitPriceFunctionalityInterval);
-}
-
-hsnInitPriceFunctionalityInterval = setInterval(hsnInitPriceFunctionality, 100);
-
+  
   $('.option-selector li[role="option"]').on('click', function()  {
     hsnPrices = [];
     hsnInitPriceFunctionalityInterval = setInterval(hsnInitPriceFunctionality, 1000);
   });
+
+
+}
+
+hsnInitPriceFunctionalityInterval = setInterval(hsnInitPriceFunctionality, 100);
+
 
 
 
