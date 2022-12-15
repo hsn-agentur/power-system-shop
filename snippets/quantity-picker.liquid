@@ -106,6 +106,7 @@ var hsnInitPriceFunctionality = function()  {
     return;
   }
   if(hsnPrices.length == 0)  {
+    hsnGetOriginalPrices();
   }
   if(!hsnLoadPrices())  {
     return;
