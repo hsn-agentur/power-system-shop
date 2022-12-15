@@ -7,10 +7,6 @@
   assign collection = collections[section.settings.collection]
 -%}
 
-{{ section.settings.explicit_order }}
-
-{{ collection | json }}
-
 
 {%- liquid
 if section.settings.explicit_order != blank
