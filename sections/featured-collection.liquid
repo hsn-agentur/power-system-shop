@@ -18,8 +18,6 @@ if section.settings.explicit_order != blank
       if comparable_product_id == variant_id
 echo 'y<br />'
 echo product | json
-      else
-        echo product.id | append: ' - ' | append: variant_id | append: '<br />'
       endif
     endfor
   endfor
