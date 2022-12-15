@@ -12,12 +12,12 @@
 if section.settings.explicit_order != blank
   assign ordered_product_ids = section.settings.explicit_order | split: ','
   assign products = '' | split: ''
+  echo collection.products | json
   for product_id in ordered_product_ids
     assign found = false
     for product in collection.products
       assign comparable_product_id = product.id | append: '' | strip
       if comparable_product_id == product_id
-      echo '###'
         assign products = products | push: product
       endif
     endfor
