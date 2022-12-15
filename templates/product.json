@@ -53,13 +53,6 @@
             "show_pickup_availability": true
           }
         },
-        "327f443e-5ddf-46b2-8462-fb78d079e0cc": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "XXXX",
-            "show_in_quickbuy": false
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -78,7 +71,6 @@
         "variant_picker",
         "c00a9b93-2c45-49f2-9d58-e196cf346518",
         "buy_buttons",
-        "327f443e-5ddf-46b2-8462-fb78d079e0cc",
         "description"
       ],
       "settings": {
