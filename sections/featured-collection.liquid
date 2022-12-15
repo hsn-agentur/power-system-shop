@@ -22,7 +22,6 @@ if section.settings.explicit_order != blank
       endif
     endfor
   endfor
-  echo products | json
   assign products = products | append: collection.products | uniq
   assign collection.products = products
 endif
