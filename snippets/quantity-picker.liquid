@@ -108,7 +108,7 @@ var hsnInitPriceFunctionality = function()  {
     return;
   }
 
-  $('#customQuantitySelector-native').on('change', hsnUpdatePrices);
+  $('#customQuantitySelector-native').once('change', hsnUpdatePrices);
   hsnUpdatePrices();
   clearInterval(hsnInitPriceFunctionalityInterval);
   
