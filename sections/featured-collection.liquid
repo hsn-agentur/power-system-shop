@@ -15,6 +15,7 @@ if section.settings.explicit_order != blank
     assign found = false
     for product in collection.products
       if product.id == variant_id
+echo 'y<br />'
 echo product | json
       else
         echo product.id | append: ' - ' | append: variant_id | append: '<br />'
