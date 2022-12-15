@@ -61,8 +61,8 @@
             -%}
 
 
+{% if section.settings.explicit_order != blank %}
 {%- liquid
-if section.settings.explicit_order != blank
   assign ordered_product_ids = section.settings.explicit_order | split: ','
   for product_id in ordered_product_ids limit: product_limit
     for product in collection.products
@@ -73,10 +73,9 @@ if section.settings.explicit_order != blank
       endif
     endfor
   endfor
-endif
-
-
 -%}
+{% else %}
+
 
 
 
@@ -84,7 +83,10 @@ endif
             {% for product in collection.products limit: product_limit %}
               {% render 'product-block', product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel %}
             {% endfor %}
+{% endif %}
           {% endif %}
+
+            
         </div>
       </div>
     </div>
