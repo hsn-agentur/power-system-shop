@@ -39,15 +39,15 @@
         "template--15959473881247__f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4-1668004814c3c3c6af-0": {
           "type": "heading",
           "settings": {
-            "title": "ENTDECKE UNSERE GANZE VIELFALT",
+            "title": "Entdecke unsere Produkt Neuheiten",
             "use_h1": false
           }
         },
         "7828a09a-f8c6-494a-b97e-ffde3441d198": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
-            "enlarge_text": true
+            "text": "<p>Wir entwickeln regelmäßig neue Produkte, damit wir euch bei<br\/>euren individuellen Zielen und eurer bewussten Ernährung optimal unterstützen<br\/>können. Entdeckt unsere Produkt Vielfalt und meldet euch gern, wenn ihr<br\/>zusätzliche Wünsche habt.<\/p>",
+            "enlarge_text": false
           }
         }
       },
@@ -79,6 +79,7 @@
       "settings": {
         "title": "Featured collection",
         "collection": "",
+        "explicit_order": "",
         "show_vendor": false,
         "enable_carousel": true,
         "grid": 4,
