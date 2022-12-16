@@ -95,9 +95,6 @@
                     {% endfor %}
                     </ul>
                   {% endif %}
-                  <div class="hsn-cart-item-changedAmount-message">
-                    Aus versandtechnischen Gründen können nur Vielfache von <span class="hsnChangeAmountStep"></span> bestellt werden.
-                  </div>
                 </div>
 
                 {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' and item.variant.inventory_quantity <= item.quantity %}
@@ -154,6 +151,9 @@
                     <div class="theme-money struck-out-price">{{ item.original_line_price | money }}</div>
                   {% endif %}
                   <span class="theme-money">{{ item.final_line_price | money }}</span>
+                </div>            
+                <div class="hsn-cart-item-changedAmount-message">
+                  Aus versandtechnischen Gründen können nur Vielfache von <span class="hsnChangeAmountStep"></span> bestellt werden.
                 </div>
               </div>
             </div>
