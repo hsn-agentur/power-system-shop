@@ -131,13 +131,6 @@
     "c2d2e909-458d-49d6-9694-290fa0aeba3a": {
       "type": "rich-text",
       "blocks": {
-        "template--16014325121183__c2d2e909-458d-49d6-9694-290fa0aeba3a-167120563396e5c543-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Rich text",
-            "use_h1": false
-          }
-        },
         "template--16014325121183__c2d2e909-458d-49d6-9694-290fa0aeba3a-167120563396e5c543-1": {
           "type": "text",
           "settings": {
@@ -147,13 +140,12 @@
         }
       },
       "block_order": [
-        "template--16014325121183__c2d2e909-458d-49d6-9694-290fa0aeba3a-167120563396e5c543-0",
         "template--16014325121183__c2d2e909-458d-49d6-9694-290fa0aeba3a-167120563396e5c543-1"
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
+        "text_alignment": "right",
+        "full_width": true,
         "use_alt_bg": false
       }
     }
