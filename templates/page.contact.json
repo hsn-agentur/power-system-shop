@@ -65,8 +65,8 @@
         "template--15959473225887__446f72a2-278a-459a-809e-4e753e1d31c1-167120543384fd8c67-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
-            "enlarge_text": true
+            "text": "<p>Anfragen bitte an folgende Mail Adresse schicken: <a href=\"mailto:powersystem@wellplustrade.com\" title=\"mailto:powersystem@wellplustrade.com\"><strong>powersystem@wellplustrade.com<\/strong><\/a><\/p>",
+            "enlarge_text": false
           }
         }
       },
