@@ -47,7 +47,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Mit unserer Auswahl an proteinhaltigen Produkten möchten wir dein Ernährungsmanagement unterstützen. Deshalb findest du bei uns proteinreiche,  kohlenhydratreduzierte und zuckerreduzierte Produkte, die du in deinen Ernährungsplan aufnehmen kannst. <br\/>Insgesamt solltest du dein persönliches Ziel immer vor Augen haben. Wenn du gern abnehmen möchtest, benötigst du dafür ein moderates Kaloriendefizit. Dies entsteht, indem du mehr Energie verbrauchst als du zu dir nimmst. Sport und möglichst viel Bewegung im Alltag helfen dir.<br\/>Sei dabei - Power System bringt Menschen in Bewegung.<br\/><\/p>",
-            "enlarge_text": true
+            "enlarge_text": false
           }
         }
       },
