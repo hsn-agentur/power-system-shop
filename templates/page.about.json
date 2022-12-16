@@ -173,7 +173,7 @@
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "right",
+        "text_alignment": "left",
         "full_width": true,
         "use_alt_bg": false
       }
