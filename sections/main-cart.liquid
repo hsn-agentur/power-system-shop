@@ -95,6 +95,9 @@
                     {% endfor %}
                     </ul>
                   {% endif %}
+                  <div class="hsn-cart-item-changedAmount-message">
+                    Aus versandtechnischen Gründen können nur Vielfache von <span class="hsn-cart-item-changedAmount-message-step"></span> bestellt werden.
+                  </div>
                 </div>
 
                 {% if item.variant.inventory_management != blank and item.variant.inventory_policy == 'deny' and item.variant.inventory_quantity <= item.quantity %}
