@@ -5728,7 +5728,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
           }
           $('.cart-item__quantity-input').each(checkAmount);
           $(container).on('change.cartTemplateSection', '.cart-item__quantity-input', function (e) {
-            this.replacingContent = true;
+            this.replacingContent = true; // no effect, but disabled ~50 lines above
             var amountChanged = false;
             $('.cart-item__quantity-input').each(function()  {
               amountChanged |= checkAmount.call(this);
