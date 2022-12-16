@@ -5679,6 +5679,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
       if ($(container).data('ajax-update')) {
         $(container).on('keyup.cartTemplateSection change.cartTemplateSection changeFromButton.cartTemplateSection', '.cart-item__quantity-input', function (evt) {
+    return; // - VLE
           if (this.replacingContent) {
             return;
           }
