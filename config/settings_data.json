@@ -1069,9 +1069,9 @@
             "type": "menu-promotion-small",
             "settings": {
               "dropdown_link_title": "Produkte",
-              "image": "shopify:\/\/shop_images\/bite-power-24er-schoko-min.jpg",
-              "title": "",
-              "link_url": "shopify:\/\/products\/power-system-low-er-carb-protein-bar-45"
+              "image": "shopify:\/\/shop_images\/whey-protein-vanille-min.jpg",
+              "title": "Whey Protein",
+              "link_url": "shopify:\/\/products\/power-system-100-protein-aus-whey"
             }
           }
         },
