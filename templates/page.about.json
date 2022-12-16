@@ -165,8 +165,8 @@
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
+        "text_alignment": "left",
+        "full_width": true,
         "use_alt_bg": false
       }
     }
