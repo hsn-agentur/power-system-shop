@@ -2,6 +2,7 @@
   "sections": {
     "main": {
       "type": "main-contact",
+      "disabled": true,
       "blocks": {
         "name": {
           "type": "name_input",
@@ -33,9 +34,57 @@
         "contact_title": "Schreib uns",
         "contact_text": ""
       }
+    },
+    "9d05e74c-3410-4e06-8391-975abbbd96dc": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "image_width": 700,
+        "subheading": "",
+        "title": "Image with text",
+        "use_h1": false,
+        "text": "<p>Pair text with an image to give customers insight into your brand. Tell a story, explain a product detail, or describe a new promotion.<\/p>",
+        "button_label": "Read more",
+        "button_link": "",
+        "button_style": "primary",
+        "image_position": "left",
+        "text_alignment": "left",
+        "use_alt_bg": false
+      }
+    },
+    "446f72a2-278a-459a-809e-4e753e1d31c1": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15959473225887__446f72a2-278a-459a-809e-4e753e1d31c1-167120543384fd8c67-0": {
+          "type": "heading",
+          "settings": {
+            "title": "KONTAKT",
+            "use_h1": false
+          }
+        },
+        "template--15959473225887__446f72a2-278a-459a-809e-4e753e1d31c1-167120543384fd8c67-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
+            "enlarge_text": true
+          }
+        }
+      },
+      "block_order": [
+        "template--15959473225887__446f72a2-278a-459a-809e-4e753e1d31c1-167120543384fd8c67-0",
+        "template--15959473225887__446f72a2-278a-459a-809e-4e753e1d31c1-167120543384fd8c67-1"
+      ],
+      "settings": {
+        "height": "medium",
+        "text_alignment": "center",
+        "full_width": false,
+        "use_alt_bg": false
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "9d05e74c-3410-4e06-8391-975abbbd96dc",
+    "446f72a2-278a-459a-809e-4e753e1d31c1"
   ]
 }
