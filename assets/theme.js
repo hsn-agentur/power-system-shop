@@ -5735,7 +5735,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             this.replacingContent = true; // no effect, but disabled ~50 lines above
             var checkAmountInfo = checkAmount.call(this);
             if(checkAmountInfo.changed)  {
-              $(this).parents('.cart-item').addClass('amountChanged');
+              $(this).parents('.cart-item').addClass('hsnAmountChanged');
               $(this).parents('.cart-item').find('.hsnChangeAmountStep').text(checkAmountInfo.step);
             }
           });
