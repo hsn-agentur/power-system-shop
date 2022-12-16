@@ -102,7 +102,7 @@
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "left",
+        "text_alignment": "right",
         "full_width": true,
         "use_alt_bg": false
       }
@@ -152,7 +152,7 @@
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "left",
+        "text_alignment": "right",
         "full_width": true,
         "use_alt_bg": false
       }
