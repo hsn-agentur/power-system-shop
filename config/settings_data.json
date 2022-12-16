@@ -1032,6 +1032,7 @@
     "live_search_show_vendor": false,
     "live_search_show_price": false,
     "live_search_search_meta": false,
+    "favicon": "shopify:\/\/shop_images\/favicon.png",
     "cart_type": "drawer",
     "product_currency_code_enabled": false,
     "checkout_logo_image": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
