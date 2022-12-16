@@ -5726,7 +5726,8 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             return false;
           }
           $('.cart-item__quantity-input').each(checkAmount);
-          $('#u333pdate-cart, #cartform').on('submit click', function(e) {
+          $(container).on('keyup.cartTemplateSection change.cartTemplateSection changeFromButton.cartTemplateSection', '.cart-item__quantity-input', function (e) {
+            this.replacingContent = true;
             var amountChanged = false;
             $('.cart-item__quantity-input').each(function()  {
               amountChanged |= checkAmount.call(this);
