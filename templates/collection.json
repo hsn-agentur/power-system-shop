@@ -46,8 +46,8 @@
         "7828a09a-f8c6-494a-b97e-ffde3441d198": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
-            "enlarge_text": true
+            "text": "<p>Entdecke unsere ganze Produkt Vielfalt und finde deine<br\/>Favoriten – fürs Training, beim Ausdauersport, zum Abnehmen und für die<br\/>bewusste Ernährung in deinem Alltag. <\/p>",
+            "enlarge_text": false
           }
         }
       },
@@ -61,38 +61,10 @@
         "full_width": false,
         "use_alt_bg": false
       }
-    },
-    "2f822e03-35c4-47fa-ac28-c4b323829662": {
-      "type": "collection-list",
-      "disabled": true,
-      "settings": {
-        "title": "Collection list",
-        "enable_carousel": true,
-        "grid": 5,
-        "use_alt_bg": true,
-        "full_width": true
-      }
-    },
-    "5da18f51-b314-492b-8229-cc38cb5481ae": {
-      "type": "featured-collection",
-      "disabled": true,
-      "settings": {
-        "title": "Featured collection",
-        "collection": "",
-        "show_vendor": false,
-        "enable_carousel": true,
-        "grid": 4,
-        "rows": 2,
-        "use_alt_bg": true,
-        "show_view_all": true,
-        "full_width": true
-      }
     }
   },
   "order": [
     "main",
-    "f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4",
-    "2f822e03-35c4-47fa-ac28-c4b323829662",
-    "5da18f51-b314-492b-8229-cc38cb5481ae"
+    "f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4"
   ]
 }
