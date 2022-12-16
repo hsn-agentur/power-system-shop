@@ -46,8 +46,8 @@
         "910c2b70-d5ec-4c9f-b9d6-3bb5d46157a4": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
-            "enlarge_text": true
+            "text": "<p>Jedes unserer High Protein Produkte kannst du nutzen, um<br\/>deinen Muskelaufbau zu unterstützen. Du hast die Wahl zwischen High Protein<br\/>Riegeln, Pulvern und ausgewählten Nahrungsergänzungsmitteln. Vom Big Block bis<br\/>zum Bite Power sowie vom Whey Protein bis zum 5K Protein Shake liefern dir<br\/>unsere Produkte unterschiedlichen Proteingehalte und -zusammensetzungen. Für<br\/>deinen individuellen Bedarf findest du bei uns das richtige Produkt – fürs<br\/>Training sowie auch für das bewusstere Snacken im Alltag. <\/p><p>Starte durch – Power System bringt Menschen in Bewegung!<\/p>",
+            "enlarge_text": false
           }
         }
       },
