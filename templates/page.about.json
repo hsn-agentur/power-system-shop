@@ -97,13 +97,6 @@
     "5e1fb758-3d93-4929-a9a3-398a52a95aeb": {
       "type": "rich-text",
       "blocks": {
-        "template--16014325121183__5e1fb758-3d93-4929-a9a3-398a52a95aeb-167120563396e5c543-0": {
-          "type": "heading",
-          "settings": {
-            "title": "Rich text",
-            "use_h1": false
-          }
-        },
         "template--16014325121183__5e1fb758-3d93-4929-a9a3-398a52a95aeb-167120563396e5c543-1": {
           "type": "text",
           "settings": {
@@ -113,14 +106,13 @@
         }
       },
       "block_order": [
-        "template--16014325121183__5e1fb758-3d93-4929-a9a3-398a52a95aeb-167120563396e5c543-0",
         "template--16014325121183__5e1fb758-3d93-4929-a9a3-398a52a95aeb-167120563396e5c543-1"
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "center",
-        "full_width": false,
-        "use_alt_bg": false
+        "text_alignment": "left",
+        "full_width": true,
+        "use_alt_bg": true
       }
     }
   },
