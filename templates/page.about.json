@@ -158,10 +158,18 @@
             "text": "<p><strong>Orientierung <\/strong><\/p><p>Der Power System Mehrwert für dich: wir geben Orientierung<br\/>und erleichtern dir, das für dich richtige Produkt zu finden. Für deinen Muskelaufbau,<br\/>dein Ausdauertraining, deine Fitness oder zum Abnehmen - unsere Produkte können<br\/>dich bei deinen individuellen sportlichen und Ernährungszielen unterstützen: <\/p>",
             "enlarge_text": false
           }
+        },
+        "ce1a2615-bdbb-442f-bf37-a529e2141317": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li>High Protein und Low Sugar für deinen Muskelaufbau <\/li><li>Lower Carb und low sugar für deine Fitness und zum Abnehmen <\/li><li>Energy und Vitamine für deine<br\/>Ausdauer <\/li><\/ul>",
+            "enlarge_text": false
+          }
         }
       },
       "block_order": [
-        "template--16014325121183__3e834b57-432f-4c62-8559-8d74f32abf18-167120563396e5c543-1"
+        "template--16014325121183__3e834b57-432f-4c62-8559-8d74f32abf18-167120563396e5c543-1",
+        "ce1a2615-bdbb-442f-bf37-a529e2141317"
       ],
       "settings": {
         "height": "medium",
