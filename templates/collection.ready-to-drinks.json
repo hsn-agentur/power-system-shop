@@ -46,8 +46,8 @@
         "7828a09a-f8c6-494a-b97e-ffde3441d198": {
           "type": "text",
           "settings": {
-            "text": "<p>Use this text to share information about your store with your customers. Describe products, share announcements, or welcome customers to your store.<\/p>",
-            "enlarge_text": true
+            "text": "<p>Trinkfertige Protein Shakes sind voll im Trend. Probiert<br\/>doch einfach mal unsere leckeren Ready-to-Drink Protein Shakes. Ganz einfach:<br\/>schütteln, öffnen und unterwegs genießen. <\/p>",
+            "enlarge_text": false
           }
         }
       },
