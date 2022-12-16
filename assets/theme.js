@@ -5719,19 +5719,24 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             var quantities = eval(quantities_attribute);
             var currentAmount = parseInt($input.val());
             var step = quantities[0].amount;
+            var changed = false;
             if((currentAmount % step) > 0)  {
               var closestAmount = Math.round(currentAmount / step) * step;
               $input.val(closestAmount);
-              return true;
+              changed = true;
             }
-            return false;
+            return {
+              changed: changed,
+              step: step
+            }
           }
           $('.cart-item__quantity-input').each(checkAmount);
           $(container).on('change.cartTemplateSection', '.cart-item__quantity-input', function (e) {
             this.replacingContent = true; // no effect, but disabled ~50 lines above
-            var amountChanged = checkAmount.call(this);
-            if(amountChanged)  {
+            var checkAmountInfo = checkAmount.call(this);
+            if(checkAmountInfo.changed)  {
               $(this).parents('.cart-item').addClass('amountChanged');
+              $(this).parents('.cart-item').find('.hsnChangeAmountStep').text(checkAmountInfo.step);
             }
           });
         })
