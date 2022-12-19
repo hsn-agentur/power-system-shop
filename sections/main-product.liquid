@@ -1,7 +1,7 @@
 {%- liquid
   assign zoom_size = 'master'
   assign min_aspect_ratio = 0.6
-  assign strip_app_blocks_from_quickbuy = true
+  assign strip_app_blocks_from_quickbuy = false
 
   assign current_variant = product.selected_or_first_available_variant
   assign featured_media = product.selected_or_first_available_variant.featured_media | default: product.featured_media
