@@ -61,6 +61,17 @@
             "icon": "",
             "show_in_quickbuy": false
           }
+        },
+        "dff04bbc-0c0c-42e7-82e2-e58bc1ae7660": {
+          "type": "accordion",
+          "settings": {
+            "title": "Inhalt",
+            "icon": "",
+            "content": "<p>je 2x Bite Power Banane, Snack Power Yogurt, Protein Deluxe Hazelnut, Lower Carb Bar Lemon Cheesecake<\/p>",
+            "page": "",
+            "open": false,
+            "show_in_quickbuy": false
+          }
         }
       },
       "block_order": [
@@ -71,7 +82,8 @@
         "variant_picker",
         "c00a9b93-2c45-49f2-9d58-e196cf346518",
         "buy_buttons",
-        "description"
+        "description",
+        "dff04bbc-0c0c-42e7-82e2-e58bc1ae7660"
       ],
       "settings": {
         "show_breadcrumbs": false,
