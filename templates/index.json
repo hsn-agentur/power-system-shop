@@ -73,10 +73,10 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/snack-power.png",
+            "image": "shopify:\/\/shop_images\/221219_Header_CAROUSEL_Vegan-min.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
-            "slide_link": "",
+            "slide_link": "shopify:\/\/collections\/vegan",
             "subheading": "",
             "title": "",
             "title_size": 84,
