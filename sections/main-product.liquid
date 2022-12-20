@@ -396,9 +396,9 @@
               <div class="input-row buyOptions" {{ block.shopify_attributes }}>
                 {% render 'variant-picker', section: section, product: product, block: block %}
 {% if product.metafields.custom.vpe %}
-  {% render 'quantity-picker', product: product %}
+  {% render 'quantity-picker', product: product %} TEST1
 {% else %}
-                  <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
+                   TEST2<div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
                     {% if block.settings.show_quantity_selector %}
                       <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
                       <div class="quantity-wrapper">
