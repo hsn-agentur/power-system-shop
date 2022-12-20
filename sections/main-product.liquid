@@ -396,9 +396,9 @@
               <div class="input-row buyOptions" {{ block.shopify_attributes }}>
                 {% render 'variant-picker', section: section, product: product, block: block %}
 {% if product.metafields.custom.vpe %}
-  {% render 'quantity-picker', product: product %} TEST1
+  {% render 'quantity-picker', product: product %}
 {% else %}
-                   TEST2<div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
+                  <div class="quantity-submit-row input-row {% if enable_dynamic_payment_button %}has-spb{% endif %}">
                     {% if block.settings.show_quantity_selector %}
                       <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
                       <div class="quantity-wrapper">
@@ -426,7 +426,16 @@
                         endunless
                       endif
                     -%}
+                    
                       <div class="quantity-submit-row__submit input-row">
+                        {% if block.settings.show_quantity_selector %}
+                          <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
+                          <div class="quantity-wrapper">
+                            <a href="#" data-quantity="down">{% render 'svg-minus' %}</a>
+                            <input aria-label="{{ 'products.product.quantity' | t }}" id="quantity" type="text" name="quantity" value="1" />
+                            <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
+                          </div>
+                        {% endif %}
                         {%- capture add_to_cart_text -%}
                           {%- if product.template_suffix contains 'preorder' -%}
                             {{- 'products.product.preorder' | t -}}
@@ -435,7 +444,7 @@
                           {%- endif -%}
                         {%- endcapture -%}
                         <button class="button button--large" type="submit" data-add-to-cart-text="{{ add_to_cart_text | escape }}">
-                          {{- add_to_cart_text -}}
+                          {{- add_to_cart_text -}} 
                         </button>
                       </div>
 
