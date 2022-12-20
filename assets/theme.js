@@ -5755,7 +5755,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
               if(quantities[i].amount == currentAmount)  {
                 return {
                   'current': quantities[i],
-                  'up': (i+2 < quantities.length ? quantities[i+1]: null),
+                  'up': (i+1 < quantities.length ? quantities[i+1]: null),
                   'down': (i > 0 ? quantities[i-1] : null)
                 };
               }
