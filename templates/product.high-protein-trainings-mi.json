@@ -29,6 +29,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "show_single": true,
             "select_first_variant": true,
