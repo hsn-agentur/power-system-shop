@@ -47,7 +47,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_quantity_selector": true,
+            "show_quantity_selector": false,
             "enable_payment_button": false,
             "show_backorder_text": true,
             "show_pickup_availability": true
