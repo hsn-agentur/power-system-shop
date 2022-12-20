@@ -7237,7 +7237,11 @@ var hsnQuickBuyHack = function()  {
   var url = src.substr(0, pos);
   ts++;
   src = url + ts;
-  $scriptNode.attr('src', src);
+  var $newScriptNode = $scriptNode.clone();
+  $newScriptNode.attr('src', src);
+  $scriptNode.parent().append($newScriptNode, $scriptNode);
+  $scriptNode.remove();
+  
 }
 
 
