@@ -7229,5 +7229,11 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 })(theme.jQuery);  
 
 
+var hsnQuickBuyHack = function()  {
+  var $scriptNode = $('script[src^="https://amaicdn.com/pricing-by-quantity/store"]');
+  var src = $scriptNode.attr('src');
+}
+
+
 
 /* Built with Barry v1.0.8 */
