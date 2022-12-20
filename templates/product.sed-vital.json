@@ -55,6 +55,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
             "show_in_tab": true,
             "open_tab": true,
