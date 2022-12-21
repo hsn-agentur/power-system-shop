@@ -7262,23 +7262,24 @@ var hsnQuickBuyHack = function()  {
 
 var hsnQuickBuyHack2 = function()  {
   var schemes = Spurit.QuantityBreaks2.config.schemes
+  var hsnPrices = [];
   for(var i=0; i < schemes.length; i++)  {
     if($.inArray(7536979902623, schemes[i].products) != -1)  {
-      hsnPrices = [];
       var originalPrice = 200;
-      hsnPrice.push({
+      hsnPrices.push({
         min: 1,
         price: originalPrice
       });
       var tiers = schemes[i].tiers;
       for(var j=0; j < tiers.length; j++)  {
-      hsnPrice.push({
+      hsnPrices.push({
         min: tiers[j].quantity,
         price: tiers[j].discount
       });
       }
     }
   }
+  console.log(hsnPrices);
 }
 
 
