@@ -7254,9 +7254,4 @@ var hsnQuickBuyHack = function()  {
 }
 
 
-var hsnQuickBuyHack2 = function()  {
-  $('script[src^="https://amaicdn.com/pricing-by-quantity/store"]').trigger('load');
-}
-
-
 /* Built with Barry v1.0.8 */
