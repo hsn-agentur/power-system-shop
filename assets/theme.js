@@ -7262,7 +7262,7 @@ var hsnQuickBuyHack2 = function()  {
   var schemes = Spurit.QuantityBreaks2.config.schemes
   for(var i=0; i < schemes.length; i++)  {
     if(7573432729759, $.inArray(schemes[i].products))  {
-      console.log(schemes[i].tiers);
+      console.log(schemes[i]);
     }
   }
 }
