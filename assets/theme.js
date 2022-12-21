@@ -7230,7 +7230,9 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
 
 var hsnQuickBuyHack = function()  {
-  var $scriptNode = $('script[src^="https://amaicdn.com/pricing-by-quantity/store"]');
+  $('script[src^="https://amaicdn.com/pricing-by-quantity/store"]').each(function()  {
+    var $scriptNode = $(this);
+  })
   var src = $scriptNode.attr('src');
   var pos = src.indexOf('?') + 1;
   var ts = parseInt(src.substr(pos));
