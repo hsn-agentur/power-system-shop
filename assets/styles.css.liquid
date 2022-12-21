@@ -11964,9 +11964,20 @@ textarea {
     line-height: 23px;
   }
 }
+
 .cart-item {
   flex-wrap: wrap;
 }
+
+.hsn-cart-item-changedAmount-message .message,
+.simple-popup {
+  display: block;
+  background: black;
+  color: #fff;
+  width: 300px;
+  border: none;
+}
+
 .hsn-cart-item-changedAmount-message {
   display: none;
   width: 100%; 
@@ -11974,18 +11985,15 @@ textarea {
   margin-top:15px;
 }
 
- .hsn-cart-item-changedAmount-message .message {  
+.hsn-cart-item-changedAmount-message .message {  
   display: inline-block;   
   text-align:center;
   width: 100%;
   max-width: 500px;
   padding: 5px 20px;
   font-size:14px;
-  background-color: rgba(249,240,217,0.9);
-  color: #725713;
-  border: 1px solid #c6ac6a;
- }
-
+}
+ 
 .hsnAmountChanged .hsn-cart-item-changedAmount-message {
   display: block;
 }
@@ -12282,12 +12290,4 @@ textarea {
 }
 #admin-bar-iframe {
   display:none !important;
-}
-
-.simple-popup {
-  display: block;
-  background: black;
-  color: #fff;
-  width: 300px;
-  border: none;
 }
