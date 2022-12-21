@@ -7232,19 +7232,20 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 var hsnQuickBuyHack = function()  {
   $('script[src^="https://amaicdn.com/pricing-by-quantity/store"]').each(function()  {
     var $scriptNode = $(this);
+    var src = $scriptNode.attr('src');
+    var pos = src.indexOf('?') + 1;
+    if(pos > 0)  {
+      var ts = parseInt(src.substr(pos));
+      var url = src.substr(0, pos);
+      ts++;
+      src = url + ts;
+    }
+    var $newScriptNode = $('<script />');
+    $newScriptNode.attr('src', src);
+    $scriptNode.before($newScriptNode);
+    $scriptNode.remove();
+    
   })
-  var src = $scriptNode.attr('src');
-  var pos = src.indexOf('?') + 1;
-  var ts = parseInt(src.substr(pos));
-  var url = src.substr(0, pos);
-  ts++;
-  src = url + ts;
-  var $newScriptNode = $scriptNode.clone();
-  var onLoadFunc = $scriptNode.get(0).onload;
-  $newScriptNode.on('load', onLoadFunc);
-  $newScriptNode.attr('src', src);
-  $scriptNode.before($newScriptNode);
-  $scriptNode.remove();
   
 }
 
