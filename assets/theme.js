@@ -7266,8 +7266,8 @@ var hsnQuickBuyHack2 = function()  {
   console.log(hsnPrices);
 }
 
-var hsnPriceEngine = function()  {
-  var generatePriceTable = function(productId)  {
+var hsnPriceEngine = {}
+  hsnPriceEngine.generatePriceTable = function(productId)  {
     var schemes = Spurit.QuantityBreaks2.config.schemes
     var hsnPrices = [];
     for(var i=0; i < schemes.length; i++)  {
@@ -7288,7 +7288,8 @@ var hsnPriceEngine = function()  {
     }
     return hsnPrices;
   }
-}
+
+
 
 theme.hsnQuickbuy = function($quickbuyContent)  {
   var findProductId = function($content)  {
@@ -7296,8 +7297,8 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
     return $wrap.attr('data-product-id');
   }
   var productId = findProductId($quickbuyContent);
-
-  console.log($quickbuyContent);
+  var prices = hsnPriceEngine.gegeneratePriceTable(productId)
+  console.log(prices);
 }
 
 
