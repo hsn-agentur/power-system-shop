@@ -7318,6 +7318,9 @@ var hsnPriceEngine = {
     }
     content += '</tbody></table>';
     $appendTo.append(content); 
+  },
+  getMinimalAmount : function(prices)  {
+    return prices[0].min;
   }
 }
 
@@ -7327,11 +7330,16 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
     var $wrap = $content.find('div[data-product-id]');
     return parseInt($wrap.attr('data-product-id'));
   }
+  var updatePriceInfo = function(amount)  {
+    
+  }
   var productId = findProductId($quickbuyContent);
   var originalPrices = hsnPriceEngine.findOriginalPrices($quickbuyContent, productId);
   var prices = hsnPriceEngine.generatePriceTable(productId, originalPrices.singlePrice);
   var $appendTo = $quickbuyContent.find('div.section-footer__payment-icons').first();
   hsnPriceEngine.appendPricelist(prices, $appendTo);
+  var minimalAmount = hsnPriceEngine.getMinimalAmount(prices);
+  updatePriceInfo(minimalAmount);
 }
 
 
