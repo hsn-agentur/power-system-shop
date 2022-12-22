@@ -7304,7 +7304,7 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
   }
   var findOriginalPrice = function($content, productId)  {
     if(originalPrices[productId] == null)  {
-      var price = $content.find('current-price').text();
+      var price = $content.find('.current-price').text();
       price = hsnPriceEngine.convertFormattedToFloatPrice(price);
       originalPrices[productId] = price;
     }
