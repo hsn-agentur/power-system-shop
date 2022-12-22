@@ -7274,11 +7274,17 @@ var hsnPriceEngine = {
     priceString = priceString.trim();
     return parseFloat(priceString);
   },
-  findOriginalPrice : function($content, productId)  {
+  findOriginalPrices : function($content, productId)  {
     if(this.originalPrices[productId] == null)  {
-      var price = $content.find('.current-price').text();
-      price = hsnPriceEngine.convertFormattedToFloatPrice(price);
-      this.originalPrices[productId] = price;
+      var singlePrice = $content.find('.current-price').text();
+      singlePrice = hsnPriceEngine.convertFormattedToFloatPrice(singlePrice);
+      var unitPrice = $content.find('.unit-price__price').text();
+      unitPrice = hsnPriceEngine.convertFormattedToFloatPrice(unitPrice);
+      
+      this.originalPrices[productId] = {
+        singlePrice: singlePrice,
+        unitPrice: unitPrice
+      };
     }
     return this.originalPrices[productId];
   },
@@ -7322,11 +7328,10 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
     return parseInt($wrap.attr('data-product-id'));
   }
   var productId = findProductId($quickbuyContent);
-  var originalPrice = hsnPriceEngine.findOriginalPrice($quickbuyContent, productId);
+  var originalPrices = hsnPriceEngine.findOriginalPrices($quickbuyContent, productId);
   var prices = hsnPriceEngine.generatePriceTable(productId, originalPrice);
   var $appendTo = $quickbuyContent.find('div.section-footer__payment-icons').first();
   hsnPriceEngine.appendPricelist(prices, $appendTo);
-  console.log(prices);
 }
 
 
