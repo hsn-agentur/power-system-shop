@@ -7274,6 +7274,10 @@ var hsnPriceEngine = {
     priceString = priceString.trim();
     return parseFloat(priceString);
   },
+  formatPrice : function(price)  {
+    var numFormatted = Math.round(price * amount * 100)/100).toFixed(2).replace('.', ',');
+    return '€' + numFormatted;  
+  }
   findOriginalPrices : function($content, productId)  {
     if(this.originalPrices[productId] == null)  {
       var singlePrice = $content.find('.current-price').text();
@@ -7340,6 +7344,10 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
   }
   var updatePriceInfo = function(amount)  {
     var actPrice = hsnPriceEngine.getPriceForAmount(prices, amount);
+    $('.current-price').text(hsnPriceEngine.formatPrice(actPrice));
+//  $('.unit-price__price').text('€' + (Math.round(hsnOriginalUnitPrice * (price / hsnOriginalSinglePrice) * 100) / 100).toFixed(2).replace('.', ','));
+//  $('.piece-price__price').text('€' + (Math.round(price * 100) / 100).toFixed(2).replace('.', ','));
+
   }
   var productId = findProductId($quickbuyContent);
   var originalPrices = hsnPriceEngine.findOriginalPrices($quickbuyContent, productId);
