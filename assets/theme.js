@@ -7284,5 +7284,9 @@ var hsnQuickBuyHack2 = function()  {
   console.log(hsnPrices);
 }
 
+theme.hsnQuickbuy = function($quickbuyContent)  {
+  console.log($quickbuyContent);
+}
+
 
 /* Built with Barry v1.0.8 */
