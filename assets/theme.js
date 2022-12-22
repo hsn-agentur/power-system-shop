@@ -5384,7 +5384,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
             $detailCont.html($newDetail);
 
-            hsnQuickbuy($newDetail);
+            theme.hsnQuickbuy($newDetail);
 
             // the order of these is important:
             theme.initProductGallery($quickbuyCont); // 1
