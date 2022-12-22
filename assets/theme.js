@@ -7349,13 +7349,16 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
 //  $('.piece-price__price').text('€' + (Math.round(price * 100) / 100).toFixed(2).replace('.', ','));
 
   }
+  var getSelectedAmount = function()  {
+    $nativeElement = $('#customQuantitySelector-native');
+    return parseInt($nativeElement.val());
+  }
   var productId = findProductId($quickbuyContent);
   var originalPrices = hsnPriceEngine.findOriginalPrices($quickbuyContent, productId);
   var prices = hsnPriceEngine.generatePriceTable(productId, originalPrices.singlePrice);
   var $appendTo = $quickbuyContent.find('div.section-footer__payment-icons').first();
   hsnPriceEngine.appendPricelist(prices, $appendTo);
-  var minimalAmount = hsnPriceEngine.getMinimalAmount(prices);
-  updatePriceInfo(minimalAmount);
+  updatePriceInfo(getSelectedAmount());
 }
 
 
