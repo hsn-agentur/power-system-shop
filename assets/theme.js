@@ -7339,7 +7339,7 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
     return parseInt($wrap.attr('data-product-id'));
   }
   var updatePriceInfo = function(amount)  {
-    var price = hsnPriceEngine.getPriceForAmount(amount);
+    var actPrice = hsnPriceEngine.getPriceForAmount(prices, amount);
   }
   var productId = findProductId($quickbuyContent);
   var originalPrices = hsnPriceEngine.findOriginalPrices($quickbuyContent, productId);
