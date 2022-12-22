@@ -7311,7 +7311,7 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
     return originalPrices[productId];
   }
   var productId = findProductId($quickbuyContent);
-  var originalPrice = findOriginalPrice($content, productId);
+  var originalPrice = findOriginalPrice($quickbuyContent, productId);
   var prices = hsnPriceEngine.generatePriceTable(productId, originalPrice);
   console.log(prices);
 }
