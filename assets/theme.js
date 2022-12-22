@@ -7275,7 +7275,7 @@ var hsnPriceEngine = {
     return parseFloat(priceString);
   },
   formatPrice : function(price)  {
-    var numFormatted = (Math.round(price * amount * 100)/100).toFixed(2).replace('.', ',');
+    var numFormatted = (Math.round(price * 100)/100).toFixed(2).replace('.', ',');
     return '€' + numFormatted;  
   },
   findOriginalPrices : function($content, productId)  {
