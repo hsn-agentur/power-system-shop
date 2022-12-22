@@ -7342,9 +7342,9 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
     var $wrap = $content.find('div[data-product-id]');
     return parseInt($wrap.attr('data-product-id'));
   }
-  var updatePriceInfo = function(amount)  {
+  var updatePriceInfo = function($content, amount)  {
     var actPrice = hsnPriceEngine.getPriceForAmount(prices, amount);
-    $('.current-price').text(hsnPriceEngine.formatPrice(actPrice));
+    $content.find('.current-price').text(hsnPriceEngine.formatPrice(actPrice));
 //  $('.unit-price__price').text('€' + (Math.round(hsnOriginalUnitPrice * (price / hsnOriginalSinglePrice) * 100) / 100).toFixed(2).replace('.', ','));
 //  $('.piece-price__price').text('€' + (Math.round(price * 100) / 100).toFixed(2).replace('.', ','));
 
@@ -7358,7 +7358,7 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
   var prices = hsnPriceEngine.generatePriceTable(productId, originalPrices.singlePrice);
   var $appendTo = $quickbuyContent.find('div.section-footer__payment-icons').first();
   hsnPriceEngine.appendPricelist(prices, $appendTo);
-  updatePriceInfo(getSelectedAmount($quickbuyContent));
+  updatePriceInfo($quickbuyContent, getSelectedAmount($quickbuyContent));
 }
 
 
