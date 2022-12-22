@@ -7349,8 +7349,8 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
 //  $('.piece-price__price').text('€' + (Math.round(price * 100) / 100).toFixed(2).replace('.', ','));
 
   }
-  var getSelectedAmount = function()  {
-    $nativeElement = $('#customQuantitySelector-native');
+  var getSelectedAmount = function($content)  {
+    $nativeElement = $content.find('#customQuantitySelector-native');
     return parseInt($nativeElement.val());
   }
   var productId = findProductId($quickbuyContent);
@@ -7358,7 +7358,7 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
   var prices = hsnPriceEngine.generatePriceTable(productId, originalPrices.singlePrice);
   var $appendTo = $quickbuyContent.find('div.section-footer__payment-icons').first();
   hsnPriceEngine.appendPricelist(prices, $appendTo);
-  updatePriceInfo(getSelectedAmount());
+  updatePriceInfo(getSelectedAmount($quickbuyContent));
 }
 
 
