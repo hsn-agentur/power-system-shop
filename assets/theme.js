@@ -5382,9 +5382,10 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
               $(this).off('load');
             });
 
+            theme.hsnQuickbuy($newDetail);
+
             $detailCont.html($newDetail);
 
-            theme.hsnQuickbuy($newDetail);
 
             // the order of these is important:
             theme.initProductGallery($quickbuyCont); // 1
