@@ -7301,6 +7301,17 @@ var hsnPriceEngine = {
       }
     }
     return hsnPrices;
+  },
+  appendPricelist : function($appendTo)  {
+    $('.hsn-price-table').remove();
+    var content = '<table class="hsn-price-table"><tbody>';
+    content += '<tr><th>von</th><th>Preis</th></tr>';
+    for(var i = 0; i < hsnPrices.length; i++)  {
+      var d = hsnPrices[i];
+      content += '<tr><td>ab ' + d.min + ' Stück</td><td>€' + (Math.round(d.price * 100) / 100).toFixed(2).replace('.', ',') + ' pro Stück</td></tr>';
+    }
+    content += '</tbody></table>';
+    $appendTo.append(content); 
   }
 }
 
