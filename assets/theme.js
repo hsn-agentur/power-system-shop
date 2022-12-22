@@ -7294,7 +7294,7 @@ var hsnPriceEngine = {
 theme.hsnQuickbuy = function($quickbuyContent)  {
   var findProductId = function($content)  {
     var $wrap = $content.find('div[data-product-id]');
-    return $wrap.attr('data-product-id');
+    return parseInt($wrap.attr('data-product-id'));
   }
   var productId = findProductId($quickbuyContent);
   var prices = hsnPriceEngine.generatePriceTable(productId);
