@@ -7350,7 +7350,7 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
 
   }
   var getSelectedAmount = function($content)  {
-    $nativeElement = $content.find('#customQuantitySelector-native');
+    var $nativeElement = $content.find('#customQuantitySelector-native');
     return parseInt($nativeElement.val());
   }
   var productId = findProductId($quickbuyContent);
