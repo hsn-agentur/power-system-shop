@@ -7324,7 +7324,7 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
   var productId = findProductId($quickbuyContent);
   var originalPrice = hsnPriceEngine.findOriginalPrice($quickbuyContent, productId);
   var prices = hsnPriceEngine.generatePriceTable(productId, originalPrice);
-  var $appendTo = $content.find('div.section-footer__payment-icons').first();
+  var $appendTo = $quickbuyContent.find('div.section-footer__payment-icons').first();
   hsnPriceEngine.appendPricelist(prices, $appendTo);
   console.log(prices);
 }
