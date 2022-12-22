@@ -7297,16 +7297,22 @@ var hsnPriceEngine = {
 
 
 theme.hsnQuickbuy = function($quickbuyContent)  {
+  var originalPrices = {};
   var findProductId = function($content)  {
     var $wrap = $content.find('div[data-product-id]');
     return parseInt($wrap.attr('data-product-id'));
   }
-  var findOriginalPrice = function($content)  {
-    var price = $content.find('current-price').text();
-    price = hsnPriceEngine.convertFormattedToFloatPrice(price);
+  var findOriginalPrice = function($content, productId)  {
+    if(originalPrices[productId] == null)  {
+      var price = $content.find('current-price').text();
+      price = hsnPriceEngine.convertFormattedToFloatPrice(price);
+      originalPrices[productId] = price;
+    }
+    return originalPrices[productId];
   }
   var productId = findProductId($quickbuyContent);
-  var prices = hsnPriceEngine.generatePriceTable(productId);
+  var originalPrice = findOriginalPrice($content, productId);
+  var prices = hsnPriceEngine.generatePriceTable(productId, originalPrice);
   console.log(prices);
 }
 
