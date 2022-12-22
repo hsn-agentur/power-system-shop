@@ -7272,7 +7272,7 @@ var hsnPriceEngine = {
     priceString = priceString.replace('€', '');
     priceString = priceString.trim();
     return parseFloat(priceString);
-  }
+  },
   generatePriceTable : function(productId, originalPrice)  {
     var schemes = Spurit.QuantityBreaks2.config.schemes
     var hsnPrices = [];
