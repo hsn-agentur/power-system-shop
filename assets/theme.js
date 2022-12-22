@@ -7263,29 +7263,31 @@ var hsnQuickBuyHack = function()  {
 
 
 var hsnQuickBuyHack2 = function()  {
-  var schemes = Spurit.QuantityBreaks2.config.schemes
-  var hsnPrices = [];
-  for(var i=0; i < schemes.length; i++)  {
-    if($.inArray(7536979902623, schemes[i].products) != -1)  {
-      var originalPrice = 200;
-      hsnPrices.push({
-        min: 1,
-        price: originalPrice
-      });
-      var tiers = schemes[i].tiers;
-      for(var j=0; j < tiers.length; j++)  {
-      hsnPrices.push({
-        min: tiers[j].quantity,
-        price: tiers[j].discount
-      });
-      }
-    }
-  }
   console.log(hsnPrices);
 }
 
 var hsnPriceEngine = function()  {
-  
+  var generatePriceTable = function(productId)  {
+    var schemes = Spurit.QuantityBreaks2.config.schemes
+    var hsnPrices = [];
+    for(var i=0; i < schemes.length; i++)  {
+      if($.inArray(productId, schemes[i].products) != -1)  {
+        var originalPrice = 200;
+        hsnPrices.push({
+          min: 1,
+          price: originalPrice
+        });
+        var tiers = schemes[i].tiers;
+        for(var j=0; j < tiers.length; j++)  {
+        hsnPrices.push({
+          min: tiers[j].quantity,
+          price: tiers[j].discount
+        });
+        }
+      }
+    }
+    return hsnPrices;
+  }
 }
 
 theme.hsnQuickbuy = function($quickbuyContent)  {
@@ -7293,6 +7295,8 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
     var $wrap = $content.find('div[data-product-id]');
     return $wrap.attr('data-product-id');
   }
+  var productId = findProductId($quickbuyContent);
+
   console.log($quickbuyContent);
 }
 
