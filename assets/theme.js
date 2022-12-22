@@ -7267,11 +7267,20 @@ var hsnQuickBuyHack2 = function()  {
 }
 
 var hsnPriceEngine = {
+  originalPrices : {},
   convertFormattedToFloatPrice: function(priceString)  {
     priceString = priceString.replace(',', '.');
     priceString = priceString.replace('€', '');
     priceString = priceString.trim();
     return parseFloat(priceString);
+  },
+  findOriginalPrice : function($content, productId)  {
+    if(originalPrices[productId] == null)  {
+      var price = $content.find('.current-price').text();
+      price = hsnPriceEngine.convertFormattedToFloatPrice(price);
+      originalPrices[productId] = price;
+    }
+    return originalPrices[productId];
   },
   generatePriceTable : function(productId, originalPrice)  {
     var schemes = Spurit.QuantityBreaks2.config.schemes
@@ -7297,21 +7306,12 @@ var hsnPriceEngine = {
 
 
 theme.hsnQuickbuy = function($quickbuyContent)  {
-  var originalPrices = {};
   var findProductId = function($content)  {
     var $wrap = $content.find('div[data-product-id]');
     return parseInt($wrap.attr('data-product-id'));
   }
-  var findOriginalPrice = function($content, productId)  {
-    if(originalPrices[productId] == null)  {
-      var price = $content.find('.current-price').text();
-      price = hsnPriceEngine.convertFormattedToFloatPrice(price);
-      originalPrices[productId] = price;
-    }
-    return originalPrices[productId];
-  }
   var productId = findProductId($quickbuyContent);
-  var originalPrice = findOriginalPrice($quickbuyContent, productId);
+  var originalPrice = hsnPriceEngine.findOriginalPrice($quickbuyContent, productId);
   var prices = hsnPriceEngine.generatePriceTable(productId, originalPrice);
   console.log(prices);
 }
