@@ -7284,7 +7284,15 @@ var hsnQuickBuyHack2 = function()  {
   console.log(hsnPrices);
 }
 
+var hsnPriceEngine = function()  {
+  
+}
+
 theme.hsnQuickbuy = function($quickbuyContent)  {
+  var findProductId = function($content)  {
+    var $wrap = $content.find('div[data-product-id]');
+    return $wrap.attr('data-product-id');
+  }
   console.log($quickbuyContent);
 }
 
