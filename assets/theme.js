@@ -7275,12 +7275,12 @@ var hsnPriceEngine = {
     return parseFloat(priceString);
   },
   findOriginalPrice : function($content, productId)  {
-    if(originalPrices[productId] == null)  {
+    if(this.originalPrices[productId] == null)  {
       var price = $content.find('.current-price').text();
       price = hsnPriceEngine.convertFormattedToFloatPrice(price);
-      originalPrices[productId] = price;
+      this.originalPrices[productId] = price;
     }
-    return originalPrices[productId];
+    return this.originalPrices[productId];
   },
   generatePriceTable : function(productId, originalPrice)  {
     var schemes = Spurit.QuantityBreaks2.config.schemes
