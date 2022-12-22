@@ -7266,8 +7266,8 @@ var hsnQuickBuyHack2 = function()  {
   console.log(hsnPrices);
 }
 
-var hsnPriceEngine = {}
-  hsnPriceEngine.generatePriceTable = function(productId)  {
+var hsnPriceEngine = {
+  generatePriceTable : function(productId)  {
     var schemes = Spurit.QuantityBreaks2.config.schemes
     var hsnPrices = [];
     for(var i=0; i < schemes.length; i++)  {
@@ -7288,7 +7288,7 @@ var hsnPriceEngine = {}
     }
     return hsnPrices;
   }
-
+}
 
 
 theme.hsnQuickbuy = function($quickbuyContent)  {
