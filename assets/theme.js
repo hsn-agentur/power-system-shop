@@ -7301,7 +7301,7 @@ var hsnPriceEngine = {
         for(var j=0; j < tiers.length; j++)  {
         hsnPrices.push({
           min: parseInt(tiers[j].quantity),
-          price: originalPrice - tiers[j].discount
+          price: singlePrice - tiers[j].discount
         });
         }
       }
