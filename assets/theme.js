@@ -7321,6 +7321,14 @@ var hsnPriceEngine = {
   },
   getMinimalAmount : function(prices)  {
     return prices[0].min;
+  },
+  getPriceForAmount : function(prices, amount)  {
+    for(var i = 0; i < prices.length; i++)  {
+      if(prices[i].min <= amount)  {
+        var price = prices[i].price;
+      }
+    }
+    return price;
   }
 }
 
@@ -7331,7 +7339,7 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
     return parseInt($wrap.attr('data-product-id'));
   }
   var updatePriceInfo = function(amount)  {
-    
+    var price = hsnPriceEngine.getPriceForAmount(amount);
   }
   var productId = findProductId($quickbuyContent);
   var originalPrices = hsnPriceEngine.findOriginalPrices($quickbuyContent, productId);
