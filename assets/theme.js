@@ -5384,7 +5384,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
             theme.hsnQuickbuy($newDetail);
 // console.log($newDetail.find('.current-price'));
-$newDetail.find('.current-price').bind('DOMSubtreeModified', function(e)  {
+$newDetail.bind('DOMSubtreeModified', function(e)  {
   console.log(e);
 });
             
