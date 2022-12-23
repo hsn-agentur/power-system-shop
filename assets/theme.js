@@ -5383,7 +5383,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             });
 
             theme.hsnQuickbuy($newDetail);
-$newDetail.find('.current-price').html('9999');
+$newDetail.find('.current-price').remove();
             $detailCont.html($newDetail);
 
 
