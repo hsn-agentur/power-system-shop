@@ -7338,6 +7338,15 @@ var hsnPriceEngine = {
 }
 
 
+theme.hsnInitUpdatePriceInfoListener = function($content, funcRef)  {
+  $content.find('#customQuantitySelector-native').on('change', function(funcRef) {
+    var $selector = $(this);
+    var amount = $selector.value();
+    funcRef.call(this, $content, amount);
+  })
+}
+
+
 theme.hsnQuickbuy = function($quickbuyContent)  {
   var findProductId = function($content)  {
     var $wrap = $content.find('div[data-product-id]');
@@ -7361,6 +7370,7 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
   var $appendTo = $quickbuyContent.find('div.section-footer__payment-icons').first();
   hsnPriceEngine.appendPricelist(prices, $appendTo);
   updatePriceInfo($quickbuyContent, getSelectedAmount($quickbuyContent));
+  this.hsnInitUpdatePriceInfoListener($quickbuyContent, updatePriceInfo);
 }
 
 
