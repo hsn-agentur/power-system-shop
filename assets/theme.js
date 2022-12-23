@@ -7345,8 +7345,9 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
   }
   var updatePriceInfo = function($content, amount)  {
     var actPrice = hsnPriceEngine.getPriceForAmount(prices, amount);
+    var originalPrices = hsnPriceEngine.findOriginalPrices($quickbuyContent, productId);
     $content.find('.current-price').text(hsnPriceEngine.formatPrice(actPrice * amount));
-    $content.find('.unit-price__price').text(hsnPriceEngine.formatPrice(hsnOriginalUnitPrice * (actPrice / hsnOriginalSinglePrice));
+    $content.find('.unit-price__price').text(hsnPriceEngine.formatPrice(originalPrices.unitPrice * (actPrice / originalPrices.singlePrice));
     $content.find('.piece-price__price').text(hsnPriceEngine.formatPrice(actPrice));
 
   }
