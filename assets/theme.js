@@ -5382,10 +5382,6 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
               $(this).off('load');
             });
 
-// console.log($newDetail.find('.current-price'));
-$newDetail.find('.product-column-right').bind('DOMSubtreeModified', function(e)  {
-//  console.log(e);
-});
             
             $detailCont.html($newDetail);
 
