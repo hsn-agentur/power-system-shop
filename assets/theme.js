@@ -5382,10 +5382,9 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
               $(this).off('load');
             });
 
-            theme.hsnQuickbuy($newDetail);
 // console.log($newDetail.find('.current-price'));
 $newDetail.find('.product-column-right').bind('DOMSubtreeModified', function(e)  {
-  console.log(e);
+//  console.log(e);
 });
             
             $detailCont.html($newDetail);
@@ -5401,6 +5400,7 @@ $newDetail.find('.product-column-right').bind('DOMSubtreeModified', function(e) 
             loadComponents($quickbuyCont); // 3
             theme.initAnimateOnScroll(); // 4
             $quickbuyCont.trigger('changedsize'); // 5
+            theme.hsnQuickbuy($newDetail);
           }).always(function () {
             theme.currentQuickbuyRequest = false;
           });
