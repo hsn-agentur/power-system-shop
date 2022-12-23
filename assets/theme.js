@@ -7345,9 +7345,9 @@ theme.hsnQuickbuy = function($quickbuyContent)  {
   }
   var updatePriceInfo = function($content, amount)  {
     var actPrice = hsnPriceEngine.getPriceForAmount(prices, amount);
-    $content.find('.current-price').html(hsnPriceEngine.formatPrice(actPrice));
-//  $('.unit-price__price').text('€' + (Math.round(hsnOriginalUnitPrice * (price / hsnOriginalSinglePrice) * 100) / 100).toFixed(2).replace('.', ','));
-//  $('.piece-price__price').text('€' + (Math.round(price * 100) / 100).toFixed(2).replace('.', ','));
+    $content.find('.current-price').text(hsnPriceEngine.formatPrice(actPrice * amount));
+    $content.find('.unit-price__price').text(hsnPriceEngine.formatPrice(hsnOriginalUnitPrice * (actPrice / hsnOriginalSinglePrice));
+    $content.find('.piece-price__price').text(hsnPriceEngine.formatPrice(actPrice));
 
   }
   var getSelectedAmount = function($content)  {
