@@ -7304,10 +7304,12 @@ var hsnPriceEngine = {
 
 
 theme.hsnInitUpdatePriceInfoListener = function($content, funcRef)  {
-  $content.find('.option-selector li[role="option"]').on('click', function() {
+  var updatePriceInfoHandler = function() {
     var amount = $content.find('#customQuantitySelector-native').val();
     funcRef.call(this, $content, amount);
   })
+  $content.find('.option-selector li[role="option"]').on('click', updatePriceInfoHandler);
+  $content.find('#customQuantitySelector-native').on('change', updatePriceInfoHandler);
 }
 
 
