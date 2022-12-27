@@ -81,7 +81,7 @@
       ],
       "settings": {
         "height": "small",
-        "text_alignment": "left",
+        "text_alignment": "center",
         "full_width": true,
         "use_alt_bg": false
       }
@@ -102,7 +102,7 @@
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "right",
+        "text_alignment": "center",
         "full_width": true,
         "use_alt_bg": false
       }
@@ -120,7 +120,7 @@
         "ce1a2615-bdbb-442f-bf37-a529e2141317": {
           "type": "text",
           "settings": {
-            "text": "<ul><li>High Protein und Low Sugar für deinen Muskelaufbau <\/li><li>Lower Carb und low sugar für deine Fitness und zum Abnehmen <\/li><li>Energy und Vitamine für deine<br\/>Ausdauer <\/li><\/ul>",
+            "text": "<ul><li>High Protein und Low Sugar für deinen Muskelaufbau <\/li><li>Lower Carb und low sugar für deine Fitness und zum Abnehmen <\/li><li>Energy und Vitamine für deine Ausdauer <\/li><\/ul>",
             "enlarge_text": false
           }
         }
@@ -131,7 +131,7 @@
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "left",
+        "text_alignment": "center",
         "full_width": true,
         "use_alt_bg": false
       }
@@ -152,7 +152,7 @@
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "right",
+        "text_alignment": "center",
         "full_width": true,
         "use_alt_bg": false
       }
@@ -173,7 +173,7 @@
       ],
       "settings": {
         "height": "medium",
-        "text_alignment": "left",
+        "text_alignment": "center",
         "full_width": true,
         "use_alt_bg": false
       }
