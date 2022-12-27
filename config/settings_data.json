@@ -1011,6 +1011,7 @@
     "coll_grid_image_shape": "portrait-45",
     "coll_grid_image_position": "center center",
     "coll_grid_show_count": true,
+    "coll_thumb_text_align": "left",
     "prod_thumb_shape": "square",
     "prod_thumb_crop": true,
     "prod_thumb_text_align": "left",
