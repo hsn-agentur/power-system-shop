@@ -18,6 +18,7 @@
   {% render 'social-meta-tags' %}
   <link rel="stylesheet" href="https://use.typekit.net/bgi1ala.css">
   {{ 'styles.css' | asset_url | stylesheet_tag }}
+  <meta name="facebook-domain-verification" content="oe0rb0jnf8iiji09fyah73q87axe4i" />
   <script>
     window.theme = window.theme || {};
     theme.money_format_with_product_code_preference = {% if settings.product_currency_code_enabled %}{{ shop.money_with_currency_format | json }}{% else %}{{ shop.money_format | json }}{% endif %};
