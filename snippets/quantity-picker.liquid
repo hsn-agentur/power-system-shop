@@ -98,6 +98,7 @@ var hsnUpdatePrices = function()  {
 var hsnGetOriginalPrices = function()  {
     hsnOriginalSinglePrice = parseFloat($('.current-price').text().substr(1).replace(',','.'))
     hsnOriginalUnitPrice = parseFloat($('.unit-price__price').text().substr(1).replace(',','.'))
+    hsnOriginalWasPrice = parseFloat($('.was-price').text().substr(1).replace(',','.'))
     hsnPrices.push({min: 1, price: hsnOriginalSinglePrice});
 }
   
