@@ -93,6 +93,7 @@ var hsnUpdatePrices = function()  {
   $('.current-price').text('€' + (Math.round(price * amount * 100)/100).toFixed(2).replace('.', ','));
   $('.unit-price__price').text('€' + (Math.round(hsnOriginalUnitPrice * (price / hsnOriginalSinglePrice) * 100) / 100).toFixed(2).replace('.', ','));
   $('.piece-price__price').text('€' + (Math.round(price * 100) / 100).toFixed(2).replace('.', ','));
+  $('.was-price').text('€' + (Math.round(hsnOriginalWasPrice * amount * 100)/100).toFixed(2).replace('.', ','));
   hsnAppendPricelist($('.section-footer__payment-icons'));
 }
 
