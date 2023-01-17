@@ -5,6 +5,9 @@
         <div class="template_header">
           <h2 class="title">{{ 'customer.login.title' | t }}</h2>
         </div>
+        <div class="message">
+          <strong>A C H T U N G !</strong><br />Alte Zugangs- und Kontodaten von vor dem 01.01.2023 funktionieren nicht mehr!*
+        </div>
 
         {% form 'customer_login' %}
         {{ form.errors | default_errors }}
@@ -40,6 +43,7 @@
           </div>
         </div>
         {% endform %}
+        <div class="small">*Liebe Kunden unseres Power System Webshops! Auf Grund neuer Sicherheitsregularien, eines E-Commerce Technologiewechsels sowie der Beendigung unserer Zusammenarbeit mit einem dritten Dienstleister, der unseren Marken-Webshop bisher betrieben hat, ist es uns nicht möglich die alten Zugangs- und Benutzerkontodaten zu übernehmen. Diese müsstet Ihr bitte einmal neu anlegen. Vielen Dank für Euer Verständnis!  </div>
       </div>
 
       {% comment %}
