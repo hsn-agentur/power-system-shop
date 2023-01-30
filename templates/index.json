@@ -6,33 +6,11 @@
         "8acbcec8-59d5-44e0-9754-9d794ad42781": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/vegan_aktion-min.png",
-            "mobile_image": "shopify:\/\/shop_images\/vegan_aktion-min.png",
+            "image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_Vegan_5f445aca-823d-43fc-bf7a-9325285065b5.png",
+            "mobile_image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_Vegan_5f445aca-823d-43fc-bf7a-9325285065b5.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "shopify:\/\/collections\/vegan",
-            "subheading": "",
-            "title": "",
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": true,
-            "button_label_1": "Mehr erfahren",
-            "button_url_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "bottom center"
-          }
-        },
-        "29c485a5-88d8-4491-8c78-8c1514391ce9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/221214_Header_AKTION_Shape_Shake-min.png",
-            "mobile_image": "shopify:\/\/shop_images\/221214_Header_AKTION_Shape_Shake-min.png",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "shopify:\/\/products\/power-system-daily-shape-shake-360g",
             "subheading": "",
             "title": "",
             "title_size": 84,
@@ -94,7 +72,6 @@
       },
       "block_order": [
         "8acbcec8-59d5-44e0-9754-9d794ad42781",
-        "29c485a5-88d8-4491-8c78-8c1514391ce9",
         "16359276425da8ce46-0",
         "16359276425da8ce46-1"
       ],
