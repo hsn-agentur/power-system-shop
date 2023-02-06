@@ -309,7 +309,7 @@
                     </div>
                     {%- for variant in product.variants -%}
                     <div data-variant="{{ variant.title }}">
-                      {{- variant.metafields.custom.beschreibung.value -}}
+                      {{- variant.metafields.custom.beschreibung.value | newline_to_br -}}
                     </div>
                     {%  endfor %}
                     </div>
@@ -320,7 +320,7 @@
                   <div class="product-description rte cf">
                     {%- if block.settings.icon == blank -%}
                       {{- product.description -}}
-                      {{- current_variant.metafields.custom.beschreibung.value | newline_to_br -}}
+                      {{- current_variant.metafields.custom.beschreibung.value -}}
                     {%- else -%}
                       <div class="with-icon">
                         {% render 'icon', icon: block.settings.icon, size: 'small' %}
