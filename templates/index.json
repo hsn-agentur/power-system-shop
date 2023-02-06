@@ -29,7 +29,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/230127_Header_CAROUSEL_Probier_Sets-min.png",
-            "image_position": "top center",
+            "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
             "subheading": "",
