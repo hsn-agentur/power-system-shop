@@ -5682,7 +5682,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
       if ($(container).data('ajax-update')) {
         $(container).on('keyup.cartTemplateSection change.cartTemplateSection changeFromButton.cartTemplateSection', '.cart-item__quantity-input', function (evt) {
-    return; // - VLE
+//    return; // - VLE
           if (this.replacingContent) {
             return;
           }
@@ -5741,7 +5741,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             }
           });
           $(container).on('change.cartTemplateSection', '.cart-item__quantity-input', function (e) {
-            this.replacingContent = true; // no effect, but disabled ~50 lines above
+         //   this.replacingContent = true; // no effect, but disabled ~50 lines above
             var checkAmountInfo = checkAmount.call(this);
             if(checkAmountInfo.changed)  {
               $(this).parents('.cart-item').addClass('hsnAmountChanged');
