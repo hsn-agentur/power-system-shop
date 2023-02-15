@@ -108,8 +108,9 @@
   {% endif %}
   {{ 'vendor.min.js'  | asset_url | script_tag }}
   {{ 'theme.js'  | asset_url | script_tag }}
+{% render "bc_banner" %}
 {% render 'amai_stp-theme-snippet' %}
 {% render 'amai_stp-cart-snippet' %}
 {% render 'amai_stp-product-snippet' %}
-{% render "bc_banner" %}</body>
+</body>
 </html>
