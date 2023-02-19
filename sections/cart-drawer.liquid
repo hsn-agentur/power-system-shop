@@ -75,8 +75,8 @@
                 <span class="theme-money">{{ item.original_price | money }}</span>
               </div>
             {% endif %}
-            <div>
-              <span class="theme-money">{{ item.final_price | money }}</span>
+            <div class="price">
+              <span class="money">{{ item.original_price | money }}</span>
             </div>
             {% render 'unit-price', variant: item %}
           </div>
