@@ -24,7 +24,7 @@
   {% for item in cart.items %}
     <div class="cart-summary-overlay__row-body" data-item-key="{{ item.key }}">
       <div class="cart-summary-overlay__column-image">
-        <img src="{{ item.image | img_url: '170x' }}" alt="{{ item.title | escape }}" />
+        <img src="{{ item.image | img_url: '170x' }}" alt="{{ item.title | escape }}">
       </div>
       <div class="cart-summary-overlay__column-item">
         <div class="cart-summary-overlay__title">{{ item.product.title }}</div>
@@ -52,22 +52,32 @@
 
           {%- if item.selling_plan_allocation -%}
             <div class="cart-summary-overlay__variant">
-              <span class="cart-summary-overlay__variant-value">{{ item.selling_plan_allocation.selling_plan.name }}</span>
+              <span class="cart-summary-overlay__variant-value">
+                {{- item.selling_plan_allocation.selling_plan.name -}}
+              </span>
             </div>
           {%- endif -%}
 
           {%- if settings.prod_pre_order_label_show and item.product.template_suffix contains 'preorder' -%}
-            <div class="cart-summary-overlay__price-label price-label price-label--preorder">{{ 'products.product.preorder' | t }}</div>
+            <div class="cart-summary-overlay__price-label price-label price-label--preorder">
+              {{ 'products.product.preorder' | t }}
+            </div>
           {%- endif -%}
         </div>
         <div class="cart-summary-overlay__mobile-price-row">
           <div class="cart-summary-overlay__mobile-unit-price">
             {% if item.variant.compare_at_price > item.variant.price %}
-              <div class="struck-out-price"><span class="theme-money">{{ item.variant.compare_at_price | money }}</span></div>
+              <div class="struck-out-price">
+                <span class="theme-money">{{ item.variant.compare_at_price | money }}</span>
+              </div>
             {% elsif item.original_line_price > item.final_line_price %}
-              <div class="struck-out-price"><span class="theme-money">{{ item.original_price | money }}</span></div>
+              <div class="struck-out-price">
+                <span class="theme-money">{{ item.original_price | money }}</span>
+              </div>
             {% endif %}
-            <div><span class="theme-money">{{ item.final_price | money }}</span></div>
+            <div>
+              <span class="theme-money">{{ item.final_price | money }}</span>
+            </div>
             {% render 'unit-price', variant: item %}
           </div>
           <div class="cart-summary-overlay__mobile-quantity">
@@ -88,11 +98,17 @@
         <div class="cart-summary-overlay__column-price">
           <span class="cart-summary-overlay__unit-price">
             {% if item.variant.compare_at_price > item.variant.price %}
-              <div class="struck-out-price"><span class="theme-money">{{ item.variant.compare_at_price | money }}</span></div>
+              <div class="struck-out-price">
+                <span class="theme-money">{{ item.variant.compare_at_price | money }}</span>
+              </div>
             {% elsif item.original_line_price > item.final_line_price %}
-              <div class="struck-out-price"><span class="theme-money">{{ item.original_price | money }}</span></div>
+              <div class="struck-out-price">
+                <span class="theme-money">{{ item.original_price | money }}</span>
+              </div>
             {% endif %}
-            <div><span class="theme-money">{{ item.final_price | money }}</span></div>
+            <div class="price">
+              <span class="money">{{ item.original_price | money }}</span>
+            </div>
             {% render 'unit-price', variant: item %}
           </span>
         </div>
@@ -102,7 +118,9 @@
         <div class="cart-summary-overlay__column-total">
           <div class="cart-summary-overlay__line-price">
             {% if item.variant.compare_at_price > item.variant.price %}
-              <div class="struck-out-price theme-money">{{ item.variant.compare_at_price | times: item.quantity | money }}</div>
+              <div class="struck-out-price theme-money">
+                {{ item.variant.compare_at_price | times: item.quantity | money }}
+              </div>
             {% elsif item.original_line_price > item.final_line_price %}
               <div class="struck-out-price theme-money">{{ item.original_line_price | money }}</div>
             {% endif %}
@@ -111,15 +129,15 @@
         </div>
         {% if item.line_level_discount_allocations.size > 0 %}
           <ul class="cart-discount-list">
-          {% for discount_allocation in item.line_level_discount_allocations %}
-            <li class="cart-discount">
-              <div class="cart-discount__label">
+            {% for discount_allocation in item.line_level_discount_allocations %}
+              <li class="cart-discount">
+                <div class="cart-discount__label">
                   <span class="cart-discount__icon">{% render 'icon-label' %}</span>
                   <span class="cart-discount__title">{{ discount_allocation.discount_application.title }}</span>
-              </div>
-              <div class="cart-discount__amount theme-money">{{ discount_allocation.amount | money }}</div>
-            </li>
-          {% endfor %}
+                </div>
+                <div class="cart-discount__amount theme-money">{{ discount_allocation.amount | money }}</div>
+              </li>
+            {% endfor %}
           </ul>
         {% endif %}
       </div>
@@ -130,16 +148,20 @@
               {%- for discount_application in cart.cart_level_discount_applications -%}
                 <li class="cart-discount cart-discount--inline">
                   <span class="cart-discount__label">
-                      <span class="cart-discount__icon">{% render 'icon-label' %}</span>
-                      <span class="cart-discount__title">{{ discount_application.title }}</span>
+                    <span class="cart-discount__icon">{% render 'icon-label' %}</span>
+                    <span class="cart-discount__title">{{ discount_application.title }}</span>
                   </span>
-                  <span class="cart-discount__amount theme-money">{{ discount_application.total_allocated_amount | money }}</span>
+                  <span class="cart-discount__amount theme-money">
+                    {{- discount_application.total_allocated_amount | money -}}
+                  </span>
                 </li>
               {%- endfor -%}
             </ul>
           {%- endif -%}
 
-          <span class="cart-summary-overlay__subtotal-mobile-title">{{ 'products.added_notification.subtotal' | t }}</span>
+          <span class="cart-summary-overlay__subtotal-mobile-title">
+            {{- 'products.added_notification.subtotal' | t -}}
+          </span>
           <span class="cart-summary-overlay__subtotal-amount theme-money">
             {%- if settings.cart_currency_code_enabled -%}
               {{- cart.total_price | money_with_currency -}}
