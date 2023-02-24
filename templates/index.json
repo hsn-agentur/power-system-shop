@@ -9,7 +9,7 @@
             "image": "shopify:\/\/shop_images\/230208_Header_AKTION_Bite.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
-            "slide_link": "shopify:\/\/products\/bite-power",
+            "slide_link": "",
             "subheading": "",
             "title": "",
             "title_size": 84,
@@ -18,7 +18,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Mehr erfahren",
-            "button_url_1": "shopify:\/\/collections\/pulver",
+            "button_url_1": "shopify:\/\/products\/bite-power",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
