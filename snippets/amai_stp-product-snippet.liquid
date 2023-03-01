@@ -8,5 +8,17 @@
     if(!Spurit.QuantityBreaks2.snippet){
         Spurit.QuantityBreaks2.snippet = {};
     }
-    Spurit.QuantityBreaks2.snippet.product = {{ product | json }};
+    let new_product = {{ product | json }};
+    let variant_info = {
+      {%- for variant in product.variants -%}
+          {{variant.id}} : {
+              "variant_id":"{{ variant.id}}",
+              "inventory_policy":"{{ variant.inventory_policy}}",
+              "inventory_quantity":{{ variant.inventory_quantity}},
+              "is_tracked_quantity":"{{ variant.inventory_management}}" !== "",
+          },
+      {%- endfor -%}
+    }
+    new_product.variant_info = Object.values(variant_info)
+    Spurit.QuantityBreaks2.snippet.product = new_product;
 </script>
