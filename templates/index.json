@@ -47,7 +47,6 @@
         },
         "0ca2a190-ab4a-41bc-a367-3b96d4b7883e": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/221214_Header_AKTION_Shape_Shake-min.png",
             "mobile_image": "shopify:\/\/shop_images\/221214_Header_AKTION_Shape_Shake-min.png",
