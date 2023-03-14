@@ -414,6 +414,7 @@
               {%- assign product_form_present = true -%}
               <div class="buy-buttons-row" {{ block.shopify_attributes }}>
                 {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-id: product.id %}
+                  <input type="hidden" id="quantity-hidden" value="1" name="quantity" />
                   {{- original_select -}}
 
                   {% if product.available %}
