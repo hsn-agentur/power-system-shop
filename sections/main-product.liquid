@@ -414,7 +414,6 @@
               {%- assign product_form_present = true -%}
               <div class="buy-buttons-row" {{ block.shopify_attributes }}>
                 {% form 'product', product, id: product_form_id, class: 'form product-purchase-form', data-product-id: product.id %}
-<input type="hidden" id="quantity-hidden" value="1" name="quantity" />
                   {{- original_select -}}
 
                   {% if product.available %}
@@ -428,6 +427,7 @@
                     -%}
                     
                       <div class="quantity-submit-row__submit input-row">
+{% unless product.metafields.custom.vpe %}
                         {% if block.settings.show_quantity_selector %}
                           <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
                           <div class="quantity-wrapper">
@@ -435,7 +435,10 @@
                             <input aria-label="{{ 'products.product.quantity' | t }}" id="quantity" type="text" name="quantity" value="1" />
                             <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
                           </div>
+  {% else %}
+<input type="hidden" id="quantity-hidden" value="1" name="quantity" />
                         {% endif %}
+{% endunless %}}
                         {%- capture add_to_cart_text -%}
                           {%- if product.template_suffix contains 'preorder' -%}
                             {{- 'products.product.preorder' | t -}}
