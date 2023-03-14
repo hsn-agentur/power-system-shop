@@ -5726,6 +5726,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             if((currentAmount % step) > 0)  {
               var closestAmount = Math.round(currentAmount / step) * step;
               $input.val(closestAmount);
+              console.log('changed amount to ' + closestAmount)
               changed = true;
             }
             return {
