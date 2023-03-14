@@ -435,8 +435,6 @@
                             <input aria-label="{{ 'products.product.quantity' | t }}" id="quantity" type="text" name="quantity" value="1" />
                             <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
                           </div>
-  {% else %}
-<input type="hidden" id="quantity-hidden" value="1" name="quantity" />
                         {% endif %}
 {% endunless %}
                         {%- capture add_to_cart_text -%}
