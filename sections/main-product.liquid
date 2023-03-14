@@ -427,6 +427,9 @@
                       endif
                     -%}
                     
+{% if product.metafields.custom.vpe %}
+  {% render 'quantity-picker', product: product %}
+{% else %}
                       <div class="quantity-submit-row__submit input-row">
                         {% if block.settings.show_quantity_selector %}
                           <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
@@ -436,6 +439,7 @@
                             <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
                           </div>
                         {% endif %}
+  {% endif %}
                         {%- capture add_to_cart_text -%}
                           {%- if product.template_suffix contains 'preorder' -%}
                             {{- 'products.product.preorder' | t -}}
