@@ -121,6 +121,10 @@
    else
      for i in (1..12)
        assign jsonpart = "{'amount':" | append: i | append: ", 'label':" | append: i | append: '}'
+     if forloop.index0 > 0
+       assign jsonstring = jsonstring | append: ','
+     endif
+     assign jsonstring = jsonstring | append: jsonpart
      endfor
    endfor
    
