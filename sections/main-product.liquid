@@ -438,7 +438,7 @@
   {% else %}
 <input type="hidden" id="quantity-hidden" value="1" name="quantity" />
                         {% endif %}
-{% endunless %}}
+{% endunless %}
                         {%- capture add_to_cart_text -%}
                           {%- if product.template_suffix contains 'preorder' -%}
                             {{- 'products.product.preorder' | t -}}
