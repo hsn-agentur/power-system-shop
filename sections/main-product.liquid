@@ -427,9 +427,6 @@
                       endif
                     -%}
                     
-{% if product.metafields.custom.vpe %}
-  {% render 'quantity-picker', product: product %}
-{% else %}
                       <div class="quantity-submit-row__submit input-row">
                         {% if block.settings.show_quantity_selector %}
                           <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
@@ -450,7 +447,6 @@
                           {{- add_to_cart_text -}} 
                         </button>
                       </div>
-  {% endif %}
 
                     
                       {% if enable_dynamic_payment_button %}
