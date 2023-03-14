@@ -118,8 +118,10 @@
        assign jsonstring = jsonstring | append: ','
      endif
      assign jsonstring = jsonstring | append: jsonpart
-
+   else
+     assign jsonstring = jsonstring | append: "{'amount':1 , 'label':'1'}"
    endfor
+   
    assign jsonstring = jsonstring | append: ']'
 -%}
 
