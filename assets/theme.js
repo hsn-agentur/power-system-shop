@@ -5695,8 +5695,14 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
            var checkAmountInfo = this.functions.checkAmount.call(evt.currentTarget, evt);
             if(checkAmountInfo.changed)  {
-              $(evt.currentTarget).parents('.cart-item').addClass('hsnAmountChanged');
-              $(evt.currentTarget).parents('.cart-item').find('.hsnChangeAmountStep').text(checkAmountInfo.step);
+              var $cartItem = $(evt.currentTarget).parents('.cart-item');
+              $cartItem.addClass('hsnAmountChanged');
+              $cartItem.find('.hsnChangeAmountStep').text(checkAmountInfo.step);
+              var index = $('.cart-item').index($cartItem.get(0));
+              if(window.hsnChangeAmountInfo == undefined) {
+                window.hsnChangeAmountInfo = [];
+              }
+              window.hsnChangeAmountInfo.push({'step': checkAmountInfo.step, 'index': index});
             }
           // focus on -/+ button or input, depending on source of event
           var toFocusId;
