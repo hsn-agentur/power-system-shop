@@ -5727,6 +5727,18 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
               var closestAmount = Math.round(currentAmount / step) * step;
               $input.val(closestAmount);
               console.log('changed amount to ' + closestAmount);
+
+
+              this.functions.updateCart.call(this,
+          {
+            line: $(evt.currentTarget).data('line'),
+            quantity: closestAmount },
+          function () {
+            // after update, set focus
+            $('#' + toFocusId).focus();
+          });
+
+              
               // $input.trigger('change.cartTemplateSection');
               changed = true;
             }
