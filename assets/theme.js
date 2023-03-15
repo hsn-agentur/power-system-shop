@@ -5695,8 +5695,8 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
            var checkAmountInfo = this.functions.checkAmount.call(evt.currentTarget, evt);
             if(checkAmountInfo.changed)  {
-              $(this).parents('.cart-item').addClass('hsnAmountChanged');
-              $(this).parents('.cart-item').find('.hsnChangeAmountStep').text(checkAmountInfo.step);
+              $(evt.currentTarget).parents('.cart-item').addClass('hsnAmountChanged');
+              $(evt.currentTarget).parents('.cart-item').find('.hsnChangeAmountStep').text(checkAmountInfo.step);
             }
           // focus on -/+ button or input, depending on source of event
           var toFocusId;
@@ -5706,16 +5706,14 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             toFocusId = $(evt.currentTarget).attr('id');
           }
 
-          // - VLE -
-//          this.functions.updateCart.call(this,
-//          {
-//            line: $(evt.currentTarget).data('line'),
-//            quantity: $(evt.currentTarget).val() },
-//          function () {
-//            // after update, set focus
-//            $('#' + toFocusId).focus();
-//          });
-// - /VLE 
+          this.functions.updateCart.call(this,
+          {
+            line: $(evt.currentTarget).data('line'),
+            quantity: $(evt.currentTarget).val() },
+          function () {
+            // after update, set focus
+            $('#' + toFocusId).focus();
+          });
         }.bind(this));
 
 
