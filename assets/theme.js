@@ -5743,7 +5743,10 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             }
           });
           $(container).on('change.cartTemplateSection', '.cart-item__quantity-input', function (e) {
-         //   this.replacingContent = true; // no effect, but disabled ~50 lines above
+            this.replacingContent = true; // no effect, but disabled ~50 lines above
+            if(e.isTrigger == 3) {
+              return;
+            }
             var checkAmountInfo = checkAmount.call(this, e);
             if(checkAmountInfo.changed)  {
               $(this).parents('.cart-item').addClass('hsnAmountChanged');
