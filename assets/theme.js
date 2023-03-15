@@ -5721,7 +5721,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             $('#' + toFocusId).focus();
 
 $(window.hsnChangeAmountInfo).each(function() {
-  var $cartItem = $$('.cart-item').eq(this.index);
+  var $cartItem = $('.cart-item').eq(this.index);
   $cartItem.addClass('hsnAmountChanged');
   $cartItem.find('.hsnChangeAmountStep').text(this.step);
 });
