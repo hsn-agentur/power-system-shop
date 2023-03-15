@@ -5728,7 +5728,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
       
         
-$(window).on('theme:cartchanged', function()  {
+$(document).on('theme:cartchanged', function()  {
 $(window.hsnChangeAmountInfo).each(function() {
   var $cartItem = $('.cart-item').eq(this.index);
   $cartItem.addClass('hsnAmountChanged');
@@ -5870,7 +5870,6 @@ $(window.hsnChangeAmountInfo).each(function() {
           success: function success() {
             document.documentElement.dispatchEvent(
             new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }));
-$(window).trigger('theme:cartchanged');
             successCallback();
           },
           error: function error(data) {
