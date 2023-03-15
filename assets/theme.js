@@ -5849,14 +5849,6 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
               console.log('changed amount to ' + closestAmount);
 
 
-              this.functions.updateCart.call(this,
-          {
-            line: $(evt.currentTarget).data('line'),
-            quantity: closestAmount },
-          function () {
-            // after update, set focus
-            $('#' + toFocusId).focus();
-          });
 
               
               // $input.trigger('change.cartTemplateSection');
