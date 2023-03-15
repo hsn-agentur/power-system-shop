@@ -5693,6 +5693,11 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             return;
           }
 
+           var checkAmountInfo = this.functions.checkAmount.call(this, e);
+            if(checkAmountInfo.changed)  {
+              $(this).parents('.cart-item').addClass('hsnAmountChanged');
+              $(this).parents('.cart-item').find('.hsnChangeAmountStep').text(checkAmountInfo.step);
+            }
           // focus on -/+ button or input, depending on source of event
           var toFocusId;
           if (evt.type === 'changeFromButton') {
@@ -5717,37 +5722,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
         
 
         $(function()  {
-          var checkAmount = function (evt) {
-            var $input = $(this);
-            var quantities_attribute = $(this).closest('.quantity').attr('data-quantities');
-            var quantities = eval(quantities_attribute);
-            var currentAmount = parseInt($input.val());
-            var step = quantities[0].amount;
-            var changed = false;
-            if((currentAmount % step) > 0)  {
-              var closestAmount = Math.round(currentAmount / step) * step;
-              $input.val(closestAmount);
-              console.log('changed amount to ' + closestAmount);
 
-
-              this.functions.updateCart.call(this,
-          {
-            line: $(evt.currentTarget).data('line'),
-            quantity: closestAmount },
-          function () {
-            // after update, set focus
-            $('#' + toFocusId).focus();
-          });
-
-              
-              // $input.trigger('change.cartTemplateSection');
-              changed = true;
-            }
-            return {
-              changed: changed,
-              step: step
-            }
-          }
           $('.cart-item__quantity-input').each(function()  {
             var checkAmountInfo = checkAmount.call(this);
             if(checkAmountInfo.changed)  {
@@ -5760,11 +5735,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             if(e.isTrigger == 3) {
             //  return;
             }
-            var checkAmountInfo = checkAmount.call(this, e);
-            if(checkAmountInfo.changed)  {
-              $(this).parents('.cart-item').addClass('hsnAmountChanged');
-              $(this).parents('.cart-item').find('.hsnChangeAmountStep').text(checkAmountInfo.step);
-            }
+           
           });
         })
         
@@ -5867,6 +5838,38 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
       },
 
+      checkAmount: function checkAmount(evt) {
+            var $input = $(this);
+            var quantities_attribute = $(this).closest('.quantity').attr('data-quantities');
+            var quantities = eval(quantities_attribute);
+            var currentAmount = parseInt($input.val());
+            var step = quantities[0].amount;
+            var changed = false;
+            if((currentAmount % step) > 0)  {
+              var closestAmount = Math.round(currentAmount / step) * step;
+              $input.val(closestAmount);
+              console.log('changed amount to ' + closestAmount);
+
+
+              this.functions.updateCart.call(this,
+          {
+            line: $(evt.currentTarget).data('line'),
+            quantity: closestAmount },
+          function () {
+            // after update, set focus
+            $('#' + toFocusId).focus();
+          });
+
+              
+              // $input.trigger('change.cartTemplateSection');
+              changed = true;
+            }
+            return {
+              changed: changed,
+              step: step
+            }
+          },
+      
       updateCart: function updateCart(params, successCallback) {
         if (this.cartXhr) {
           this.cartXhr.abort();
