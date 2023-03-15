@@ -5727,7 +5727,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
               var closestAmount = Math.round(currentAmount / step) * step;
               $input.val(closestAmount);
               console.log('changed amount to ' + closestAmount);
-              $input.trigger('change.cartTemplateSection');
+              // $input.trigger('change.cartTemplateSection');
               changed = true;
             }
             return {
@@ -5745,7 +5745,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
           $(container).on('change.cartTemplateSection', '.cart-item__quantity-input', function (e) {
             this.replacingContent = true; // no effect, but disabled ~50 lines above
             if(e.isTrigger == 3) {
-              return;
+            //  return;
             }
             var checkAmountInfo = checkAmount.call(this, e);
             if(checkAmountInfo.changed)  {
