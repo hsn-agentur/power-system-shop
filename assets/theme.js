@@ -5870,7 +5870,7 @@ $(window.hsnChangeAmountInfo).each(function() {
           success: function success() {
             document.documentElement.dispatchEvent(
             new CustomEvent('theme:cartchanged', { bubbles: true, cancelable: false }));
-
+$(window).trigger('theme:cartchanged');
             successCallback();
           },
           error: function error(data) {
