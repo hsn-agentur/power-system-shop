@@ -5693,7 +5693,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             return;
           }
 
-           var checkAmountInfo = this.functions.checkAmount.call(this, e);
+           var checkAmountInfo = this.functions.checkAmount.call(evt.currentTarget, evt);
             if(checkAmountInfo.changed)  {
               $(this).parents('.cart-item').addClass('hsnAmountChanged');
               $(this).parents('.cart-item').find('.hsnChangeAmountStep').text(checkAmountInfo.step);
