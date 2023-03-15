@@ -5701,15 +5701,16 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             toFocusId = $(evt.currentTarget).attr('id');
           }
 
-          this.functions.updateCart.call(this,
-          {
-            line: $(evt.currentTarget).data('line'),
-            quantity: $(evt.currentTarget).val() },
-          function () {
-            // after update, set focus
-            $('#' + toFocusId).focus();
-          });
-
+          // - VLE -
+//          this.functions.updateCart.call(this,
+//          {
+//            line: $(evt.currentTarget).data('line'),
+//            quantity: $(evt.currentTarget).val() },
+//          function () {
+//            // after update, set focus
+//            $('#' + toFocusId).focus();
+//          });
+// - /VLE 
         }.bind(this));
 
 
