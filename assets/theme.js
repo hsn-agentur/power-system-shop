@@ -5720,17 +5720,21 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             // after update, set focus
             $('#' + toFocusId).focus();
 
-$(window.hsnChangeAmountInfo).each(function() {
-  var $cartItem = $('.cart-item').eq(this.index);
-  $cartItem.addClass('hsnAmountChanged');
-  $cartItem.find('.hsnChangeAmountStep').text(this.step);
-});
 
             
           });
         }.bind(this));
 
 
+      
+        
+$(window).on('theme:cartchanged', function()  {
+$(window.hsnChangeAmountInfo).each(function() {
+  var $cartItem = $('.cart-item').eq(this.index);
+  $cartItem.addClass('hsnAmountChanged');
+  $cartItem.find('.hsnChangeAmountStep').text(this.step);
+});
+})
         
 
        
