@@ -5719,24 +5719,7 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
 
         
 
-        $(function()  {
-
-          $('.cart-item__quantity-input').each(function()  {
-            var checkAmountInfo = checkAmount.call(this);
-            if(checkAmountInfo.changed)  {
-              $(this).parents('.cart-item').addClass('hsnAmountChanged');
-              $(this).parents('.cart-item').find('.hsnChangeAmountStep').text(checkAmountInfo.step);
-            }
-          });
-          $(container).on('change.cartTemplateSection', '.cart-item__quantity-input', function (e) {
-            //this.replacingContent = true; // no effect, but disabled ~50 lines above
-            if(e.isTrigger == 3) {
-            //  return;
-            }
-           
-          });
-        })
-        
+       
 
         $(container).on('click.cartTemplateSection', '.quantity-down, .quantity-up', function (evt) {
           var getQuantitydata = function(quatities, currentAmount)  {
@@ -5846,12 +5829,6 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
             if((currentAmount % step) > 0)  {
               var closestAmount = Math.round(currentAmount / step) * step;
               $input.val(closestAmount);
-              console.log('changed amount to ' + closestAmount);
-
-
-
-              
-              // $input.trigger('change.cartTemplateSection');
               changed = true;
             }
             return {
