@@ -6,7 +6,7 @@
         "16359276425da8ce46-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_Bite.png",
+            "image": "shopify:\/\/shop_images\/230330_Header_AKTION_Ostern-min.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
@@ -18,7 +18,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Mehr erfahren",
-            "button_url_1": "shopify:\/\/products\/bite-power",
+            "button_url_1": "shopify:\/\/collections\/probier-sets",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
