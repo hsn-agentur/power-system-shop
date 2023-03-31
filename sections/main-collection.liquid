@@ -126,7 +126,7 @@
                   <div class="overlay-text overlay--v-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | first }} overlay--h-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | last }} image-overlay__over">
                     <div class="overlay-text__inner">
                       <div class="overlay-text__text">
-                        <h2 class="overlay-text__title h4-style">{% if section.settings.hide_heading %}&nbsp;{% else %}{{ link.title }}{% endif %}</h2>
+                        <h2 class="overlay-text__title h4-style">{{ link.title }}</h2>
                       </div>
                     </div>
                   </div>
@@ -162,7 +162,7 @@
       <div class="overlay-text overlay-text--inline overlay--v-center overlay--h-center image-overlay__over" data-cc-animate data-cc-animate-delay="0.2s">
         <div class="overlay-text__inner">
           <div class="overlay-text__text">
-            <h1 class="overlay-text__title super-large-text">{{ collection.title | escape }}</h1>
+            <h1 class="overlay-text__title super-large-text">{% if section.settings.hide_heading %}&nbsp;{% else %}{{ collection.title | escape }}{% endif %}</h1>
 
             {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
               <div class="overlay-text__rte rte cf align-center reading-width large-text">{{ collection.description }}</div>
