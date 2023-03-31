@@ -3,6 +3,7 @@
     "main": {
       "type": "main-collection",
       "settings": {
+        "hide_heading": true,
         "show_image_behind_heading": true,
         "heading_image_height": "huge",
         "overlay_style": "no_background",
