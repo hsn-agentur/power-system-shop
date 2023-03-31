@@ -69,9 +69,8 @@
         },
         "3894a9f9-cb8f-4530-8c4e-9dbf44508fa0": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/230127_Header_CAROUSEL_Probier_Sets-min.png",
+            "image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_Bite.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
@@ -83,7 +82,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Mehr erfahren",
-            "button_url_1": "shopify:\/\/collections\/probier-sets",
+            "button_url_1": "shopify:\/\/products\/bite-power",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
