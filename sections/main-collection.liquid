@@ -126,7 +126,7 @@
                   <div class="overlay-text overlay--v-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | first }} overlay--h-{{ section.settings.subcoll_gall_text_alignment | split: ' ' | last }} image-overlay__over">
                     <div class="overlay-text__inner">
                       <div class="overlay-text__text">
-                        <h2 class="overlay-text__title h4-style">{% if hide_heading %}&nbsp;{% else %}{{ link.title }}{% endif %}</h2>
+                        <h2 class="overlay-text__title h4-style">{% if section.settings.hide_heading %}&nbsp;{% else %}{{ link.title }}{% endif %}</h2>
                       </div>
                     </div>
                   </div>
