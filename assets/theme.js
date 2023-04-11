@@ -1440,7 +1440,12 @@
         if($(this).attr('id').indexOf('customQuantitySelector') == 0)  {
           return;
         }
-        selectedVariant = $(this).attr('data-value');
+        if(selectedVariant == '') {
+          selectedVariant = $(this).attr('data-value');
+        }
+        else {
+          selectedVariant += ' / ' + $(this).attr('data-value');
+        }
       })
       $('*[data-select]').each(function()  {
         $(this).find('*[data-variant]').hide();
