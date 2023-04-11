@@ -1408,15 +1408,15 @@
         selectedOptions.push($(this).attr('data-value'));
       })
       $('a.thumbnail[data-variants], a.show-gallery').each(function()  {
-        var variants = $(this).attr('data-variants').trim();
+        var variants = $(this).attr('data-variants').trim().split(',');
         var allSelectedOptionsFound = true;
         $(selectedOptions).each(function()  {
           if(variants.length == 0)  {
             return;
           }
-          allSelectedOptionsFound &= (variants.indexOf(this) != -1)
-          if(!(variants.indexOf(this) != -1)) {
-            console.log('selected variant ' + this + ' filtered out image ' + variants + ' ');
+          allSelectedOptionsFound &= (jQuery.inArray(this, variants) != -1)
+          if(!(jQuery.inArray(this, variants) != -1)) {
+            console.log('selected variant ' + this + ' filtered out image ' + variants.join('#') + ' ');
           }
         })
         if(allSelectedOptionsFound)  {
