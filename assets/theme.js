@@ -1408,7 +1408,7 @@
         selectedOptions.push($(this).attr('data-value'));
       })
       $('a.thumbnail[data-variants], a.show-gallery').each(function()  {
-        var variants = $(this).attr('data-variants').trim().split(',');
+        var variants = $(this).attr('data-variants').trim().split(', ');
         var allSelectedOptionsFound = true;
         $(selectedOptions).each(function()  {
           if(variants.length == 0)  {
