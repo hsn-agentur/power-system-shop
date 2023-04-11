@@ -1416,7 +1416,7 @@
           }
           allSelectedOptionsFound &= (jQuery.inArray(this, variants) != -1)
           if(!(jQuery.inArray(this, variants) != -1)) {
-            console.log('selected variant ' + this + ' filtered out image ' + variants.join('#') + ' ');
+       //     console.log('selected variant ' + this + ' filtered out image ' + variants.join(' # ') + ' ');
           }
         })
         if(allSelectedOptionsFound)  {
