@@ -1415,6 +1415,9 @@
             return;
           }
           allSelectedOptionsFound &= (variants.indexOf(this) != -1)
+          if(!(variants.indexOf(this) != -1)) {
+            console.log('selected variant ' + this + ' filtered out image ' + variants + ' ');
+          }
         })
         if(allSelectedOptionsFound)  {
  //         $(this).css({height: '', overflow: ''});
