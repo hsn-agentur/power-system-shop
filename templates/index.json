@@ -27,6 +27,7 @@
         },
         "0ca2a190-ab4a-41bc-a367-3b96d4b7883e": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/230330_Header_AKTION_Ausdauer-Energie-min.png",
             "image_position": "center center",
@@ -90,7 +91,6 @@
         },
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/230209_Header_CAROUSEL_Big-Block-min_080ee423-d5e8-47fe-a66c-05a4732c70db.png",
             "image_position": "center center",
