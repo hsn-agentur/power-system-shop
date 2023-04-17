@@ -1046,7 +1046,7 @@
           "1478526632860": {
             "type": "announcement",
             "settings": {
-              "text": "<p>Neuheiten entdecken & 10% Probier-Rabatt sichern<\/p>"
+              "text": "<p><a href=\"\/collections\/neuheiten\" title=\"Neuheiten\">Neuheiten entdecken & 10% Probier-Rabatt sichern<\/a><\/p>"
             }
           }
         },
