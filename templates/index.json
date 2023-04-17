@@ -27,7 +27,7 @@
         "0ca2a190-ab4a-41bc-a367-3b96d4b7883e": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/230330_Header_AKTION_Ausdauer-Energie-min.png",
+            "image": "shopify:\/\/shop_images\/230414_Header_NEUHEITEN_LC_StrawCheesecake-min.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
@@ -39,7 +39,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Mehr erfahren",
-            "button_url_1": "shopify:\/\/collections\/aktion-ausdauer-drink-energy-bars",
+            "button_url_1": "https:\/\/power-system-shop.com\/products\/lower-carb-bar-2?variant=46508053365063",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
