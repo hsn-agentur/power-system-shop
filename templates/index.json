@@ -66,27 +66,6 @@
             "text_alignment": "bottom center"
           }
         },
-        "3894a9f9-cb8f-4530-8c4e-9dbf44508fa0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_Bite.png",
-            "image_position": "center center",
-            "mobile_image_position": "center center",
-            "slide_link": "",
-            "subheading": "",
-            "title": "",
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": true,
-            "button_label_1": "Mehr erfahren",
-            "button_url_1": "shopify:\/\/products\/bite-power",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "bottom center"
-          }
-        },
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
           "settings": {
@@ -107,14 +86,36 @@
             "button_url_2": "",
             "text_alignment": "bottom center"
           }
+        },
+        "3894a9f9-cb8f-4530-8c4e-9dbf44508fa0": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_Bite.png",
+            "image_position": "center center",
+            "mobile_image_position": "center center",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "Mehr erfahren",
+            "button_url_1": "shopify:\/\/products\/bite-power",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
         }
       },
       "block_order": [
         "16359276425da8ce46-0",
         "0ca2a190-ab4a-41bc-a367-3b96d4b7883e",
         "8acbcec8-59d5-44e0-9754-9d794ad42781",
-        "3894a9f9-cb8f-4530-8c4e-9dbf44508fa0",
-        "88c9e954-ab9b-4667-811e-6e097f485100"
+        "88c9e954-ab9b-4667-811e-6e097f485100",
+        "3894a9f9-cb8f-4530-8c4e-9dbf44508fa0"
       ],
       "settings": {
         "height": "fixed",
