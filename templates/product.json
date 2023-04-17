@@ -39,12 +39,6 @@
             "size_chart_page": ""
           }
         },
-        "c00a9b93-2c45-49f2-9d58-e196cf346518": {
-          "type": "shopify:\/\/apps\/amai-quantity-breaks-and-gifts\/blocks\/table-discount-block\/a8198207-c94c-43c6-8e51-f4d802fff7f3",
-          "disabled": true,
-          "settings": {
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -70,7 +64,6 @@
         "price",
         "divider",
         "variant_picker",
-        "c00a9b93-2c45-49f2-9d58-e196cf346518",
         "buy_buttons",
         "description"
       ],
