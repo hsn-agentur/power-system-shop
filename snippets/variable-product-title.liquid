@@ -9,7 +9,7 @@
       {{ full_product.title }}
     {%- endif -%}
   {% if product.title %}
-  <br /><span class="hsn-variant-name">{{ product.title }}</span>
+  <br /><span class="hsn-variant-name">{{ product.title | replace: ' / ', '<br />' }}</span>
   {% endif %}
   </span>
 {%- endif -%}
