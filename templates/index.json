@@ -138,7 +138,7 @@
         "explicit_order": "",
         "show_vendor": false,
         "enable_carousel": false,
-        "grid": 4,
+        "grid": 5,
         "rows": 5,
         "use_alt_bg": false,
         "show_view_all": true,
