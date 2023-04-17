@@ -138,8 +138,8 @@
         "explicit_order": "",
         "show_vendor": false,
         "enable_carousel": false,
-        "grid": 4,
-        "rows": 1,
+        "grid": 5,
+        "rows": 4,
         "use_alt_bg": false,
         "show_view_all": true,
         "full_width": false
