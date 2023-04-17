@@ -179,7 +179,7 @@
         "grid": 4,
         "rows": 1,
         "use_alt_bg": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "full_width": false
       }
     },
