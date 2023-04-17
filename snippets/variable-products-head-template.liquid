@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{ 'variable-products.css' | asset_url }}" />
   {% endif %}
 {%- endif -%}
-{% if collection or product or false %}
+{% if collection or product or true %}
   <script src="{{ 'variable-products.js' | asset_url }}" type="text/javascript" defer></script>
 {% else %}
   <script>

@@ -123,7 +123,7 @@
                   </div>
                 {%- endunless -%}
               {%- endif -%}
-              {% render 'product-label', product: product, cheapest_variant: cheapest_variant %}
+              {% render 'product-label', product: real_product, cheapest_variant: cheapest_variant %}
             </div>
           </a>
           {%- if show_hover_image -%}
