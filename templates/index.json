@@ -48,7 +48,7 @@
         "8acbcec8-59d5-44e0-9754-9d794ad42781": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/221111_Header_PRODUKTE_Drinks-min.png",
+            "image": "shopify:\/\/shop_images\/230414_Header_NEUHEITEN_LCV-HazelBrownie-min.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
@@ -60,7 +60,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Mehr erfahren",
-            "button_url_1": "shopify:\/\/products\/protein-shake",
+            "button_url_1": "https:\/\/power-system-shop.com\/products\/lower-carb-bar-2?variant=46508053430599",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
