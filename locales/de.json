@@ -139,7 +139,7 @@
   },
   "products": {
     "listing": {
-      "from": "Von"
+      "from": "ab"
     },
     "product": {
       "add_to_cart": "In den Warenkorb",
