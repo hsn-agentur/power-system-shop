@@ -1,12 +1,12 @@
 {%- if full_product == null -%}
-  2{{ product.title }}
+  {{ product.title }}
 {%- else -%}
   <span data-behavior="variable-product_title" data-variant_id='{{product.id}}'>
     {%- assign downcase_title = product.title | downcase -%}
     {%- if full_product.id == product.id or downcase_title == 'default title' -%}
-     7 {{ full_product.title }}
+      {{ full_product.title }}
     {%- else -%}
-    9  {{ full_product.title }}
+      {{ full_product.title }}
     {%- endif -%}
   </span>
 {%- endif -%}
