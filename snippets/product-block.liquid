@@ -153,8 +153,11 @@
 
               <div class="product-block__title">
                 {% render 'variable-product-title', product: product, full_product: full_product %}
-{{ product.title | replace: ' / ', '<br />' }}
-              
+                {%- assign downcase_title = product.title | downcase -%}
+                  {%- unless full_product.id == product.id or downcase_title == 'default title' -%}
+                    <br />
+                    {{ product.title | replace: ' / ', '<br />' }}
+                  {%- endunless -%}
               
               </div>
               {%- if settings.prod_thumb_show_subtitle and variable_product_metafields.descriptors.subtitle != blank -%}
