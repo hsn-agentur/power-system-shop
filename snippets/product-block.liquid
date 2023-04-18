@@ -154,7 +154,7 @@
               <div class="product-block__title">
                 {% render 'variable-product-title', product: product, full_product: full_product %}
                 {%- assign downcase_title = product.title | downcase -%}
-                  {%- unless full_product.id == product.id or downcase_title == 'default title' -%}
+                  {%- unless full_product.id == product.id or downcase_title == 'default title' or product.title == full_product.title -%}
                     <br />
                     {{ product.title | replace: ' / ', '<br />' }}
                   {%- endunless -%}
