@@ -1,6 +1,6 @@
 {%- assign enable_variable = true -%}
 {%- assign collection_id_string = collection.id | downcase -%}
-{%- assign blacklisted_collections = '290678046879' | split: ',' -%}
+{%- assign blacklisted_collections = '' | split: ',' -%}
 {%- if blacklisted_collections contains collection_id_string -%}{%- assign enable_variable = false -%}{%- endif -%}
 {%- assign whitelisted_collections = '' | split: ',' -%}
 {%- if whitelisted_collections contains collection_id_string -%}{%- assign enable_variable = true -%}{%- endif -%}
