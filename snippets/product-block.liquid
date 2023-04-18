@@ -151,8 +151,12 @@
                 <div class="vendor">{{ variable_vendor }}</div>
               {%- endif -%}
 
-              <div class="product-block__title">{% render 'variable-product-title', product: product, full_product: full_product %}</div>
+              <div class="product-block__title">
+                {% render 'variable-product-title', product: product, full_product: full_product %}
 {{ product.title | replace: ' / ', '<br />' }}
+              
+              
+              </div>
               {%- if settings.prod_thumb_show_subtitle and variable_product_metafields.descriptors.subtitle != blank -%}
                 <div class="product-block__subtitle">{{ variable_product_metafields.descriptors.subtitle }}</div>
               {%- endif -%}
