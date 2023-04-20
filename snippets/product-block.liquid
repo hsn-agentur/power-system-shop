@@ -156,7 +156,7 @@
                 {%- assign downcase_title = product.title | downcase -%}
                   {%- unless full_product.id == product.id or downcase_title == 'default title' or  full_product == null -%}
                     <br />
-                    {{ product.title | replace: ' / ', '<br />' }}
+                    {{ product.title | replace: ' / ', '<br />' }} ´
                   {%- endunless -%}
               
               </div>
