@@ -74,7 +74,7 @@
       for variant in product.variants              
         assign comparable_id = variant.id | append: '' | strip
         if comparable_id == product_or_variant_id
-          render 'product-block', product: variant, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+          render 'product-block', full_product: product, product: variant, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
         endif
       endfor
     endfor
