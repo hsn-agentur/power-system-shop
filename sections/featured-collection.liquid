@@ -67,11 +67,14 @@
   assign ordered_product_ids = section.settings.explicit_order | split: ','
   for product_or_variant_id in ordered_product_ids limit: product_limit
     for product in collection.products
+      assign comparable_id = product.id | append: '' | strip
+      if comparable_id == product_or_variant_id
+        render 'product-block', product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+      endif
       for variant in product.variants              
         assign comparable_id = variant.id | append: '' | strip
-        if comparable_product_id == product_or_variant_id
-          render 'product-block', full_product: product product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
-
+        if comparable_id == product_or_variant_id
+          render 'product-block', product: variant, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
         endif
       endfor
     endfor
