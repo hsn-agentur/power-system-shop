@@ -65,16 +65,15 @@
 {% if section.settings.explicit_order != blank %}
 {%- liquid
   assign ordered_product_ids = section.settings.explicit_order | split: ','
-  for product_id in ordered_product_ids limit: product_limit
+  for product_or_variant_id in ordered_product_ids limit: product_limit
     for product in collection.products
-                    echo '<!-- ####'
-                    echo product | json
-                    echo '-->'
-      assign comparable_product_id = product.id | append: '' | strip
-      if comparable_product_id == product_id
-        render 'product-block', product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
+      for variant in product.variants              
+        assign comparable_id = variant.id | append: '' | strip
+        if comparable_product_id == product_or_variant_id
+          render 'product-block', full_product: product product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
 
-      endif
+        endif
+      endfor
     endfor
   endfor
 -%}
@@ -124,7 +123,7 @@
       {
         "type": "text",
         "id": "explicit_order",
-        "label": "Explicit Order (Product IDs)"
+        "label": "Explicit Order / Filter (Variant IDs)"
       },
       {
         "type": "checkbox",
