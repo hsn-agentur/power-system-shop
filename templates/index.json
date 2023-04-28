@@ -70,7 +70,7 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/230209_Header_CAROUSEL_Big-Block-min_080ee423-d5e8-47fe-a66c-05a4732c70db.png",
+            "image": "shopify:\/\/shop_images\/230427_Header_CAROUSEL_5K-min.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
@@ -82,7 +82,7 @@
             "text": "",
             "enlarge_text": false,
             "button_label_1": "Mehr erfahren",
-            "button_url_1": "",
+            "button_url_1": "shopify:\/\/products\/5k-protein-shake-1",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
