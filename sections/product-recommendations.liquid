@@ -39,8 +39,12 @@
           -%}
    
           {%- for product in recommendations.products -%}
+            {%- if product.variants  -%}
+              {% render 'product-block', product: product.variants.0, custom_aspect_ratio: chosen_aspect_ratio %}
+            {%- else -%}
      <!-- {{ product | json }} -->
             {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio %}
+            {%- endif -%}}
           {%- endfor -%}
         </div>
       </div>
