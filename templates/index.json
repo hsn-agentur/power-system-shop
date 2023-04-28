@@ -82,7 +82,7 @@
             "text": "",
             "enlarge_text": false,
             "button_label_1": "Mehr erfahren",
-            "button_url_1": "shopify:\/\/products\/big-block",
+            "button_url_1": "",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -92,7 +92,7 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/221111_Startseite_CAROUSEL_Bite.png",
+            "image": "shopify:\/\/shop_images\/230414_Header_NEUHEITEN_alle-min.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
