@@ -37,6 +37,7 @@
               endfor
             endif
           -%}
+    <!-- {{ product | json }} -->
           {%- for product in recommendations.products -%}
             {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio %}
           {%- endfor -%}
