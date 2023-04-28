@@ -5,6 +5,7 @@
     data-cc-animate>
 
   {% if recommendations.performed and recommendations.products_count > 0 %}
+     <!-- {{ recommendations | json }} -->
     <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %} fully-spaced-row">
       <h4 class="align-center hometitle">{{ section.settings.title }}</h4>
 
@@ -37,7 +38,7 @@
               endfor
             endif
           -%}
-    <!-- {{ product | json }} -->
+   
           {%- for product in recommendations.products -%}
             {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio %}
           {%- endfor -%}
