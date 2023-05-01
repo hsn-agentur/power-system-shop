@@ -5,6 +5,7 @@
       "blocks": {
         "16359276425da8ce46-0": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/230418_Header_NEUHEITEN_BitePower_Straccia-min.png",
             "image_position": "center center",
@@ -26,6 +27,7 @@
         },
         "0ca2a190-ab4a-41bc-a367-3b96d4b7883e": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/230418_Header_NEUHEITEN_LC_StrawCheesecake-min.png",
             "image_position": "center center",
@@ -48,7 +50,7 @@
         "8acbcec8-59d5-44e0-9754-9d794ad42781": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/230418_Header_NEUHEITEN_LCV-HazelBrownie-min.png",
+            "image": "shopify:\/\/shop_images\/230427_Header_PRODUKTE_Drinks-min.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
@@ -60,7 +62,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Mehr erfahren",
-            "button_url_1": "https:\/\/power-system-shop.com\/products\/lower-carb-bar-2?variant=46508053463367",
+            "button_url_1": "shopify:\/\/products\/protein-shake-2",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -68,7 +70,6 @@
         },
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/230427_Header_CAROUSEL_5K-min.png",
             "image_position": "center center",
@@ -90,7 +91,6 @@
         },
         "3894a9f9-cb8f-4530-8c4e-9dbf44508fa0": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/230414_Header_NEUHEITEN_alle-min.png",
             "image_position": "center center",
