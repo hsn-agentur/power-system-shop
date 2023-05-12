@@ -92,7 +92,7 @@
         "3894a9f9-cb8f-4530-8c4e-9dbf44508fa0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/230414_Header_NEUHEITEN_alle-min.png",
+            "image": "shopify:\/\/shop_images\/230428_Header_AKTION_LowCarb-min.png",
             "image_position": "center center",
             "mobile_image_position": "center center",
             "slide_link": "",
@@ -103,8 +103,8 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": true,
-            "button_label_1": "Neuheiten entdecken",
-            "button_url_1": "shopify:\/\/collections\/neuheiten",
+            "button_label_1": "Mehr erfahren",
+            "button_url_1": "shopify:\/\/products\/lower-carb-bar-2",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
