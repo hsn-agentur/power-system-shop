@@ -39,11 +39,6 @@
             "size_chart_page": ""
           }
         },
-        "c00a9b93-2c45-49f2-9d58-e196cf346518": {
-          "type": "shopify:\/\/apps\/quantity-breaks-discounts\/blocks\/table-discount-block\/a8198207-c94c-43c6-8e51-f4d802fff7f3",
-          "settings": {
-          }
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -67,7 +62,7 @@
           "settings": {
             "title": "Inhalt",
             "icon": "",
-            "content": "<p>je 2x Lower Carb Bar Lemon Cheesecake, Blueberry Cupcake, Cookies & Cream, Peanut Caramel <\/p>",
+            "content": "<p>je 2x Lower Carb Bar Lemon Cheesecake, Blueberry Cupcake, Strawberry Cheesecake, Hazelnut Brownie Vegan<\/p>",
             "page": "",
             "open": false,
             "show_in_quickbuy": false
@@ -80,7 +75,6 @@
         "price",
         "divider",
         "variant_picker",
-        "c00a9b93-2c45-49f2-9d58-e196cf346518",
         "buy_buttons",
         "description",
         "dff04bbc-0c0c-42e7-82e2-e58bc1ae7660"
