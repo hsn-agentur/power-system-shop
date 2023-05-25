@@ -467,6 +467,11 @@
   "shopify": {
     "links": {
       "powered_by_shopify": " "
+    },
+    "checkout": {
+      "delivery_options": {
+        "shipping_address": "Lieferadresse (keine Packstationen!)"
+      }
     }
   }
 }
