@@ -471,6 +471,9 @@
     "checkout": {
       "delivery_options": {
         "shipping_address": "Lieferadresse (keine Packstationen!)"
+      },
+      "contact": {
+        "address1_label": "Adresse (Straße & Hausnummer)"
       }
     }
   }
