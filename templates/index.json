@@ -5,7 +5,6 @@
       "blocks": {
         "c0e42942-2a09-4f30-a543-8fceefbb3156": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/230526_Header_AKTION_Ausdauer-Energie.png",
             "image_position": "center center",
