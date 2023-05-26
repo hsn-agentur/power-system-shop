@@ -26,7 +26,6 @@
         },
         "93878369-c1a0-4b4b-9b35-f88decc10ee0": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/221116_Header_CAROUSEL_Snack.png",
             "image_position": "center center",
