@@ -3,28 +3,44 @@
     <div class="flexible-layout valign-middle">
       <div class="column column--half {% if section.settings.video_position == 'right' %}column--order-push-desktop{% endif %}">
 
-        {% if section.settings.video != blank %}
+        {% if section.settings.video_shopify != blank or section.settings.video_external != blank %}
           <div class="video-container image-overlay image-overlay--bg-no_background"
-            data-video-url="{{ section.settings.video | escape }}"
+            {% if section.settings.video_shopify != blank %}
+              data-video-sources="{%- for source in section.settings.video_shopify.sources -%}
+                {{ source.format }} {{ source.mime_type }} {{ source.url }}
+                {%- unless forloop.last -%}|{%- endunless -%}
+              {%- endfor -%}"
+              data-video-type="mp4"
+            {% elsif section.settings.video_external != blank %}
+              data-video-url="{{ section.settings.video_external | escape }}"
+            {% endif %}
             data-video-autoplay="{% if section.settings.autoplay %}true{% else %}false{% endif %}"
             data-video-loop="true"
             data-cc-animate>
             <div class="video-container__video"></div>
 
+            {%- liquid
+              if section.settings.placeholder_image
+                assign placeholder_image = section.settings.placeholder_image
+              elsif section.settings.video_shopify
+                assign placeholder_image = section.settings.video_shopify.preview_image
+              endif
+            -%}
             {% unless section.settings.autoplay %}
               <div class="video-container__cover">
-                {%- if section.settings.placeholder_image == blank -%}
+                {%- if placeholder_image == blank -%}
                   <div class="placeholder-image placeholder--banner dark">
                     {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' -}}
                   </div>
                 {%- else -%}
                   <div class="rimage-outer-wrapper rimage-background lazyload fade-in"
-                      data-bgset="{% render 'bgset', image: section.settings.placeholder_image %}"
+                      data-bgset="{% render 'bgset', image: placeholder_image %}"
                       data-sizes="auto"
-                      data-parent-fit="cover">
+                      data-parent-fit="cover"
+                      style="background-position: {{ placeholder_image.presentation.focal_point }}">
                     <noscript>
-                      <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: section.settings.placeholder_image.aspect_ratio | times: 100 }}%">
-                        <img src="{{ section.settings.placeholder_image | img_url: '1024x1024' }}" alt="{{ section.settings.placeholder_image.alt | escape }}" class="rimage__image">
+                      <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: placeholder_image.aspect_ratio | times: 100 }}%">
+                        <img src="{{ placeholder_image | img_url: '1024x1024' }}" alt="{{ placeholder_image.alt | escape }}" class="rimage__image">
                       </div>
                     </noscript>
                   </div>
@@ -38,14 +54,15 @@
                 </div>
               </div>
 
-            {% elsif section.settings.placeholder_image %}
+            {% elsif placeholder_image %}
               <div class="video-container__fallback rimage-outer-wrapper rimage-background lazyload fade-in"
-                data-bgset="{% render 'bgset', image: section.settings.placeholder_image %}"
+                data-bgset="{% render 'bgset', image: placeholder_image %}"
                 data-sizes="auto"
-                data-parent-fit="cover">
+                data-parent-fit="cover"
+                style="background-position: {{ placeholder_image.presentation.focal_point }}">
                 <noscript>
-                  <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: section.settings.placeholder_image.aspect_ratio | times: 100 }}%">
-                    <img src="{{ section.settings.placeholder_image | img_url: '1024x1024' }}" alt="{{ section.settings.placeholder_image.alt | escape }}" class="rimage__image">
+                  <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: placeholder_image.aspect_ratio | times: 100 }}%">
+                    <img src="{{ placeholder_image | img_url: '1024x1024' }}" alt="{{ placeholder_image.alt | escape }}" class="rimage__image">
                   </div>
                 </noscript>
               </div>
@@ -71,7 +88,7 @@
           <div class="rte">{{ section.settings.text }}</div>
 
           {% if section.settings.button_label != blank %}
-            <div class="lightly-spaced-row-above">
+            <div class="lightish-spaced-row-above">
               <a class="{% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
             </div>
           {% endif %}
@@ -88,10 +105,17 @@
     "class": "section-video-with-text",
     "settings": [
       {
-        "id": "video",
-        "type": "text",
-        "label": "Video link",
-        "info": "Supports mp4, YouTube and Vimeo. Please read documentation before using. [Read more](https://cleancanvas.co.uk/support/general/background-video)",
+        "id": "video_shopify",
+        "type": "video",
+        "label": "Video upload",
+        "info": "Hosted by Shopify. Replaces External video if both are set."
+      },
+      {
+        "id": "video_external",
+        "type": "video_url",
+        "label": "External video",
+        "accept": ["youtube", "vimeo"],
+        "info": "Supports YouTube and Vimeo",
         "default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
       },
       {
@@ -103,8 +127,12 @@
       {
         "id": "placeholder_image",
         "type": "image_picker",
-        "label": "Placeholder image",
-        "info": "Required. Shows while the video is loading, or if it cannot autoplay."
+        "label": "Custom placeholder image",
+        "info": "Required for External videos"
+      },
+      {
+        "type": "header",
+        "content": "Text"
       },
       {
         "type": "text",

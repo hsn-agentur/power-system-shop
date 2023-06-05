@@ -42,9 +42,7 @@
               endif
             -%}
             {% for product in section.settings.product_list %}
-              {% if false %}
               {% render 'product-block', product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel %}
-              {% endif %}
             {% endfor %}
           {% endif %}
         </div>
@@ -54,7 +52,7 @@
 
   {% if settings.quickbuy_style != 'off' and section.settings.enable_carousel %}
     <div class="quickbuy-container">
-      <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x' %}</a>
+      <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x', stroke_width: 1 %}</a>
       <div class="inner"></div>
     </div>
   {% endif %}

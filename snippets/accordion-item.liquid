@@ -1,6 +1,7 @@
 {% comment %}
   Parameters:
   - title {string} [required] - The item title or summary
+  - escape_title {boolean} [optional] - Whether to HTML-escape the provided title. Default is false.
   - content {string} [required] - The item content
   - add_content_class {string} [optional] - Additional class(es) to add to the content element
   - toggle_icon {string} [optional] - Custom icon markup, e.g. '<span class="icon">...</span>'
@@ -8,6 +9,10 @@
 {% endcomment %}
 
 {%- liquid
+  if escape_title
+    assign title = title | escape
+  endif
+
   assign item_attr = 'class="cc-accordion-item"'
 
   if item_open == true

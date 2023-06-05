@@ -3,7 +3,7 @@
   {%- if product.metafields.theme.label != blank -%}
     {%- assign label_count = label_count | plus: 1 -%}
     <span class="product-label product-label--meta">
-      <span>{{ product.metafields.theme.label }}</span>
+      <span>{{ product.metafields.theme.label | escape }}</span>
     </span>
   {%- endif -%}
 

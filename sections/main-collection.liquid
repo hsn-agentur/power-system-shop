@@ -1,4 +1,4 @@
-<div data-section-id="{{ section.id }}" data-section-type="collection-template" data-ajax-filtering="{{ section.settings.ajax_products }}" data-components="accordion,modal,price-range" data-cc-animate>
+<div data-section-id="{{ section.id }}" data-section-type="collection-template" data-ajax-filtering="{{ section.settings.ajax_products }}" data-filter-section-id="{{ section.id }}" data-components="accordion,modal,price-range" data-cc-animate>
 {% paginate collection.products by section.settings.coll_num_per_page_int %}
 
 {%- liquid
@@ -68,7 +68,7 @@
   {% capture subcollection_html %}
     {% if section.settings.subcoll_style == 'buttons' %}
       <div class="container">
-        <div class="subcollection-links subcollection-links--buttons align-center lightly-spaced-row-above{% if header_image_enabled %} image-overlay__over{% endif %}">
+        <div class="subcollection-links subcollection-links--buttons align-center lightish-spaced-row-above{% if header_image_enabled %} image-overlay__over{% endif %}">
           {%- for link in current_link_parent.links -%}
             {%- unless link.object.handle == collection.handle or link.type != 'collection_link' -%}
               {%- assign subcoll_count = subcoll_count | plus: 1 -%}
@@ -79,7 +79,7 @@
       </div>
     {% else %}
       {% unless section.settings.subcoll_gall_full_width %}
-        <div class="container container--not-mobile lightly-spaced-row-above lightly-spaced-row-above--not-mobile">
+        <div class="container container--not-mobile lightish-spaced-row-above lightish-spaced-row-above--not-mobile">
       {% endunless %}
       <div class="subcollection-links subcollection-links--gallery {% if section.settings.subcoll_gall_full_width %}subcollection-links--is-full-width{% endif %} {% if section.settings.subcoll_gall_mobile_layout == 'hide' %}desktop-only{% endif %} {% if header_image_enabled %}subcollection-links--under-image-header{% endif %}">
         <div class="gallery slick-slider-overlay-dots {% if section.settings.subcoll_gall_enable_margin %} gallery--with-margins{% endif %}{% if section.settings.subcoll_gall_full_width and section.settings.subcoll_gall_enable_margin %} gallery--with-vertical-outer-padding{% endif %}"
@@ -149,51 +149,80 @@
 {%- endif -%}
 
 {% if header_image_enabled %}
-  <div class="page-header page-header--with-background page-header--background-desktop-only image-overlay image-overlay--bg-{{ section.settings.overlay_style }} page-header--padded-{{ section.settings.heading_image_height }} rimage-wrapper">
-    <div class="rimage-background lazyload fade-in"
-      data-bgset="{% render 'bgset', image: collection.image %}"
-      data-sizes="auto"
-      data-parent-fit="cover"></div>
-    <div class="page-header-background-mobile-only image-overlay image-overlay--bg-{{ section.settings.overlay_style }} page-header--padded-{{ section.settings.heading_image_height }} rimage-wrapper">
+  {%- liquid
+    assign show_header = false
+    if section.settings.show_title
+      assign show_header = true
+    endif
+    if collection.description != blank and section.settings.coll_desc_pos == 'above'
+      assign show_header = true
+    endif
+    if current_link_parent and section.settings.subcoll_style == 'buttons'
+      assign show_header = true
+    endif
+  -%}
+  {%- if show_header -%}
+    <div class="page-header page-header--with-background page-header--background-desktop-only image-overlay image-overlay--bg-{{ section.settings.overlay_style }} page-header--padded-{{ section.settings.heading_image_height }} rimage-wrapper">
       <div class="rimage-background lazyload fade-in"
         data-bgset="{% render 'bgset', image: collection.image %}"
         data-sizes="auto"
         data-parent-fit="cover"></div>
-      <div class="overlay-text overlay-text--inline overlay--v-center overlay--h-center image-overlay__over" data-cc-animate data-cc-animate-delay="0.2s">
-        <div class="overlay-text__inner">
-          <div class="overlay-text__text">
-            <h1 class="overlay-text__title super-large-text">{% if section.settings.hide_heading %}&nbsp;{% else %}{{ collection.title | escape }}{% endif %}</h1>
+      <div class="page-header-background-mobile-only image-overlay image-overlay--bg-{{ section.settings.overlay_style }} page-header--padded-{{ section.settings.heading_image_height }} rimage-wrapper">
+        <div class="rimage-background lazyload fade-in"
+          data-bgset="{% render 'bgset', image: collection.image %}"
+          data-sizes="auto"
+          data-parent-fit="cover"></div>
+        <div class="overlay-text overlay-text--inline overlay--v-center overlay--h-center image-overlay__over" data-cc-animate data-cc-animate-delay="0.2s">
+          <div class="overlay-text__inner">
+            <div class="overlay-text__text">
+              {%- if section.settings.show_title -%}
+                <h1 class="overlay-text__title super-large-text">{{ collection.title | escape }}</h1>
+              {%- endif -%}
 
-            {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-              <div class="overlay-text__rte rte cf align-center reading-width large-text">{{ collection.description }}</div>
-            {% endif %}
+              {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
+                <div class="overlay-text__rte rte cf align-center reading-width large-text">{{ collection.description }}</div>
+              {% endif %}
 
-            {%- if current_link_parent and section.settings.subcoll_style == 'buttons' -%}
-              {{ subcollection_html }}
-            {%- endif -%}
+              {%- if current_link_parent and section.settings.subcoll_style == 'buttons' -%}
+                {{ subcollection_html }}
+              {%- endif -%}
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  {%- endif -%}
 {% else %}
   {{ subcollection_html }}
-  <div class="page-header page-header--with-upper-spacing">
-    <div class="container">
-      <h1 class="pagetitle h3-style">{{ collection.title | escape }}</h1>
+  {%- liquid
+    assign show_header = false
+    if section.settings.show_title
+      assign show_header = true
+    endif
+    if collection.description != blank and section.settings.coll_desc_pos == 'above'
+      assign show_header = true
+    endif
+  -%}
+  {%- if show_header -%}
+    <div class="page-header page-header--with-upper-spacing">
+      <div class="container">
+        {%- if section.settings.show_title -%}
+          <h1 class="pagetitle h3-style">{{ collection.title | escape }}</h1>
+        {%- endif -%}
 
-      {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
-        <div class="rte cf align-center reading-width">{{ collection.description }}</div>
-      {% endif %}
+        {% if collection.description != blank and section.settings.coll_desc_pos == 'above' %}
+          <div class="rte cf align-center reading-width">{{ collection.description }}</div>
+        {% endif %}
+      </div>
     </div>
-  </div>
+  {% endif %}
 {% endif %}
 
   {%- if current_link_parent and header_image_enabled and section.settings.subcoll_style != 'buttons' -%}
     {{ subcollection_html }}
   {%- endif -%}
 
-  <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}">
+  <div class="container{% if settings.use_fullwidth_layout %} container--no-max{% endif %}{% if show_header == false %} lightly-spaced-row-above{% endif %}">
     <div class="utility-bar" data-ajax-container data-ajax-scroll-to>
       <div class="utility-bar__left">
         {% if section.settings.coll_show_sort or show_filters %}
@@ -260,12 +289,12 @@
       </div>
     </div>
 
-    <div class="filter-container filter-container--side{% if section.settings.collapse_tag_sidebar_by_default == false %} filter-container--show-filters-desktop{% endif %}" data-ajax-container>
+    <div class="filter-container filter-container--side{% if section.settings.collapse_tag_sidebar_by_default == false %} filter-container--show-filters-desktop{% endif %}">
       {% if section.settings.coll_show_sort or show_filters %}
         {% render 'faceted-filters', filter_context: collection, clear_url: collection.url, current_sort: current_sort %}
       {% endif %}
 
-      <div class="filters-adjacent collection-listing">
+      <div class="filters-adjacent collection-listing" data-ajax-container>
         {% if collection.products.size == 0 %}
           <h5 class="align-centre fully-spaced-row">{{ 'collections.general.no_matches' | t }}</h5>
         {% else %}
@@ -297,7 +326,6 @@
                 endfor
               endif
             -%}
-            {% render 'variable-products-block-main-collection', collection: collection, chosen_aspect_ratio: chosen_aspect_ratio, section: section %}
             {% for product in collection.products %}
               {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, animate: true %}
             {% endfor %}
@@ -329,14 +357,14 @@
       },
       {
         "type": "checkbox",
-        "id": "hide_heading",
-        "label": "Hide Heading",
-        "default": false
+        "id": "show_title",
+        "label": "Show collection title",
+        "default": true
       },
       {
         "type": "checkbox",
         "id": "show_image_behind_heading",
-        "label": "Show collection image behind heading",
+        "label": "Show collection image behind title",
         "default": true
       },
       {
@@ -392,6 +420,22 @@
         ]
       },
       {
+        "type": "select",
+        "id": "coll_desc_pos",
+        "label": "Description position",
+        "default": "above",
+        "options": [
+          {
+            "value": "above",
+            "label": "Below collection title"
+          },
+          {
+            "value": "below",
+            "label": "Below products"
+          }
+        ]
+      },
+      {
         "type": "header",
         "content": "Layout"
       },
@@ -424,22 +468,6 @@
         "id": "show_total",
         "label": "Show product total",
         "default": true
-      },
-      {
-        "type": "select",
-        "id": "coll_desc_pos",
-        "label": "Description position",
-        "default": "above",
-        "options": [
-          {
-            "value": "above",
-            "label": "Below collection title"
-          },
-          {
-            "value": "below",
-            "label": "Below products"
-          }
-        ]
       },
       {
         "type": "header",
@@ -504,6 +532,13 @@
         "label": "Filter and sort collections without loading a new page",
         "default": true,
         "info": "Some apps require this to be disabled"
+      },
+      {
+        "type": "checkbox",
+        "id": "auto_apply_hide_unavailable",
+        "label": "On selecting a filter, automatically apply 'Hide out of stock'",
+        "default": false,
+        "info": "Requires Availability filter to be enabled"
       },
       {
         "type": "checkbox",

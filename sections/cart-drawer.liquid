@@ -1,181 +1,720 @@
-<div class="cart-summary-overlay">
-  <div class="cart-summary-overlay__row-head">
-    <div class="cart-summary-overlay__column-image">
-      <div class="cart-summary-overlay__column-title">{{ 'products.added_notification.title' | t }}</div>
-    </div>
-    <div class="cart-summary-overlay__column-item">
-      <div class="cart-summary-overlay__column-title">{{ 'products.added_notification.item' | t }}</div>
-    </div>
-    <div class="cart-summary-overlay__column-price-region">
-      <div class="cart-summary-overlay__column-price">
-        <div class="cart-summary-overlay__column-title">{{ 'products.added_notification.unit_price' | t }}</div>
-      </div>
-      <div class="cart-summary-overlay__column-quantity">
-        <div class="cart-summary-overlay__column-title">{{ 'products.added_notification.quantity' | t }}</div>
-      </div>
-      <div class="cart-summary-overlay__column-total">
-        <div class="cart-summary-overlay__column-title">{{ 'products.added_notification.total_price' | t }}</div>
-      </div>
-    </div>
-    <div class="cart-summary-overlay__column-subtotal">
-      <div class="cart-summary-overlay__column-title">{{ 'products.added_notification.shipping_note' | t }}</div>
-    </div>
-  </div>
-  {% for item in cart.items %}
-    <div class="cart-summary-overlay__row-body" data-item-key="{{ item.key }}">
-      <div class="cart-summary-overlay__column-image">
-        <img src="{{ item.image | img_url: '170x' }}" alt="{{ item.title | escape }}">
-      </div>
-      <div class="cart-summary-overlay__column-item">
-        <div class="cart-summary-overlay__title">{{ item.product.title }}</div>
-        <div class="cart-summary-overlay__variants">
-          {%- unless item.product.has_only_default_variant -%}
-            <div class="cart-summary-overlay__variant">
-              <span class="cart-summary-overlay__variant-value">{{ item.variant.title }}</span>
-            </div>
-
-            {%- for p in item.properties -%}
-              {% unless p.last == blank %}
-                <div class="cart-summary-overlay__variant">
-                  <span class="cart-summary-overlay__variant-option">{{ p.first }}</span>
-                  <span class="cart-summary-overlay__variant-value">
-                    {% if p.last contains '/uploads/' %}
-                      <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-                    {% else %}
-                      {{ p.last }}
-                    {% endif %}
-                  </span>
-                </div>
-              {% endunless %}
-            {%- endfor -%}
-          {% endunless %}
-
-          {%- if item.selling_plan_allocation -%}
-            <div class="cart-summary-overlay__variant">
-              <span class="cart-summary-overlay__variant-value">
-                {{- item.selling_plan_allocation.selling_plan.name -}}
-              </span>
-            </div>
-          {%- endif -%}
-
-          {%- if settings.prod_pre_order_label_show and item.product.template_suffix contains 'preorder' -%}
-            <div class="cart-summary-overlay__price-label price-label price-label--preorder">
-              {{ 'products.product.preorder' | t }}
-            </div>
-          {%- endif -%}
-        </div>
-        <div class="cart-summary-overlay__mobile-price-row">
-          <div class="cart-summary-overlay__mobile-unit-price">
-            {% if item.variant.compare_at_price > item.variant.price %}
-              <div class="struck-out-price">
-                <span class="theme-money">{{ item.variant.compare_at_price | money }}</span>
-              </div>
-            {% elsif item.original_line_price > item.final_line_price %}
-              <div class="struck-out-price">
-                <span class="theme-money">{{ item.original_price | money }}</span>
-              </div>
-            {% endif %}
-            <div class="price">
-              <span class="money">{{ item.original_price | money }}</span>
-            </div>
-            {% render 'unit-price', variant: item %}
-          </div>
-          <div class="cart-summary-overlay__mobile-quantity">
-            {{ 'products.added_notification.quantity' | t }}
-            <span class="cart-summary-overlay__quantity">{{ item.quantity }}</span>
-          </div>
-          <div class="cart-summary-overlay__mobile-line-price">
-            {% if item.original_line_price != item.final_line_price %}
-              <div class="theme-money struck-out-price">{{ item.original_line_price | money }}</div>
-              <div class="theme-money">{{ item.final_line_price | money }}</div>
-            {% else %}
-              <span class="theme-money">{{ item.final_line_price | money }}</span>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-      <div class="cart-summary-overlay__column-price-region">
-        <div class="cart-summary-overlay__column-price">
-          <span class="cart-summary-overlay__unit-price">
-            {% if item.variant.compare_at_price > item.variant.price %}
-              <div class="struck-out-price">
-                <span class="theme-money">{{ item.variant.compare_at_price | money }}</span>
-              </div>
-            {% elsif item.original_line_price > item.final_line_price %}
-              <div class="struck-out-price">
-                <span class="theme-money">{{ item.original_price | money }}</span>
-              </div>
-            {% endif %}
-            <div class="price">
-              <span class="money">{{ item.original_price | money }}</span>
-            </div>
-            {% render 'unit-price', variant: item %}
-          </span>
-        </div>
-        <div class="cart-summary-overlay__column-quantity">
-          <span class="cart-summary-overlay__quantity">{{ item.quantity }}</span>
-        </div>
-        <div class="cart-summary-overlay__column-total">
-          <div class="cart-summary-overlay__line-price">
-            {% if item.variant.compare_at_price > item.variant.price %}
-              <div class="struck-out-price theme-money">
-                {{ item.variant.compare_at_price | times: item.quantity | money }}
-              </div>
-            {% elsif item.original_line_price > item.final_line_price %}
-              <div class="struck-out-price theme-money">{{ item.original_line_price | money }}</div>
-            {% endif %}
-            <div class="theme-money">{{ item.final_line_price | money }}</div>
-          </div>
-        </div>
-        {% if item.line_level_discount_allocations.size > 0 %}
-          <ul class="cart-discount-list">
-            {% for discount_allocation in item.line_level_discount_allocations %}
-              <li class="cart-discount">
-                <div class="cart-discount__label">
-                  <span class="cart-discount__icon">{% render 'icon-label' %}</span>
-                  <span class="cart-discount__title">{{ discount_allocation.discount_application.title }}</span>
-                </div>
-                <div class="cart-discount__amount theme-money">{{ discount_allocation.amount | money }}</div>
-              </li>
-            {% endfor %}
-          </ul>
+{%- capture announcement -%}
+  {% if section.settings.show_announcement %}
+    {%- liquid
+      if section.settings.announcement_enable_box
+        assign box_color_brightness = section.settings.announcement_box_color | color_brightness
+        if box_color_brightness > 128
+          assign box_color_saturation = section.settings.announcement_box_color | color_extract: 'saturation'
+          if box_color_saturation > 0
+            assign text_col = section.settings.announcement_box_color | color_darken: 60 | color_saturate: 30 | color_to_rgb | split: '(' | last | split: ')' | first
+          else
+            assign text_col = section.settings.announcement_box_color | color_darken: 60 | color_to_rgb | split: '(' | last | split: ')' | first
+          endif
+        else
+          assign text_col = '255,255,255'
+        endif
+      endif
+    -%}
+    <div class="{% if section.settings.announcement_icon != blank or section.settings.announcement_custom_icon != blank %} with-icon{% endif %}{% if section.settings.announcement_enable_box %} text-box text-box--wide{% endif %}" {% if section.settings.announcement_enable_box %}style="--box-color: {{ section.settings.announcement_box_color }}; --box-text-color: {{ text_col }}"{% endif %}>
+      {%- if section.settings.announcement_icon == blank and section.settings.announcement_custom_icon == blank -%}
+        {{- section.settings.announcement_text -}}
+      {%- else -%}
+        {% if section.settings.announcement_custom_icon == blank %}
+          {% render 'icon', icon: section.settings.announcement_icon, size: section.settings.announcement_icon_size %}
+        {% else %}
+          <span class="icon icon--image icon--{{ section.settings.announcement_icon_size }}">{% render 'responsive-image', image: section.settings.announcement_custom_icon %}</span>
         {% endif %}
-      </div>
-      <div class="cart-summary-overlay__column-subtotal">
-        <span class="cart-summary-overlay__subtotal">
-          {%- if cart.cart_level_discount_applications != blank -%}
-            <ul class="cart-discount-list">
-              {%- for discount_application in cart.cart_level_discount_applications -%}
-                <li class="cart-discount cart-discount--inline">
-                  <span class="cart-discount__label">
-                    <span class="cart-discount__icon">{% render 'icon-label' %}</span>
-                    <span class="cart-discount__title">{{ discount_application.title }}</span>
-                  </span>
-                  <span class="cart-discount__amount theme-money">
-                    {{- discount_application.total_allocated_amount | money -}}
-                  </span>
-                </li>
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
+        <span class="with-icon__beside">{{ section.settings.announcement_text }}</span>
+      {%- endif -%}
+    </div>
+  {% endif %}
+{%- endcapture -%}
 
-          <span class="cart-summary-overlay__subtotal-mobile-title">
-            {{- 'products.added_notification.subtotal' | t -}}
-          </span>
-          <span class="cart-summary-overlay__subtotal-amount theme-money">
-            {%- if settings.cart_currency_code_enabled -%}
-              {{- cart.total_price | money_with_currency -}}
-            {%- else -%}
-              {{- cart.total_price | money -}}
-            {%- endif -%}
-          </span>
-          <div class="cart-summary-overlay__note">{{ 'products.added_notification.shipping_note' | t }}&nbsp;</div>
-        </span>
+<div data-section-id="{{ section.id }}" data-section-type="cart-drawer" data-form-action="{{ routes.cart_url }}" data-form-method="post">
+  <div class="cart-drawer-modal cc-popup cc-popup--right" aria-hidden="true" data-freeze-scroll="true">
+    <div class="cc-popup-background"></div>
+    <div class="cc-popup-modal" role="dialog" aria-modal="true" aria-labelledby="CartDrawerModal-Title">
+      <div class="cc-popup-container">
+        <div class="cc-popup-content">
+          <cart-form data-section-id="{{ section.id }}" class="cart-drawer" data-ajax-update="true">
+            <div class="cart-drawer__content{% if cart.items == empty %} cart-drawer__content--hidden{% endif %}" data-merge-attributes="content-container">
+              <div class="cart-drawer__content-upper">
+                <header class="cart-drawer__header cart-drawer__content-item">
+                  <div id="CartDrawerModal-Title" class="cart-drawer__title h4-style heading-font" data-merge="header-title">
+                    {{ 'cart.general.title' | t }}
+                    {% if cart.items != empty %}
+                      <span class="cart-drawer__title-count">({{ cart.item_count }})</span>
+                    {% endif %}
+                  </div>
+
+                  <button type="button" class="cc-popup-close tap-target" aria-label="{{ 'general.accessibility_labels.close' | t | escape }}">
+                    {%- render 'popup-close' -%}
+                  </button>
+                </header>
+
+                {%- if settings.show_free_shipping_bar -%}
+                  <div class="cart-drawer__content-item">
+                    {%- render 'free-shipping-bar' -%}
+                  </div>
+                {%- endif -%}
+
+                {%- if section.settings.announcement_position == 'above-items' -%}
+                  <div class="cart-drawer__content-item">
+                    <div class="cart-info-block cart-info-block--lmtb">{{- announcement -}}</div>
+                  </div>
+                {%- endif -%}
+
+                <div class="cart-item-list cart-drawer__content-item">
+                  <div class="cart-item-list__body" data-merge-list="cart-items">
+                    {% for item in cart.items %}
+                      <div data-merge-list-item="item-key:{{ item.key }}|{{ item.final_price }}{% for discount_allocation in item.line_level_discount_allocations %}|{{ discount_allocation.discount_application.title | escape }}{% endfor %}"
+                          {% comment %} Discount items are difficult to predict - BOGOFs appear as a separate item with the same key as an existing item - simpler to always refresh {% endcomment %}
+                          {%- if item.line_level_discount_allocations == empty -%}
+                          data-merge-cache="{{ item.key }}|{{ item.quantity }}|{{ item.final_line_price }}|{% if item.selling_plan_allocation %}{{ item.selling_plan_allocation.selling_plan.id }}{% endif %}"
+                          {%- endif -%}>
+                        {%- render 'cart-item', item: item, forloop: forloop, drawer: true -%}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+
+                {%- if section.settings.announcement_position == 'below-items' -%}
+                  <div class="cart-drawer__content-item">
+                    <div class="cart-info-block cart-info-block--lmtb">{{- announcement -}}</div>
+                  </div>
+                {%- endif -%}
+              </div>
+
+              <div data-merge="cross-sells" data-merge-cache="{% if cart.items == blank %}blank{% else %}{{ cart.items.first.product.id }}{% endif %}">
+                {%- liquid
+                  if section.settings.enable_cross_sells
+                    if cart.items == empty
+                      if section.settings.cross_sell_products != blank
+                        assign cross_sell_product_list = true
+                      endif
+                    else
+                      if section.settings.enable_automatic_cross_sells
+                        assign cross_sell_auto = true
+                      elsif section.settings.cross_sell_products != blank
+                        assign cross_sell_product_list = true
+                      endif
+                    endif
+                  endif
+                -%}
+                {%- if cross_sell_product_list or cross_sell_auto -%}
+                  <div class="cart-item-upsells">
+                    <cc-cart-cross-sell{% if cross_sell_auto %} data-from="{{ routes.product_recommendations_url }}?section_id=product-mini-recommendations&limit=8&product_id={{ cart.items.first.product.id }}"{% endif %}>
+                      <div class="collection-slider collection-slider--no-wide-gutter cart-drawer__content-item use-alt-bg">
+                        <div class="opposing-items opposing-items--valign-base very-lightly-spaced-row">
+                          <div class="opposing-items__left product-detail-label">{{ section.settings.cross_sell_title | escape }}</div>
+                          <div class="no-wrap">
+                            <a class="prev ltr-icon inh-col" href="#">{% render 'svg-chevron-left' %}</a>
+                            <a class="next ltr-icon inh-col" href="#">{% render 'svg-chevron-right' %}</a>
+                          </div>
+                        </div>
+                        <div class="collection-listing">
+                          <div class="product-list product-list--image-shape-{{ settings.prod_thumb_shape }} carousel carousel--fixed-grid-mode carousel--per-row-2">
+                            {%- liquid
+                              if cross_sell_product_list
+                                if settings.prod_thumb_shape == 'portrait-23'
+                                  assign chosen_aspect_ratio = 0.67
+                                elsif settings.prod_thumb_shape == 'portrait-45'
+                                  assign chosen_aspect_ratio = 0.8
+                                elsif settings.prod_thumb_shape == 'square'
+                                  assign chosen_aspect_ratio = 1.0
+                                elsif settings.prod_thumb_shape == 'landscape-54'
+                                  assign chosen_aspect_ratio = 1.25
+                                elsif settings.prod_thumb_shape == 'landscape-32'
+                                  assign chosen_aspect_ratio = 1.50
+                                elsif settings.prod_thumb_shape == 'tallest'
+                                  assign chosen_aspect_ratio = 99
+                                  for product in section.settings.cross_sell_products
+                                    if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                                      assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                                    endif
+                                  endfor
+                                else
+                                  assign chosen_aspect_ratio = 0
+                                  for product in section.settings.cross_sell_products
+                                    if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                                      assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                                    endif
+                                  endfor
+                                endif
+
+                                for product in section.settings.cross_sell_products
+                                 render 'product-block', product: product, manual_image_load: true, no_quick_buy: true, no_swiping: true, custom_aspect_ratio: chosen_aspect_ratio
+                                endfor
+                              endif
+                            -%}
+                          </div>
+                        </div>
+                      </div>
+                    </cross-sell-products>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+
+            <div class="cart-drawer__footer{% if cart.items == empty %} cart-drawer__footer--hidden{% endif %}" data-merge-attributes="footer-container">
+              {%- if section.settings.announcement_position == 'above-subtotal' -%}
+                <div class="cart-info-block cart-info-block--smb">{{- announcement -}}</div>
+              {%- endif -%}
+
+              <div data-merge="footer">
+                {% if cart.items != empty %}
+                  {%- if cart.cart_level_discount_applications != blank -%}
+                    <ul class="cart-discount-list">
+                      {%- for discount_application in cart.cart_level_discount_applications -%}
+                        <li class="cart-discount cart-discount--inline">
+                          <span class="cart-discount__label">
+                              <span class="cart-discount__icon">{% render 'icon-label' %}</span>
+                              <span class="cart-discount__title">{{ discount_application.title }}</span>
+                          </span>
+                          <span class="cart-discount__amount theme-money">{{ discount_application.total_allocated_amount | money }}</span>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+                  <div class="subtotal h4-style heading-font opposing-items">
+                    {{ 'cart.general.subtotal' | t }}:
+                    <span class="theme-money">
+                      {%- if settings.cart_currency_code_enabled -%}
+                        {{- cart.total_price | money_with_currency -}}
+                      {%- else -%}
+                        {{- cart.total_price | money -}}
+                      {%- endif -%}
+                    </span>
+                  </div>
+
+                  <div class="lightly-spaced-row">
+                    {%- if section.settings.show_tax_and_shipping -%}
+                      {%- capture taxes_shipping_checkout -%}
+                        {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                          {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
+                        {%- elsif cart.taxes_included -%}
+                          {{ 'cart.general.taxes_included_but_shipping_at_checkout' | t }}
+                        {%- elsif shop.shipping_policy.body != blank -%}
+                          {{ 'cart.general.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url }}
+                        {%- else -%}
+                          {{ 'cart.general.taxes_and_shipping_at_checkout' | t }}
+                        {%- endif -%}
+                      {%- endcapture -%}
+
+                      <div class="cart-policies rte">{{ taxes_shipping_checkout }}</div>
+                    {%- endif -%}
+
+                    {% if section.settings.enable_cart_notes %}
+                      <a href="#" class="toggle-target-toggler--is-hidden underline" data-toggle-target=".cart-drawer__note">{{ 'cart.label.note' | t }}</a>
+                      <div class="cart-drawer__note toggle-target toggle-target--hidden">
+                        <div class="toggle-target-container">
+                          <textarea name="note">{{ cart.note }}</textarea>
+                        </div>
+                      </div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+
+              {% if section.settings.cart_terms_page != blank %}
+                <terms-agreement class="terms-agreement rte">
+                  <input type="checkbox" id="terms" />
+                  <label for="terms">{{ 'cart.terms.agreement_html' | t: terms_url: section.settings.cart_terms_page }}</label>
+                </terms-agreement>
+              {% endif %}
+
+              <div class="checkout-buttons{% if cart.items == empty %} hidden{% endif %}" data-merge-attributes="checkout-buttons">
+                {% if section.settings.enable_direct_cart %}
+                  <a href="{{ routes.root_url | append: '/checkout' | replace: '//', '/' }}" class="button button--large button--wide">{{ 'cart.general.checkout' | t }}</a>
+                {% else %}
+                  <a href="{{ routes.cart_url }}" class="button button--large button--wide">{{ 'cart.general.checkout' | t }}</a>
+                {% endif %}
+              </div>
+
+              {%- if section.settings.announcement_position == 'below-checkout' -%}
+                <div class="cart-info-block cart-info-block--smt">{{- announcement -}}</div>
+              {%- endif -%}
+            </div>
+
+            <div
+              class="cart-drawer__empty-content{% if section.settings.empty_enable_custom_colors %} cart-drawer__empty-content--custom-colors{% endif %}{% if cart.items != empty %} cart-drawer__empty-content--hidden{% endif %}"
+              data-merge-attributes="empty-container"
+              {% if section.settings.empty_enable_custom_colors %}
+                style="--bg: {{ section.settings.empty_color_background_gradient | default: section.settings.empty_color_background }};
+                       --text: {{ section.settings.empty_color_text }};
+                       --text-dim: {{ section.settings.empty_color_text | color_modify: 'alpha', 0.4 }}"
+              {% endif %}>
+              <button type="button" class="cc-popup-close tap-target" aria-label="{{ 'general.accessibility_labels.close' | t | escape }}">
+                {%- render 'popup-close' -%}
+              </button>
+              <div class="align-center">
+                {%- if section.settings.empty_icon == 'basket' -%}
+                  <div class="lightly-spaced-row"><span class="icon--large">{%- render 'svg-basket' -%}</span></div>
+                {%- elsif section.settings.empty_icon == 'bag' -%}
+                  <div class="lightly-spaced-row"><span class="icon--large">{%- render 'svg-bag' -%}</span></div>
+                {%- elsif section.settings.empty_icon == 'cart' -%}
+                  <div class="lightly-spaced-row"><span class="icon--large">{%- render 'svg-cart' -%}</span></div>
+                {%- endif -%}
+
+                {%- if section.settings.empty_heading != blank -%}
+                  <div class="majortitle h1-style">{{ section.settings.empty_heading }}</div>
+                {%- endif -%}
+
+                {%- if section.settings.empty_text != blank -%}
+                  <div class="rte">{{ section.settings.empty_text }}</div>
+                {%- endif -%}
+
+                {%- if section.settings.empty_button_text != blank -%}
+                  <div class="button-row">
+                    <a class="{% if section.settings.empty_button_style != 'link' %}btn btn--{{ section.settings.empty_button_style }}{% else %}small-feature-link{% endif %} button-row__button" href="{{ section.settings.empty_button_link }}">{{ section.settings.empty_button_text | escape }}</a>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </cart-form>
+        </div>
       </div>
     </div>
-  {% endfor %}
-  <div class="cart-summary-overlay__actions">
-    <a class="button altcolour shop-more" href="#">{{ 'products.added_notification.keep_shopping' | t }}</a>
-    <a class="button to-cart" href="{{ routes.cart_url }}">{{ 'products.added_notification.cart' | t }}</a>
   </div>
 </div>
+
+
+{% schema %}
+  {
+    "name": "Cart drawer",
+    "class": "section-cart-drawer",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_cart_notes",
+        "label": "Enable cart notes",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "show_tax_and_shipping",
+        "label": "Show tax status and shipping policy link",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_direct_cart",
+        "label": "Enable direct checkout",
+        "info": "Disable to send customers to the cart page",
+        "default": true
+      },
+      {
+        "type": "url",
+        "id": "cart_terms_page",
+        "label": "Terms and Conditions link",
+        "info": "Checkbox only required if direct checkout is enabled"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_backorder_text",
+        "label": "Show backorder text",
+        "default": true,
+        "info": "Only shows for products which use inventory tracking and are available to purchase when out of stock."
+      },
+      {
+        "type": "header",
+        "content": "Inventory notice"
+      },
+      {
+        "type": "radio",
+        "id": "show_inventory_notice",
+        "label": "Show inventory notice",
+        "options": [
+          {
+            "label": "Never",
+            "value": "never"
+          },
+          {
+            "label": "Only when inventory low",
+            "value": "low"
+          },
+          {
+            "label": "Always",
+            "value": "always"
+          }
+        ],
+        "default": "low"
+      },
+      {
+        "type": "select",
+        "id": "show_inventory_count",
+        "label": "Show count in inventory notice",
+        "options": [
+          {
+            "label": "Never",
+            "value": "never"
+          },
+          {
+            "label": "Only when inventory low",
+            "value": "low"
+          },
+          {
+            "label": "Always",
+            "value": "always"
+          }
+        ],
+        "default": "low"
+      },
+      {
+        "type": "range",
+        "id": "inventory_threshold",
+        "min": 1,
+        "max": 100,
+        "step": 1,
+        "label": "Low inventory threshold",
+        "default": 10
+      },
+      {
+        "type": "header",
+        "content": "Announcement"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_announcement",
+        "label": "Show announcement",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "announcement_position",
+        "label": "Position",
+        "options": [
+          {
+            "label": "Above cart items",
+            "value": "above-items"
+          },
+          {
+            "label": "Below cart items",
+            "value": "below-items"
+          },
+          {
+            "label": "Above subtotal",
+            "value": "above-subtotal"
+          },
+          {
+            "label": "Below checkout button",
+            "value": "below-checkout"
+          }
+        ],
+        "default": "above-items"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "announcement_text",
+        "label": "Text",
+        "default": "Cart announcement text"
+      },
+      {
+        "type": "select",
+        "id": "announcement_icon",
+        "label": "Icon",
+        "default": "box",
+        "options": [
+          {
+            "value": "",
+            "label": "No icon"
+          },
+          {
+            "value": "award",
+            "label": "Award"
+          },
+          {
+            "value": "box",
+            "label": "Box"
+          },
+          {
+            "value": "briefcase",
+            "label": "Briefcase"
+          },
+          {
+            "value": "calendar",
+            "label": "Calendar"
+          },
+          {
+            "value": "chat_bubble",
+            "label": "Chat bubble"
+          },
+          {
+            "value": "check_mark",
+            "label": "Check mark"
+          },
+          {
+            "value": "check_mark_in_circle",
+            "label": "Check mark in circle"
+          },
+          {
+            "value": "clock",
+            "label": "Clock"
+          },
+          {
+            "value": "credit_card",
+            "label": "Credit card"
+          },
+          {
+            "value": "dollar_sign",
+            "label": "Dollar sign"
+          },
+          {
+            "value": "dryer",
+            "label": "Dryer"
+          },
+          {
+            "value": "eye",
+            "label": "Eye"
+          },
+          {
+            "value": "feather",
+            "label": "Feather"
+          },
+          {
+            "value": "gift",
+            "label": "Gift"
+          },
+          {
+            "value": "heart",
+            "label": "Heart"
+          },
+          {
+            "value": "iron",
+            "label": "Iron"
+          },
+          {
+            "value": "leaf",
+            "label": "Leaf"
+          },
+          {
+            "value": "leather",
+            "label": "Leather"
+          },
+          {
+            "value": "lock",
+            "label": "Lock"
+          },
+          {
+            "value": "map_pin",
+            "label": "Map pin"
+          },
+          {
+            "value": "pants",
+            "label": "Pants"
+          },
+          {
+            "value": "percent",
+            "label": "Percent"
+          },
+          {
+            "value": "plane",
+            "label": "Plane"
+          },
+          {
+            "value": "price_tag",
+            "label": "Price tag"
+          },
+          {
+            "value": "question_mark",
+            "label": "Question mark"
+          },
+          {
+            "value": "return",
+            "label": "Return"
+          },
+          {
+            "value": "ruler",
+            "label": "Ruler"
+          },
+          {
+            "value": "scissors",
+            "label": "Scissors"
+          },
+          {
+            "value": "shirt",
+            "label": "Shirt"
+          },
+          {
+            "value": "shoe",
+            "label": "Shoe"
+          },
+          {
+            "value": "silhouette",
+            "label": "Silhouette"
+          },
+          {
+            "value": "star",
+            "label": "Star"
+          },
+          {
+            "value": "truck",
+            "label": "Truck"
+          },
+          {
+            "value": "washing",
+            "label": "Washing"
+          }
+        ]
+      },
+      {
+        "type": "image_picker",
+        "id": "announcement_custom_icon",
+        "label": "Custom icon"
+      },
+      {
+        "type": "select",
+        "id": "announcement_icon_size",
+        "label": "Icon size",
+        "default": "small",
+        "options": [
+          {
+            "value": "small",
+            "label": "Small"
+          },
+          {
+            "value": "large",
+            "label": "Large"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "announcement_enable_box",
+        "label": "Enable box style",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "announcement_box_color",
+        "label": "Box color",
+        "info": "Suggestions: Blue #e5f3ff, Teal #e0f5f5, Green #e0f4d5, Yellow #fcf1cd, Red #fbeae5",
+        "default": "#e0f4d5"
+      },
+      {
+        "type": "header",
+        "content": "Empty cart"
+      },
+      {
+        "type": "select",
+        "id": "empty_icon",
+        "label": "Icon",
+        "default": "basket",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "bag",
+            "label": "Bag"
+          },
+          {
+            "value": "basket",
+            "label": "Basket"
+          },
+          {
+            "value": "cart",
+            "label": "Cart"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "empty_heading",
+        "label": "Heading",
+        "default": "Your cart is empty"
+      },
+      {
+        "type": "richtext",
+        "id": "empty_text",
+        "label": "Text"
+      },
+      {
+        "type": "text",
+        "id": "empty_button_text",
+        "label": "Button text",
+        "default": "Start shopping"
+      },
+      {
+        "type": "url",
+        "id": "empty_button_link",
+        "label": "Button link",
+        "default": "\/collections\/all"
+      },
+      {
+        "type": "select",
+        "id": "empty_button_style",
+        "label": "Button style",
+        "default": "primary",
+        "options": [
+          {
+            "label": "Button - primary",
+            "value": "primary"
+          },
+          {
+            "label": "Button - secondary",
+            "value": "secondary"
+          },
+          {
+            "label": "Link",
+            "value": "link"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "empty_enable_custom_colors",
+        "label": "Enable custom colors",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id": "empty_color_background",
+        "label": "Background"
+      },
+      {
+        "type": "color_background",
+        "id": "empty_color_background_gradient",
+        "label": "Background gradient"
+      },
+      {
+        "type": "color",
+        "id": "empty_color_text",
+        "label": "Text"
+      },
+      {
+        "type": "header",
+        "content": "Recommended products"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_cross_sells",
+        "label": "Show recommended products",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "cross_sell_title",
+        "label": "Heading",
+        "default": "You may like"
+      },
+      {
+        "type": "product_list",
+        "id": "cross_sell_products",
+        "label": "Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_automatic_cross_sells",
+        "label": "Enable automatic recommendations",
+        "info": "Displays products related to the first item in the cart, replacing the recommended products above.",
+        "default": true
+      },
+      {
+        "type": "paragraph",
+        "content": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)"
+      }
+    ]
+  }
+{% endschema %}

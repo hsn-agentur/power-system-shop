@@ -3,14 +3,6 @@
      data-section-type="testimonials">
 
   {%- style -%}
-    {%- if section.settings.layout contains 'image-' and section.settings.image_shape != 'natural' -%}
-      {%- for block in section.blocks -%}
-        #section-id-{{ section.id }} .testimonial-{{ forloop.index }} .rimage__image {
-          object-position: {{ block.settings.image_alignment }};
-        }
-      {% endfor %}
-    {%- endif -%}
-
     #section-id-{{ section.id }} .testimonial__blockquote {
       font-size: {{ section.settings.quote_text_size_mobile }}px;
       {%- if section.settings.quote_text_size_mobile >= 90 -%}
@@ -80,7 +72,7 @@
 
                 {%- if block.settings.testimonial != blank -%}
                   <div class="testimonial__text">
-                    <blockquote class="testimonial__blockquote{% if section.settings.text_caps %} testimonial__blockquote--caps{% endif %} heading-font">{{ block.settings.testimonial | escape | newline_to_br }}</blockquote>
+                    <blockquote class="testimonial__blockquote{% if section.settings.text_caps %} testimonial__blockquote--caps{% endif %} heading-font">{% render 'multiline-text' with block.settings.testimonial %}</blockquote>
                   </div>
                 {%- endif -%}
 
@@ -257,51 +249,6 @@
             "id": "image",
             "label": "Image",
             "info": "1000 x 800px recommended"
-          },
-          {
-            "type": "select",
-            "id": "image_alignment",
-            "label": "Image alignment",
-            "info": "Used to keep the subject of your focus in view, if cropped to a fixed shape",
-            "default": "center center",
-            "options": [
-              {
-                "value": "top left",
-                "label": "Top left"
-              },
-              {
-                "value": "top center",
-                "label": "Top center"
-              },
-              {
-                "value": "top right",
-                "label": "Top right"
-              },
-              {
-                "value": "center left",
-                "label": "Middle left"
-              },
-              {
-                "value": "center center",
-                "label": "Middle center"
-              },
-              {
-                "value": "center right",
-                "label": "Middle right"
-              },
-              {
-                "value": "bottom left",
-                "label": "Bottom left"
-              },
-              {
-                "value": "bottom center",
-                "label": "Bottom center"
-              },
-              {
-                "value": "bottom right",
-                "label": "Bottom right"
-              }
-            ]
           },
           {
             "type": "text",

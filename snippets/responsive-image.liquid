@@ -15,11 +15,6 @@
 
   assign min_aspect_ratio = min_aspect_ratio | default: 0
   assign local_aspect_ratio = local_aspect_ratio | at_least: min_aspect_ratio
-
-
-  assign altTextParts = image.alt | split: "|"
-  assign altText = altTextParts.last | strip
-
 -%}
 
 <div class="rimage-outer-wrapper" {% unless local_cover or no_max_width %}style="max-width: {{ max_width }}px"{% endunless %}>
@@ -31,11 +26,11 @@
       data-widths="[180, 220, 300, 360, 460, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
       data-aspectratio="{{ image.aspect_ratio }}"
       data-sizes="auto"
-      alt="{{ altText | escape }}"
-      {% if local_cover %}data-parent-fit="cover"{% endif %}>
+      alt="{{ image.alt | escape }}"
+      {% if local_cover %}data-parent-fit="cover" style="object-position: {{ image.presentation.focal_point }}"{% endif %}>
 
     <noscript>
-      <img class="rimage__image" src="{{ image | img_url: '1024x1024' }}" alt="{{ altText | escape }}">
+      <img class="rimage__image" src="{{ image | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}">
     </noscript>
   </div>
 </div>

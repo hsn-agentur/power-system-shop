@@ -46,6 +46,9 @@
       "minus": "Menos",
       "play": "Reproducir"
     },
+    "slider": {
+      "images": "Imagenes"
+    },
     "navigation": {
       "menu_toggle_aria_label": "Alternar menú",
       "main_navigation_aria_label": "Navegación primaria"
@@ -99,29 +102,29 @@
       "agreement_html": "Estoy de acuerdo con los <a href=\"{{ terms_url }}\" target=\"_blank\">términos y la política de reembolso</a>"
     },
     "general": {
+      "quantity_too_high": "Solo puedes tener {{ quantity }} en tu carrito",
       "title": "Carrito de compra",
-      "empty": "Su carrito actualmente está vacío.",
-      "quantity": "Cantidad",
-      "remove": "Quitar",
       "subtotal": "Subtotal",
       "taxes_included_and_shipping_policy_html": "Impuesto incluido. Los <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pagos.",
       "taxes_included_but_shipping_at_checkout": "En la pantalla de pagos se incluye el impuesto y se calculan los gastos de envío",
       "taxes_and_shipping_policy_at_checkout_html": "Los impuestos y <a href=\"{{ link }}\">gastos de envío</a> se calculan en la pantalla de pagos",
       "taxes_and_shipping_at_checkout": "Los impuestos y gastos de envío se calculan en la pantalla de pagos",
+      "checkout": "Finalizar pedido",
       "update": "Actualizar carrito",
       "or": "O",
-      "checkout": "Finalizar pedido",
       "continue": "Continuar la compra",
-      "backorder": "El producto está en espera y se enviará tan pronto como vuelva a estar en stock"
+      "backorder": "El producto está en espera y se enviará tan pronto como vuelva a estar en stock",
+      "quantity": "Cantidad",
+      "remove": "Quitar"
     },
     "label": {
+      "note": "Agregar comentarios al pedido",
       "product": "Producto",
       "price": "Precio",
       "quantity": "Cantidad",
       "total": "Total",
       "decrease": "Reducir",
-      "increase": "Aumentar",
-      "note": "Agregar comentarios al pedido"
+      "increase": "Aumentar"
     },
     "shipping_calculator": {
       "button_hide": "Ocultar calculadora de envíos",
@@ -135,6 +138,10 @@
       "no_rates": "No enviamos a este destino.",
       "at": "en",
       "loading": "Calculador..."
+    },
+    "free_shipping_bar": {
+      "free_shipping_not_met_html": "¡Gasta {{ difference }} más y obtén el envío gratuito!",
+      "free_shipping_met_html": "¡Eres elegible para el envío gratuito!"
     }
   },
   "products": {
@@ -144,9 +151,8 @@
     "product": {
       "add_to_cart": "Agregar al carrito",
       "pick_a": "Elige un",
-      "adding_to_cart": "Añadiendo",
       "added_to_cart": "¡Gracias!",
-      "preorder": "Hacer un pedido",
+      "added_to_cart_with_link_html": "Agregado a tu <a href=\"{{ cart_url }}\">carrito</a>",
       "view_in_space": "Ver en tu espacio",
       "selector_label": "Opciones",
       "no_selection": "Elige una opcion",
@@ -160,7 +166,7 @@
       "vendor": "Proveedor",
       "sku": "SKU:",
       "quantity": "Cantidad",
-      "product_unavailable": "No disponible",
+      "preorder": "Hacer un pedido",
       "backorder": "está en espera y se enviará tan pronto como vuelva a estar en stock",
       "prev_product": "Anterior",
       "next_product": "Siguiente",
@@ -170,17 +176,6 @@
     "variant": {
       "no_stock": "Agotado",
       "non_existent": "No disponible"
-    },
-    "added_notification": {
-      "title": "Recién agregado",
-      "item": "Artículo",
-      "unit_price": "Precio del artículo",
-      "quantity": "Cant.",
-      "total_price": "Precio total",
-      "shipping_note": "Excl. shipping",
-      "subtotal": "Subtotal",
-      "keep_shopping": "Seguir comprando",
-      "cart": "Carrito"
     },
     "quick_buy": {
       "close": "Cerrar Vista rápida",
@@ -310,60 +305,10 @@
       "collection_title": "Titulo de colección"
     }
   },
-  "blogs": {
-    "article": {
-      "tags": "Etiquetas",
-      "older_post": "Posts antiguos",
-      "back_to_blog_html": "Regresar a {{ blog }}",
-      "newer_post": "Posts recientes"
-    },
-    "comments": {
-      "title": "Comentarios",
-      "author_meta_said": "{{ author }} dijo:",
-      "form_title": "Dejar un comentario",
-      "success": "¡Su comentario se ha compartido con éxito! ¡Gracias!",
-      "moderated": "Por favor tenga en cuenta que los comentarios deben ser aprobados antes de ser publicados",
-      "name": "Nombre",
-      "email": "Correo electrónico",
-      "message": "Mensaje",
-      "post": "Publicar comentario"
-    },
-    "general": {
-      "no_matches": "¡Aún no cuentas con artículos! En cuanto añadas uno, se mostrará aquí."
-    }
-  },
   "customer": {
-    "login": {
-      "title": "Ingresar",
-      "email": "Correo electrónico",
-      "password": "Contraseña",
-      "forgot_password": "¿Olvidó su contraseña?",
-      "sign_in": "Registrarse",
-      "register": "Crear cuenta",
-      "guest_title": "Continuar como invitado",
-      "guest_continue": "Continuar"
-    },
-    "recover_password": {
-      "title": "Restablecer su contraseña",
-      "subtext": "Le enviaremos un correo electrónico para restablecer su contraseña.",
-      "success": "Hemos enviado un correo electrónico con un enlace para actualizar su contraseña.",
-      "email": "Correo electrónico",
-      "submit": "Enviar",
-      "cancel": "Cancelar"
-    },
-    "register": {
-      "title": "Crear cuenta",
-      "first_name": "Nombre",
-      "last_name": "Apellido",
-      "email": "Correo electrónico",
-      "password": "Contraseña",
-      "submit": "Crear",
-      "log_in": "Ingresar con una cuenta existente",
-      "cancel": "Volver a la tienda"
-    },
     "general": {
-      "or": "o",
-      "return": "Volver a la tienda"
+      "return": "Volver a la tienda",
+      "or": "o"
     },
     "account": {
       "title": "Mi cuenta",
@@ -393,8 +338,8 @@
       "first_name": "Nombre",
       "last_name": "Apellido",
       "company": "Compañía",
-      "address1": "Dirección1",
-      "address2": "Dirección2",
+      "address1": "Dirección 1",
+      "address2": "Dirección 2",
       "city": "Ciudad",
       "country": "País",
       "province": "Provincia",
@@ -409,6 +354,24 @@
       "delete": "Eliminar",
       "edit_address": "Editar dirección",
       "update": "Actualizar dirección"
+    },
+    "login": {
+      "title": "Ingresar",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "forgot_password": "¿Olvidó su contraseña?",
+      "sign_in": "Registrarse",
+      "register": "Crear cuenta",
+      "guest_title": "Continuar como invitado",
+      "guest_continue": "Continuar"
+    },
+    "recover_password": {
+      "title": "Restablecer su contraseña",
+      "subtext": "Le enviaremos un correo electrónico para restablecer su contraseña.",
+      "success": "Hemos enviado un correo electrónico con un enlace para actualizar su contraseña.",
+      "email": "Correo electrónico",
+      "submit": "Enviar",
+      "cancel": "Cancelar"
     },
     "order": {
       "title": "Pedido {{ name }}",
@@ -429,12 +392,44 @@
       "shipping": "Envío",
       "tax": "Impuesto"
     },
+    "register": {
+      "title": "Crear cuenta",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Crear",
+      "log_in": "Ingresar con una cuenta existente",
+      "cancel": "Volver a la tienda"
+    },
     "reset_password": {
       "title": "Restablecer contraseña de cuenta",
       "subtext": "Ingrese una nueva contraseña para {{ email }}",
       "password": "Contraseña",
       "password_confirm": "Confirmar contraseña",
       "submit": "Restablecer contraseña"
+    }
+  },
+  "blogs": {
+    "article": {
+      "tags": "Etiquetas",
+      "older_post": "Posts antiguos",
+      "back_to_blog_html": "Regresar a {{ blog }}",
+      "newer_post": "Posts recientes"
+    },
+    "comments": {
+      "title": "Comentarios",
+      "author_meta_said": "{{ author }} dijo:",
+      "form_title": "Dejar un comentario",
+      "success": "¡Su comentario se ha compartido con éxito! ¡Gracias!",
+      "moderated": "Por favor tenga en cuenta que los comentarios deben ser aprobados antes de ser publicados",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "post": "Publicar comentario"
+    },
+    "general": {
+      "no_matches": "¡Aún no cuentas con artículos! En cuanto añadas uno, se mostrará aquí."
     }
   },
   "storefront_password": {

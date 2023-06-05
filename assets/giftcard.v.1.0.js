@@ -10,16 +10,16 @@
   var config = {
     qrCode: 'qr-code',
     printButton: 'print-gift-card',
-    giftCardCode: 'gift-card-code-digits' };
-
+    giftCardCode: 'gift-card-code-digits'
+  };
 
   var qrCode = document.getElementById(config.qrCode);
 
   new QRCode(qrCode, {
     text: qrCode.getAttribute('data-identifier'),
     width: 120,
-    height: 120 });
-
+    height: 120
+  });
 
   document.getElementById(config.printButton).addEventListener('click', function () {
     window.print();

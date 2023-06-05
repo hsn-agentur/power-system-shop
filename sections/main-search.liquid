@@ -1,6 +1,6 @@
 {% paginate search.results by section.settings.coll_num_per_page_int %}
 
-<div data-section-id="{{ section.id }}" data-section-type="search-template" data-ajax-filtering="{{ section.settings.ajax_products }}" data-components="accordion,modal,price-range">
+<div data-section-id="{{ section.id }}" data-section-type="search-template" data-ajax-filtering="{{ section.settings.ajax_products }}" data-filter-section-id="{{ section.id }}" data-components="accordion,modal,price-range">
   <div class="page-header" data-cc-animate>
     <div class="container">
       <h1 class="visually-hidden">{{ 'general.search.title' | t }}</h1>
@@ -98,7 +98,7 @@
         </div>
       </div>
 
-      <div class="filter-container filter-container--side{% if section.settings.collapse_tag_sidebar_by_default == false %} filter-container--show-filters-desktop{% endif %}" data-ajax-container>
+      <div class="filter-container filter-container--side{% if section.settings.collapse_tag_sidebar_by_default == false %} filter-container--show-filters-desktop{% endif %}">
         {% liquid
           assign clear_url = search.terms | escape | prepend: '?q=' | prepend: routes.search_url
           if section.settings.coll_show_sort or show_filters
@@ -106,7 +106,7 @@
           endif
         %}
 
-        <div class="filters-adjacent collection-listing">
+        <div class="filters-adjacent collection-listing" data-ajax-container>
           {% if search.results == empty %}
             <h5 class="align-centre fully-spaced-row" data-cc-animate>{{ 'general.search.no_results' | t: terms: search.terms }}</h5>
           {% else %}
@@ -301,6 +301,13 @@
         "label": "Filter and sort collections without loading a new page",
         "default": true,
         "info": "Some apps require this to be disabled"
+      },
+      {
+        "type": "checkbox",
+        "id": "auto_apply_hide_unavailable",
+        "label": "On selecting a filter, automatically apply 'Hide out of stock'",
+        "default": false,
+        "info": "Requires Availability filter to be enabled"
       },
       {
         "type": "checkbox",

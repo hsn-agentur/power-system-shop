@@ -17,14 +17,14 @@
   endif
 
   if section.settings.accordion_item1_page != blank
-    render 'accordion-item', title: pages[section.settings.accordion_item1_page].title, content: pages[section.settings.accordion_item1_page].content, add_content_class: add_content_class, toggle_icon: toggle_icon
+    render 'accordion-item', title: pages[section.settings.accordion_item1_page].title, escape_title: true, content: pages[section.settings.accordion_item1_page].content, add_content_class: add_content_class, toggle_icon: toggle_icon
   endif
 
   if section.settings.accordion_item2_page != blank
-    render 'accordion-item', title: pages[section.settings.accordion_item2_page].title, content: pages[section.settings.accordion_item2_page].content, add_content_class: add_content_class, toggle_icon: toggle_icon
+    render 'accordion-item', title: pages[section.settings.accordion_item2_page].title, escape_title: true, content: pages[section.settings.accordion_item2_page].content, add_content_class: add_content_class, toggle_icon: toggle_icon
   endif
 
   if section.settings.accordion_item3_page != blank
-    render 'accordion-item', title: pages[section.settings.accordion_item3_page].title, content: pages[section.settings.accordion_item3_page].content, add_content_class: add_content_class, toggle_icon: toggle_icon
+    render 'accordion-item', title: pages[section.settings.accordion_item3_page].title, escape_title: true, content: pages[section.settings.accordion_item3_page].content, add_content_class: add_content_class, toggle_icon: toggle_icon
   endif
 -%}

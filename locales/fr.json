@@ -46,6 +46,9 @@
       "minus": "Moins",
       "play": "Lire"
     },
+    "slider": {
+      "images": "Des photos"
+    },
     "navigation": {
       "menu_toggle_aria_label": "Basculer le menu",
       "main_navigation_aria_label": "Navigation principale"
@@ -99,29 +102,29 @@
       "agreement_html": "J'accepte les <a href=\"{{ terms_url }}\" target=\"_blank\">termes et la politique de remboursement</a>"
     },
     "general": {
+      "quantity_too_high": "Vous ne pouvez en avoir que {{ quantity }} dans votre panier",
       "title": "Panier",
-      "empty": "Votre panier est vide.",
-      "quantity": "Quantité",
-      "remove": "Retirer",
       "subtotal": "Sous-total",
       "taxes_included_and_shipping_policy_html": "Taxes incluses. <a href=\"{{ link }}\">Frais de port</a> calculés à la caisse.",
       "taxes_included_but_shipping_at_checkout": "Taxes incluses et frais de port calculés à la caisse",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes et <a href=\"{{ link }}\">frais de port</a> calculés à la caisse",
       "taxes_and_shipping_at_checkout": "Taxes et frais de port calculés à la caisse",
+      "checkout": "Procéder au paiement",
       "update": "Mettre à jour",
       "or": "ou",
-      "checkout": "Procéder au paiement",
       "continue": "Poursuivre vos achats",
-      "backorder": "Le produit est en rupture de stock et sera envoyé dès qu'il sera disponible"
+      "backorder": "Le produit est en rupture de stock et sera envoyé dès qu'il sera disponible",
+      "quantity": "Quantité",
+      "remove": "Retirer"
     },
     "label": {
+      "note": "Ajouter une note",
       "product": "Produit",
       "price": "Prix",
       "quantity": "Quantité",
       "total": "Total",
       "decrease": "Moins",
-      "increase": "Plus",
-      "note": "Ajouter une note"
+      "increase": "Plus"
     },
     "shipping_calculator": {
       "button_hide": "Masquer le calculateur d'expédition",
@@ -135,6 +138,10 @@
       "no_rates": "Nous ne livrons pas à cette destination.",
       "at": "à",
       "loading": "Calculateur..."
+    },
+    "free_shipping_bar": {
+      "free_shipping_not_met_html": "Dépensez {{ difference }} de plus et obtenez la livraison gratuite!",
+      "free_shipping_met_html": "Vous êtes éligible à l'envoi gratuit"
     }
   },
   "products": {
@@ -144,9 +151,8 @@
     "product": {
       "add_to_cart": "Ajouter au panier",
       "pick_a": "Choisissez un",
-      "adding_to_cart": "Ajouter",
-      "added_to_cart": "Ajoutée",
-      "preorder": "Pré-commander",
+      "added_to_cart": "Ajouté",
+      "added_to_cart_with_link_html": "Ajouté à votre <a href=\"{{ cart_url }}\">panier</a>",
       "view_in_space": "Afficher dans votre espace",
       "selector_label": "Options",
       "no_selection": "Choisis une option",
@@ -160,7 +166,7 @@
       "vendor": "Distributeur",
       "sku": "SKU:",
       "quantity": "Quantité",
-      "product_unavailable": "Non disponible",
+      "preorder": "Pré-commander",
       "backorder": "est en rupture de stock et sera envoyé dès qu'il sera disponible",
       "prev_product": "Précédent",
       "next_product": "Suivant",
@@ -170,17 +176,6 @@
     "variant": {
       "no_stock": "Épuisé",
       "non_existent": "Non disponible"
-    },
-    "added_notification": {
-      "title": "Ajouté au panier à l'instant",
-      "item": "Produit",
-      "unit_price": "Prix",
-      "quantity": "Quantité",
-      "total_price": "Total",
-      "shipping_note": "Hors livraison",
-      "subtotal": "Sous-total",
-      "keep_shopping": "Retourner au magasinage",
-      "cart": "Panier"
     },
     "quick_buy": {
       "close": "Fermer",
@@ -310,60 +305,10 @@
       "collection_title": "Titre de la collection"
     }
   },
-  "blogs": {
-    "article": {
-      "tags": "Balises",
-      "older_post": "Précédent",
-      "back_to_blog_html": "Retour à {{ blog }}",
-      "newer_post": "Suivant"
-    },
-    "comments": {
-      "title": "Commentaires",
-      "author_meta_said": "{{ author }}:",
-      "form_title": "Laissez un commentaire",
-      "success": "Votre commentaire a été publié avec succès!",
-      "moderated": "Veuillez noter que les commentaires doivent être approuvés avant d'être affichés",
-      "name": "Nom",
-      "email": "Courriel",
-      "message": "Message",
-      "post": "Publier le commentaire"
-    },
-    "general": {
-      "no_matches": "Votre boutique ne contient aucun article de blog pour le moment."
-    }
-  },
   "customer": {
-    "login": {
-      "title": "Connexion",
-      "email": "Courriel",
-      "password": "Mot de passe",
-      "forgot_password": "Mot de passe oublié?",
-      "sign_in": "Se connecter",
-      "register": "Créer un compte",
-      "guest_title": "Continuer en tant qu'invité",
-      "guest_continue": "Continuer"
-    },
-    "recover_password": {
-      "title": "Réinitialiser votre mot de passe",
-      "subtext": "Nous vous ferons parvenir un courriel pour réinitialiser votre mot de passe.",
-      "success": "Nous vous avons fait parvenir un courriel pour réinitialiser votre mot de passe.",
-      "email": "Courriel",
-      "submit": "Soumettre",
-      "cancel": "Annuler"
-    },
-    "register": {
-      "title": "Créer un compte",
-      "first_name": "Prénom",
-      "last_name": "Nom",
-      "email": "Courriel",
-      "password": "Mot de passe",
-      "submit": "Créer",
-      "log_in": "Connexion",
-      "cancel": "Retour à la boutique"
-    },
     "general": {
-      "or": "ou",
-      "return": "Retour à la boutique"
+      "return": "Retour à la boutique",
+      "or": "ou"
     },
     "account": {
       "title": "Mon compte",
@@ -410,6 +355,24 @@
       "edit_address": "Éditer l'adresse",
       "update": "Mettre à jour l'adresse"
     },
+    "login": {
+      "title": "Connexion",
+      "email": "Courriel",
+      "password": "Mot de passe",
+      "forgot_password": "Mot de passe oublié?",
+      "sign_in": "Se connecter",
+      "register": "Créer un compte",
+      "guest_title": "Continuer en tant qu'invité",
+      "guest_continue": "Continuer"
+    },
+    "recover_password": {
+      "title": "Réinitialiser votre mot de passe",
+      "subtext": "Nous vous ferons parvenir un courriel pour réinitialiser votre mot de passe.",
+      "success": "Nous vous avons fait parvenir un courriel pour réinitialiser votre mot de passe.",
+      "email": "Courriel",
+      "submit": "Soumettre",
+      "cancel": "Annuler"
+    },
     "order": {
       "title": "Commande {{ name }}",
       "cancelled_on": "Commande annulée le {{ date }}",
@@ -429,12 +392,44 @@
       "shipping": "Livraison",
       "tax": "Taxes"
     },
+    "register": {
+      "title": "Créer un compte",
+      "first_name": "Prénom",
+      "last_name": "Nom",
+      "email": "Courriel",
+      "password": "Mot de passe",
+      "submit": "Créer",
+      "log_in": "Connexion",
+      "cancel": "Retour à la boutique"
+    },
     "reset_password": {
       "title": "Réinitialiser le mot de passe du compte",
       "subtext": "Entrez un nouveau mot de passe pour {{ email }}",
       "password": "Mot de passe",
       "password_confirm": "Confirmer le mot de passe",
       "submit": "Réinitialiser le mot de passe"
+    }
+  },
+  "blogs": {
+    "article": {
+      "tags": "Balises",
+      "older_post": "Précédent",
+      "back_to_blog_html": "Retour à {{ blog }}",
+      "newer_post": "Suivant"
+    },
+    "comments": {
+      "title": "Commentaires",
+      "author_meta_said": "{{ author }}:",
+      "form_title": "Laissez un commentaire",
+      "success": "Votre commentaire a été publié avec succès!",
+      "moderated": "Veuillez noter que les commentaires doivent être approuvés avant d'être affichés",
+      "name": "Nom",
+      "email": "Courriel",
+      "message": "Message",
+      "post": "Publier le commentaire"
+    },
+    "general": {
+      "no_matches": "Votre boutique ne contient aucun article de blog pour le moment."
     }
   },
   "storefront_password": {

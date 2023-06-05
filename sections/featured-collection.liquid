@@ -4,13 +4,8 @@
   else
     assign product_limit = section.settings.grid | times: section.settings.rows
   endif
-  assign product_limit = 20000
   assign collection = collections[section.settings.collection]
 -%}
-
-
-
-
 
 <div class="section-id-{{ section.id }} collection-slider-row {% if section.settings.use_alt_bg %}use-alt-bg{% endif %}" data-section-type="featured-collection" data-components="accordion,modal,price-range">
   <div class="container{% if section.settings.enable_carousel %} container--not-mobile{% endif %}{% if section.settings.full_width %} container--no-max{% endif %}">
@@ -26,6 +21,7 @@
           <a class="small-feature-link" href="{{ collection.url }}">{{ 'collections.general.view_all' | t }}</a>
         </div>
       {%- endif -%}
+
       <div class="collection-listing" data-cc-animate="cc-fade-in-up">
         <div class="product-list product-list--per-row-{{ section.settings.grid }} product-list--per-row-mob-{{ settings.prod_thumb_mob_per_row }} product-list--image-shape-{{ settings.prod_thumb_shape }} {% if section.settings.enable_carousel %}carousel{% endif %}">
           {% if section.settings.collection == blank %}
@@ -60,39 +56,10 @@
                 endfor
               endif
             -%}
-
-
-{% if section.settings.explicit_order != blank %}
-{%- liquid
-  assign ordered_product_ids = section.settings.explicit_order | split: ','
-  for product_or_variant_id in ordered_product_ids limit: product_limit
-    for product in collection.products
-      assign comparable_id = product.id | append: '' | strip
-      if comparable_id == product_or_variant_id
-        render 'product-block', product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
-      endif
-      for variant in product.variants              
-        assign comparable_id = variant.id | append: '' | strip
-        if comparable_id == product_or_variant_id
-          render 'product-block', full_product: product, product: variant, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel
-        endif
-      endfor
-    endfor
-  endfor
--%}
-{% else %}
-                    {% render 'variable-products-block-featured-collection', collection: collection, section: section, chosen_aspect_ratio: chosen_aspect_ratio, variant_limit: product_limit %}
-
-
-
-                     <!-- for product in collection.products limit: product_limit -->
-            {% for product in collection.products limit: 10000 %}
-              {% render 'product-block', product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel %}
+            {% for product in collection.products limit: product_limit %}
+              {% render 'product-block', product: product, collection: collection, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel %}
             {% endfor %}
-{% endif %}
           {% endif %}
-
-            
         </div>
       </div>
     </div>
@@ -100,7 +67,7 @@
 
   {% if settings.quickbuy_style != 'off' and section.settings.enable_carousel %}
     <div class="quickbuy-container">
-      <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x' %}</a>
+      <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x', stroke_width: 1 %}</a>
       <div class="inner"></div>
     </div>
   {% endif %}
@@ -122,11 +89,6 @@
         "type": "collection",
         "id": "collection",
         "label": "Collection"
-      },
-      {
-        "type": "text",
-        "id": "explicit_order",
-        "label": "Explicit Order / Filter (Variant IDs)"
       },
       {
         "type": "checkbox",

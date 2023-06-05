@@ -53,7 +53,7 @@
 
             {%- if block.settings.title != blank -%}
               <div class="logo-list__logo-title">
-                {{ block.settings.title }}
+                {{ block.settings.title | escape }}
               </div>
             {%- endif -%}
 

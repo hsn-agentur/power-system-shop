@@ -20,7 +20,7 @@
 
         {%- if section.settings.image != blank -%}
           <div class="cc-popup-image">
-            {% render 'responsive-image', image: section.settings.image %}
+            {% render 'responsive-image', image: section.settings.image, cover: true %}
           </div>
         {%- endif -%}
 
@@ -31,7 +31,7 @@
                 {%- if section.settings.title != blank or section.settings.text != blank -%}
                   <div class="cc-popup-text">
                     {%- if section.settings.title != blank -%}
-                      <h2 class="cc-popup-title">{{ section.settings.title }}</h2>
+                      <h2 class="cc-popup-title">{{ section.settings.title | escape }}</h2>
                     {%- endif -%}
                     {%- if section.settings.text != blank -%}
                       <div class="rte">{{ section.settings.text }}</div>
@@ -185,7 +185,8 @@
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Image"
+        "label": "Image",
+        "info": "Image displays on desktop only"
       },
       {
         "type": "header",

@@ -46,6 +46,9 @@
       "minus": "Menos",
       "play": "Reproduzir vídeo"
     },
+    "slider": {
+      "images": "Imagens"
+    },
     "navigation": {
       "menu_toggle_aria_label": "Alternar menu",
       "main_navigation_aria_label": "NaNavegação de rodapé"
@@ -99,29 +102,29 @@
       "agreement_html": "Eu concordo com os <a href=\"{{ terms_url }}\" target=\"_blank\">termos e política de reembolso</a>"
     },
     "general": {
+      "quantity_too_high": "Você só pode ter {{ quantity }} no seu carrinho",
       "title": "Carrinho de compras",
-      "empty": "Seu carrinho está vazio no momento.",
-      "quantity": "Quantidade",
-      "remove": "Eliminar",
       "subtotal": "Subtotal",
       "taxes_included_and_shipping_policy_html": "Imposto incluído. <a href=\"{{ link }}\">Envio</a> calculado na finalização da compra.",
       "taxes_included_but_shipping_at_checkout": "Imposto incluído e envio calculado na finalização da compra",
       "taxes_and_shipping_policy_at_checkout_html": "Impostos e <a href=\"{{ link }}\">envio</a> calculados na finalização da compra",
       "taxes_and_shipping_at_checkout": "Impostos e envio calculados na finalização da compra",
+      "checkout": "Finalizar pedido",
       "update": "Atualizar carrinho",
       "or": "ou",
-      "checkout": "Finalizar pedido",
       "continue": "Continue comprando",
-      "backorder": "O produto está em espera e será enviado assim que estiver de volta em estoque"
+      "backorder": "O produto está em espera e será enviado assim que estiver de volta em estoque",
+      "quantity": "Quantidade",
+      "remove": "Eliminar"
     },
     "label": {
+      "note": "Instruções especiais para o vendedor",
       "product": "Produto",
       "price": "Preço",
       "quantity": "Quantidade",
       "total": "Total",
       "decrease": "Menos",
-      "increase": "Mais",
-      "note": "Instruções especiais para o vendedor"
+      "increase": "Mais"
     },
     "shipping_calculator": {
       "button_hide": "Ocultar calculadora de envio",
@@ -135,6 +138,10 @@
       "no_rates": "Nós não enviamos para este destino.",
       "at": "em",
       "loading": "Calculando..."
+    },
+    "free_shipping_bar": {
+      "free_shipping_not_met_html": "Gaste mais {{ difference }} para receber frete grátis!",
+      "free_shipping_met_html": "Você está elegível para frete grátis!"
     }
   },
   "products": {
@@ -144,9 +151,8 @@
     "product": {
       "add_to_cart": "Adicionar ao carrinho",
       "pick_a": "Escolha um",
-      "adding_to_cart": "Adicionando",
       "added_to_cart": "Adicionado",
-      "preorder": "Pedido antecipado",
+      "added_to_cart_with_link_html": "Adicionado ao seu <a href=\"{{ cart_url }}\">carrinho</a>",
       "view_in_space": "Ver no seu espaço",
       "selector_label": "Opções",
       "no_selection": "Escolha uma opção",
@@ -160,7 +166,7 @@
       "vendor": "Fornecedor",
       "sku": "SKU:",
       "quantity": "Quantidade",
-      "product_unavailable": "Indisponível",
+      "preorder": "Pedido antecipado",
       "backorder": "está em espera e será enviado assim que estiver de volta em estoque",
       "prev_product": "Anterior",
       "next_product": "Próximo",
@@ -170,17 +176,6 @@
     "variant": {
       "no_stock": "Esgotado",
       "non_existent": "Indisponível"
-    },
-    "added_notification": {
-      "title": "Adicionado",
-      "item": "Produto",
-      "unit_price": "Preço",
-      "quantity": "Quantidade",
-      "total_price": "Total",
-      "shipping_note": "Excluindo frete",
-      "subtotal": "Subtotal",
-      "keep_shopping": "Continue navegando",
-      "cart": "Carrinho"
     },
     "quick_buy": {
       "close": "Perto",
@@ -310,60 +305,10 @@
       "collection_title": "Exemplo de título de coleção"
     }
   },
-  "blogs": {
-    "article": {
-      "tags": "Tags",
-      "older_post": "Anterior",
-      "back_to_blog_html": "Regressar a {{ blog }}",
-      "newer_post": "Próximo"
-    },
-    "comments": {
-      "title": "Comentários",
-      "author_meta_said": "{{ author }}:",
-      "form_title": "Deixe um comentário",
-      "success": "Seu comentário foi postado com sucesso! Obrigado!",
-      "moderated": "Os comentários devem ser aprovados antes de serem publicados",
-      "name": "Nome",
-      "email": "E-mail",
-      "message": "Mensagem",
-      "post": "Postar comentário"
-    },
-    "general": {
-      "no_matches": "A sua loja não publicou ainda qualquer post no blog."
-    }
-  },
   "customer": {
-    "login": {
-      "title": "Entrar",
-      "email": "E-mail",
-      "password": "Palavra-passe",
-      "forgot_password": "Esqueceu sua palavra-passe?",
-      "sign_in": "Entrar",
-      "register": "Criar conta",
-      "guest_title": "Continuar como convidado",
-      "guest_continue": "Continuar"
-    },
-    "recover_password": {
-      "title": "Repor sua palavra-passe",
-      "subtext": "Nós lhe enviaremos um e-mail para repor sua palavra-passe.",
-      "success": "Nós lhe enviamos um e-mail com um link para atualizar sua palavra-passe.",
-      "email": "E-mail",
-      "submit": "Enviar",
-      "cancel": "Cancelar"
-    },
-    "register": {
-      "title": "Criar conta",
-      "first_name": "Nome",
-      "last_name": "Sobrenome",
-      "email": "E-mail",
-      "password": "Palavra-passe",
-      "submit": "Criar",
-      "log_in": "Entrar",
-      "cancel": "Retornar à loja"
-    },
     "general": {
-      "or": "ou",
-      "return": "Retornar à loja"
+      "return": "Retornar à loja",
+      "or": "ou"
     },
     "account": {
       "title": "Minha conta",
@@ -410,6 +355,24 @@
       "edit_address": "Editar endereço",
       "update": "Atualizar endereço"
     },
+    "login": {
+      "title": "Entrar",
+      "email": "E-mail",
+      "password": "Palavra-passe",
+      "forgot_password": "Esqueceu sua palavra-passe?",
+      "sign_in": "Entrar",
+      "register": "Criar conta",
+      "guest_title": "Continuar como convidado",
+      "guest_continue": "Continuar"
+    },
+    "recover_password": {
+      "title": "Repor sua palavra-passe",
+      "subtext": "Nós lhe enviaremos um e-mail para repor sua palavra-passe.",
+      "success": "Nós lhe enviamos um e-mail com um link para atualizar sua palavra-passe.",
+      "email": "E-mail",
+      "submit": "Enviar",
+      "cancel": "Cancelar"
+    },
     "order": {
       "title": "Pedido {{ name }}",
       "cancelled_on": "Pedido cancelado em {{ date }}",
@@ -429,12 +392,44 @@
       "shipping": "Frete",
       "tax": "Impostos"
     },
+    "register": {
+      "title": "Criar conta",
+      "first_name": "Nome",
+      "last_name": "Sobrenome",
+      "email": "E-mail",
+      "password": "Palavra-passe",
+      "submit": "Criar",
+      "log_in": "Entrar",
+      "cancel": "Retornar à loja"
+    },
     "reset_password": {
       "title": "Repor palavra-passe da conta",
       "subtext": "Digite uma nova palavra-passe para {{ email }}",
       "password": "Palavra-passe",
       "password_confirm": "Confirmar palavra-passe",
       "submit": "Repor palavra-passe"
+    }
+  },
+  "blogs": {
+    "article": {
+      "tags": "Tags",
+      "older_post": "Anterior",
+      "back_to_blog_html": "Regressar a {{ blog }}",
+      "newer_post": "Próximo"
+    },
+    "comments": {
+      "title": "Comentários",
+      "author_meta_said": "{{ author }}:",
+      "form_title": "Deixe um comentário",
+      "success": "Seu comentário foi postado com sucesso! Obrigado!",
+      "moderated": "Os comentários devem ser aprovados antes de serem publicados",
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "post": "Postar comentário"
+    },
+    "general": {
+      "no_matches": "A sua loja não publicou ainda qualquer post no blog."
     }
   },
   "storefront_password": {
