@@ -1,0 +1,14 @@
+
+
+
+@media (min-width: 768px) {
+  .navigation .navigation__tier-1>.navigation__item>.navigation__link {
+      padding: 8px;
+  }  
+}
+
+
+offers h3 {
+  font-size: 22px;
+  margin-top: 50px;
+}

@@ -13,9 +13,9 @@
 {%- form 'localization', id: form_id, class: 'selectors-form' -%}
   {%- if country_selector -%}
     <div class="selectors-form__item">
-      <h2 class="visually-hidden" id="country-heading-{{ input_prefix }}">
+      <div class="visually-hidden" id="country-heading-{{ input_prefix }}">
         {{ 'general.country.dropdown_label' | t }}
-      </h2>
+      </div>
 
       <div class="disclosure" data-disclosure-country>
         <button type="button" class="disclosure__toggle" aria-expanded="false" aria-controls="country-list-{{ input_prefix }}" aria-describedby="country-heading-{{ input_prefix }}" data-disclosure-toggle>
@@ -38,9 +38,9 @@
 
   {%- if language_selector -%}
     <div class="selectors-form__item">
-      <h2 class="visually-hidden" id="lang-heading-{{ input_prefix }}">
+      <div class="visually-hidden" id="lang-heading-{{ input_prefix }}">
         {{ 'general.language.dropdown_label' | t }}
-      </h2>
+      </div>
 
       <div class="disclosure" data-disclosure-locale>
         <button type="button" class="disclosure__toggle" aria-expanded="false" aria-controls="lang-list-{{ input_prefix }}" aria-describedby="lang-heading-{{ input_prefix }}" data-disclosure-toggle>

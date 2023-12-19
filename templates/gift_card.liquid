@@ -1,10 +1,15 @@
 {% layout 'gift_card' %}
-<div class="giftcard {% if gift_card.expired or gift_card.enabled != true %} giftcard--disabled{% endif %}">
-
+<div class="giftcard {% if gift_card.expired or gift_card.enabled != true %} giftcard--disabled{% endif %} test">
   <h1>{{ 'gift_cards.issued.subtext' | t }}</h1>
   {% unless gift_card.enabled %}
     <span class="giftcard-tag">{{ 'gift_cards.issued.disabled' | t }}</span>
   {% endunless %}
+
+  <div class="giftcard-frame">
+    <img src="{{ 'gift_card_frame.jpg' | asset_url }}" alt="background frame" width="2482" height="3508" />
+
+
+  
 
   {%- assign gift_card_expiry_date = gift_card.expires_on | date: "%d/%m/%y" -%}
 
@@ -16,19 +21,23 @@
     <span class="giftcard-tag giftcard-tag--active">{{ 'gift_cards.issued.active' | t: expiry: gift_card_expiry_date }}</span>
   {% endif %}
 
-  <div class="giftcard__illustration">
-  <img src="{{ 'gift-card/card.jpg' | shopify_asset_url }}" alt="Gift card illustration">
+  <div class="giftcard-illustration-outer">
+    <div class="giftcard__illustration">
+    <img src="{{ 'gift_card_illustration.jpg' | asset_url }}" alt="Gift card illustration">
 
     {%- assign code_size = gift_card.code | format_code | size -%}
-    <span id="gift-card-code-digits" class="giftcard__code">{{ gift_card.code | format_code }}</span>
+    <div class="giftcard-data">
+      <div class="gift-card-code">{{ gift_card.code | format_code }}</div>
+      {%- if settings.cart_currency_code_enabled -%}
+        {%- assign formatted_initial_value = gift_card.initial_value | money_with_currency -%}
+      {%- else -%}
+        {%- assign formatted_initial_value = gift_card.initial_value | money -%}
+      {%- endif -%}
+      <div class="gift-card-value">{{ 'gift_cards.issued.initial_value_html' | t: value: formatted_initial_value }}</h2>
+    </div>
+    </div>
   </div>
 
-  {%- if settings.cart_currency_code_enabled -%}
-    {%- assign formatted_initial_value = gift_card.initial_value | money_with_currency -%}
-  {%- else -%}
-    {%- assign formatted_initial_value = gift_card.initial_value | money -%}
-  {%- endif -%}
-  <h2>{{ 'gift_cards.issued.initial_value_html' | t: value: formatted_initial_value }}</h2>
 
   {%- if settings.cart_currency_code_enabled -%}
     {%- assign formatted_current_balance = gift_card.balance | money_with_currency -%}
@@ -39,6 +48,8 @@
     <p>{{ 'gift_cards.issued.remaining_html' | t: balance: formatted_current_balance }}</p>
   {% endif %}
 
+<div style="display: none">
+  
   <p>{{ 'gift_cards.issued.redeem' | t }}</p>
 
   <div class="giftcard-qr-row">
@@ -53,13 +64,45 @@
     </div>
   {% endif %}
 
+    
+        </div>
+      </div>
+
+
+    <div class="giftcard-printout-text">
+      <p class="data">Code: <strong>{{ gift_card.code | format_code }}</strong><br />
+      {{ 'gift_cards.issued.initial_value_html' | t: value: formatted_initial_value }}</p>
+      
+      <p>So findest du deine Power System Favoriten und löst deinen Gutschein ein:</p>
+      <ul>
+        <li>Besuche uns auf www.power-system-shop.com</li>
+        <li>Wähle deine gewünschten Produkte und lege sie in den Warenkorb.</li>
+        <li>Gib im Warenkorb den Code in das dafür vorgesehene Gutscheinfeld ein und klicke auf „Einlösen“</li>
+        <li>Klicke auf „zur Kasse“ und beende den Bestellprozess</li>
+        <li>Du erhältst umgehend eine Bestellbestätigung per Email</li>
+      </ul>
+      <p><strong>Einlösebedingungen</strong></p>
+      <p>Gutschein ist gültig auf www.power-system-shop.com bis der Gutscheinwert vollständig aufgebraucht ist. Wenn deine Bestellung bereits verarbeitet wurde, kann der Gutschein nicht mehr nachträglich eingelöst werden. Der Betrag kann nicht bar ausgezahlt werden.</p>
+    </div>
+
+    
+    </div>
+
+    <div class="giftcard-text">
+            <p class="data">Code: <strong>{{ gift_card.code | format_code }}</strong><br />
+      {{ 'gift_cards.issued.initial_value_html' | t: value: formatted_initial_value }}</p>
+
+      {{ 'gift_cards.issued.print_text' | t }}
+    </div>
+  
   <div class="giftcard-button-row">
     <a href="#" id="print-gift-card" class="print-giftcard btn btn--secondary">
-      <span class="feather-icon feather-icon--small">{% render 'feather-printer' %}</span>
-      <span class="btn__icon-label">{{ 'gift_cards.issued.print' | t }}</span>
+
+      {{ 'gift_cards.issued.print' | t }}
     </a>
 
     <a href="{{ shop.url }}" class="btn btn--primary" target="_blank">{{ 'gift_cards.issued.shop_link' | t }}</a>
   </div>
 
 </div>
+    

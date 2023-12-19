@@ -91,7 +91,7 @@
                         value="{{ value | escape }}"
                         {% if block.settings.select_first_variant or product.variants.size == 1 or product.selected_variant %}{% if option.selected_value == value %}checked{% endif %}{% endif %}
                         required>
-                  <label class="opt-label"{% if uses_swatches %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ forloop.index0 }}"><span class="opt-label__text">{{ value }}</span></label>
+                  <label class="opt-label"{% if uses_swatches %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %} for="{{ option_id }}-opt-{{ forloop.index0 }}"><span class="opt-label__text">{{ value | escape_once }}</span></label>
                 {%- endfor -%}
               </div>
             </fieldset>

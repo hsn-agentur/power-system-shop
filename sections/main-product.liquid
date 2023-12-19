@@ -417,7 +417,7 @@
                   <input type="hidden" id="quantity-hidden" value="1" name="quantity" />
                   {{- original_select -}}
 
-                  {% if product.available %}
+                  {% if product.available or true %}
                     {%- liquid
                       assign enable_dynamic_payment_button = false
                       if block.settings.enable_payment_button and product.selling_plan_groups == empty

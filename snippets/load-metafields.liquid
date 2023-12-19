@@ -1,102 +1,117 @@
-{% assign metafields = shop.metafields.bc_cookie %}
-{% assign data = shop.metafields.bc_cookie %}
-{% assign cookieData = data.bc_cookie_list %}
+{% comment %}v 2.0{% endcomment %}
+{% unless request.design_mode %}
+    {% assign metafields = shop.metafields.bc_cookie %}
 
-{% if data.size > 0 and cookieData._bc_c_set.live == '1' and content_for_header contains 'beeclever.app\/get-script.php' %}
-    <link rel="preconnect" href="https://gdpr-legal-cookie.beeclever.app">
-  	<link rel="preload" as="script" href="https://gdpr-legal-cookie.beeclever.app/get-script.php?shop={{ shop.permanent_domain }}">    <script>
-        var sDomain = location.host;
+    {% assign data = null -%}
+    {%- if shop.metafields.bc_cookie.value == blank -%}
+      {%- assign data = shop.metafields.bc_cookie -%}
+    {%- else -%}
+      {%- assign data = shop.metafields.bc_cookie.value -%}
+    {%- endif %}
 
-        /****** Start thirdPartyScriptDefinition ******/
-        (function(){
-            window.thirdPartyScriptDefinition = [
-                /* start example
+    {% assign bc_cookie_list = null -%}
+    {%- if data.bc_cookie_list.value == blank -%}
+      {%- assign bc_cookie_list = data.bc_cookie_list -%}
+    {%- else -%}
+      {%- assign bc_cookie_list = data.bc_cookie_list.value -%}
+    {%- endif %}
 
-                {
-                    "src" : "facebook",
-                    "cookie" : "fr",
-                    "provider" : "facebook.com",
-                    "description" : "",
-                    "expires" : 7776000,
-                    "domain" : "facebook.com",
-                    "declaration" : 1,
-                    "group" : "facebook"
-                },{
-                    "src" : "facebook",
-                    "cookie" : "_fbp",
-                    "provider" : sDomain,
-                    "description" : "",
-                    "expires" : 7776000,
-                    "domain" : sDomain,
-                    "declaration" : 1,
-                    "group" : "facebook"
-                }
+    {% if data.size > 0 and bc_cookie_list._bc_c_set.live == '1' and content_for_header contains 'beeclever.app\/get-script.php' %}
+        <link rel="preconnect" href="https://gdpr-legal-cookie.beeclever.app">
+        <link rel="preload" as="script" href="https://gdpr-legal-cookie.beeclever.app/get-script.php?shop={{ shop.permanent_domain }}">    <script>
+            var sDomain = location.host;
 
-                end example */
-            ]
-        })();
-        /****** End thirdPartyScriptDefinition ******/
+            /****** Start thirdPartyScriptDefinition ******/
+            (function(){
+                  window.thirdPartyScriptDefinition = [
+                      {% comment %}
+                      /* start example
 
-        {% render 'zload-metafields' %}
+                    {
+                          "src" : "facebook",
+                          "cookie" : "fr",
+                          "provider" : "facebook.com",
+                        "description" : "",
+                          "expires" : 7776000,
+                          "domain" : "facebook.com",
+                        "declaration" : 1,
+                          "group" : "facebook"
+                      },{
+                          "src" : "facebook",
+                          "cookie" : "_fbp",
+                          "provider" : sDomain,
+                        "description" : "",
+                          "expires" : 7776000,
+                        "domain" : sDomain,
+                        "declaration" : 1,
+                          "group" : "facebook"
+                    }
 
-		window.thirdPartyScriptDefinition.push(
-          { "src" : "analytics.js", "cookie" : "_shopify_fs", "provider" : "shopify.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "shopify" },
-          { "src" : "doubleclick.net","cookie" : "_shopify_fs","provider" : "shopify.com","description" : "","expires" : 0,"domain" : sDomain,"declaration" : 1,"group" : "shopify" },
-          { "src" : "trekkie", "cookie" : "_shopify_fs", "provider" : "shopify.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "shopify" },
-          { "src" : "luckyorange", "cookie" : "_shopify_fs", "provider" : "shopify.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "shopify" },
-          { "src" : "googletagmanager", "cookie" : "_gat", "provider" : "googletagmanager.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "googletagmanager" }
-        );
+                      end example */
+                      {% endcomment %}
+                  ]
+              })();
+              /****** End thirdPartyScriptDefinition ******/
 
-        {% if false %}
-        /**************************** start custom section *******************************/
+              {% render 'zload-metafields' %}
 
-        // Declaration of the cookie to be listened to
+        window.thirdPartyScriptDefinition.push(
+                { "src" : "analytics.js", "cookie" : "_shopify_fs", "provider" : "shopify.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "shopify" },
+                { "src" : "doubleclick.net","cookie" : "_shopify_fs","provider" : "shopify.com","description" : "","expires" : 0,"domain" : sDomain,"declaration" : 1,"group" : "shopify" },
+                { "src" : "trekkie", "cookie" : "_shopify_fs", "provider" : "shopify.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "shopify" },
+                { "src" : "luckyorange", "cookie" : "_shopify_fs", "provider" : "shopify.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "shopify" },
+                { "src" : "googletagmanager", "cookie" : "_gat", "provider" : "googletagmanager.com", "description" : "", "expires" : 0, "domain" : sDomain, "declaration" : 1, "group" : "googletagmanager" }
+            );
 
-        /* example start
+            {% comment %}
+            /**************************** start custom section *******************************/
 
-        var customCookies = {
-           "myCookie" : true,
-           "myOtherCookie" : true
-        };
+            // Declaration of the cookie to be listened to
 
-        example end */
-        {% endif %}
+            /* example start
 
-        var customCookies = {
-            "testCookie" : true
-        };
+            var customCookies = {
+               "myCookie" : true,
+               "myOtherCookie" : true
+            };
 
-        function BC_GDPR_CustomScriptForShop () {
-            return [
+            example end */
+            {% endcomment %}
 
-                function testCookie () {
-                    // your additional script
-                }
+            var customCookies = {};
 
-                {% if false %}
-                /* example start
+            function BC_GDPR_CustomScriptForShop () {
+                return [
 
-                --------------------------------------------
-                **************   define function   **************
+                    function testCookie () {
+                        // your additional script
+                    }
 
-                **************   the name of the function is the cookie name   **************
-                **************   Important, the use of commas as separators    **************
+                    {% comment %}
+                    /* example start
 
-                function myCookie () {
-                    your additional code
-                },
+                    --------------------------------------------
+                    **************   define function   **************
 
-                function myOtherCookie () {
-                    your additional code
-                }
+                    **************   the name of the function is the cookie name   **************
+                    **************   Important, the use of commas as separators    **************
 
-                --------------------------------------------
-                example end */
+                    function myCookie () {
+                        your additional code
+                    },
 
-                /**************************** End custom section *******************************/
-                {% endif %}
-            ];
-        }
+                    function myOtherCookie () {
+                        your additional code
+                    }
 
-    </script>
-{% endif %}
+                    --------------------------------------------
+                    example end */
+
+                    /**************************** End custom section *******************************/
+                    {% endcomment %}
+                ];
+            }
+
+        </script>
+    {% endif %}
+{% endunless %}

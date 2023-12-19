@@ -1,0 +1,172 @@
+.template-giftcard {
+  padding: 0px;
+}
+
+
+/* --- */
+
+
+.giftcard {
+  padding: 0px;
+}
+
+.giftcard-frame {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/*
+@media (orientation: portrait) {
+  .giftcard-frame {
+    transform: rotate(-90deg);
+    height: 100vw;
+    width: auto;
+    aspect-ratio: 3508 / 2482;
+    border: 1px solid green;
+    transform-origin: 49% 70%;
+  }
+}
+*/
+
+.giftcard-frame img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top center;
+}
+
+
+
+div[class^="omnisend"] {
+    display: none;
+}
+
+
+
+.giftcard-illustration-outer {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+.giftcard__illustration {
+  width: 100%;
+  max-width: 16cm;
+  height: auto;
+  aspect-ratio: 1466 / 910;
+  margin: 0px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.giftcard__illustration img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
+}
+
+
+@media only screen {
+  .giftcard-illustration-outer {
+    width: 95%;
+  }
+  .giftcard-frame > img {
+    display: none;
+  }
+  .giftcard-printout-text  {
+    display: none;
+  }
+}
+
+.giftcard-data {
+  display: none;
+  margin-bottom: 5%;
+  margin-left: 8%;
+  height: 8%;
+  width: 50%;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: #ffffff;
+  font-family: "Basic Commercial", sans-serif;
+  font-size: 11px;
+/*  display: flex; */
+  align-items: center;  
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.giftcard-text {
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.giftcard-printout-text {
+  z-index: 1;
+  text-align: left;
+  margin-top: 5%;
+  padding: 5%;
+  font-size: 0.6em;
+}
+
+.giftcard-printout-text .data {
+  font-size: 1.2em;
+}
+
+
+@media (max-width: 500px) {
+  .giftcard-data {
+    font-size: 2.2vw;
+  }
+}
+
+@media only print {
+  .giftcard-frame {
+    padding: 18%;
+    aspect-ratio: 2482/ 3508;
+    max-width: 21cm;
+  }
+  
+  h1 {
+    display: none;
+  }
+  .giftcard {
+    max-width: 100%;
+    margin-top: 0px;
+  }
+
+  .giftcard__illustration {
+    max-width: 16cm;
+  }
+  
+  .giftcard-text {
+    display: none;
+  }
+  .giftcard-button-row {
+    display: none;
+  }
+}
+
+
+/*
+@media (orientation: portrait) {
+  .giftcard-data {
+    font-size: 1.9vw;
+  }
+}
+*/

@@ -46,6 +46,9 @@
       "minus": "Minus",
       "play": "Video afspelen"
     },
+    "slider": {
+      "images": "Images"
+    },
     "navigation": {
       "menu_toggle_aria_label": "Menu wisselen",
       "main_navigation_aria_label": "Primaire navigatie"
@@ -99,29 +102,29 @@
       "agreement_html": "Ik ga akkoord met de <a href=\"{{ terms_url }}\" target=\"_blank\">voorwaarden en het terugbetalingsbeleid</a>"
     },
     "general": {
+      "quantity_too_high": "Je kunt er maar {{ quantity }} in je winkelmandje hebben",
       "title": "Winkelmandje",
-      "empty": "Uw winkelmandje is momenteel leeg.",
-      "quantity": "Aantal",
-      "remove": "Verwijder",
       "subtotal": "Subtotaal",
       "taxes_included_and_shipping_policy_html": "Inclusief belasting. <a href=\"{{ link }}\">Verzendkosten</a> worden berekend bij het afrekenen.",
       "taxes_included_but_shipping_at_checkout": "Belasting inbegrepen en verzendkosten worden berekend bij het afrekenen",
       "taxes_and_shipping_policy_at_checkout_html": "Belastingen en <a href=\"{{ link }}\">verzendkosten</a> worden berekend bij het afrekenen",
       "taxes_and_shipping_at_checkout": "Belastingen en verzendkosten worden berekend bij het afrekenen",
+      "checkout": "Plaats bestelling",
       "update": "Update winkelmandje",
       "or": "or",
-      "checkout": "Plaats bestelling",
       "continue": "Terugkeren naar winkel",
-      "backorder": "Product is in bestelling en wordt verzonden zodra het weer op voorraad is"
+      "backorder": "Product is in bestelling en wordt verzonden zodra het weer op voorraad is",
+      "quantity": "Aantal",
+      "remove": "Verwijder"
     },
     "label": {
+      "note": "Voeg een opmerking aan je bestelling toe",
       "product": "Product",
       "price": "Prijs",
       "quantity": "Hoeveelheid",
       "total": "Totaal",
       "decrease": "Min",
-      "increase": "Plus",
-      "note": "Voeg een opmerking aan je bestelling toe"
+      "increase": "Plus"
     },
     "shipping_calculator": {
       "button_hide": "Verzendcalculator verbergen",
@@ -135,6 +138,10 @@
       "no_rates": "We verzenden niet naar deze bestemming.",
       "at": "aan",
       "loading": "Berekenen..."
+    },
+    "free_shipping_bar": {
+      "free_shipping_not_met_html": "U bent {{ difference }} verwijderd van gratis verzending",
+      "free_shipping_met_html": "U komt in aanmerking voor gratis verzending!"
     }
   },
   "products": {
@@ -144,9 +151,8 @@
     "product": {
       "add_to_cart": "In winkelmandje",
       "pick_a": "Kies een",
-      "adding_to_cart": "Het toevoegen",
       "added_to_cart": "Toegevoegd",
-      "preorder": "Voorafgaande bestelling",
+      "added_to_cart_with_link_html": "Toegevoegd aan uw <a href=\"{{ cart_url }}\">winkelwagen</a>",
       "view_in_space": "Bekijk in uw ruimte",
       "selector_label": "Opties",
       "no_selection": "Kies een optie",
@@ -160,7 +166,7 @@
       "vendor": "Verkoper",
       "sku": "SKU:",
       "quantity": "Aantal",
-      "product_unavailable": "Niet beschikbaar",
+      "preorder": "Voorafgaande bestelling",
       "backorder": "is in bestelling en wordt verzonden zodra het weer op voorraad is",
       "prev_product": "Verleden",
       "next_product": "Volgend",
@@ -170,17 +176,6 @@
     "variant": {
       "no_stock": "Uitverkocht",
       "non_existent": "Niet beschikbaar"
-    },
-    "added_notification": {
-      "title": "Toegevoegd",
-      "item": "Product",
-      "unit_price": "Eenheidsprijs",
-      "quantity": "Aantal",
-      "total_price": "Totaal",
-      "shipping_note": "Exclusief verzendkosten",
-      "subtotal": "Subtotaal",
-      "keep_shopping": "Bekijk alle producten",
-      "cart": "Winkelwagen"
     },
     "quick_buy": {
       "close": "Sluiten",
@@ -310,60 +305,10 @@
       "collection_title": "Collectie Titel Voorbeeld"
     }
   },
-  "blogs": {
-    "article": {
-      "tags": "Tags",
-      "older_post": "Verleden",
-      "back_to_blog_html": "Terug naar {{ blog }}",
-      "newer_post": "Volgend"
-    },
-    "comments": {
-      "title": "Reacties",
-      "author_meta_said": "{{ author }}:",
-      "form_title": "Laat een reactie achter",
-      "success": "Uw reactie is succesvol geplaatst! Bedankt!",
-      "moderated": "Reacties moeten worden goedgekeurd alvorens deze geplaatst worden.",
-      "name": "Naam",
-      "email": "E-mail",
-      "message": "Bericht",
-      "post": "Plaats reactie"
-    },
-    "general": {
-      "no_matches": "Je winkel heeft nog geen blogberichten geplaatst."
-    }
-  },
   "customer": {
-    "login": {
-      "title": "Login",
-      "email": "E-mail",
-      "password": "Wachtwoord",
-      "forgot_password": "Wachtwoord vergeten?",
-      "sign_in": "Aanmelden",
-      "register": "Account aanmaken",
-      "guest_title": "Ga verder als gast",
-      "guest_continue": "Ga verder"
-    },
-    "recover_password": {
-      "title": "Wachtwoord opnieuw instellen",
-      "subtext": "We zullen u een e-mail sturen om uw wachtwoord opnieuw in te stellen.",
-      "success": "U ontvangt dadelijk een e-mail om uw wachtwoord opnieuw in te stellen.",
-      "email": "E-mail",
-      "submit": "Bevestig",
-      "cancel": "Annuleer"
-    },
-    "register": {
-      "title": "Registeren",
-      "first_name": "Voornaam",
-      "last_name": "Achternaam",
-      "email": "E-mail",
-      "password": "Wachtwoord",
-      "submit": "Registreren",
-      "log_in": "Login met wachtwoord",
-      "cancel": "Terug naar de shop"
-    },
     "general": {
-      "or": "or",
-      "return": "Terugkeren naar winkel"
+      "return": "Terugkeren naar winkel",
+      "or": "or"
     },
     "account": {
       "title": "Uw Account",
@@ -410,6 +355,24 @@
       "edit_address": "Wijzig adres",
       "update": "Adres aanpassen"
     },
+    "login": {
+      "title": "Login",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "forgot_password": "Wachtwoord vergeten?",
+      "sign_in": "Aanmelden",
+      "register": "Account aanmaken",
+      "guest_title": "Ga verder als gast",
+      "guest_continue": "Ga verder"
+    },
+    "recover_password": {
+      "title": "Wachtwoord opnieuw instellen",
+      "subtext": "We zullen u een e-mail sturen om uw wachtwoord opnieuw in te stellen.",
+      "success": "U ontvangt dadelijk een e-mail om uw wachtwoord opnieuw in te stellen.",
+      "email": "E-mail",
+      "submit": "Bevestig",
+      "cancel": "Annuleer"
+    },
     "order": {
       "title": "Bestelling {{ name }}",
       "cancelled_on": "Geannuleerd op {{ date }}",
@@ -429,12 +392,44 @@
       "shipping": "Leveringskosten",
       "tax": "BTW"
     },
+    "register": {
+      "title": "Registeren",
+      "first_name": "Voornaam",
+      "last_name": "Achternaam",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "submit": "Registreren",
+      "log_in": "Login met wachtwoord",
+      "cancel": "Terug naar de shop"
+    },
     "reset_password": {
       "title": "Stel uw wachtwoord opnieuw in",
       "subtext": "Voeg een nieuw wachtwoord in voor {{ email }}",
       "password": "Wachtwoord",
       "password_confirm": "Bevestig wachtwoord",
       "submit": "Opnieuw instellen"
+    }
+  },
+  "blogs": {
+    "article": {
+      "tags": "Tags",
+      "older_post": "Verleden",
+      "back_to_blog_html": "Terug naar {{ blog }}",
+      "newer_post": "Volgend"
+    },
+    "comments": {
+      "title": "Reacties",
+      "author_meta_said": "{{ author }}:",
+      "form_title": "Laat een reactie achter",
+      "success": "Uw reactie is succesvol geplaatst! Bedankt!",
+      "moderated": "Reacties moeten worden goedgekeurd alvorens deze geplaatst worden.",
+      "name": "Naam",
+      "email": "E-mail",
+      "message": "Bericht",
+      "post": "Plaats reactie"
+    },
+    "general": {
+      "no_matches": "Je winkel heeft nog geen blogberichten geplaatst."
     }
   },
   "storefront_password": {

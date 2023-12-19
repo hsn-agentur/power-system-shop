@@ -25,7 +25,16 @@
     <div class="container container--no-max">
       <div class="announcement-bar__left desktop-only">
         {% if section.settings.show_social_icons %}
-          {% render 'social-icons', icon_setting: settings.social_custom_icon, icon_size: 'x30' %}
+          {%- if settings.social_custom_url != blank and settings.social_custom_icon_mob_nav != blank -%}
+            <template class="js-replacement-custom-icon">
+              <li>
+                <a aria-label="{{ settings.social_custom_icon_mob_nav.alt | escape }}" class="social-custom-mobile" target="_blank" rel="noopener" href="{{ settings.social_custom_url }}">
+                  <img src="{{ settings.social_custom_icon_mob_nav | img_url: 'x30' }}" alt="{{ settings.social_custom_icon_mob_nav.alt }}" width="{{ settings.social_custom_icon_mob_nav.width }}" height="{{ settings.social_custom_icon_mob_nav.height }}"/>
+                </a>
+              </li>
+            </template>
+          {%- endif -%}
+          {% render 'social-icons', icon_setting: settings.social_custom_icon_ann_bar, icon_size: 'x30' %}
         {% endif %}
       </div>
 

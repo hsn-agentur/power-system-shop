@@ -38,6 +38,20 @@
             </ul>
           {% endif %}
 
+          {%- if request.design_mode -%}
+            {%- liquid
+              assign email_exists = false
+              for block in section.blocks
+                if block.type == 'email_input'
+                  assign email_exists = true
+                endif
+              endfor
+            -%}
+            {%- if email_exists == false -%}
+              <div class="errors">You must include the 'Email input' block for the form to work correctly.</div>
+            {%- endif -%}
+          {%- endif -%}
+
           <div class="flexible-layout flexible-layout--form">
             {% for block in section.blocks %}
               <div class="column column--{% if block.settings.half_width %}half{% else %}full{% endif %}">
@@ -73,7 +87,7 @@
                     <label for="contact_phone">{{ 'contact.form.phone' | t }}</label>
                     <input
                       type="tel"
-                      id="contact_form"
+                      id="contact_phone"
                       autocomplete="tel"
                       name="contact[{{ 'contact.form.phone' | t }}]"
                       {% if block.settings.required %}required{% endif %}
@@ -153,6 +167,7 @@
         "type": "checkbox",
         "id": "use_columns",
         "label": "Two column layout",
+        "info": "The left column shows content from the current page. Edit this in Admin > Online Store > Pages",
         "default": true
       },
       {
@@ -174,6 +189,10 @@
         "limit": 1,
         "settings": [
           {
+            "type": "paragraph",
+            "content": "The label can be changed in the translation editor."
+          },
+          {
             "type": "checkbox",
             "id": "half_width",
             "label": "Half width",
@@ -187,6 +206,14 @@
         "limit": 1,
         "settings": [
           {
+            "type": "paragraph",
+            "content": "REQUIRED - Contact form will not work if this block is removed."
+          },
+          {
+            "type": "paragraph",
+            "content": "The label can be changed in the translation editor."
+          },
+          {
             "type": "checkbox",
             "id": "half_width",
             "label": "Half width",
@@ -199,6 +226,10 @@
         "name": "Message input",
         "limit": 1,
         "settings": [
+          {
+            "type": "paragraph",
+            "content": "The label can be changed in the translation editor."
+          },
           {
             "type": "checkbox",
             "id": "half_width",

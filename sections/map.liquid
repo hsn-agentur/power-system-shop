@@ -47,7 +47,8 @@
             <div class="map-section__feature-image map-section__feature-image--{{ section.id }} lazyload"
                 data-bgset="{% render 'bgset', image: section.settings.feature_image %}"
                 data-sizes="auto"
-                data-parent-fit="cover">
+                data-parent-fit="cover"
+                style="background-position: {{ section.settings.feature_image.presentation.focal_point }}">
             </div>
             <noscript>
               <div class="map-section__feature-image map-section__feature-image--{{ section.id }}" style="background-image: url({{ section.settings.feature_image | img_url: '400x400'}});"></div>
@@ -65,7 +66,8 @@
           <div class="map-section__map-image map-section__map-image--{{ section.id }} lazyload"
               data-bgset="{% render 'bgset', image: section.settings.background_image %}"
               data-sizes="auto"
-              data-parent-fit="cover">
+              data-parent-fit="cover"
+              style="background-position: {{ section.settings.background_image.presentation.focal_point }}">
           </div>
           <noscript>
             <div class="map-section__map-image map-section__map-image--{{ section.id }}" style="background-image: url({{ section.settings.background_image | img_url: '400x400'}});"></div>

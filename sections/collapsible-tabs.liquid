@@ -1,4 +1,4 @@
-<div data-section-type="collapsible-tabs" data-components="accordion">
+<div data-section-type="collapsible-tabs" data-components="accordion" data-cc-animate>
   <div class="container">
     <div class="collapsible-tabs">
       {% if section.settings.title != blank %}
@@ -13,13 +13,14 @@
 
             {% elsif block.type == 'button' %}
               <div class="collapsible-tabs__button collapsible-tabs__content">
-                <a class="btn btn--primary" href="{{ block.settings.link }}">{{ block.settings.title | escape }}</a>
+                <a class="btn btn--primary btn--link" href="{{ block.settings.link }}"><span class="btn__text">{{ block.settings.title | escape }}</span></a>
               </div>
 
             {% elsif block.type == 'question' %}
               <div class="collapsible-tabs__tab">
                 {% render 'accordion-item',
                     title: block.settings.title,
+                    escape_title: true,
                     content: block.settings.answer,
                     add_content_class: 'rte',
                     item_open: false

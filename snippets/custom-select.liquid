@@ -45,7 +45,7 @@
 
 {%- if label -%}
   {%- capture label_html -%}
-    <label id="{{ label_id }}" class="label{% if hide_label %} visually-hidden{% endif %} no-js-hidden">{{ label }}</label>
+    <label id="{{ label_id }}" class="label{% if hide_label %} visually-hidden{% endif %} no-js-hidden">{{ label | escape_once }}</label>
   {%- endcapture -%}
   {%- unless label_inside -%}{{ label_html }}{%- endunless -%}
 {%- endif -%}
@@ -54,7 +54,7 @@
   <button class="cc-select__btn" type="button"
           aria-haspopup="listbox" aria-labelledby="{{ label_id }}"
           {% if swatches and selected_value != blank %} data-swatch="{{ selected_value | replace: '"', '' | downcase }}"{% endif %}>
-    {{- selected_name -}}
+    {{- selected_name | escape_once -}}
     <svg class="cc-select__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
   </button>
   <ul class="cc-select__listbox" role="listbox" tabindex="-1"
@@ -63,7 +63,7 @@
       <li class="cc-select__option js-option" id="{{ id }}-opt-blank" role="option"
           data-value=""
           {% if selected_value == blank %} aria-selected="true"{% endif %}>
-        <span>{{- blank_option -}}</span>
+        <span>{{- blank_option | escape_once -}}</span>
       </li>
     {%- endif -%}
     {%- for value in option_values -%}
@@ -71,7 +71,7 @@
           data-value="{{ value | escape }}"
           {% if swatches %} data-swatch="{{ value | replace: '"', '' | downcase }}"{% endif %}
           {% if value == selected_value %} aria-selected="true"{% endif %}>
-        <span>{{- option_names[forloop.index0] -}}</span>
+        <span>{{- option_names[forloop.index0] | escape_once -}}</span>
       </li>
     {%- endfor -%}
   </ul>
@@ -79,15 +79,15 @@
 
 {%- if include_native -%}
   {%- if label -%}
-    <label for="{{ id }}-native" class="label{% if hide_label %} visually-hidden{% endif %} js-hidden">{{ label }}</label>
+    <label for="{{ id }}-native" class="label{% if hide_label %} visually-hidden{% endif %} js-hidden">{{ label | escape_once }}</label>
   {%- endif -%}
   <select class="js-hidden" id="{{ id }}-native"{% if native_name %} name="{{ native_name }}"{% endif %}{% if native_form_id %} form="{{ native_form_id }}"{% endif %}>
     {%- if blank_option != blank -%}
-      <option value="">{{ blank_option }}</option>
+      <option value="">{{ blank_option | escape_once }}</option>
     {%- endif -%}
     {%- for value in option_values -%}
       <option value="{{ value | escape }}"{% if value == selected_value %} selected{% endif %}>
-        {{- option_names[forloop.index0] -}}
+        {{- option_names[forloop.index0] | escape_once -}}
       </option>
     {%- endfor -%}
   </select>

@@ -25,49 +25,62 @@
     }
   {% endstyle %}
 
-  {% if section.settings.video != blank %}
+  {% if section.settings.video_shopify != blank or section.settings.video_external != blank %}
     <div class="video-container video-container--image video-container--modal-mobile image-overlay image-overlay--bg-{{ section.settings.overlay_style }}"
       data-cc-animate
       data-cc-animate-delay="0.2s"
-      data-video-id="{{ section.settings.video.id }}"
-      data-video-url="{{ section.settings.video }}"
-      data-video-type="{{ section.settings.video.type }}"
+      {% if section.settings.video_shopify != blank %}
+        data-video-sources="{%- for source in section.settings.video_shopify.sources -%}
+          {{ source.format }} {{ source.mime_type }} {{ source.url }}
+          {%- unless forloop.last -%}|{%- endunless -%}
+        {%- endfor -%}"
+        data-video-type="mp4"
+      {% elsif section.settings.video_external != blank %}
+        data-video-url="{{ section.settings.video_external | escape }}"
+      {% endif %}
       data-video-autoplay="false"
       data-video-loop="false">
       <a class="video-container__stop" href="#" aria-label="{{ 'general.accessibility_labels.video_stop' | t | escape }}">{% render 'svg-x' %}</a>
       <div class="video-container__video"></div>
 
+      {%- liquid
+        if section.settings.image
+          assign cover_image = section.settings.image
+        elsif section.settings.video_shopify
+          assign cover_image = section.settings.video_shopify.preview_image
+        endif
+      -%}
       <div class="video-container__cover">
-        {%- if section.settings.image == blank -%}
-          <div class="placeholder-image placeholder--banner dark">
-            {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' -}}
-          </div>
-        {%- else -%}
+        {%- if cover_image -%}
           <div class="rimage-outer-wrapper rimage-background lazyload fade-in"
-              data-bgset="{% render 'bgset', image: section.settings.image %}"
+              data-bgset="{% render 'bgset', image: cover_image %}"
               data-sizes="auto"
               data-parent-fit="cover"
-              style="background-position: {{ section.settings.image_position }}">
+              style="background-position: {{ cover_image.presentation.focal_point }}">
             <noscript>
-              <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%">
-                <img src="{{ section.settings.image | img_url: '1024x1024' }}" alt="{{ section.settings.image.alt | escape }}" class="rimage__image">
+              <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: cover_image.aspect_ratio | times: 100 }}%">
+                <img src="{{ cover_image | img_url: '1024x1024' }}" alt="{{ cover_image.alt | escape }}" class="rimage__image">
               </div>
             </noscript>
+          </div>
+        {%- else -%}
+          <div class="placeholder-image placeholder--banner dark">
+            {{- 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' -}}
           </div>
         {%- endif -%}
       </div>
 
       <div class="overlay-text overlay-text--for-banner overlay--v-{{ section.settings.text_alignment | split: ' ' | first }} overlay--h-{{ section.settings.text_alignment | split: ' ' | last }} image-overlay__over" data-cc-animate data-cc-animate-delay="0.2s">
-        <div class="overlay-text__inner">
+        <div class="overlay-text__inner" style="--heading-max-width: {{ section.settings.heading_max_width }}px">
           <div class="overlay-text__text">
             {%- if section.settings.subheading != blank -%}
               <div class="overlay-text__subheading subheading subheading--over">{{ section.settings.subheading | escape }}</div>
             {%- endif -%}
             {%- if section.settings.video_title != blank -%}
               {% if section.settings.use_h1 %}
-                <h1 class="overlay-text__title">{{ section.settings.video_title | newline_to_br }}</h1>
+                <h1 class="overlay-text__title">{% render 'multiline-text' with section.settings.video_title %}</h1>
               {% else %}
-                <h2 class="overlay-text__title h1-style">{{ section.settings.video_title | newline_to_br }}</h2>
+                <h2 class="overlay-text__title h1-style">{% render 'multiline-text' with section.settings.video_title %}</h2>
               {% endif %}
             {%- endif -%}
             {%- if section.settings.text != blank -%}
@@ -90,12 +103,28 @@
     "class": "section-video",
     "settings": [
       {
-        "id": "video",
+        "id": "video_shopify",
+        "type": "video",
+        "label": "Video upload",
+        "info": "Hosted by Shopify. Replaces External video if both are set."
+      },
+      {
+        "id": "video_external",
         "type": "video_url",
-        "label": "Video link",
+        "label": "External video",
         "accept": ["youtube", "vimeo"],
         "info": "Supports YouTube and Vimeo",
         "default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
+      },
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Custom cover image",
+        "info": "Required for External videos"
+      },
+      {
+        "type": "header",
+        "content": "Overlay"
       },
       {
         "type": "text",
@@ -104,10 +133,21 @@
         "default": "Tell your story"
       },
       {
-        "type": "textarea",
+        "type": "text",
         "id": "video_title",
         "label": "Heading",
+        "info": "Enter <br> for a line-break",
         "default": "Featured video"
+      },
+      {
+        "type": "range",
+        "id": "heading_max_width",
+        "min": 500,
+        "max": 1200,
+        "step": 20,
+        "unit": "px",
+        "label": "Maximum heading width",
+        "default": 800
       },
       {
         "type": "range",
@@ -193,56 +233,6 @@
         "default": "center center"
       },
       {
-        "id": "image",
-        "type": "image_picker",
-        "label": "Cover image"
-      },
-      {
-        "type": "select",
-        "id": "image_position",
-        "label": "Image alignment",
-        "info": "Used to keep the subject of your image in view",
-        "default": "center center",
-        "options": [
-          {
-            "value": "top left",
-            "label": "Top left"
-          },
-          {
-            "value": "top center",
-            "label": "Top center"
-          },
-          {
-            "value": "top right",
-            "label": "Top right"
-          },
-          {
-            "value": "center left",
-            "label": "Middle left"
-          },
-          {
-            "value": "center center",
-            "label": "Middle center"
-          },
-          {
-            "value": "center right",
-            "label": "Middle right"
-          },
-          {
-            "value": "bottom left",
-            "label": "Bottom left"
-          },
-          {
-            "value": "bottom center",
-            "label": "Bottom center"
-          },
-          {
-            "value": "bottom right",
-            "label": "Bottom right"
-          }
-        ]
-      },
-      {
         "type": "header",
         "content": "Layout"
       },
@@ -283,10 +273,7 @@
     ],
     "presets": [
       {
-        "name": "Video",
-        "settings": {
-          "video": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
-        }
+        "name": "Video"
       }
     ]
   }

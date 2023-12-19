@@ -19,10 +19,6 @@
 
 {%- unless base_font.system? -%}
   <link rel="preload" as="font" href="{{ base_font | font_url }}" type="font/woff2" crossorigin>
-
-  {%- if base_font_bold -%}<link rel="preload" as="font" href="{{ base_font_bold | font_url }}" type="font/woff2" crossorigin>{%- endif -%}
-  {%- if base_font_italic -%}<link rel="preload" as="font" href="{{ base_font_italic | font_url }}" type="font/woff2" crossorigin>{%- endif -%}
-  {%- if base_font_bold_italic -%}<link rel="preload" as="font" href="{{ base_font_bold_italic | font_url }}" type="font/woff2" crossorigin>{%- endif -%}
 {%- endunless -%}
 
 {%- unless nav_font.system? -%}
@@ -44,10 +40,14 @@
   <link rel="canonical" href="{{ canonical_url }}" />
 {%- endif -%}
 
-{%- if settings.favicon != blank and settings.favicon contains '.png' -%}
-  <link rel="shortcut icon" href="{{ settings.favicon | img_url: 'master' }}" type="image/png" />
-{%- elsif settings.favicon != blank and settings.favicon contains '.ico' -%}
-  <link rel="shortcut icon" href="{{ settings.favicon | img_url: 'master' }}" type="image/x-icon" />
+{%- if settings.favicon != blank -%}
+  {%- liquid
+    assign image_type = settings.favicon | split: '?' | first | split: '.' | last | downcase
+    if image_type == 'svg'
+      assign image_type = 'svg+xml'
+    endif
+  -%}
+  <link rel="icon" href="{{ settings.favicon | image_url: width: 48, height: 48 }}" type="image/{{ image_type }}">
 {%- endif -%}
 
 {%- if page_description -%}

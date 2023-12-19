@@ -42,7 +42,7 @@
           <div class="rte">{{ section.settings.text }}</div>
 
           {% if section.settings.button_label != blank %}
-            <div class="lightly-spaced-row-above">
+            <div class="lightish-spaced-row-above">
               <a class="{% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
             </div>
           {% endif %}
@@ -77,6 +77,10 @@
         "unit": "px",
         "label": "Image width",
         "default": 700
+      },
+      {
+        "type": "header",
+        "content": "Text"
       },
       {
         "type": "text",

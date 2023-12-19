@@ -37,44 +37,44 @@
 
               {% if block.type == 'image' %}
 
-              {% if block.settings.image == blank %}
-                <div class="placeholder-image landscape {% if block.settings.text != blank %}dark{% endif %}">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-              {% else %}
-                {% render 'responsive-image', image: block.settings.image %}
-              {% endif %}
+                {% if block.settings.image == blank %}
+                  <div class="placeholder-image landscape {% if block.settings.text != blank %}dark{% endif %}">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+                {% else %}
+                  {% render 'responsive-image', image: block.settings.image %}
+                {% endif %}
 
-              {% if block.settings.text != blank %}
-              <div class="overlay-text overlay-centre">
-                <div class="overlay-text__inner">
-                  <div class="overlay-text__text">
-                    <div class="h6-style heading-font">{{ block.settings.text | escape }}</div>
-                    {% if block.settings.subtext != blank %}<div class="second-line">{{ block.settings.subtext | escape }}</div>{% endif %}
+                {% if block.settings.text != blank %}
+                <div class="overlay-text overlay-centre">
+                  <div class="overlay-text__inner">
+                    <div class="overlay-text__text">
+                      <div class="h6-style heading-font">{{ block.settings.text | escape }}</div>
+                      {% if block.settings.subtext != blank %}<div class="second-line">{{ block.settings.subtext | escape }}</div>{% endif %}
+                    </div>
                   </div>
                 </div>
-              </div>
-              {% endif %}
+                {% endif %}
 
               {% elsif block.type contains 'icon' %}
 
-              <div class="icon-with-caption">
-                <div class="icon-with-caption__icon">
-                  {% if block.type == 'icon' %}
-                    {% render 'icon', icon: block.settings.icon, size: 'medium' %}
-                  {% else %}
-                    <div class="icon-with-caption__image-{{ block.settings.image_size }}">
-                      {% if block.settings.image == blank %}
-                        <div class="placeholder-image landscape">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
-                      {% else %}
-                        {% render 'responsive-image', image: block.settings.image %}
-                      {% endif %}
-                    </div>
+                <div class="icon-with-caption">
+                  <div class="icon-with-caption__icon">
+                    {% if block.type == 'icon' %}
+                      {% render 'icon', icon: block.settings.icon, size: 'medium' %}
+                    {% else %}
+                      <div class="icon-with-caption__image-{{ block.settings.image_size }}">
+                        {% if block.settings.image == blank %}
+                          <div class="placeholder-image landscape">{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}</div>
+                        {% else %}
+                          {% render 'responsive-image', image: block.settings.image %}
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                  </div>
+
+                  {% if block.settings.text != blank %}
+                  <div class="icon-with-caption__text heading-font h6-style align-center">{% render 'multiline-text' with block.settings.text %}</div>
                   {% endif %}
                 </div>
-
-                {% if block.settings.text != blank %}
-                <h6 class="icon-with-caption__text align-center">{{ block.settings.text | escape }}</h6>
-                {% endif %}
-              </div>
 
               {% endif %}
 
