@@ -1,1 +1,46 @@
-{"sections":{"main":{"type":"main-cart","settings":{"show_page_title":true,"enable_cart_notes":true,"show_tax_and_shipping":true,"cart_terms_page":"","show_additional_checkout_buttons":true,"show_backorder_text":true,"show_shipping_calculator":false,"shipping_calculator_default_country":"United States"}},"169779208412595557":{"type":"apps","blocks":{"caad0d71-f6b3-4170-95cd-0ea412bc075d":{"type":"shopify:\/\/apps\/cartking-free-gifts\/blocks\/app-block\/4831ea51-9f80-493d-8541-da4662a9e219","settings":{"autoAdd":false,"disallowUponAddition":true,"ineligibleGiftRemove":false,"cardColor":"#ffffff","cardTextColor":"#000000","buttonColor":"#000000","title":"Geschenk auswählen","cta":"","postAddTxt":"Ausgewähltes Geschenk"}}},"block_order":["caad0d71-f6b3-4170-95cd-0ea412bc075d"],"settings":{"full_width":false}}},"order":["main","169779208412595557"]}
+{
+	"sections": {
+		"main": {
+			"type": "main-cart",
+			"settings": {
+				"show_page_title": true,
+				"enable_cart_notes": true,
+				"show_tax_and_shipping": true,
+				"cart_terms_page": "",
+				"show_additional_checkout_buttons": true,
+				"show_backorder_text": true,
+				"show_shipping_calculator": false,
+				"shipping_calculator_default_country": "United States"
+			}
+		},
+		"169779208412595557": {
+			"type": "apps",
+			"blocks": {
+				"caad0d71-f6b3-4170-95cd-0ea412bc075d": {
+					"type": "shopify:\/\/apps\/cartking-free-gifts\/blocks\/app-block\/4831ea51-9f80-493d-8541-da4662a9e219",
+					"settings": {
+						"autoAdd": false,
+						"disallowUponAddition": true,
+						"ineligibleGiftRemove": false,
+						"cardColor": "#ffffff",
+						"cardTextColor": "#000000",
+						"buttonColor": "#000000",
+						"title": "Geschenk auswählen",
+						"cta": "",
+						"postAddTxt": "Ausgewähltes Geschenk"
+					}
+				}
+			},
+			"block_order": [
+				"caad0d71-f6b3-4170-95cd-0ea412bc075d"
+			],
+			"settings": {
+				"full_width": false
+			}
+		}
+	},
+	"order": [
+		"main",
+		"169779208412595557"
+	]
+}

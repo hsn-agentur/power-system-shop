@@ -1,1 +1,99 @@
-{"sections":{"main":{"type":"main-collection","settings":{"show_image_behind_heading":true,"heading_image_height":"huge","overlay_style":"no_background","coll_num_per_page_int":24,"grid":4,"show_vendor":false,"show_total":false,"coll_desc_pos":"above","enable_filtering":false,"collapse_tag_sidebar_by_default":true,"collapse_filters_method":"over-12","show_filter_counts":false,"show_disabled_filters":true,"ajax_products":true,"enable_sticky_filter":true,"filter_two_columns":false,"coll_show_sort":true,"coll_show_feat":false,"enable_subcoll":false,"subcoll_menu":"main-menu","subcoll_style":"buttons","subcoll_gall_shape":"sq","image_position":"center center","subcoll_gall_enable_margin":true,"subcoll_gall_full_width":false,"subcoll_gall_overlay_style":"shadow","subcoll_gall_text_alignment":"center center","subcoll_gall_mobile_layout":"2"}},"f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4":{"type":"rich-text","blocks":{"template--15959473881247__f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4-1668004814c3c3c6af-0":{"type":"heading","settings":{"title":"ENTDECKE UNSERE PROTEIN SHAKES","use_h1":false}},"7828a09a-f8c6-494a-b97e-ffde3441d198":{"type":"text","settings":{"text":"<p>Trinkfertige Protein Shakes sind voll im Trend. Probiert<br\/>doch einfach mal unsere leckeren Ready-to-Drink Protein Shakes. Ganz einfach:<br\/>schütteln, öffnen und unterwegs genießen. <\/p>","enlarge_text":false}}},"block_order":["template--15959473881247__f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4-1668004814c3c3c6af-0","7828a09a-f8c6-494a-b97e-ffde3441d198"],"settings":{"height":"medium","text_alignment":"center","full_width":false,"use_alt_bg":false}},"2f822e03-35c4-47fa-ac28-c4b323829662":{"type":"collection-list","disabled":true,"settings":{"title":"Collection list","enable_carousel":true,"grid":5,"use_alt_bg":true,"full_width":true}},"5da18f51-b314-492b-8229-cc38cb5481ae":{"type":"featured-collection","disabled":true,"settings":{"title":"Featured collection","collection":"","explicit_order":"","show_vendor":false,"enable_carousel":true,"grid":4,"rows":2,"use_alt_bg":true,"show_view_all":true,"full_width":true}}},"order":["main","f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4","2f822e03-35c4-47fa-ac28-c4b323829662","5da18f51-b314-492b-8229-cc38cb5481ae"]}
+{
+	"sections": {
+		"main": {
+			"type": "main-collection",
+			"settings": {
+				"show_image_behind_heading": true,
+				"heading_image_height": "huge",
+				"overlay_style": "no_background",
+				"coll_num_per_page_int": 24,
+				"grid": 4,
+				"show_vendor": false,
+				"show_total": false,
+				"coll_desc_pos": "above",
+				"enable_filtering": false,
+				"collapse_tag_sidebar_by_default": true,
+				"collapse_filters_method": "over-12",
+				"show_filter_counts": false,
+				"show_disabled_filters": true,
+				"ajax_products": true,
+				"enable_sticky_filter": true,
+				"filter_two_columns": false,
+				"coll_show_sort": true,
+				"coll_show_feat": false,
+				"enable_subcoll": false,
+				"subcoll_menu": "main-menu",
+				"subcoll_style": "buttons",
+				"subcoll_gall_shape": "sq",
+				"image_position": "center center",
+				"subcoll_gall_enable_margin": true,
+				"subcoll_gall_full_width": false,
+				"subcoll_gall_overlay_style": "shadow",
+				"subcoll_gall_text_alignment": "center center",
+				"subcoll_gall_mobile_layout": "2"
+			}
+		},
+		"f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4": {
+			"type": "rich-text",
+			"blocks": {
+				"template--15959473881247__f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4-1668004814c3c3c6af-0": {
+					"type": "heading",
+					"settings": {
+						"title": "ENTDECKE UNSERE PROTEIN SHAKES",
+						"use_h1": false
+					}
+				},
+				"7828a09a-f8c6-494a-b97e-ffde3441d198": {
+					"type": "text",
+					"settings": {
+						"text": "<p>Trinkfertige Protein Shakes sind voll im Trend. Probiert<br\/>doch einfach mal unsere leckeren Ready-to-Drink Protein Shakes. Ganz einfach:<br\/>schütteln, öffnen und unterwegs genießen. <\/p>",
+						"enlarge_text": false
+					}
+				}
+			},
+			"block_order": [
+				"template--15959473881247__f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4-1668004814c3c3c6af-0",
+				"7828a09a-f8c6-494a-b97e-ffde3441d198"
+			],
+			"settings": {
+				"height": "medium",
+				"text_alignment": "center",
+				"full_width": false,
+				"use_alt_bg": false
+			}
+		},
+		"2f822e03-35c4-47fa-ac28-c4b323829662": {
+			"type": "collection-list",
+			"disabled": true,
+			"settings": {
+				"title": "Collection list",
+				"enable_carousel": true,
+				"grid": 5,
+				"use_alt_bg": true,
+				"full_width": true
+			}
+		},
+		"5da18f51-b314-492b-8229-cc38cb5481ae": {
+			"type": "featured-collection",
+			"disabled": true,
+			"settings": {
+				"title": "Featured collection",
+				"collection": "",
+				"explicit_order": "",
+				"show_vendor": false,
+				"enable_carousel": true,
+				"grid": 4,
+				"rows": 2,
+				"use_alt_bg": true,
+				"show_view_all": true,
+				"full_width": true
+			}
+		}
+	},
+	"order": [
+		"main",
+		"f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4",
+		"2f822e03-35c4-47fa-ac28-c4b323829662",
+		"5da18f51-b314-492b-8229-cc38cb5481ae"
+	]
+}
