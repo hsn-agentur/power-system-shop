@@ -53,7 +53,7 @@
 
     {% if settings.quickbuy_style != 'off' and section.settings.enable_carousel %}
       <div class="quickbuy-container">
-        <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x' %}</a>
+        <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x', stroke_width: 1 %}</a>
         <div class="inner"></div>
       </div>
     {% endif %}

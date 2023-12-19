@@ -24,10 +24,12 @@
     "datePublished": {{ article.published_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
     "dateCreated": {{ article.created_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
     "dateModified": {{ article.updated_at | date: '%Y-%m-%dT%H:%M:%SZ' | json }},
+    {%- if section.settings.show_author -%}
     "author": {
       "@type": "Person",
       "name": {{ article.author | json }}
     },
+    {%- endif -%}
     "publisher": {
       "@type": "Organization",
       {%- if page_image -%}

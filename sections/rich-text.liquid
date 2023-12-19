@@ -18,25 +18,27 @@
             {% endif %}
 
           {% when 'subheading' %}
-            <div class="subheading subheading--over lightly-spaced-row-above" {{ block.shopify_attributes }}>{{ block.settings.subheading | escape }}</div>
+            <div class="subheading subheading--over lightish-spaced-row-above" {{ block.shopify_attributes }}>{{ block.settings.subheading | escape }}</div>
 
           {% when 'text' %}
             <div class="rte lightly-spaced-row {% if block.settings.enlarge_text %}large-text{% endif %}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
 
           {% when 'button' %}
-            <div class="lightly-spaced-row-above button-row" {{ block.shopify_attributes }}>
+            <div class="lightish-spaced-row-above button-row" {{ block.shopify_attributes }}>
               <a class="{% if block.settings.button_style != 'link' %}btn btn--{{ block.settings.button_style }}{% else %}small-feature-link{% endif %} button-row__button" href="{{ block.settings.button_link }}">{{ block.settings.button_label | escape }}</a>
               {%- assign skip_block_count = 0 -%}
               {%- for next_block in section.blocks offset: forloop.index -%}
                 {%- if next_block.type == 'button' -%}
                   {%- assign skip_block_count = skip_block_count | plus: 1 -%}
                   <a class="{% if next_block.settings.button_style != 'link' %}btn btn--{{ next_block.settings.button_style }}{% else %}small-feature-link{% endif %} button-row__button" href="{{ next_block.settings.button_link }}" {{ block.shopify_attributes }}>{{ next_block.settings.button_label | escape }}</a>
+                {%- else -%}
+                  {%- break -%}
                 {%- endif -%}
               {%- endfor -%}
             </div>
 
           {% when 'image' %}
-            <div class="lightly-spaced-row inline-width-container" style="width: {{ block.settings.image_width }}px" {{ block.shopify_attributes }}>
+            <div class="lightly-spaced-row lightish-spaced-row-above inline-width-container" style="width: {{ block.settings.image_width }}px" {{ block.shopify_attributes }}>
               {% if block.settings.url != blank %}<a href="{{ block.settings.url }}">{% endif %}
                 {% if block.settings.image != blank %}
                   {% render 'responsive-image', image: block.settings.image %}

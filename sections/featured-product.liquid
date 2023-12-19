@@ -21,7 +21,7 @@
   assign description_shown = false
 -%}
 
-<div class="container section-{{ section.id }} featured-product product-detail {% if current_variant.compare_at_price > current_variant.price %}variant-status--on-sale{% endif %} strongly-spaced-row valign-middle"
+<div class="container section-{{ section.id }} featured-product product-detail{% if current_variant.compare_at_price > current_variant.price %} variant-status--on-sale{% endif %}{% if current_variant.available == false %} variant-status--unavailable{% endif %} strongly-spaced-row valign-middle"
     data-section-type="featured-product"
     data-components="accordion,custom-select,modal"
     data-cc-animate>
@@ -373,7 +373,7 @@
                         <label class="label" for="quantity">{{ 'products.product.quantity' | t }}</label>
                         <div class="quantity-wrapper">
                           <a href="#" data-quantity="down">{% render 'svg-minus' %}</a>
-                          <input aria-label="{{ 'products.product.quantity' | t }}" id="quantity" type="text" name="quantity" value="1" />
+                          <input aria-label="{{ 'products.product.quantity' | t }}" id="quantity" type="number" name="quantity" value="1" />
                           <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
                         </div>
                       {% endif %}
@@ -385,8 +385,12 @@
                             {{- 'products.product.add_to_cart' | t -}}
                           {%- endif -%}
                         {%- endcapture -%}
-                        <button class="button button--large" type="submit" data-add-to-cart-text="{{ add_to_cart_text | escape }}">
-                          {{- add_to_cart_text -}}
+                        <button class="button button--large{% if current_variant.available == false %} button--sold-out{% endif %}" type="submit" data-add-to-cart-text="{{ add_to_cart_text | escape }}">
+                          {%- if current_variant.available -%}
+                            {{- add_to_cart_text -}}
+                          {%- else -%}
+                            {{- 'products.variant.no_stock' | t -}}
+                          {%- endif -%}
                         </button>
                       </div>
                       {% if enable_dynamic_payment_button %}
@@ -401,7 +405,13 @@
                     </div>
 
                   {% else %}
-                    <div class="product-unavailable">{{ 'products.product.product_unavailable' | t }}</div>
+                    <div class="quantity-submit-row input-row">
+                      <div class="quantity-submit-row__submit">
+                        <button class="button button--large button--sold-out" type="submit">
+                          {{- 'products.variant.no_stock' | t -}}
+                        </button>
+                      </div>
+                    </div>
                   {% endif %}
                 {% endform %}
 
@@ -414,7 +424,7 @@
                     </label>
                     <div class="quantity-wrapper">
                       <a href="#" data-quantity="down">{% render 'svg-minus' %}</a>
-                      <input aria-label="{{ 'products.product.quantity' | t }}" id="quantity" type="text" name="quantity" value="1" />
+                      <input aria-label="{{ 'products.product.quantity' | t }}" id="quantity" type="number" name="quantity" value="1" />
                       <a href="#" data-quantity="up">{% render 'svg-plus' %}</a>
                     </div>
                   {% endif %}
@@ -491,7 +501,7 @@
               <div class="product-detail-accordion" {{ block.shopify_attributes }}>
                 {%- capture accordion_title -%}
                   {%- if block.settings.icon == blank -%}
-                    {{- block.settings.title -}}
+                    {{- block.settings.title | escape -}}
                   {%- else -%}
                     <div class="with-icon">
                       {% render 'icon', icon: block.settings.icon, size: 'small' %}
@@ -652,7 +662,7 @@
                     {% else %}
                       <div class="option-selector" data-selector-type="radio">
                         <fieldset>
-                          <legend class="label">{{ block.settings.label }}</legend>
+                          <legend class="label">{{ block.settings.label | escape }}</legend>
                           {% for option in custom_options %}
                             <label class="label">
                               <input type="radio" form="{{ product_form_id }}" name="{{ custom_input_name }}" value="{{ option | escape }}"{% if forloop.first %} checked{% endif %}>
@@ -669,7 +679,7 @@
 
           {% when 'related_products' %}
             {% if block.settings.product_list != blank %}
-              <div class="lightly-spaced-row lightly-spaced-row-above" {{ block.shopify_attributes }}>
+              <div class="lightly-spaced-row lightish-spaced-row-above" {{ block.shopify_attributes }}>
                 <div class="label">{{ block.settings.title | escape }}</div>
                 <div class="fixed-layout">
                   {%- liquid
@@ -708,6 +718,75 @@
                 </div>
               </div>
             {% endif %}
+
+          {% when 'complementary' %}
+            <cc-fetched-content data-id="{{ block.id }}" data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&intent=complementary" contains-product-blocks {{ block.shopify_attributes }}>
+              {%- if recommendations.performed and recommendations.products_count > 0 -%}
+                {%- liquid
+                  if settings.prod_thumb_shape == 'portrait-23'
+                    assign chosen_aspect_ratio = 0.67
+                  elsif settings.prod_thumb_shape == 'portrait-45'
+                    assign chosen_aspect_ratio = 0.8
+                  elsif settings.prod_thumb_shape == 'square'
+                    assign chosen_aspect_ratio = 1.0
+                  elsif settings.prod_thumb_shape == 'landscape-54'
+                    assign chosen_aspect_ratio = 1.25
+                  elsif settings.prod_thumb_shape == 'landscape-32'
+                    assign chosen_aspect_ratio = 1.50
+                  elsif settings.prod_thumb_shape == 'tallest'
+                    assign chosen_aspect_ratio = 99
+                    for product in recommendations.products limit: block.settings.max_products
+                      if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                      endif
+                    endfor
+                  else
+                    assign chosen_aspect_ratio = 0
+                    for product in recommendations.products limit: block.settings.max_products
+                      if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                      endif
+                    endfor
+                  endif
+                -%}
+
+                <div class="lightly-spaced-row lightish-spaced-row-above not-in-quickbuy">
+                  {% if block.settings.enable_carousel and recommendations.products_count > 2 and block.settings.max_products > 2 %}
+                    <div class="collection-slider collection-slider--no-wide-gutter">
+                      <div class="opposing-items opposing-items--valign-base very-lightly-spaced-row">
+                        <div class="opposing-items__left label">{{ block.settings.block_heading | escape }}</div>
+                        <div class="no-wrap">
+                          <a class="prev ltr-icon inh-col" href="#">{% render 'svg-chevron-left' %}</a>
+                          <a class="next ltr-icon inh-col" href="#">{% render 'svg-chevron-right' %}</a>
+                        </div>
+                      </div>
+                      <div class="collection-listing">
+                        <div class="product-list product-list--image-shape-{{ settings.prod_thumb_shape }} carousel carousel--fixed-grid-mode carousel--per-row-2">
+                          {%- liquid
+                            for related_product in recommendations.products limit: block.settings.max_products
+                              render 'product-block', product: related_product, manual_image_load: true, no_quick_buy: true, no_swiping: true, custom_aspect_ratio: chosen_aspect_ratio
+                            endfor
+                          -%}
+                        </div>
+                      </div>
+                    </div>
+                  {% else %}
+                    <div class="very-lightly-spaced-row">
+                      <div class="label">{{ block.settings.block_heading | escape }}</div>
+                    </div>
+                    <div class="fixed-layout fixed-layout--no-wide-gutter">
+                      {%- liquid
+                        for related_product in recommendations.products limit: block.settings.max_products
+                          echo '<div class="column column--half">'
+                          render 'product-block', product: related_product, manual_image_load: false, no_quick_buy: true, custom_aspect_ratio: chosen_aspect_ratio
+                          echo '</div>'
+                        endfor
+                      -%}
+                    </div>
+                  {% endif %}
+                </div>
+              {%- endif -%}
+            </cc-fetched-content>
 
         {% endcase %}
       {% endfor %}
@@ -1972,23 +2051,55 @@
       },
       {
         "type": "related_products",
-        "name": "Related products",
+        "name": "Product list",
         "settings": [
           {
             "type": "paragraph",
-            "content": "To set different related items for each product, use a product reference list [metafield](https:\/\/help.shopify.com\/en\/manual\/metafields) as a dynamic source."
+            "content": "To use a different list for each product, use a product reference list [metafield](https:\/\/help.shopify.com\/en\/manual\/metafields) as a dynamic source."
           },
           {
             "type": "text",
             "id": "title",
             "label": "Heading",
             "info": "Only shows if products are present",
-            "default": "Related products"
+            "default": "Product list"
           },
           {
             "type": "product_list",
             "id": "product_list",
             "label": "Products"
+          }
+        ]
+      },
+      {
+        "type": "complementary",
+        "name": "Complementary products",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "To select complementary products, add the Search & Discovery app. [Learn more](https:\/\/shopify.dev\/themes\/product-merchandising\/recommendations)"
+          },
+          {
+            "type": "text",
+            "id": "block_heading",
+            "default": "Pairs well with",
+            "label": "Heading"
+          },
+          {
+            "type": "checkbox",
+            "id": "enable_carousel",
+            "label": "Enable carousel",
+            "default": true
+          },
+          {
+            "type": "range",
+            "id": "max_products",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "label": "Maximum products to show",
+            "default": 10
           }
         ]
       },

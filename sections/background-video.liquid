@@ -31,21 +31,37 @@
     }
   {% endstyle %}
 
-  {% if section.settings.video != blank %}
+  {% if section.settings.video_shopify != blank or section.settings.video_external != blank %}
     <div class="height--fixed video-container video-container--background image-overlay image-overlay--bg-{{ section.settings.overlay_style }}"
-      data-video-url="{{ section.settings.video | escape }}"
+      {% if section.settings.video_shopify != blank %}
+        data-video-sources="{%- for source in section.settings.video_shopify.sources -%}
+          {{ source.format }} {{ source.mime_type }} {{ source.url }}
+          {%- unless forloop.last -%}|{%- endunless -%}
+        {%- endfor -%}"
+        data-video-type="mp4"
+      {% elsif section.settings.video_external != blank %}
+        data-video-url="{{ section.settings.video_external | escape }}"
+      {% endif %}
       data-video-autoplay="true"
       data-video-loop="true"
       data-cc-animate>
       <div class="video-container__video"></div>
-      {% if section.settings.placeholder_image %}
+      {%- liquid
+        if section.settings.placeholder_image
+          assign placeholder_image = section.settings.placeholder_image
+        elsif section.settings.video_shopify
+          assign placeholder_image = section.settings.video_shopify.preview_image
+        endif
+      -%}
+      {% if placeholder_image %}
         <div class="video-container__fallback rimage-outer-wrapper rimage-background lazyload fade-in"
-          data-bgset="{% render 'bgset', image: section.settings.placeholder_image %}"
+          data-bgset="{% render 'bgset', image: placeholder_image %}"
           data-sizes="auto"
-          data-parent-fit="cover">
+          data-parent-fit="cover"
+          {%- if section.settings.placeholder_image %} style="background-position: {{ section.settings.placeholder_image.presentation.focal_point }}"{% endif %}>
           <noscript>
-            <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: section.settings.placeholder_image.aspect_ratio | times: 100 }}%">
-              <img src="{{ section.settings.placeholder_image | img_url: '1024x1024' }}" alt="{{ section.settings.placeholder_image.alt | escape }}" class="rimage__image">
+            <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: placeholder_image.aspect_ratio | times: 100 }}%">
+              <img src="{{ placeholder_image | img_url: '1024x1024' }}" alt="{{ placeholder_image.alt | escape }}" class="rimage__image">
             </div>
           </noscript>
         </div>
@@ -59,15 +75,15 @@
       {%- if show_overlay_text -%}
         <div class="overlay-text overlay-text--for-banner overlay--v-{{ section.settings.text_alignment | split: ' ' | first }} overlay--h-{{ section.settings.text_alignment | split: ' ' | last }} image-overlay__over">
           <div class="overlay-text__inner">
-            <div class="overlay-text__text" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.5s">
+            <div class="overlay-text__text" style="--heading-max-width: {{ section.settings.heading_max_width }}px" data-cc-animate="cc-fade-in-up" data-cc-animate-delay="0.5s">
               {%- if section.settings.subheading != blank -%}
                 <div class="overlay-text__subheading subheading subheading--over">{{ section.settings.subheading | escape }}</div>
               {%- endif -%}
               {%- if section.settings.title != blank -%}
                 {% if section.settings.use_h1 %}
-                  <h1 class="overlay-text__title">{{ section.settings.title | newline_to_br }}</h1>
+                  <h1 class="overlay-text__title">{% render 'multiline-text' with section.settings.title %}</h1>
                 {% else %}
-                  <h2 class="overlay-text__title h1-style">{{ section.settings.title | newline_to_br }}</h2>
+                  <h2 class="overlay-text__title h1-style">{% render 'multiline-text' with section.settings.title %}</h2>
                 {% endif %}
               {%- endif -%}
               {%- if section.settings.text != blank -%}
@@ -76,10 +92,10 @@
               {%- if section.settings.button_label_1 != blank or section.settings.button_label_2 != blank -%}
                 <div class="overlay-text__button-row">
                   {%- if section.settings.button_label_1 != blank -%}
-                    <a class="overlay-text__button button altcolour" href="{{ section.settings.button_url_1 }}">{{ section.settings.button_label_1 }}</a>
+                    <a class="overlay-text__button button altcolour" href="{{ section.settings.button_url_1 }}">{{ section.settings.button_label_1 | escape }}</a>
                   {%- endif -%}
                   {%- if section.settings.button_label_2 != blank -%}
-                    <a class="overlay-text__button button altcolour" href="{{ section.settings.button_url_2 }}">{{ section.settings.button_label_2 }}</a>
+                    <a class="overlay-text__button button altcolour" href="{{ section.settings.button_url_2 }}">{{ section.settings.button_label_2 | escape }}</a>
                   {%- endif -%}
                 </div>
               {%- endif -%}
@@ -104,17 +120,32 @@
         "content": "Background videos play on loop, with no sound. If you need a video with sound use the Video section."
       },
       {
-        "id": "video",
-        "type": "text",
-        "label": "Video link",
-        "info": "Supports mp4, YouTube and Vimeo. Please read documentation before using. [Read more](https://cleancanvas.co.uk/support/general/background-video)",
+        "type": "paragraph",
+        "content": "Please read documentation before using. [Read more](https://cleancanvas.co.uk/support/general/background-video)"
+      },
+      {
+        "id": "video_shopify",
+        "type": "video",
+        "label": "Video upload",
+        "info": "Hosted by Shopify. Replaces External video if both are set."
+      },
+      {
+        "id": "video_external",
+        "type": "video_url",
+        "label": "External video",
+        "accept": ["youtube", "vimeo"],
+        "info": "Supports YouTube and Vimeo",
         "default": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc"
       },
       {
         "id": "placeholder_image",
         "type": "image_picker",
-        "label": "Placeholder image",
-        "info": "Required. Shows while the video is loading, or if it cannot autoplay."
+        "label": "Custom placeholder image",
+        "info": "Shows while the video is loading, or if it cannot autoplay."
+      },
+      {
+        "type": "header",
+        "content": "Overlay"
       },
       {
         "type": "text",
@@ -123,10 +154,21 @@
         "default": "Tell your story"
       },
       {
-        "type": "textarea",
+        "type": "text",
         "id": "title",
         "label": "Heading",
+        "info": "Enter <br> for a line-break",
         "default": "Background video"
+      },
+      {
+        "type": "range",
+        "id": "heading_max_width",
+        "min": 500,
+        "max": 1200,
+        "step": 20,
+        "unit": "px",
+        "label": "Maximum heading width",
+        "default": 800
       },
       {
         "type": "range",

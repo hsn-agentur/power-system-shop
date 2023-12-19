@@ -26,10 +26,15 @@
 
   <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">
 
+  <style>
+    {{ settings.type_base_font | font_face: font_display: 'fallback' }}
+    {{ settings.type_heading_font | font_face: font_display: 'fallback' }}
+    {{ settings.type_logo_font | font_face: font_display: 'fallback' }}
+  </style>
+
   {{ 'styles.css' | asset_url | stylesheet_tag }}
 
   <script src="{{ 'vendor/qrcode.js' | shopify_asset_url }}" defer="defer"></script>
-  <script src="{{ 'giftcard.v.1.0.js' | asset_url }}" defer="defer"></script>
 
   {{ content_for_header }}
 </head>
@@ -40,5 +45,51 @@
 
     {{ content_for_layout }}
   </main>
+
+  <script>
+    function initGiftCard(){
+      var config = {
+        qrCode: 'qr-code',
+        printButton: 'print-gift-card',
+        giftCardCode: 'gift-card-code-digits'
+      };
+
+      var qrCode = document.getElementById(config.qrCode);
+
+      qrCode.innerHTML = '';
+
+      new QRCode(qrCode, {
+        text: qrCode.getAttribute('data-identifier'),
+        width: 120,
+        height: 120
+      });
+
+      document.getElementById(config.printButton).addEventListener('click', function(){
+        window.print();
+      }, false);
+
+      function selectText(evt) {
+        var text = evt.target;
+        var range = '';
+
+        if (document.body.createTextRange) {
+          range = document.body.createTextRange();
+          range.moveToElementText(text);
+          range.select();
+        } else if (window.getSelection) {
+          var selection = window.getSelection();
+          range = document.createRange();
+          range.selectNodeContents(text);
+          selection.removeAllRanges();
+          selection.addRange(range);
+        }
+      }
+
+      // Auto-select gift card code on click, based on ID passed to the function
+      document.getElementById(config.giftCardCode).addEventListener('click', selectText, false);
+    };
+    document.addEventListener('DOMContentLoaded', initGiftCard);
+    document.addEventListener('shopify:section:load', initGiftCard);
+  </script>
 </body>
 </html>

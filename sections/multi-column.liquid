@@ -35,7 +35,7 @@
           {% endif %}
 
           {% if block.settings.title != blank %}
-            <h3 class="text-column__title">{{ block.settings.title }}</h3>
+            <h3 class="text-column__title">{{ block.settings.title | escape }}</h3>
           {% endif %}
 
           {% if block.settings.text != blank %}
@@ -44,7 +44,7 @@
 
           {% if block.settings.button_label != blank %}
             <div class="text-column__button-row text-column__button-row--{{ section.settings.button_style }}">
-              <a class="text-column__button {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.link }}">{{ block.settings.button_label }}</a>
+              <a class="text-column__button {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}" href="{{ block.settings.link }}">{{ block.settings.button_label | escape }}</a>
             </div>
           {% endif %}
         </div>

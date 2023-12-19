@@ -32,7 +32,7 @@
       data-aspectratio="{{ image.aspect_ratio }}"
       data-sizes="auto"
       alt="{{ altText | escape }}"
-      {% if local_cover %}data-parent-fit="cover"{% endif %}>
+      {% if local_cover %}data-parent-fit="cover" style="object-position: {{ image.presentation.focal_point }}"{% endif %}>
 
     <noscript>
       <img class="rimage__image" src="{{ image | img_url: '1024x1024' }}" alt="{{ altText | escape }}">

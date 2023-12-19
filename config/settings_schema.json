@@ -3,7 +3,7 @@
     "name": "theme_info",
     "theme_name": "Symmetry",
     "theme_author": "Clean Canvas",
-    "theme_version": "5.5.1",
+    "theme_version": "6.0.3",
     "theme_documentation_url": "http:\/\/cleancanvas.co.uk\/support\/symmetry\/",
     "theme_support_url": "http:\/\/cleancanvas.co.uk\/support\/symmetry\/"
   },
@@ -28,17 +28,20 @@
       {
         "type": "color",
         "id": "font_col_base",
-        "label": "Base"
+        "label": "Base",
+        "default": "#333"
       },
       {
         "type": "color",
         "id": "font_col_link",
-        "label": "Links"
+        "label": "Links",
+        "default": "#111"
       },
       {
         "type": "color",
         "id": "font_col_heads",
-        "label": "Headings"
+        "label": "Headings",
+        "default": "#111"
       },
       {
         "type": "color",
@@ -96,7 +99,8 @@
       {
         "type": "color",
         "id": "bg_col",
-        "label": "Color"
+        "label": "Color",
+        "default": "#ffffff"
       },
       {
         "type": "image_picker",
@@ -133,12 +137,14 @@
       {
         "type": "color",
         "id": "head_bg_col",
-        "label": "Background"
+        "label": "Background",
+        "default": "#ffffff"
       },
       {
         "type": "color",
         "id": "head_txt_col",
-        "label": "Text"
+        "label": "Text",
+        "default": "#232323"
       },
       {
         "type": "header",
@@ -169,11 +175,6 @@
         "id": "nav_featured_col",
         "label": "Featured link color",
         "default": "#dd6666"
-      },
-      {
-        "type": "color",
-        "id": "not_shade_bg",
-        "label": "Cart drawer background"
       },
       {
         "type": "header",
@@ -805,7 +806,7 @@
         "type": "checkbox",
         "id": "prod_thumb_url_within_coll",
         "label": "Include collection in URL",
-        "info": "Used for breadcrumbs and recommended products",
+        "info": "Used for breadcrumbs and product recommendations",
         "default": true
       },
       {
@@ -828,6 +829,12 @@
             "label": "Disabled"
           }
         ]
+      },
+      {
+        "type": "checkbox",
+        "id": "qb_show_app_blocks",
+        "label": "Show app blocks in quick buy",
+        "default": false
       },
       {
         "type": "header",
@@ -922,7 +929,7 @@
         "type": "radio",
         "id": "prod_new_method",
         "label": "New in method",
-        "info": "Collection: Will show when a product is in a collection with 'new' in the handle. Tag: Add the tag 'New' to the product.",
+        "info": "Collection: Will show when a product is in a collection with 'new' in the handle (be mindful of handles that may accidentally trigger this, e.g. 'earrings-from-new-york'). Tag: Add the tag 'New' to the product.",
         "default": "collection",
         "options": [
           {
@@ -1028,8 +1035,8 @@
         "type": "textarea",
         "id": "swatch_value_list",
         "label": "Swatch color list",
-        "placeholder": "Red:#ff0000\nWhite:#ffffff\nBlack:black.png",
-        "info": "One color per line. Example: Red:#ff0000"
+        "placeholder": "Red:#ff0000\nWhite:#ffffff\nBlack:black.png\nRed Blue Stripes:#e22#22e",
+        "info": "One color per line. Example: Red:#ff0000. Up to three colors can be used to show vertical stripes. Example: Red Blue Stripes:#e22#22e"
       },
       {
         "type": "paragraph",
@@ -1169,9 +1176,15 @@
       },
       {
         "type": "text",
-        "id": "social_pinterest_url",
-        "label": "Pinterest",
-        "info": "https:\/\/pinterest.com\/shopify"
+        "id": "social_instagram_url",
+        "label": "Instagram",
+        "info": "https:\/\/instagram.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube_url",
+        "label": "YouTube",
+        "info": "https:\/\/youtube.com\/user\/shopify"
       },
       {
         "type": "text",
@@ -1181,21 +1194,57 @@
       },
       {
         "type": "text",
-        "id": "social_youtube_url",
-        "label": "Youtube",
-        "info": "https:\/\/youtube.com\/user\/shopify"
-      },
-      {
-        "type": "text",
-        "id": "social_instagram_url",
-        "label": "Instagram",
-        "info": "https:\/\/instagram.com\/shopify"
-      },
-      {
-        "type": "text",
         "id": "social_tiktok_url",
-        "label": "Tiktok",
+        "label": "TikTok",
         "info": "https:\/\/tiktok.com\/@shopify?"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest_url",
+        "label": "Pinterest",
+        "info": "https:\/\/pinterest.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr_url",
+        "label": "Tumblr",
+        "info": "https:\/\/www.tumblr.com\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_snapchat_url",
+        "label": "Snapchat",
+        "info": "https:\/\/story.snapchat.com\/p\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_whatsapp_url",
+        "label": "WhatsApp",
+        "info": "https:\/\/api.whatsapp.com\/send?phone=1234"
+      },
+      {
+        "type": "text",
+        "id": "social_wechat_url",
+        "label": "WeChat",
+        "info": "weixin://dl/chat?shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_linkedin_url",
+        "label": "LinkedIn",
+        "info": "https:\/\/www.linkedin.com\/company\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_twitch_url",
+        "label": "Twitch",
+        "info": "https:\/\/www.twitch.tv\/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_spotify_url",
+        "label": "Spotify",
+        "info": "https:\/\/open.spotify.com\/artist\/shopify"
       },
       {
         "type": "header",
@@ -1204,8 +1253,23 @@
       },
       {
         "type": "image_picker",
+        "id": "social_custom_icon_ann_bar",
+        "label": "Custom icon - announcement bar"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_custom_icon_mob_nav",
+        "label": "Custom icon - mobile menu"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_custom_icon_footer",
+        "label": "Custom icon - footer"
+      },
+      {
+        "type": "image_picker",
         "id": "social_custom_icon",
-        "label": "Custom icon"
+        "label": "Custom icon - popup"
       },
       {
         "type": "text",
@@ -1277,7 +1341,7 @@
         "type": "image_picker",
         "id": "favicon",
         "label": "Image",
-        "info": "32 x 32px .png recommended"
+        "info": "48 x 48px .png recommended"
       }
     ]
   },
@@ -1311,6 +1375,80 @@
           }
         ],
         "default": "drawer"
+      },
+      {
+        "type": "select",
+        "id": "after_add_to_cart",
+        "label": "After adding to cart",
+        "info": "'Show cart drawer' requires Drawer to be the Cart type",
+        "options": [
+          {
+            "value": "drawer",
+            "label": "Show cart drawer"
+          },
+          {
+            "value": "notification",
+            "label": "Show notification"
+          },
+          {
+            "value": "page",
+            "label": "Go to cart page (with quantity check)"
+          },
+          {
+            "value": "no-js",
+            "label": "Go to cart page (JS disabled)"
+          }
+        ],
+        "default": "notification"
+      },
+      {
+        "type": "header",
+        "content": "Free shipping bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_free_shipping_bar",
+        "label": "Show free shipping bar",
+        "default": false
+      },
+      {
+        "type": "paragraph",
+        "content": "Enter in format CURRENCY:AMOUNT, or COUNTRY:CURRENCY:AMOUNT for country-specific pricing. The first matched currency in the list will be used, so place country-specific pricing first."
+      },
+      {
+        "type": "paragraph",
+        "content": "Use the smallest unit for AMOUNT."
+      },
+      {
+        "type": "paragraph",
+        "content": "Example: EC:USD:5000 for $50 USD to Ecuador."
+      },
+      {
+        "type": "paragraph",
+        "content": "Example: USD:4500 for $45 US Dollars anywhere."
+      },
+      {
+        "type": "textarea",
+        "id": "free_shipping_amounts",
+        "label": "Amounts",
+        "placeholder": "USD:4500",
+        "info": "One price per line. [Read more](https://cleancanvas.co.uk/support/mode/shipping-bar)"
+      },
+      {
+        "type": "paragraph",
+        "content": "[Currency code reference](https://www.iso.org/iso-4217-currency-codes.html) [Country code reference](https://www.iso.org/glossary-for-iso-3166.html)"
+      },
+      {
+        "type": "color",
+        "id": "free_shipping_bar_col_under",
+        "label": "Bar color - under",
+        "default": "#00800a"
+      },
+      {
+        "type": "color",
+        "id": "free_shipping_bar_col_met",
+        "label": "Bar color - success",
+        "default": "#00800a"
       }
     ]
   },
@@ -1337,6 +1475,17 @@
         "label": "Show on totals",
         "info": "Applies to cart, drawer, order summary and gift card",
         "default": false
+      }
+    ]
+  },
+  {
+    "name": "Advanced",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "custom_theme_css",
+        "label": "Custom CSS",
+        "info": "Included on every theme page"
       }
     ]
   }

@@ -35,16 +35,18 @@
 {%- if template == 'gift_card' -%}
 
 {% comment %} Gift card template logo {% endcomment %}
-<meta itemprop="url" content="{{ shop.url }}">
-<meta itemprop="name" content="{{ shop.name }}">
-{%- if section.settings.logo != blank -%}
-  <h1 class="logo" itemscope itemtype="http://schema.org/Organization">
-    {% capture img_size %}{{ section.settings.logo_img_width_int | times: 2 }}x{% endcapture %}
-    <img src="{{ section.settings.logo | img_url: img_size }}" alt="{{ section.settings.logo.alt | escape }}" itemprop="logo" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" />
-  </h1>
-{%- else -%}
-  <h1>{{ shop.name }}</h1>
-{%- endif -%}
+<div id="shoplogo">
+  <meta itemprop="url" content="{{ shop.url }}">
+  <meta itemprop="name" content="{{ shop.name }}">
+  {%- if section.settings.logo != blank -%}
+    <h1 class="logo" itemscope itemtype="http://schema.org/Organization">
+      {% capture img_size %}{{ section.settings.logo_img_width_int | times: 2 }}x{% endcapture %}
+      <img src="{{ section.settings.logo | img_url: img_size }}" alt="{{ section.settings.logo.alt | escape }}" itemprop="logo" width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" />
+    </h1>
+  {%- else -%}
+    <h1 class="logotext">{{ shop.name }}</h1>
+  {%- endif -%}
+</div>
 
 {%- else -%}
 
@@ -54,6 +56,9 @@
     <div class="logo-area container container--no-max">
       <div class="logo-area__left">
         <div class="logo-area__left__inner">
+          <button class="button notabutton mobile-nav-toggle" aria-label="{{ 'general.navigation.menu_toggle_aria_label' | t | escape }}" aria-controls="main-nav">
+            {%- render 'svg-menu' -%}
+          </button>
           {% if section.settings.enable_search %}
             <a class="show-search-link" href="{{ routes.search_url }}" aria-label="{{ 'layout.search.open' | t }}">
               <span class="show-search-link__icon">
@@ -131,9 +136,6 @@
 
       <div class="logo-area__right">
         <div class="logo-area__right__inner">
-          <button class="button notabutton mobile-nav-toggle" aria-label="{{ 'general.navigation.menu_toggle_aria_label' | t | escape }}" aria-controls="main-nav">
-            {%- render 'svg-menu' -%}
-          </button>
           {% if shop.customer_accounts_enabled %}
             {% if customer %}
               <a class="header-account-link" href="{{ routes.account_url }}" aria-label="{{ 'layout.customer.account' | t | escape }}">
@@ -193,7 +195,7 @@
           data-per-row-mob="{{ settings.prod_thumb_mob_per_row }}">
 
         <div class="main-search__container container">
-          <button class="main-search__close button notabutton" aria-label="{{ 'layout.search.close' | t | escape }}">{% render 'svg-x' %}</button>
+          <button class="main-search__close button notabutton" aria-label="{{ 'layout.search.close' | t | escape }}">{% render 'svg-x', stroke_width: 1 %}</button>
 
           <form class="main-search__form" action="{{ routes.search_url }}" method="get" autocomplete="off">
             <input type="hidden" name="type" value="{{ settings.search_type }}" />
@@ -358,8 +360,35 @@
             <div class="navigation__mobile-products">
               <div class="navigation__mobile-products-title">{{ section.settings.nav_mob_products_title | escape }}</div>
               <div class="product-list product-list--scrollarea">
+                {%- liquid
+                  if settings.prod_thumb_shape == 'portrait-23'
+                    assign chosen_aspect_ratio = 0.67
+                  elsif settings.prod_thumb_shape == 'portrait-45'
+                    assign chosen_aspect_ratio = 0.8
+                  elsif settings.prod_thumb_shape == 'square'
+                    assign chosen_aspect_ratio = 1.0
+                  elsif settings.prod_thumb_shape == 'landscape-54'
+                    assign chosen_aspect_ratio = 1.25
+                  elsif settings.prod_thumb_shape == 'landscape-32'
+                    assign chosen_aspect_ratio = 1.50
+                  elsif settings.prod_thumb_shape == 'tallest'
+                    assign chosen_aspect_ratio = 99
+                    for product in collections[section.settings.nav_mob_products_collection].products limit: product_limit
+                      if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                      endif
+                    endfor
+                  else
+                    assign chosen_aspect_ratio = 0
+                    for product in collections[section.settings.nav_mob_products_collection].products limit: product_limit
+                      if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+                        assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+                      endif
+                    endfor
+                  endif
+                -%}
                 {% for product in collections[section.settings.nav_mob_products_collection].products limit: 10 %}
-                  {% render 'product-block', product: product, no_swiping: true, no_quick_buy_markup: true, manual_image_load: true %}
+                  {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: true, no_quick_buy_markup: true, manual_image_load: true %}
                 {% endfor %}
               </div>
             </div>
@@ -402,7 +431,7 @@
         }
         if (inlineNavContainer.offsetWidth >= inlineNavWidth) {
           pageHeader.classList.add('pageheader--layout-inline-permitted');
-          var tallLogo = logoContainer.clientHeight > lastInlineNavLink.clientHeight + 1;
+          var tallLogo = logoContainer.clientHeight > lastInlineNavLink.clientHeight + 20;
           if (tallLogo) {
             inlineNav.classList.add('navigation--tight-underline');
           } else {
@@ -415,6 +444,16 @@
     }
   }
   theme.inlineNavigationCheck();
+
+  theme.setInitialHeaderHeightProperty = () => {
+    let headerHeight = 0,
+        section = document.querySelector('.section-header');
+    if (section) {
+      headerHeight = Math.ceil(section.clientHeight);
+      document.documentElement.style.setProperty('--theme-header-height', headerHeight + 'px');
+    }
+  };
+  setTimeout(theme.setInitialHeaderHeightProperty, 0);
 </script>
 {%- endif -%}
 

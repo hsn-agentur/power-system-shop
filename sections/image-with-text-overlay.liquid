@@ -68,7 +68,7 @@
             data-bgset="{% render 'bgset', image: section.settings.image %}"
             data-sizes="auto"
             data-parent-fit="cover"
-            style="background-position: {{ section.settings.image_position }}">
+            style="background-position: {{ section.settings.image.presentation.focal_point }}">
           {%- if section.settings.height == 'adapt' -%}
             {%- assign aspect_ratio = section.settings.image.aspect_ratio | default: 2.0 -%}
             <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
@@ -86,10 +86,10 @@
               data-bgset="{% render 'bgset', image: section.settings.mobile_image %}"
               data-sizes="auto"
               data-parent-fit="cover"
-              style="background-position: {{ section.settings.mobile_image_position }}">
+              style="background-position: {{ section.settings.mobile_image.presentation.focal_point }}">
           {%- if section.settings.height == 'adapt' -%}
             {%- assign aspect_ratio = section.settings.mobile_image.aspect_ratio | default: 2.0 -%}
-            <div class="rimage-wrapper THISONE" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
+            <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
           {%- endif -%}
           <noscript>
             <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: section.settings.mobile_image.aspect_ratio | times: 100 }}%">
@@ -102,16 +102,16 @@
 
     {%- if show_overlay_text -%}
       <div class="overlay-text overlay-text--for-banner overlay--v-{{ section.settings.text_alignment | split: ' ' | first }} overlay--h-{{ section.settings.text_alignment | split: ' ' | last }} image-overlay__over">
-        <div class="overlay-text__inner">
+        <div class="overlay-text__inner" style="--heading-max-width: {{ section.settings.heading_max_width }}px">
           <div class="overlay-text__text">
             {%- if section.settings.subheading != blank -%}
               <div class="overlay-text__subheading subheading subheading--over">{{ section.settings.subheading | escape }}</div>
             {%- endif -%}
             {%- if section.settings.title != blank -%}
               {% if section.settings.use_h1 %}
-                <h1 class="overlay-text__title">{{ section.settings.title | newline_to_br }}</h1>
+                <h1 class="overlay-text__title">{% render 'multiline-text' with section.settings.title %}</h1>
               {% else %}
-                <h2 class="overlay-text__title h1-style">{{ section.settings.title | newline_to_br }}</h2>
+                <h2 class="overlay-text__title h1-style">{% render 'multiline-text' with section.settings.title %}</h2>
               {% endif %}
             {%- endif -%}
             {%- if section.settings.text != blank -%}
@@ -121,17 +121,17 @@
               <div class="overlay-text__button-row">
                 {%- if wrap_image_with_link -%}
                   {%- if section.settings.button_label_1 != blank -%}
-                    <span class="overlay-text__button button altcolour">{{ section.settings.button_label_1 }}</span>
+                    <span class="overlay-text__button button altcolour">{{ section.settings.button_label_1 | escape }}</span>
                   {%- endif -%}
                   {%- if section.settings.button_label_2 != blank -%}
-                    <span class="overlay-text__button button altcolour">{{ section.settings.button_label_2 }}</span>
+                    <span class="overlay-text__button button altcolour">{{ section.settings.button_label_2 | escape }}</span>
                   {%- endif -%}
                 {%- else -%}
                   {%- if section.settings.button_label_1 != blank -%}
-                    <a class="overlay-text__button button altcolour" href="{{ section.settings.button_url_1 }}">{{ section.settings.button_label_1 }}</a>
+                    <a class="overlay-text__button button altcolour" href="{{ section.settings.button_url_1 }}">{{ section.settings.button_label_1 | escape }}</a>
                   {%- endif -%}
                   {%- if section.settings.button_label_2 != blank -%}
-                    <a class="overlay-text__button button altcolour" href="{{ section.settings.button_url_2 }}">{{ section.settings.button_label_2 }}</a>
+                    <a class="overlay-text__button button altcolour" href="{{ section.settings.button_url_2 }}">{{ section.settings.button_label_2 | escape }}</a>
                   {%- endif -%}
                 {%- endif -%}
               </div>
@@ -166,95 +166,6 @@
         "id": "mobile_image",
         "label": "Mobile image",
         "info": "1024px x 1024px recommended"
-      },
-      {
-        "type": "select",
-        "id": "image_position",
-        "label": "Image alignment",
-        "info": "Used to keep the subject of your image in view",
-        "default": "center center",
-        "options": [
-          {
-            "value": "top left",
-            "label": "Top left"
-          },
-          {
-            "value": "top center",
-            "label": "Top center"
-          },
-          {
-            "value": "top right",
-            "label": "Top right"
-          },
-          {
-            "value": "center left",
-            "label": "Middle left"
-          },
-          {
-            "value": "center center",
-            "label": "Middle center"
-          },
-          {
-            "value": "center right",
-            "label": "Middle right"
-          },
-          {
-            "value": "bottom left",
-            "label": "Bottom left"
-          },
-          {
-            "value": "bottom center",
-            "label": "Bottom center"
-          },
-          {
-            "value": "bottom right",
-            "label": "Bottom right"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "mobile_image_position",
-        "label": "Mobile image alignment",
-        "options": [
-          {
-            "value": "left top",
-            "label": "Top left"
-          },
-          {
-            "value": "center top",
-            "label": "Top center"
-          },
-          {
-            "value": "right top",
-            "label": "Top right"
-          },
-          {
-            "value": "left center",
-            "label": "Middle left"
-          },
-          {
-            "value": "center center",
-            "label": "Middle center"
-          },
-          {
-            "value": "right center",
-            "label": "Middle right"
-          },
-          {
-            "value": "left bottom",
-            "label": "Bottom left"
-          },
-          {
-            "value": "center bottom",
-            "label": "Bottom center"
-          },
-          {
-            "value": "right bottom",
-            "label": "Bottom right"
-          }
-        ],
-        "default": "center center"
       },
       {
         "type": "radio",
@@ -303,16 +214,31 @@
         "info": "Not used if buttons or text contain links"
       },
       {
+        "type": "header",
+        "content": "Overlay"
+      },
+      {
         "type": "text",
         "id": "subheading",
         "label": "Subheading",
         "default": "Tell your story"
       },
       {
-        "type": "textarea",
+        "type": "text",
         "id": "title",
         "label": "Heading",
-        "default": "Two line\ntext heading"
+        "info": "Enter <br> for a line-break",
+        "default": "Text heading"
+      },
+      {
+        "type": "range",
+        "id": "heading_max_width",
+        "min": 500,
+        "max": 1200,
+        "step": 20,
+        "unit": "px",
+        "label": "Maximum heading width",
+        "default": 800
       },
       {
         "type": "range",

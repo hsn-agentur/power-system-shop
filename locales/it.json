@@ -46,6 +46,9 @@
       "minus": "Meno",
       "play": "Riproduci"
     },
+    "slider": {
+      "images": "Slider immagini"
+    },
     "navigation": {
       "menu_toggle_aria_label": "Attiva/disattiva menu",
       "main_navigation_aria_label": "Navigazione principale"
@@ -99,29 +102,29 @@
       "agreement_html": "Accetto i <a href=\"{{ terms_url }}\" target=\"_blank\">termini e la politica di reso</a>"
     },
     "general": {
+      "quantity_too_high": "Puoi aggiungerne solo {{ quantity }} al carrello",
       "title": "Carrello",
-      "empty": "Il carrello è al momento vuoto.",
-      "quantity": "Quantità",
-      "remove": "Rimuovi",
       "subtotal": "Totale parziale",
       "taxes_included_and_shipping_policy_html": "Imposte incluse. <a href=\"{{ link }}\">Spese di spedizione</a> calcolate al momento del pagamento.",
       "taxes_included_but_shipping_at_checkout": "Imposte incluse e spedizione calcolata al momento del pagamento",
       "taxes_and_shipping_policy_at_checkout_html": "Imposte e <a href=\"{{ link }}\">spese di spedizione</a> calcolate al momento del pagamento",
       "taxes_and_shipping_at_checkout": "Imposte e spese di spedizione calcolate al momento del pagamento",
+      "checkout": "Cassa",
       "update": "Aggiorna il carrello",
       "or": "oppure",
-      "checkout": "Cassa",
       "continue": "Continua con gli acquisti",
-      "backorder": "L'articolo è stato ordinato e verrà spedito non appena sarà di nuovo disponibile."
+      "backorder": "L'articolo è stato ordinato e verrà spedito non appena sarà di nuovo disponibile.",
+      "quantity": "Quantità",
+      "remove": "Rimuovi"
     },
     "label": {
+      "note": "Aggiungi una nota al tuo ordine",
       "product": "Articolo",
       "price": "Prezzo",
       "quantity": "Quantità",
       "total": "Totale",
       "decrease": "Riduci",
-      "increase": "Incrementa",
-      "note": "Aggiungi una nota al tuo ordine"
+      "increase": "Incrementa"
     },
     "shipping_calculator": {
       "button_hide": "Nascondi calcolatore delle spese di spedizione",
@@ -135,6 +138,10 @@
       "no_rates": "Non effettuiamo spedizioni verso questa destinazione.",
       "at": "a",
       "loading": "Calcolo in corso..."
+    },
+    "free_shipping_bar": {
+      "free_shipping_not_met_html": "Spendi {{ difference }} in più per ottenere la spedizione gratuita!",
+      "free_shipping_met_html": "Hai diritto alla spedizione gratuita!"
     }
   },
   "products": {
@@ -144,9 +151,8 @@
     "product": {
       "add_to_cart": "Aggiungi al carrello",
       "pick_a": "Scegli un",
-      "adding_to_cart": "Aggiunta in corso",
       "added_to_cart": "Aggiunto al carrello",
-      "preorder": "Pre-ordina",
+      "added_to_cart_with_link_html": "Aggiunto al tuo <a href=\"{{ cart_url }}\">carrello</a>",
       "view_in_space": "Visualizza nel tuo spazio",
       "selector_label": "Opzioni",
       "no_selection": "Scegli un'opzione",
@@ -160,7 +166,7 @@
       "vendor": "Di",
       "sku": "SKU:",
       "quantity": "Quantità",
-      "product_unavailable": "Questo articolo non è disponibile",
+      "preorder": "Pre-ordina",
       "backorder": "è stato ordinato e verrà spedito non appena sarà di nuovo disponibile.",
       "prev_product": "Precedente",
       "next_product": "Successivo",
@@ -170,17 +176,6 @@
     "variant": {
       "no_stock": "Esaurito",
       "non_existent": "Non disponibile"
-    },
-    "added_notification": {
-      "title": "Appena aggiunto",
-      "item": "Articolo",
-      "unit_price": "Prezzo dell'articolo",
-      "quantity": "Q.tà",
-      "total_price": "Prezzo totale",
-      "shipping_note": "Escluse spese di spedizione",
-      "subtotal": "Totale parziale",
-      "keep_shopping": "Continua a fare acquisti",
-      "cart": "Carrello"
     },
     "quick_buy": {
       "close": "Chiudi acquisto rapido",
@@ -310,60 +305,10 @@
       "collection_title": "Titolo collezione"
     }
   },
-  "blogs": {
-    "article": {
-      "tags": "Tag",
-      "older_post": "Post più vecchio",
-      "back_to_blog_html": "Torna al {{ blog }}",
-      "newer_post": "Post più recente"
-    },
-    "comments": {
-      "title": "Commenti",
-      "author_meta_said": "{{ author }} ha detto:",
-      "form_title": "Lascia un commento",
-      "success": "Il tuo commento è stato pubblicato correttamente! Grazie!",
-      "moderated": "Nota bene: i commenti devono essere approvati prima della pubblicazione.",
-      "name": "Nome",
-      "email": "Email",
-      "message": "Commento",
-      "post": "Pubblica un commento"
-    },
-    "general": {
-      "no_matches": "Non è presente ancora nessun articolo! Una volta che ne avrai scritto uno, apparirà qui."
-    }
-  },
   "customer": {
-    "login": {
-      "title": "Accesso",
-      "email": "Email",
-      "password": "Password",
-      "forgot_password": "Hai dimenticato la password?",
-      "sign_in": "Accedi",
-      "register": "Crea un account",
-      "guest_title": "Continua senza registrarti",
-      "guest_continue": "Prosegui"
-    },
-    "recover_password": {
-      "title": "Reimposta la password",
-      "subtext": "Ti invieremo un'email per reimpostare la password.",
-      "success": "Ti abbiamo inviato un'email con un collegamento per aggiornare la password.",
-      "email": "Email",
-      "submit": "Invia",
-      "cancel": "Annulla"
-    },
-    "register": {
-      "title": "Crea account",
-      "first_name": "Nome",
-      "last_name": "Cognome",
-      "email": "Email",
-      "password": "Password",
-      "submit": "Crea",
-      "log_in": "Accedi con un account esistente",
-      "cancel": "Torna al negozio"
-    },
     "general": {
-      "or": "oppure",
-      "return": "Torna al negozio"
+      "return": "Torna al negozio",
+      "or": "oppure"
     },
     "account": {
       "title": "Il mio account",
@@ -393,8 +338,8 @@
       "first_name": "Nome",
       "last_name": "Cognome",
       "company": "Azienda",
-      "address1": "Indirizzo1",
-      "address2": "Indirizzo2",
+      "address1": "Indirizzo 1",
+      "address2": "Indirizzo 2",
       "city": "Città",
       "country": "Paese",
       "province": "Provincia",
@@ -409,6 +354,24 @@
       "delete": "Elimina",
       "edit_address": "Modifica indirizzo",
       "update": "Aggiorna indirizzo"
+    },
+    "login": {
+      "title": "Accesso",
+      "email": "Email",
+      "password": "Password",
+      "forgot_password": "Hai dimenticato la password?",
+      "sign_in": "Accedi",
+      "register": "Crea un account",
+      "guest_title": "Continua senza registrarti",
+      "guest_continue": "Prosegui"
+    },
+    "recover_password": {
+      "title": "Reimposta la password",
+      "subtext": "Ti invieremo un'email per reimpostare la password.",
+      "success": "Ti abbiamo inviato un'email con un collegamento per aggiornare la password.",
+      "email": "Email",
+      "submit": "Invia",
+      "cancel": "Annulla"
     },
     "order": {
       "title": "Ordine {{ name }}",
@@ -429,12 +392,44 @@
       "shipping": "Spedizione",
       "tax": "Imposta"
     },
+    "register": {
+      "title": "Crea account",
+      "first_name": "Nome",
+      "last_name": "Cognome",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Crea",
+      "log_in": "Accedi con un account esistente",
+      "cancel": "Torna al negozio"
+    },
     "reset_password": {
       "title": "Ripristina password",
       "subtext": "Inserisci una nuova password per {{ email }}",
       "password": "Password",
       "password_confirm": "Conferma la password",
       "submit": "Ripristina password"
+    }
+  },
+  "blogs": {
+    "article": {
+      "tags": "Tag",
+      "older_post": "Post più vecchio",
+      "back_to_blog_html": "Torna al {{ blog }}",
+      "newer_post": "Post più recente"
+    },
+    "comments": {
+      "title": "Commenti",
+      "author_meta_said": "{{ author }} ha detto:",
+      "form_title": "Lascia un commento",
+      "success": "Il tuo commento è stato pubblicato correttamente! Grazie!",
+      "moderated": "Nota bene: i commenti devono essere approvati prima della pubblicazione.",
+      "name": "Nome",
+      "email": "Email",
+      "message": "Commento",
+      "post": "Pubblica un commento"
+    },
+    "general": {
+      "no_matches": "Non è presente ancora nessun articolo! Una volta che ne avrai scritto uno, apparirà qui."
     }
   },
   "storefront_password": {

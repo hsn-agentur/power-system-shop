@@ -4,6 +4,7 @@
   - first_item_open {boolean} [optional] - Whether the first item should be open on page load. Default is false.
   - add_content_class {string} [optional] - Additional class(es) to add to the content element
   - toggle_icon {string} [optional] - Custom icon markup, e.g. '<span class="icon">...</span>'
+  - escape_titles {boolean} [optional] - Whether to HTML-escape the titles. Default is false.
 
   One of the following three forms of content should also be provided:
   1. content_snippet {string} - Helper snippet to use to generate content
@@ -52,6 +53,10 @@
             assign item_open = true
           else
             assign item_open = false
+          endif
+
+          if escape_titles
+            assign title = title | escape
           endif
 
           render 'accordion-item', title: title, content: item_contents[forloop.index0], add_content_class: add_content_class, toggle_icon: toggle_icon, item_open: item_open

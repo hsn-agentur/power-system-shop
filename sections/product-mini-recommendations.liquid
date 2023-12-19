@@ -1,0 +1,37 @@
+{%- if recommendations.performed and recommendations.products_count > 0 -%}
+  <div class="product-recommendations">
+    <div class="product-list">
+      {%- liquid
+        if settings.prod_thumb_shape == 'portrait-23'
+          assign chosen_aspect_ratio = 0.67
+        elsif settings.prod_thumb_shape == 'portrait-45'
+          assign chosen_aspect_ratio = 0.8
+        elsif settings.prod_thumb_shape == 'square'
+          assign chosen_aspect_ratio = 1.0
+        elsif settings.prod_thumb_shape == 'landscape-54'
+          assign chosen_aspect_ratio = 1.25
+        elsif settings.prod_thumb_shape == 'landscape-32'
+          assign chosen_aspect_ratio = 1.50
+        elsif settings.prod_thumb_shape == 'tallest'
+          assign chosen_aspect_ratio = 99
+          for product in recommendations.products
+            if product.featured_media.preview_image.aspect_ratio < chosen_aspect_ratio
+              assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+            endif
+          endfor
+        else
+          assign chosen_aspect_ratio = 0
+          for product in recommendations.products
+            if product.featured_media.preview_image.aspect_ratio > chosen_aspect_ratio
+              assign chosen_aspect_ratio = product.featured_media.preview_image.aspect_ratio
+            endif
+          endfor
+        endif
+
+        for product in recommendations.products
+          render 'product-block', product: product, manual_image_load: true, no_quick_buy: true, no_swiping: true, custom_aspect_ratio: chosen_aspect_ratio
+        endfor
+      -%}
+    </div>
+  </div>
+{%- endif -%}

@@ -1,5 +1,5 @@
 {% layout 'gift_card' %}
-<div class="giftcard {% if gift_card.expired or gift_card.enabled != true %} giftcard--disabled{% endif %}">
+<div class="giftcard {% if gift_card.expired or gift_card.enabled != true %} giftcard--disabled{% endif %} test2">
 
   <h1>{{ 'gift_cards.issued.subtext' | t }}</h1>
   {% unless gift_card.enabled %}

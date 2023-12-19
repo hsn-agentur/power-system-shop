@@ -46,6 +46,9 @@
       "minus": "Minus",
       "play": "Play"
     },
+    "slider": {
+      "images": "Image slider"
+    },
     "navigation": {
       "menu_toggle_aria_label": "Toggle menu",
       "main_navigation_aria_label": "Primary navigation"
@@ -99,29 +102,29 @@
       "agreement_html": "I agree to the <a href=\"{{ terms_url }}\" target=\"_blank\">terms and refund policy</a>"
     },
     "general": {
+      "quantity_too_high": "You can only have {{ quantity }} in your cart",
       "title": "Shopping cart",
-      "empty": "Your cart is currently empty.",
-      "quantity": "Quantity",
-      "remove": "Remove",
       "subtotal": "Subtotal",
       "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
       "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
       "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
       "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
+      "checkout": "Check out",
       "update": "Update cart",
       "or": "or",
-      "checkout": "Check out",
       "continue": "Continue shopping",
-      "backorder": "Product is backordered and will ship as soon as it is back in stock."
+      "backorder": "Product is backordered and will ship as soon as it is back in stock.",
+      "quantity": "Quantity",
+      "remove": "Remove"
     },
     "label": {
+      "note": "Add a note to your order",
       "product": "Product",
       "price": "Price",
       "quantity": "Quantity",
       "total": "Total",
       "decrease": "Decrease",
-      "increase": "Increase",
-      "note": "Add a note to your order"
+      "increase": "Increase"
     },
     "shipping_calculator": {
       "button_hide": "Hide shipping calculator",
@@ -135,6 +138,10 @@
       "no_rates": "We do not ship to this destination.",
       "at": "at",
       "loading": "Calculating..."
+    },
+    "free_shipping_bar": {
+      "free_shipping_not_met_html": "You are {{ difference }} away from free shipping",
+      "free_shipping_met_html": "You are eligible for free shipping!"
     }
   },
   "products": {
@@ -144,9 +151,8 @@
     "product": {
       "add_to_cart": "Add to Cart",
       "pick_a": "Pick a",
-      "adding_to_cart": "Adding",
       "added_to_cart": "Added to cart",
-      "preorder": "Pre-order",
+      "added_to_cart_with_link_html": "Added to your <a href=\"{{ cart_url }}\">Cart</a>",
       "view_in_space": "View in your space",
       "selector_label": "Options",
       "no_selection": "Choose an option",
@@ -160,7 +166,7 @@
       "vendor": "By",
       "sku": "SKU:",
       "quantity": "Quantity",
-      "product_unavailable": "This product is unavailable",
+      "preorder": "Pre-order",
       "backorder": "is backordered and will ship as soon as it is back in stock.",
       "prev_product": "Previous",
       "next_product": "Next",
@@ -170,17 +176,6 @@
     "variant": {
       "no_stock": "Sold out",
       "non_existent": "Unavailable"
-    },
-    "added_notification": {
-      "title": "Just added",
-      "item": "Item",
-      "unit_price": "Item price",
-      "quantity": "Qty",
-      "total_price": "Total price",
-      "shipping_note": "Excl. shipping",
-      "subtotal": "Subtotal",
-      "keep_shopping": "Keep Shopping",
-      "cart": "Cart"
     },
     "quick_buy": {
       "close": "Close quick buy",
@@ -310,60 +305,10 @@
       "collection_title": "Collection title"
     }
   },
-  "blogs": {
-    "article": {
-      "tags": "Tags",
-      "older_post": "Older Post",
-      "back_to_blog_html": "Back to {{ blog }}",
-      "newer_post": "Newer Post"
-    },
-    "comments": {
-      "title": "Comments",
-      "author_meta_said": "{{ author }} said:",
-      "form_title": "Leave a comment",
-      "success": "Your comment was posted successfully! Thank you!",
-      "moderated": "Please note: comments must be approved before they are published.",
-      "name": "Name",
-      "email": "Email",
-      "message": "Comment",
-      "post": "Post comment"
-    },
-    "general": {
-      "no_matches": "You don't have any articles yet! Once you've written one, it will show up here."
-    }
-  },
   "customer": {
-    "login": {
-      "title": "Login",
-      "email": "Email",
-      "password": "Password",
-      "forgot_password": "Forgot your password?",
-      "sign_in": "Sign In",
-      "register": "Create account",
-      "guest_title": "Continue as a guest",
-      "guest_continue": "Continue"
-    },
-    "recover_password": {
-      "title": "Reset your password",
-      "subtext": "We will send you an email to reset your password.",
-      "success": "We've sent you an email with a link to update your password.",
-      "email": "Email",
-      "submit": "Submit",
-      "cancel": "Cancel"
-    },
-    "register": {
-      "title": "Create Account",
-      "first_name": "First Name",
-      "last_name": "Last Name",
-      "email": "Email",
-      "password": "Password",
-      "submit": "Create",
-      "log_in": "Log in with an existing account",
-      "cancel": "Return to Store"
-    },
     "general": {
-      "or": "or",
-      "return": "Return to Store"
+      "return": "Return to Store",
+      "or": "or"
     },
     "account": {
       "title": "My Account",
@@ -393,8 +338,8 @@
       "first_name": "First Name",
       "last_name": "Last Name",
       "company": "Company",
-      "address1": "Address1",
-      "address2": "Address2",
+      "address1": "Address 1",
+      "address2": "Address 2",
       "city": "City",
       "country": "Country",
       "province": "Province",
@@ -409,6 +354,24 @@
       "delete": "Delete",
       "edit_address": "Edit address",
       "update": "Update Address"
+    },
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "forgot_password": "Forgot your password?",
+      "sign_in": "Sign In",
+      "register": "Create account",
+      "guest_title": "Continue as a guest",
+      "guest_continue": "Continue"
+    },
+    "recover_password": {
+      "title": "Reset your password",
+      "subtext": "We will send you an email to reset your password.",
+      "success": "We've sent you an email with a link to update your password.",
+      "email": "Email",
+      "submit": "Submit",
+      "cancel": "Cancel"
     },
     "order": {
       "title": "Order {{ name }}",
@@ -429,12 +392,44 @@
       "shipping": "Shipping",
       "tax": "Tax"
     },
+    "register": {
+      "title": "Create Account",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create",
+      "log_in": "Log in with an existing account",
+      "cancel": "Return to Store"
+    },
     "reset_password": {
       "title": "Reset Password",
       "subtext": "Enter a new password for {{ email }}",
       "password": "Password",
       "password_confirm": "Confirm Password",
       "submit": "Reset Password"
+    }
+  },
+  "blogs": {
+    "article": {
+      "tags": "Tags",
+      "older_post": "Older Post",
+      "back_to_blog_html": "Back to {{ blog }}",
+      "newer_post": "Newer Post"
+    },
+    "comments": {
+      "title": "Comments",
+      "author_meta_said": "{{ author }} said:",
+      "form_title": "Leave a comment",
+      "success": "Your comment was posted successfully! Thank you!",
+      "moderated": "Please note: comments must be approved before they are published.",
+      "name": "Name",
+      "email": "Email",
+      "message": "Comment",
+      "post": "Post comment"
+    },
+    "general": {
+      "no_matches": "You don't have any articles yet! Once you've written one, it will show up here."
     }
   },
   "storefront_password": {

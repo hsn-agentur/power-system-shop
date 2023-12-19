@@ -1,8 +1,11 @@
 <div id="section-id-{{ section.id }}" data-section-type="gallery">
   {% style %}
-    #section-id-{{ section.id }} .gallery__item {
-      height: {{ section.settings.mobile_image_height }}px;
-    }
+    {%- if section.settings.height == 'fixed' -%}
+      #section-id-{{ section.id }} .gallery__item {
+        height: {{ section.settings.mobile_image_height }}px;
+      }
+    {%- endif -%}
+
     #section-id-{{ section.id }} .overlay-text__title {
       font-size: {{ section.settings.title_size_mobile }}px;
       {%- if section.settings.title_size_mobile >= 90 -%}
@@ -10,9 +13,12 @@
       {%- endif %}
     }
     @media (min-width: 768px) {
-      #section-id-{{ section.id }} .gallery__item {
-        height: {{ section.settings.desktop_image_height }}px;
-      }
+      {%- if section.settings.height == 'fixed' -%}
+        #section-id-{{ section.id }} .gallery__item {
+          height: {{ section.settings.desktop_image_height }}px;
+        }
+      {%- endif -%}
+
       #section-id-{{ section.id }} .overlay-text__title {
         {%- assign title_size_medium = section.settings.title_size | times: 0.7 | at_least: section.settings.title_size_mobile -%}
         font-size: {{ title_size_medium }}px;
@@ -48,7 +54,7 @@
   <div class="{{ super_container_class }}">
     {%- unless section.settings.full_width -%}<div class="container container--not-mobile">{%- endunless -%}
 
-    <div class="gallery gallery--grid-{{ section.settings.grid }}{% if section.settings.enable_margin %} gallery--with-margins{% endif %}{% if section.settings.enable_carousel %} gallery--mobile-carousel slick-slider-overlay-dots{% endif %}{% if section.settings.full_width and section.settings.enable_margin %} gallery--with-vertical-outer-padding{% endif %}" data-grid="{{ section.settings.grid }}">
+    <div class="gallery gallery--height-{{ section.settings.height }} gallery--grid-{{ section.settings.grid }}{% if section.settings.enable_margin %} gallery--with-margins{% endif %}{% if section.settings.enable_carousel %} gallery--mobile-carousel slick-slider-overlay-dots{% endif %}{% if section.settings.full_width and section.settings.enable_margin %} gallery--with-vertical-outer-padding{% endif %}" data-grid="{{ section.settings.grid }}">
       <div class="gallery__row">
         {%- for block in section.blocks -%}
           {%- assign forloop_mod_grid = forloop.index0 | modulo: section.settings.grid -%}
@@ -73,7 +79,7 @@
             {%- if block.settings.link != blank -%}<a class="image-overlay__image-link" href="{{ block.settings.link }}">{%- endif -%}
 
             {%- if block.settings.image == blank -%}
-              <div class="gallery__image placeholder-image {% if show_overlay_text %}dark{% endif %}">
+              <div class="gallery__image placeholder-image {% if show_overlay_text %}dark{% endif %}" style="--ar-padding: 100%">
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
               </div>
             {%- else -%}
@@ -81,7 +87,7 @@
                   data-bgset="{% render 'bgset', image: block.settings.image %}"
                   data-sizes="auto"
                   data-parent-fit="cover"
-                  style="background-position: {{ block.settings.alignment }}">
+                  style="background-position: {{ block.settings.image.presentation.focal_point }}; --ar-padding: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
                 <noscript>
                   <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
                     <img src="{{ block.settings.image | img_url: '1024x1024' }}" alt="{{ block.settings.image.alt | escape }}" class="rimage__image">
@@ -98,11 +104,11 @@
                     <div class="overlay-text__subheading subheading subheading--over">{{ block.settings.subheading | escape }}</div>
                   {%- endif -%}
                   {%- if block.settings.title != blank -%}
-                    <h2 class="overlay-text__title h4-style">{{ block.settings.title | newline_to_br }}</h2>
+                    <h2 class="overlay-text__title h4-style">{% render 'multiline-text' with block.settings.title %}</h2>
                   {%- endif -%}
                   {%- if block.settings.button_label != blank -%}
                     <div class="overlay-text__button-row overlay-text__button-row--{{ section.settings.button_style }}">
-                      <span class="overlay-text__button {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}">{{ block.settings.button_label }}</span>
+                      <span class="overlay-text__button {% if section.settings.button_style != 'link' %}btn btn--{{ section.settings.button_style }}{% else %}small-feature-link{% endif %}">{{ block.settings.button_label | escape }}</span>
                     </div>
                   {%- endif -%}
                 </div>
@@ -133,6 +139,22 @@
       "step": 1,
       "label": "Max images per row",
       "default": 2
+    },
+    {
+      "type": "radio",
+      "id": "height",
+      "label": "Image height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "Natural"
+        },
+        {
+          "value": "fixed",
+          "label": "Fixed"
+        }
+      ],
+      "default": "fixed"
     },
     {
       "type": "range",
@@ -202,6 +224,7 @@
       "id": "enable_carousel",
       "type": "checkbox",
       "label": "Enable mobile slideshow",
+      "info": "If using natural image heights, ensure images are the same shape",
       "default": true
     },
     {
@@ -264,51 +287,6 @@
           "label": "Image"
         },
         {
-          "type": "select",
-          "id": "alignment",
-          "label": "Image alignment",
-          "info": "Used to keep the subject of your focus in view",
-          "default": "center center",
-          "options": [
-            {
-              "value": "top left",
-              "label": "Top left"
-            },
-            {
-              "value": "top center",
-              "label": "Top center"
-            },
-            {
-              "value": "top right",
-              "label": "Top right"
-            },
-            {
-              "value": "center left",
-              "label": "Middle left"
-            },
-            {
-              "value": "center center",
-              "label": "Middle center"
-            },
-            {
-              "value": "center right",
-              "label": "Middle right"
-            },
-            {
-              "value": "bottom left",
-              "label": "Bottom left"
-            },
-            {
-              "value": "bottom center",
-              "label": "Bottom center"
-            },
-            {
-              "value": "bottom right",
-              "label": "Bottom right"
-            }
-          ]
-        },
-        {
           "type": "checkbox",
           "id": "enlarge_image",
           "label": "Enlarge image",
@@ -321,9 +299,10 @@
           "default": "Gallery"
         },
         {
-          "type": "textarea",
+          "type": "text",
           "id": "title",
           "label": "Heading",
+          "info": "Enter <br> for a line-break",
           "default": "Tell your story"
         },
         {

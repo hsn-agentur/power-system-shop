@@ -5,43 +5,16 @@
 {%- endif -%}
 
 {%- if full_product -%}
-  {%- assign variable_product_metafields = full_product.metafields -%}
-{%- else -%}
-  {%- assign variable_product_metafields = product.metafields -%}
-{%- endif -%}
-
-{%- if full_product -%}
   {%- assign product_id = full_product.id -%}
 {%- else -%}
   {%- assign product_id = product.id -%}
 {%- endif -%}
 
-{%- if product.options_with_values -%}
-  {%- assign variable_options_with_values = product.options_with_values -%}
-{%- else -%}
-  {%- assign variable_options_with_values = full_product.options_with_values -%}
-{%- endif -%}
-
-{%- if product.media -%}
-  {%- assign variable_media = product.media -%}
-{%- else -%}
-  {%- assign variable_media = full_product.media -%}
-{%- endif -%}
-
-{%- if product.featured_media -%}
-  {%- assign variable_featured_media = product.featured_media -%}
-{%- else -%}
-  {%- assign variable_featured_media = full_product.featured_media -%}
-{%- endif -%}
-
-{%- if product.vendor -%}
-  {%- assign variable_vendor = product.vendor -%}
-{%- else -%}
-  {%- assign variable_vendor = full_product.vendor -%}
-{%- endif -%}
-
+{%- if product.options_with_values -%}{%- assign variable_options_with_values = product.options_with_values -%}{%- else -%}{%- assign variable_options_with_values = full_product.options_with_values -%}{%- endif -%}
+{%- if product.media -%}{%- assign variable_media = product.media -%}{%- else -%}{%- assign variable_media = full_product.media -%}{%- endif -%}
+{%- if product.featured_media -%}{%- assign variable_featured_media = product.featured_media -%}{%- else -%}{%- assign variable_featured_media = full_product.featured_media -%}{%- endif -%}
 {%- liquid
-  if collection and settings.prod_thumb_url_within_coll
+  if collection and settings.prod_thumb_url_within_coll and product.collections contains collection
     assign product_url = product.url | within: collection
   else
     assign product_url = product.url
@@ -160,7 +133,7 @@
 
                 p:
                 {{ product | json }}
-                
+
                 -->
                   {%- unless full_product.id == product.id or downcase_title == 'default title' or  full_product == null -%}
                     <br />
@@ -195,6 +168,7 @@
                   <span class="product-price__item price-label price-label--sale">{{ 'products.labels.sale' | t }}</span>
                 {% endif %}
               </div>
+{% render 'hsn-deposit', product: product %}
 
               {% render 'unit-price', variant: cheapest_variant %}
             </a>
@@ -231,7 +205,7 @@
                               {%- elsif settings.swatch_method == 'image' and variant.featured_media.preview_image -%}
                                 data-bgset="{{ variant.featured_media.preview_image | img_url: '48x48', crop: settings.swatch_crop_align }}"
                               {%- endif -%}
-                            {%- endif %}><span class="product-block-options__item__text">{{ variant.title }}</span></span>
+                            {%- endif %}><span class="product-block-options__item__text">{{ variant.title | escape }}</span></span>
                         {%- endfor -%}
                         {%- if real_product.variants.size > option_limit and is_swatch -%}
                           {%- assign remaining = real_product.variants.size | minus: option_limit -%}
@@ -274,7 +248,7 @@
                               {%- elsif settings.swatch_method == 'image' and option_value_variant.featured_media -%}
                                 data-bgset="{{ option_value_variant.featured_media.preview_image | img_url: '48x48', crop: settings.swatch_crop_align }}"
                               {%- endif -%}
-                            {% endif %}><span class="product-block-options__item__text">{{ product_option_value }}</span></span>
+                            {% endif %}><span class="product-block-options__item__text">{{ product_option_value | escape }}</span></span>
                         {%- endfor -%}
                         {%- if product_option.values.size > option_limit and is_swatch -%}
                           {%- assign remaining = product_option.values.size | minus: option_limit -%}
@@ -287,11 +261,11 @@
               {%- endfor -%}
             {%- endif -%}
 
-            {%- if settings.enable_product_reviews_collection and variable_product_metafields.reviews.rating_count != blank -%}
-              {%- assign rating_count = variable_product_metafields.reviews.rating_count | plus: 0 -%}
+            {%- if settings.enable_product_reviews_collection and product.metafields.reviews.rating_count != blank -%}
+              {%- assign rating_count = product.metafields.reviews.rating_count | plus: 0 -%}
               {%- if rating_count > 0 -%}
                 <div class="product-block__rating">
-                  {% render 'rating', rating_value: variable_product_metafields.reviews.rating.value %}
+                  {% render 'rating', rating_value: product.metafields.reviews.rating.value %}
                   <span class="cc-rating-custom-caption">
                     {{ rating_count }} {{ 'products.product.reviews_link' | t: count: rating_count | downcase }}
                   </span>
@@ -307,7 +281,7 @@
   {%- if settings.quickbuy_style != 'off' -%}
     {%- unless no_quick_buy_markup or no_quick_buy -%}
       <div class="quickbuy-container">
-        <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x' %}</a>
+        <a href="#" class="close-detail" aria-label="{{ 'products.quick_buy.close' | t }}" tabindex="-1">{% render 'svg-x', stroke_width: 1 %}</a>
         <div class="inner"></div>
       </div>
     {%- endunless -%}

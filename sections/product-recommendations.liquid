@@ -39,6 +39,7 @@
           -%}
    
           {%- for product in recommendations.products -%}
+{% if product.type=='giftbox_ghost_product' %}{%continue%}{%endif%}
             {%- if product.variants  -%}
               {% render 'product-block', product: product.variants.first, full_product: product, custom_aspect_ratio: chosen_aspect_ratio %}
             {%- else -%}
@@ -91,7 +92,7 @@ loadProductRecommendationsIntoSection();
     "settings": [
       {
         "type": "paragraph",
-        "content": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)"
+        "content": "Dynamic recommendations use order and product information to change and improve over time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)"
       },
       {
         "type": "text",
@@ -108,7 +109,7 @@ loadProductRecommendationsIntoSection();
       {
         "type": "range",
         "id": "grid",
-        "label": "Products per row",
+        "label": "Maximum products to show",
         "min": 2,
         "max": 5,
         "step": 1,
