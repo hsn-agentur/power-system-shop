@@ -195,7 +195,10 @@
                             <span class="was-price theme-money">{{ variant.compare_at_price | money }}</span>
                             {% endif %}
                           </div>
+                      
+{% render 'hsn-deposit', product: product %}
 
+                      
                           {% render 'unit-price', variant: variant %}
 {% if variant.metafields.custom.menge %}
   {% render 'piece-price', variant: variant %}

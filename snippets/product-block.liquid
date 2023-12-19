@@ -168,6 +168,7 @@
                   <span class="product-price__item price-label price-label--sale">{{ 'products.labels.sale' | t }}</span>
                 {% endif %}
               </div>
+{% render 'hsn-deposit', product: product %}
 
               {% render 'unit-price', variant: cheapest_variant %}
             </a>
