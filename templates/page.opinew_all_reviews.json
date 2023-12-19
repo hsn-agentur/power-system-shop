@@ -1,1 +1,11 @@
-{"sections":{"main":{"type":"apps","settings":{}}},"order":["main"]}
+{
+	"sections": {
+		"main": {
+			"type": "apps",
+			"settings": {}
+		}
+	},
+	"order": [
+		"main"
+	]
+}
