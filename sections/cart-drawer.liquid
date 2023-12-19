@@ -67,6 +67,7 @@
                 <div class="cart-item-list cart-drawer__content-item">
                   <div class="cart-item-list__body" data-merge-list="cart-items">
                     {% for item in cart.items %}
+                      {% if item.product.type  == 'mws_fee_generated' %}{% continue %}{% endif %}
                       <div data-merge-list-item="item-key:{{ item.key }}|{{ item.final_price }}{% for discount_allocation in item.line_level_discount_allocations %}|{{ discount_allocation.discount_application.title | escape }}{% endfor %}"
                           {% comment %} Discount items are difficult to predict - BOGOFs appear as a separate item with the same key as an existing item - simpler to always refresh {% endcomment %}
                           {%- if item.line_level_discount_allocations == empty -%}
@@ -176,6 +177,7 @@
                       {%- endfor -%}
                     </ul>
                   {%- endif -%}
+                  <span class="mw-hidden-fees"></span>
                   <div class="subtotal h4-style heading-font opposing-items">
                     {{ 'cart.general.subtotal' | t }}:
                     <span class="theme-money">
@@ -212,6 +214,7 @@
                         </div>
                       </div>
                     {% endif %}
+                  <span class="mw-cart-fees"></span>
                   </div>
                 {% endif %}
               </div>

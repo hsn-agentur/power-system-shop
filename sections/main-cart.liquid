@@ -20,6 +20,7 @@
         </div>
         <div class="cart-item-list__body">
           {% for item in cart.items %}
+            {% if item.product.type  == 'mw_hidden_cart_fee' %}{% continue %}{% endif %}
             <div class="cart-item product-{{ item.product.handle }}" data-cc-animate>
               {%- comment -%}
               Determining the handle of the collection that was last seen for the 'continue shopping' link.
