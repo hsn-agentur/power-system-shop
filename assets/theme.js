@@ -7726,4 +7726,21 @@ $(document).on('theme:cartchanged', function () {
 });
 
 */
+
+$(document).on('theme:cartchanged', function () {
+  location.hash = '#cart';
+});
+
+$(document).on('theme:close-cart-drawer', function () {
+  if(location.hash == '#cart') {
+    location.hash = '';
+  }
+});
+
+$(function() {
+  if(location.hash == '#cart') {
+    $('.cart-link').trigger('click');
+  }
+});
+
 /* Built with Barry v1.0.8 */
