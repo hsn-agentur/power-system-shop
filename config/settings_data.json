@@ -1061,14 +1061,21 @@
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
             "type": "announcement",
             "settings": {
-              "text": "<p>10% auf Big Block & Weight Gainer<\/p>"
+              "text": "<p>15% auf unsere veganen Produkte<\/p>"
+            }
+          },
+          "e4c8bef2-2d68-4f55-9f02-e88dadecf17c": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>15% Rabatt auf unser Daily Shape Shakes<\/p>"
             }
           }
         },
         "block_order": [
           "42c280b1-df5e-4e32-acae-53c4b2f14e8c",
           "9f47148d-50ff-4a7b-9d37-883d4296ff4c",
-          "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff"
+          "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff",
+          "e4c8bef2-2d68-4f55-9f02-e88dadecf17c"
         ],
         "settings": {
           "announcement_bar_col": "#171717",

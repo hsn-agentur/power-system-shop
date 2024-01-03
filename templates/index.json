@@ -1,194 +1,194 @@
 {
-	"sections": {
-		"16359276425da8ce46": {
-			"type": "slideshow",
-			"blocks": {
-				"88c9e954-ab9b-4667-811e-6e097f485100": {
-					"type": "image",
-					"settings": {
-						"image": "shopify:\/\/shop_images\/12_Big-Block_Aktion_231218.png",
-						"mobile_image": "shopify:\/\/shop_images\/12_Big-Block_Aktion_mobil_231218.png",
-						"slide_link": "",
-						"subheading": "",
-						"title": "",
-						"heading_max_width": 800,
-						"title_size": 84,
-						"title_size_mobile": 46,
-						"use_h1": false,
-						"text": "",
-						"enlarge_text": false,
-						"button_label_1": "Klicke hier",
-						"button_url_1": "shopify:\/\/collections\/angebote",
-						"button_label_2": "",
-						"button_url_2": "",
-						"text_alignment": "bottom center"
-					}
-				},
-				"70c72871-cb7d-4a53-9ae3-195e5d316bea": {
-					"type": "image",
-					"disabled": true,
-					"settings": {
-						"image": "shopify:\/\/shop_images\/11_Bite_Power_20_231102_9f5d8e12-3db6-45a7-8ea1-ebe1d9a03818.png",
-						"mobile_image": "shopify:\/\/shop_images\/11_DeluxeBar_mobil_231116_v2.png",
-						"slide_link": "",
-						"subheading": "",
-						"title": "",
-						"heading_max_width": 800,
-						"title_size": 84,
-						"title_size_mobile": 46,
-						"use_h1": false,
-						"text": "",
-						"enlarge_text": false,
-						"button_label_1": "Mehr erfahren",
-						"button_url_1": "shopify:\/\/products\/protein-deluxe-1",
-						"button_label_2": "",
-						"button_url_2": "",
-						"text_alignment": "bottom center"
-					}
-				},
-				"196bbe59-e163-4ffe-af22-a732b403f854": {
-					"type": "image",
-					"disabled": true,
-					"settings": {
-						"image": "shopify:\/\/shop_images\/230209_Header_CAROUSEL_Big-Block.png",
-						"slide_link": "",
-						"subheading": "",
-						"title": "",
-						"heading_max_width": 800,
-						"title_size": 84,
-						"title_size_mobile": 46,
-						"use_h1": false,
-						"text": "",
-						"enlarge_text": true,
-						"button_label_1": "Mehr erfahren",
-						"button_url_1": "shopify:\/\/products\/big-block-1",
-						"button_label_2": "",
-						"button_url_2": "",
-						"text_alignment": "bottom center"
-					}
-				},
-				"54b739b2-b967-4e07-9fee-246766f28a2c": {
-					"type": "image",
-					"settings": {
-						"image": "shopify:\/\/shop_images\/12_Gutschein_231218.png",
-						"mobile_image": "shopify:\/\/shop_images\/12_Gutschein_mobil_231218.png",
-						"slide_link": "",
-						"subheading": "",
-						"title": "",
-						"heading_max_width": 800,
-						"title_size": 84,
-						"title_size_mobile": 46,
-						"use_h1": false,
-						"text": "",
-						"enlarge_text": true,
-						"button_label_1": "Klicke hier",
-						"button_url_1": "shopify:\/\/products\/geschenkgutschein",
-						"button_label_2": "",
-						"button_url_2": "",
-						"text_alignment": "bottom center"
-					}
-				}
-			},
-			"block_order": [
-				"88c9e954-ab9b-4667-811e-6e097f485100",
-				"70c72871-cb7d-4a53-9ae3-195e5d316bea",
-				"196bbe59-e163-4ffe-af22-a732b403f854",
-				"54b739b2-b967-4e07-9fee-246766f28a2c"
-			],
-			"settings": {
-				"height": "fixed",
-				"height_desktop": 540,
-				"height_mobile": 460,
-				"full_width": true,
-				"mobile_overlay_under": false,
-				"overlay_style": "no_background",
-				"slide_transition": "zoom",
-				"slide_navigation": "arrows",
-				"autoplay": true,
-				"autoplay_speed": 7
-			}
-		},
-		"16359278676808bea5": {
-			"type": "featured-collection",
-			"settings": {
-				"title": "UNSERE BESTSELLER",
-				"collection": "bestseller",
-				"explicit_order": "",
-				"show_vendor": false,
-				"enable_carousel": false,
-				"grid": 4,
-				"rows": 4,
-				"use_alt_bg": false,
-				"show_view_all": false,
-				"full_width": false
-			}
-		},
-		"16359285201c71bbb1": {
-			"type": "background-video",
-			"settings": {
-				"video_shopify": "shopify:\/\/files\/videos\/9400971f21874b6fadd7013a66790747.mp4",
-				"video_external": "",
-				"placeholder_image": "shopify:\/\/shop_images\/video-shake.jpg",
-				"subheading": "",
-				"title": "",
-				"heading_max_width": 800,
-				"title_size": 84,
-				"title_size_mobile": 42,
-				"use_h1": false,
-				"text": "",
-				"enlarge_text": true,
-				"button_label_1": "",
-				"button_url_1": "",
-				"button_label_2": "",
-				"button_url_2": "",
-				"text_alignment": "center center",
-				"height_desktop": 460,
-				"height_mobile": 480,
-				"full_width": true,
-				"overlay_style": "full image-overlay--bg-shadow"
-			}
-		},
-		"16642917088b0c9ba4": {
-			"type": "featured-collection",
-			"settings": {
-				"title": "UNSERE PULVER",
-				"collection": "pulver",
-				"explicit_order": "46508615991623,46508480332103,46508501598535,42834521882783",
-				"show_vendor": false,
-				"enable_carousel": false,
-				"grid": 4,
-				"rows": 1,
-				"use_alt_bg": false,
-				"show_view_all": true,
-				"full_width": false
-			}
-		},
-		"166426917788bb9d1e": {
-			"type": "apps",
-			"blocks": {
-				"3c8cdc6d-de3f-4c9a-9747-0b95670a8d2e": {
-					"type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
-					"settings": {
-						"title": "",
-						"title_color": "",
-						"alignment": "center",
-						"html_area": "<script>\n(function ($) {\n  var $ = jQuery = $;\n$(function()  {\n    var $instaLnk = $('#insta-feed h2');\n    $instaLnk.on('click', function() {\n      \/\/window.location.href = \"https:\/\/www.instagram.com\/powersystemsport\/\";\n      window.open('https:\/\/www.instagram.com\/powersystemsport\/', '_blank'); \n    });\n  });\n})(theme.jQuery);  \n<\/script>"
-					}
-				}
-			},
-			"block_order": [
-				"3c8cdc6d-de3f-4c9a-9747-0b95670a8d2e"
-			],
-			"settings": {
-				"full_width": false
-			}
-		}
-	},
-	"order": [
-		"16359276425da8ce46",
-		"16359278676808bea5",
-		"16359285201c71bbb1",
-		"16642917088b0c9ba4",
-		"166426917788bb9d1e"
-	]
+  "sections": {
+    "16359276425da8ce46": {
+      "type": "slideshow",
+      "blocks": {
+        "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/01_Shape_Shake_231228.png",
+            "mobile_image": "shopify:\/\/shop_images\/01_Shape_Shake_mobil_231228.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label_1": "Jetzt probieren",
+            "button_url_1": "shopify:\/\/products\/daily-shape-shake",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
+        },
+        "88c9e954-ab9b-4667-811e-6e097f485100": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/01_Vegan50_rot_231228.png",
+            "mobile_image": "shopify:\/\/shop_images\/01_Vegan50_rot_mobil_231228.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label_1": "Hier Entdecken",
+            "button_url_1": "shopify:\/\/collections\/vegan",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
+        },
+        "54b739b2-b967-4e07-9fee-246766f28a2c": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/12_Gutschein_231218.png",
+            "mobile_image": "shopify:\/\/shop_images\/12_Gutschein_mobil_231218.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "Klicke hier",
+            "button_url_1": "shopify:\/\/products\/geschenkgutschein",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
+        },
+        "196bbe59-e163-4ffe-af22-a732b403f854": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/230209_Header_CAROUSEL_Big-Block.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "Mehr erfahren",
+            "button_url_1": "shopify:\/\/products\/big-block-1",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
+        }
+      },
+      "block_order": [
+        "70c72871-cb7d-4a53-9ae3-195e5d316bea",
+        "88c9e954-ab9b-4667-811e-6e097f485100",
+        "54b739b2-b967-4e07-9fee-246766f28a2c",
+        "196bbe59-e163-4ffe-af22-a732b403f854"
+      ],
+      "settings": {
+        "height": "fixed",
+        "height_desktop": 540,
+        "height_mobile": 460,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "no_background",
+        "slide_transition": "zoom",
+        "slide_navigation": "arrows",
+        "autoplay": true,
+        "autoplay_speed": 7
+      }
+    },
+    "16359278676808bea5": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "UNSERE BESTSELLER",
+        "collection": "bestseller",
+        "explicit_order": "",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 4,
+        "use_alt_bg": false,
+        "show_view_all": false,
+        "full_width": false
+      }
+    },
+    "16359285201c71bbb1": {
+      "type": "background-video",
+      "settings": {
+        "video_shopify": "shopify:\/\/files\/videos\/9400971f21874b6fadd7013a66790747.mp4",
+        "video_external": "",
+        "placeholder_image": "shopify:\/\/shop_images\/video-shake.jpg",
+        "subheading": "",
+        "title": "",
+        "heading_max_width": 800,
+        "title_size": 84,
+        "title_size_mobile": 42,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "height_desktop": 460,
+        "height_mobile": 480,
+        "full_width": true,
+        "overlay_style": "full image-overlay--bg-shadow"
+      }
+    },
+    "16642917088b0c9ba4": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "UNSERE PULVER",
+        "collection": "pulver",
+        "explicit_order": "46508615991623,46508480332103,46508501598535,42834521882783",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": false,
+        "show_view_all": true,
+        "full_width": false
+      }
+    },
+    "166426917788bb9d1e": {
+      "type": "apps",
+      "blocks": {
+        "3c8cdc6d-de3f-4c9a-9747-0b95670a8d2e": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": "<script>\n(function ($) {\n  var $ = jQuery = $;\n$(function()  {\n    var $instaLnk = $('#insta-feed h2');\n    $instaLnk.on('click', function() {\n      \/\/window.location.href = \"https:\/\/www.instagram.com\/powersystemsport\/\";\n      window.open('https:\/\/www.instagram.com\/powersystemsport\/', '_blank'); \n    });\n  });\n})(theme.jQuery);  \n<\/script>"
+          }
+        }
+      },
+      "block_order": [
+        "3c8cdc6d-de3f-4c9a-9747-0b95670a8d2e"
+      ],
+      "settings": {
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "16359276425da8ce46",
+    "16359278676808bea5",
+    "16359285201c71bbb1",
+    "16642917088b0c9ba4",
+    "166426917788bb9d1e"
+  ]
 }
