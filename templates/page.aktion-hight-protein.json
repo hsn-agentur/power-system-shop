@@ -3,8 +3,8 @@
     "a444ce3c-4551-4732-b75c-5b4da7e715e9": {
       "type": "image-with-text-overlay",
       "settings": {
-        "image": "shopify:\/\/shop_images\/11_Black_Week_231121.png",
-        "mobile_image": "shopify:\/\/shop_images\/11_Black_Week_mobil_231121.png",
+        "image": "shopify:\/\/shop_images\/01_Landingpage_Kampagne_BigBlock_240117.png",
+        "mobile_image": "shopify:\/\/shop_images\/01_Landingpage_Kampagne_BigBlock_mobil_240117.png",
         "height": "fixed",
         "height_desktop": 500,
         "height_mobile": 460,
@@ -27,6 +27,35 @@
         "overlay_style": "shadow"
       }
     },
+    "b0f985d1-e51c-4017-a157-0daaccb36e78": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "STARTE 2024 MIT POWER",
+            "use_h1": false
+          }
+        },
+        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unsere High-Protein-Produkte wie Big Block, Weight Gainer, Bite Power und Protein Deluxe unterstützen Deinen  Muskelaufbau und Body Shaping. Ideal für Krafttraining und Fitnessbegeisterte. Jedes Produkt ist speziell entwickelt, um Deine Ziele zu erreichen. Vielfalt und Geschmack stehen bei uns im Vordergrund. Ob für eine intensive Trainingseinheit oder als leckere, proteinreiche Snack-Option – wir bieten die perfekte Mischung für Deinen<br\/> Erfolg. Kraft und Geschmack in jedem Bissen – starte jetzt durch mit unserer High-Protein-Produktvielfalt!<\/p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1",
+        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": false,
+        "use_alt_bg": false
+      }
+    },
     "9f32275f-3a94-46be-8cff-2da8ad3a4fb4": {
       "type": "custom-liquid",
       "settings": {
@@ -44,7 +73,7 @@
     "67ba3c25-2855-4b80-9c3a-2c8721d7fe1e": {
       "type": "featured-collection",
       "settings": {
-        "title": "FIT INS NEUE JAHR",
+        "title": "",
         "collection": "aktion-high-protein",
         "explicit_order": "46505959915847,46505959948615,46505959981383,46498980495687,46498980561223,46498980626759,46508113396039,46508113363271,46502872777031,46502872809799,46502872842567,46508489212231",
         "show_vendor": false,
@@ -55,42 +84,13 @@
         "show_view_all": false,
         "full_width": false
       }
-    },
-    "b0f985d1-e51c-4017-a157-0daaccb36e78": {
-      "type": "rich-text",
-      "blocks": {
-        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1": {
-          "type": "heading",
-          "settings": {
-            "title": "ENTDECKE UNSERE HIGH-PROTEIN-POWER!",
-            "use_h1": false
-          }
-        },
-        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Starte 2024 mit Kraft! Unsere High-Protein-Produkte wie Big Block, <br\/>Weight Gainer, Bite Power und Protein Deluxe unterstützen Deinen <br\/>Muskelaufbau und Body Shaping. Ideal für Krafttraining und <br\/>Fitnessbegeisterte. Jedes Produkt ist speziell entwickelt, um Deine <br\/>Ziele zu erreichen. Vielfalt und Geschmack stehen bei uns im <br\/>Vordergrund. Ob für eine intensive Trainingseinheit oder als leckere, <br\/>proteinreiche Snack-Option – wir bieten die perfekte Mischung für Deinen<br\/> Erfolg. Kraft und Geschmack in jedem Bissen – starte jetzt durch mit <br\/>unserer High-Protein-Produktvielfalt!<\/p>",
-            "enlarge_text": false
-          }
-        }
-      },
-      "block_order": [
-        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1",
-        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "text_alignment": "center",
-        "full_width": false,
-        "use_alt_bg": false
-      }
     }
   },
   "order": [
     "a444ce3c-4551-4732-b75c-5b4da7e715e9",
+    "b0f985d1-e51c-4017-a157-0daaccb36e78",
     "9f32275f-3a94-46be-8cff-2da8ad3a4fb4",
     "main",
-    "67ba3c25-2855-4b80-9c3a-2c8721d7fe1e",
-    "b0f985d1-e51c-4017-a157-0daaccb36e78"
+    "67ba3c25-2855-4b80-9c3a-2c8721d7fe1e"
   ]
 }

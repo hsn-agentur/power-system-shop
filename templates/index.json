@@ -6,8 +6,8 @@
         "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_Shape_Shake_240103.png",
-            "mobile_image": "shopify:\/\/shop_images\/01_Shape_Shake_mobil_240103.png",
+            "image": "shopify:\/\/shop_images\/01_TMZ_Aktion_240111.png",
+            "mobile_image": "shopify:\/\/shop_images\/01_TMZ_aktion_mobil_240111_63285f70-d088-4d28-9169-8bade0c7d52a.png",
             "slide_link": "",
             "subheading": "",
             "title": "",
@@ -18,7 +18,7 @@
             "text": "",
             "enlarge_text": false,
             "button_label_1": "Jetzt probieren",
-            "button_url_1": "shopify:\/\/products\/daily-shape-shake",
+            "button_url_1": "https:\/\/power-system-shop.com\/collections\/angebote",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -27,9 +27,9 @@
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_Vegan50_rot_231228.png",
-            "mobile_image": "shopify:\/\/shop_images\/01_Vegan50_rot_mobil_231228.png",
-            "slide_link": "",
+            "image": "shopify:\/\/shop_images\/01_TMZ_vanilla_240111.png",
+            "mobile_image": "shopify:\/\/shop_images\/01_TMZ_vanilla_mobil_240111.png",
+            "slide_link": "https:\/\/power-system-shop.com\/collections\/neuheiten",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -39,7 +39,7 @@
             "text": "",
             "enlarge_text": false,
             "button_label_1": "Hier Entdecken",
-            "button_url_1": "shopify:\/\/collections\/vegan",
+            "button_url_1": "shopify:\/\/collections\/neuheiten",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -69,10 +69,10 @@
         },
         "196bbe59-e163-4ffe-af22-a732b403f854": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/230209_Header_CAROUSEL_Big-Block.png",
-            "slide_link": "",
+            "image": "shopify:\/\/shop_images\/01_TMZ_schoko_240111.png",
+            "mobile_image": "shopify:\/\/shop_images\/01_TMZ_schoko_mobil_240111.png",
+            "slide_link": "https:\/\/power-system-shop.com\/collections\/neuheiten",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
