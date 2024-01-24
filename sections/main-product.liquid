@@ -290,6 +290,9 @@
                     </div>
                   {%- endif -%}
                 {%- endif -%}
+            
+  {% render 'hsn-payment-icons', container_class: 'payment-icons', item_class: 'payment-icon', icons_per_row: 6 %}
+
               </div>
 
             {% when 'description' %}
@@ -474,19 +477,7 @@
                   {% endif %}
                 {% endform %}
 
-<div class="section-footer__payment-icons pxs">
-     {% assign payment_icon_count_per_row = 6 %}
-     {% assign payment_icon_index = 0 %}
-     {% for type in shop.enabled_payment_types %}
-       {{ type | payment_type_svg_tag: class: 'section-footer__payment-icon' }}
-       {% assign payment_icon_index = payment_icon_index | plus: 1 %}
-       {% if payment_icon_index >= payment_icon_count_per_row %}
-         <br />
-         {% assign payment_icon_index = 0 %}
-       {% endif %}
-     {% endfor %}
-</div>
-
+{% render 'hsn-payment-icons', container_class: 'section-footer__payment-icons pxs',item_class: 'section-footer__payment-icon', icons_per_row: 6 %}
             
               </div>
 
