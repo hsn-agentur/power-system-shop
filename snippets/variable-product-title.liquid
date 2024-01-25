@@ -1,8 +1,8 @@
 {{ full_product.title }}
   
-{%- assign downcase_title = variant.title | downcase -%}
+{%- assign downcase_title = product.title | downcase -%}
 {% if downcase_title != 'default title' %}
   <br />
-  {{ variant.title | replace: ' / ', '<br />' }}
+  {{ product.title | replace: ' / ', '<br />' }}
 {% endif %}
   
