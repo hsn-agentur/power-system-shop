@@ -1,4 +1,4 @@
-  {%- assign full_product = true -%}
+
 {%- if full_product -%}
   {%- assign real_product = full_product -%}
 {%- else -%}
@@ -32,6 +32,8 @@
   if full_product
     assign cheapest_variant = product
   endif
+  assign cheapest_variant = product.variants | sort: 'price' | first
+
 -%}{%- if full_product -%}{%- assign cheapest_variant = product -%}{%- endif -%}
 
 <div data-product-id="{{ product_id }}" class="product-block" {% if animate %}data-cc-animate{% endif %}>
@@ -126,21 +128,8 @@
               {%- endif -%}
 
               <div class="product-block__title">
-                {% render 'variable-product-title', product: product, full_product: full_product %}
-                {%- assign downcase_title = product.title | downcase -%}
-                <!--
-                fp:
-                {{ full_product | json }}
-
-                p:
-                {{ product | json }}
-
-                -->
-                  {%- unless full_product.id == product.id or downcase_title == 'default title' or  full_product == null -%}
-                    <br />
-                    {{ product.title | replace: ' / ', '<br />' }}
-                  {%- endunless -%}
-              
+                {% assign first_variant = product.variants | first %}
+                {% render 'variable-product-title', product: product, full_product: full_product, variant: first_variant %}
               </div>
               {%- if settings.prod_thumb_show_subtitle and variable_product_metafields.descriptors.subtitle != blank -%}
                 <div class="product-block__subtitle">{{ variable_product_metafields.descriptors.subtitle }}</div>
