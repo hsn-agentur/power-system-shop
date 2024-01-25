@@ -40,10 +40,10 @@
    
           {%- for product in recommendations.products -%}
 {% if product.type=='giftbox_ghost_product' %}{%continue%}{%endif%}
+{% if product.type  == 'mws_fee_generated' %}{% continue %}{% endif %}
             {%- if product.variants  -%}
               {% render 'product-block', product: product.variants.first, full_product: product, custom_aspect_ratio: chosen_aspect_ratio %}
             {%- else -%}
-     <!-- {{ product | json }} -->
             {% render 'product-block', product: product, custom_aspect_ratio: chosen_aspect_ratio %}
             {%- endif -%}
           {%- endfor -%}
