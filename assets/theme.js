@@ -1438,6 +1438,7 @@
           $(this).find('.rimage-outer-wrapper').addClass('hsnNotFittingSelectedVariant');
         }
       });
+      $('.owl-stage').css({transform: 'translate3d(0px, 0px, 0px)'});
     }
     displayVariantTexts()  {
       var selectedVariant = '';
