@@ -3832,7 +3832,6 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
   };
 
   theme.addedToCartHandler = function (response) {
-    console.log('xyzabc');
     if (theme.settings.after_add_to_cart === 'page') {
       // redirect
       window.location = theme.routes.cart_url;
@@ -7506,9 +7505,8 @@ $('#quantity-hidden').val($('#customQuantitySelector').find('li[aria-selected="t
       var adj = $(this).data('quantity') == 'up' ? 1 : -1;
       var $qty = $(this).closest('.quantity-wrapper').find('[name=quantity]');
       if ($qty.attr('step')) {
-      // VLE  adj *= parseInt($qty.attr('step'));
+        adj *= parseInt($qty.attr('step'));
       }
-      console.log(adj);
       $qty.val(Math.max(1, parseInt($qty.val()) + adj)).trigger('change');
       return false;
     });
