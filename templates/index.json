@@ -6,9 +6,9 @@
         "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_TMZ_Aktion_240111.png",
-            "mobile_image": "shopify:\/\/shop_images\/01_TMZ_aktion_mobil_240111_63285f70-d088-4d28-9169-8bade0c7d52a.png",
-            "slide_link": "",
+            "image": "shopify:\/\/shop_images\/01_Muskelaufbau_240131_b2550e9a-3ff0-435e-adc0-72d9d623c38a.png",
+            "mobile_image": "shopify:\/\/shop_images\/01_Muskelaufbau_mobil_240131_f0693a2c-39e2-42f8-83e2-4ba0fe2e1670.png",
+            "slide_link": "shopify:\/\/collections\/angebote",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -17,8 +17,8 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": false,
-            "button_label_1": "Jetzt probieren",
-            "button_url_1": "https:\/\/power-system-shop.com\/collections\/angebote",
+            "button_label_1": "Jetzt 15% sparen",
+            "button_url_1": "shopify:\/\/collections\/angebote",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -27,9 +27,9 @@
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_TMZ_vanilla_240111.png",
-            "mobile_image": "shopify:\/\/shop_images\/01_TMZ_vanilla_mobil_240111.png",
-            "slide_link": "https:\/\/power-system-shop.com\/collections\/neuheiten",
+            "image": "shopify:\/\/shop_images\/01_Trinkmahlzeit_240131.png",
+            "mobile_image": "shopify:\/\/shop_images\/01_Trinkmahlzeit_mobil_240131.png",
+            "slide_link": "shopify:\/\/collections\/neuheiten",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -38,7 +38,7 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": false,
-            "button_label_1": "Hier Entdecken",
+            "button_label_1": "Gleich probieren",
             "button_url_1": "shopify:\/\/collections\/neuheiten",
             "button_label_2": "",
             "button_url_2": "",
@@ -70,9 +70,9 @@
         "196bbe59-e163-4ffe-af22-a732b403f854": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_TMZ_schoko_240111.png",
-            "mobile_image": "shopify:\/\/shop_images\/01_TMZ_schoko_mobil_240111.png",
-            "slide_link": "https:\/\/power-system-shop.com\/collections\/neuheiten",
+            "image": "shopify:\/\/shop_images\/01_Muskelaufbau_BB_240131_png.png",
+            "mobile_image": "shopify:\/\/shop_images\/01_Muskelaufbau_BB_mobil_240131_0c61fb26-45b5-4374-a30a-20388e45e512.png",
+            "slide_link": "shopify:\/\/products\/big-block-1",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -81,7 +81,7 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": true,
-            "button_label_1": "Mehr erfahren",
+            "button_label_1": "Jetzt Rabatt sichern",
             "button_url_1": "shopify:\/\/products\/big-block-1",
             "button_label_2": "",
             "button_url_2": "",
