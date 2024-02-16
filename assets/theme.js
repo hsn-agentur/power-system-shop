@@ -7756,7 +7756,7 @@ var hsnRecoverPriceHtml = function() {
 }
 
 $(function() {
-  
+  hsnRecoverPriceHtml();
 });
 
 /* Built with Barry v1.0.8 */
