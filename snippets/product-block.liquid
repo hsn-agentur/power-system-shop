@@ -34,6 +34,9 @@
   endif
   assign cheapest_variant = product.variants | sort: 'price' | first
 
+   assign cheapest_variant = product
+   
+
 -%}{%- if full_product -%}{%- assign cheapest_variant = product -%}{%- endif -%}
 
 <div data-product-id="{{ product_id }}" class="product-block" {% if animate %}data-cc-animate{% endif %}>
