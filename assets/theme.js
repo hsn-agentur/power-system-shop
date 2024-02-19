@@ -5191,7 +5191,7 @@ shelfStart = 0;
           var $firstItem = $items.first();
           shelfStart = $carouselItem.parent().children().index($firstItem.get(0));
           shelfEnd = shelfStart + carouselVisibleItemCount - 1;
-          currentIndex = $carouselItem.parent().children().index($carouselItem.get(0));
+          currentIndex = $items.index($carouselItem.get(0));
 
 // /VLE      
           if (currentIndex < shelfStart) {
