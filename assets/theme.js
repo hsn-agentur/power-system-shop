@@ -7742,4 +7742,21 @@ $(function() {
   }
 });
 
+var hsnRecoverPriceHtml = function() {
+  $(hsnProductPriceHtml).each(function() {
+    var $el = $('div[data-url="' + this.ref + '"]');
+    if($el.length == 0) {
+      return;
+    }
+    if($el.find('.product-price').length == 0) {
+      $el.find('.product-block__title').after(this.html);
+    }
+  });
+}
+
+$(function() {
+  hsnRecoverPriceHtml();
+  setInterval(hsnRecoverPriceHtml, 1000);
+});
+
 /* Built with Barry v1.0.8 */

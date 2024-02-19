@@ -34,6 +34,9 @@
   endif
   assign cheapest_variant = product.variants | sort: 'price' | first
 
+   assign cheapest_variant = product
+   
+
 -%}{%- if full_product -%}{%- assign cheapest_variant = product -%}{%- endif -%}
 
 <div data-product-id="{{ product_id }}" class="product-block" {% if animate %}data-cc-animate{% endif %}>
@@ -119,7 +122,7 @@
         </div>
       {% endif %}
 
-      <div class="product-info">
+      <div class="product-info" data-url="{{ product_url }}">
         <div class="inner">
           <div class="innerer">
             <a class="product-link{% if settings.quickbuy_style == 'whole' %} quickbuy-toggle{% endif %}" href="{{ product_url }}">
@@ -135,6 +138,7 @@
                 <div class="product-block__subtitle">{{ variable_product_metafields.descriptors.subtitle }}</div>
               {%- endif -%}
 
+{% capture product_price_html %}
               <div class="product-price">
                 {% if false and real_product.price_varies %}
                   <span class="product-price__item product-price__from">{{ 'products.listing.from' | t }}</span>
@@ -158,6 +162,19 @@
                   <span class="product-price__item price-label price-label--sale">{{ 'products.labels.sale' | t }}</span>
                 {% endif %}
               </div>
+{% endcapture %}
+{{ product_price_html }}
+
+  <script>
+
+if(!hsnProductPriceHtml) {
+  var hsnProductPriceHtml = [];
+}
+
+hsnProductPriceHtml.push({ref: '{{ product_url }}', html: '{{ product_price_html | strip | strip_newlines }}'});
+
+  </script>
+  
 {% render 'hsn-deposit', product: product %}
 
               {% render 'unit-price', variant: cheapest_variant %}
