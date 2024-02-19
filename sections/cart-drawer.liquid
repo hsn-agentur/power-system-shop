@@ -68,7 +68,7 @@
                   <div class="cart-item-list__body" data-merge-list="cart-items">
                     {% for item in cart.items %}
                       {% if item.product.type  == 'mws_fee_generated' %}
-                        <input type="hidden" class="cart-item__quantity-input" value="0" />
+                        <input type="hidden" class="cart-item__quantity-input" value="1" data-initial-value="1" />
                         {% continue %}
                       {% endif %}
                       <div data-merge-list-item="item-key:{{ item.key }}|{{ item.final_price }}{% for discount_allocation in item.line_level_discount_allocations %}|{{ discount_allocation.discount_application.title | escape }}{% endfor %}"
