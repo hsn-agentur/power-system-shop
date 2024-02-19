@@ -1453,7 +1453,7 @@
         $('.product-slideshow.slick-initialized').slick('slickFilter', slickFilterByFittingSelectedVariant);
       }
       else {
-        $('.product-slideshow').on('init reInit', function(e) {
+        $('.product-slideshow').on('init', function(e) {
           setTimeout(function() {
             $('.product-slideshow.slick-initialized').slick('slickFilter', slickFilterByFittingSelectedVariant);
           }, 500)
