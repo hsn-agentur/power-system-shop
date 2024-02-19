@@ -1445,10 +1445,20 @@
         }
       });
 
+      var slickFilterByFittingSelectedVariant = function() {
+        return $(this).find('.hsnNotFittingSelectedVariant').length == 0;
+      }
       
-              $('.product-slideshow.slick-initialized').slick('slickFilter', function() {
-          return $(this).find('.hsnNotFittingSelectedVariant').length == 0;
+      if($('.product-slideshow.slick-initialized').length) {
+        $('.product-slideshow.slick-initialized').slick('slickFilter', slickFilterByFittingSelectedVariant);
+      }
+      else {
+        $('.product-slideshow').on('init reInit', function(e) {
+          setTimeout(function() {
+            $('.product-slideshow.slick-initialized').slick('slickFilter', slickFilterByFittingSelectedVariant);
+          }, 500)
         });
+      }
 
       
       
