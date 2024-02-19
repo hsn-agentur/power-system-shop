@@ -7757,6 +7757,7 @@ var hsnRecoverPriceHtml = function() {
 
 $(function() {
   hsnRecoverPriceHtml();
+  setInterval(hsnRecoverPriceHtml, 1000);
 });
 
 /* Built with Barry v1.0.8 */
