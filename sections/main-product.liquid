@@ -72,7 +72,7 @@
   endif;
  -%}
 
-            <div class="slide{% if forloop.index0 == initial_slide %} slide--custom-initial{% endif %}" data-media-id="{{ media.id }}">
+            <div class="slide{% if forloop.index0 == initial_slide %} slide--custom-initial{% endif %}" data-media-id="{{ media.id }}" data-variants="{{ variantNames }}">
                 {%- if media.media_type == 'image' and section.settings.enable_zoom -%}<a class="show-gallery" href="{{ media.preview_image | img_url: zoom_size }}" data-variants="{{ variantNames }}">{%- endif -%}
                   {%- render 'media', media: media, min_aspect_ratio: min_aspect_ratio -%}
                 {%- if media.media_type == 'image' and section.settings.enable_zoom -%}</a>{%- endif -%}
