@@ -1412,7 +1412,7 @@
 
       $('.product-slideshow.slick-initialized').slick('slickUnfilter');
       
-      $('a.thumbnail[data-variants], a.show-gallery, .slide[data-variants]').each(function(i)  {
+      $('a.thumbnail[data-variants], a.show-gallery, .slide[data-variants], .hsnVariantInfo').each(function(i)  {
         var variants = $(this).attr('data-variants').trim().split(', ');
         var allSelectedOptionsFound = true;
         $(selectedOptions).each(function()  {
@@ -1431,8 +1431,6 @@
           }
           $(this).removeClass('hsnNotFittingSelectedVariant');
           $(this).find('.rimage-outer-wrapper').removeClass('hsnNotFittingSelectedVariant');
-          $(this).find('.rimage-outer-wrapper').addClass('hsnFittingSelectedVariant');
-//          $(this).parents('.owl-item').addClass('active');
         }
         else  {
           if($(this).hasClass('thumbnail'))  {
@@ -1440,8 +1438,6 @@
           }
           $(this).addClass('hsnNotFittingSelectedVariant');
           $(this).find('.rimage-outer-wrapper').addClass('hsnNotFittingSelectedVariant');
-          $(this).find('.rimage-outer-wrapper').removeClass('hsnFittingSelectedVariant');
-//          $(this).parents('.owl-item').removeClass('active');
         }
       });
 
@@ -1548,6 +1544,10 @@
       this.displayVariantTexts();
       
       this.hideListbox();
+
+      setTimeout(function() {
+        location.reload();
+      }, 800);
     }}
 
 
