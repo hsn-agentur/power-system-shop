@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "video_XcgdGH": {
+      "type": "video",
+      "settings": {
+        "video_shopify": "shopify:\/\/files\/videos\/001_Erklärvideo_Trinkmahlzeiten_1080x1080px_98034eb3-ce64-4242-a840-084c261b5b5d.mp4",
+        "video_external": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "subheading": "",
+        "video_title": "",
+        "heading_max_width": 500,
+        "title_size": 42,
+        "title_size_mobile": 96,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": false,
+        "text_alignment": "center center",
+        "full_width": false,
+        "overlay_style": "no_background"
+      }
+    },
+    "9f32275f-3a94-46be-8cff-2da8ad3a4fb4": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "code": "<div class=\"countdown-timer-block\" countdown-timer-id=\"clmt2iz8f1666391jxlaikd5ygr\"><\/div>"
+      }
+    },
+    "b0f985d1-e51c-4017-a157-0daaccb36e78": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Trinkmahlzeiten Probier-Special",
+            "use_h1": false
+          }
+        },
+        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jetzt 20% sparen – aber nur für kurze Zeit!<\/p>",
+            "enlarge_text": false
+          }
+        }
+      },
+      "block_order": [
+        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1",
+        "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1"
+      ],
+      "settings": {
+        "height": "small",
+        "text_alignment": "center",
+        "full_width": false,
+        "use_alt_bg": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "full_width": false
+      }
+    },
+    "67ba3c25-2855-4b80-9c3a-2c8721d7fe1e": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "trinkmahlzeiten-aktion",
+        "explicit_order": "",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 2,
+        "use_alt_bg": false,
+        "show_view_all": false,
+        "full_width": false
+      }
+    }
+  },
+  "order": [
+    "video_XcgdGH",
+    "9f32275f-3a94-46be-8cff-2da8ad3a4fb4",
+    "b0f985d1-e51c-4017-a157-0daaccb36e78",
+    "main",
+    "67ba3c25-2855-4b80-9c3a-2c8721d7fe1e"
+  ]
+}
