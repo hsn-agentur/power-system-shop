@@ -4,7 +4,8 @@
       "type": "video",
       "custom_css": [
         ".section-video .container {background-color: #dddddd;}",
-        ".video-container {max-width: 787px; margin: auto; aspect-ratio: 1 \/ 1;}"
+        ".video-container {max-width: 787px; margin: auto; aspect-ratio: 1 \/ 1;}",
+        ".video-container__video {height: 100%;}"
       ],
       "settings": {
         "video_shopify": "shopify:\/\/files\/videos\/001_Erklärvideo_Trinkmahlzeiten_1080x1080px_98034eb3-ce64-4242-a840-084c261b5b5d.mp4",
