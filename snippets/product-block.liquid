@@ -122,7 +122,7 @@
         </div>
       {% endif %}
 
-      <div class="product-info" data-url="{{ product_url }}">
+      <div class="product-info" data-url="hsnRef{{ product_url | sha256 }}">
         <div class="inner">
           <div class="innerer">
             <a class="product-link{% if settings.quickbuy_style == 'whole' %} quickbuy-toggle{% endif %}" href="{{ product_url }}">
@@ -171,7 +171,7 @@ if(!hsnProductPriceHtml) {
   var hsnProductPriceHtml = [];
 }
 
-hsnProductPriceHtml.push({ref: '{{ product_url }}', html: '{{ product_price_html | strip | strip_newlines }}'});
+hsnProductPriceHtml.push({ref: 'hsnRef{{ product_url | sha256 }}', html: '{{ product_price_html | strip | strip_newlines }}'});
 
   </script>
   

@@ -1412,7 +1412,7 @@
 
       $('.product-slideshow.slick-initialized').slick('slickUnfilter');
       
-      $('a.thumbnail[data-variants], a.show-gallery').each(function(i)  {
+      $('a.thumbnail[data-variants], a.show-gallery, .slide[data-variants], .hsnVariantInfo').each(function(i)  {
         var variants = $(this).attr('data-variants').trim().split(', ');
         var allSelectedOptionsFound = true;
         $(selectedOptions).each(function()  {
@@ -1431,8 +1431,6 @@
           }
           $(this).removeClass('hsnNotFittingSelectedVariant');
           $(this).find('.rimage-outer-wrapper').removeClass('hsnNotFittingSelectedVariant');
-          $(this).find('.rimage-outer-wrapper').addClass('hsnFittingSelectedVariant');
-//          $(this).parents('.owl-item').addClass('active');
         }
         else  {
           if($(this).hasClass('thumbnail'))  {
@@ -1440,13 +1438,14 @@
           }
           $(this).addClass('hsnNotFittingSelectedVariant');
           $(this).find('.rimage-outer-wrapper').addClass('hsnNotFittingSelectedVariant');
-          $(this).find('.rimage-outer-wrapper').removeClass('hsnFittingSelectedVariant');
-//          $(this).parents('.owl-item').removeClass('active');
         }
       });
 
       var slickFilterByFittingSelectedVariant = function() {
-        return $(this).find('.hsnNotFittingSelectedVariant').length == 0;
+        if($(this).find('.hsnNotFittingSelectedVariant').length > 0) {
+          return false;
+        }
+        return !$(this).hasClass('hsnNotFittingSelectedVariant');
       }
       
       if($('.product-slideshow.slick-initialized').length) {
@@ -1545,6 +1544,10 @@
       this.displayVariantTexts();
       
       this.hideListbox();
+
+      setTimeout(function() {
+        location.reload();
+      }, 800);
     }}
 
 
@@ -5212,7 +5215,7 @@ shelfStart = 0;
           // from click or variant image? change main image
           var index = 0;
           var mediaId = $(this).data('media-id');
-          $(this).parent().children(':visible').each(function (iter) {
+          $(this).parent().children(':not(.hsnNotFittingSelectedVariant)').each(function (iter) {
             index = iter;
             if ($(this).data('media-id') == mediaId) {
               return false;
