@@ -6,7 +6,7 @@
         ".section-video .container {background-color: transparent;}",
         ".video-container {max-width: 787px; margin: auto; aspect-ratio: 1 \/ 1;}",
         ".video-container__video {height: 100%;}",
-        "@media (max-width: 767.98px) {.video-container--modal-mobile .overlay-text {height: auto; width: calc(100% - 60px); aspect-ratio: 1\/1; } .video-container--playing .video-container__video {height: auto;}}"
+        "@media (max-width: 767.98px) {.video-container--modal-mobile .overlay-text {height: auto; aspect-ratio: 1\/1; width: 90%; } .video-container--playing .video-container__video {height: auto; }}"
       ],
       "settings": {
         "video_shopify": "shopify:\/\/files\/videos\/001_Erklärvideo_Trinkmahlzeiten_1080x1080px_98034eb3-ce64-4242-a840-084c261b5b5d.mp4",
