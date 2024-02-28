@@ -1463,22 +1463,6 @@
 
       
       
-      setTimeout(function() {
-return;
-              var firstAvailableIndex = -1;
-      $('a.thumbnail[data-variants]').each(function(i) {
-        if((firstAvailableIndex == -1) && !$(this).hasClass('hsnNotFittingSelectedVariant')) {
-          firstAvailableIndex = i;
-        }
-      });
-      if(firstAvailableIndex > -1) {
-    //    $('.product-slideshow').slick('slickGoTo', firstAvailableIndex, false);
-      }
-//        $('.product-slideshow').slick('slickGoTo', 0, false);
-      $('.product-slideshow').slick('slickGoTo', 0, false);
-      $('.owl-stage').css({transform: 'translate3d(0px, 0px, 0px)'});
-        
-      }, 500);
     }
     displayVariantTexts()  {
       var selectedVariant = '';
