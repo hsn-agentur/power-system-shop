@@ -1455,6 +1455,8 @@
         $('.product-slideshow').on('init', function(e) {
           setTimeout(function() {
             $('.product-slideshow.slick-initialized').slick('slickFilter', slickFilterByFittingSelectedVariant);
+                  $('.product-slideshow').slick('slickGoTo', 0, false);
+
           }, 500)
         });
       }
