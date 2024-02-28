@@ -1473,6 +1473,7 @@
     //    $('.product-slideshow').slick('slickGoTo', firstAvailableIndex, false);
       }
 //        $('.product-slideshow').slick('slickGoTo', 0, false);
+      $('.product-slideshow').slick('slickGoTo', 0, false);
       $('.owl-stage').css({transform: 'translate3d(0px, 0px, 0px)'});
         
       }, 500);
