@@ -3,7 +3,7 @@
     "video_XcgdGH": {
       "type": "video",
       "custom_css": [
-        ".section-video .container {background-color: #dddddd;}",
+        ".section-video .container {background-color: transparent;}",
         ".video-container {max-width: 787px; margin: auto; aspect-ratio: 1 \/ 1;}",
         ".video-container__video {height: 100%;}"
       ],
