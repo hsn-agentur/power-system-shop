@@ -1462,7 +1462,7 @@
       
       
       setTimeout(function() {
-
+return;
               var firstAvailableIndex = -1;
       $('a.thumbnail[data-variants]').each(function(i) {
         if((firstAvailableIndex == -1) && !$(this).hasClass('hsnNotFittingSelectedVariant')) {
