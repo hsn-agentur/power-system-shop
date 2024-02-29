@@ -1425,7 +1425,7 @@
           }
         });
 
-        if(variants.length == 0) {
+        if(variants.length == 0 || (variants.length == 1 && variants[0] == '')) {
           allSelectedOptionsFound = true;
         }
 
