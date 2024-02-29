@@ -1423,7 +1423,11 @@
           if(!(jQuery.inArray(this, variants) != -1)) {
        //     console.log('selected variant ' + this + ' filtered out image ' + variants.join(' # ') + ' ');
           }
-        })
+        });
+
+        if(variants.length == 0) {
+          allSelectedOptionsFound = true;
+        }
 
         if(allSelectedOptionsFound)  {
           if($(this).hasClass('thumbnail'))  {
