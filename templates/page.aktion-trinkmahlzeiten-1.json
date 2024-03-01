@@ -19,11 +19,21 @@
         "overlay_style": "no_background"
       }
     },
-    "9f32275f-3a94-46be-8cff-2da8ad3a4fb4": {
-      "type": "custom-liquid",
+    "1709274580c1f300a4": {
+      "type": "apps",
+      "blocks": {
+        "essential_countdown_app_block_QRDBdh": {
+          "type": "shopify:\/\/apps\/essential-countdown\/blocks\/app-block\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "clma976hn2102601ozmn1yygz7a"
+          }
+        }
+      },
+      "block_order": [
+        "essential_countdown_app_block_QRDBdh"
+      ],
       "settings": {
-        "full_width": true,
-        "code": "<div class=\"countdown-timer-block\" countdown-timer-id=\"clma976hn2102601ozmn1yygz7a\"><\/div>"
+        "full_width": false
       }
     },
     "b0f985d1-e51c-4017-a157-0daaccb36e78": {
@@ -80,7 +90,7 @@
   },
   "order": [
     "video_XcgdGH",
-    "9f32275f-3a94-46be-8cff-2da8ad3a4fb4",
+    "1709274580c1f300a4",
     "b0f985d1-e51c-4017-a157-0daaccb36e78",
     "main",
     "67ba3c25-2855-4b80-9c3a-2c8721d7fe1e"
