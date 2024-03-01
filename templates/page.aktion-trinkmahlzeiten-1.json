@@ -21,7 +21,6 @@
     },
     "9f32275f-3a94-46be-8cff-2da8ad3a4fb4": {
       "type": "custom-liquid",
-      "disabled": true,
       "settings": {
         "full_width": true,
         "code": "<div class=\"countdown-timer-block\" countdown-timer-id=\"clmt2iz8f1666391jxlaikd5ygr\"><\/div>"
