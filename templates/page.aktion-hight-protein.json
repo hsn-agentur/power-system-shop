@@ -2,6 +2,7 @@
   "sections": {
     "a444ce3c-4551-4732-b75c-5b4da7e715e9": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/01_Landingpage_Kampagne_BigBlock_240117.png",
         "mobile_image": "shopify:\/\/shop_images\/01_Landingpage_Kampagne_BigBlock_mobil_240117.png",
@@ -33,14 +34,14 @@
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1": {
           "type": "heading",
           "settings": {
-            "title": "STARTE 2024 MIT POWER",
+            "title": "Power System High Protein für dich",
             "use_h1": false
           }
         },
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Unsere High-Protein-Produkte wie Big Block, Weight Gainer, Bite Power und Protein Deluxe unterstützen Deinen  Muskelaufbau und Body Shaping. Ideal für Krafttraining und Fitnessbegeisterte. Jedes Produkt ist speziell entwickelt, um Deine Ziele zu erreichen. Vielfalt und Geschmack stehen bei uns im Vordergrund. Ob für eine intensive Trainingseinheit oder als leckere, proteinreiche Snack-Option – wir bieten die perfekte Mischung für Deinen<br\/> Erfolg. Kraft und Geschmack in jedem Bissen – starte jetzt durch mit unserer High-Protein-Produktvielfalt!<\/p>",
+            "text": "<p>Suchst du noch einen Begleiter für dein Krafttraining? Entdecke unsere Vielfalt an High Protein Produkten mit super leckerem Geschmack. Jetzt zugreifen!<\/p>",
             "enlarge_text": false
           }
         }
