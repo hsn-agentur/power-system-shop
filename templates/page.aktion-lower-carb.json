@@ -2,6 +2,7 @@
   "sections": {
     "a444ce3c-4551-4732-b75c-5b4da7e715e9": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/01_Landingpage_Kampagne_LowerCarb_Zitrone_240117.png",
         "mobile_image": "shopify:\/\/shop_images\/01_Landingpage_Kampagne_LowerCarb_Zitrone_mobil_240117.png",
@@ -33,14 +34,14 @@
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1": {
           "type": "heading",
           "settings": {
-            "title": "ENTDECKE DIE LOWER CARB VIELFALT!",
+            "title": "Power System Lower Carb für dich",
             "use_h1": false
           }
         },
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Willkommen in einem gesünderen Jahr! Mit unseren Lower Carb Riegeln <br\/>erlebst Du, wie lecker bewusste Ernährung sein kann. Ob beim Shaping, <br\/>Abnehmen oder einfach nur Genießen - unsere Sortenvielfalt bietet für <br\/>jeden Geschmack das Richtige. Wähle aus einer großen Auswahl und genieße<br\/> den leckeren Geschmack unserer sorgfältig zubereiteten Riegel. Mach den<br\/> Schritt zu einem fitteren Du mit Lower Carb!<\/p>",
+            "text": "<p>Bist du noch auf der Suche nach leckeren Snacks, die deine Fitnessziele unterstützen? Entdecke unsere Lower Carb Bars in vielen leckeren Sorten. Jetzt zugreifen!<\/p>",
             "enlarge_text": false
           }
         }
