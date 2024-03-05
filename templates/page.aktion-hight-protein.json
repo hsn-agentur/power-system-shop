@@ -76,11 +76,11 @@
       "settings": {
         "title": "",
         "collection": "aktion-high-protein",
-        "explicit_order": "46505959915847,46505959948615,46505959981383,46498980495687,46498980561223,46498980626759,46508113396039,46508113363271,46502872777031,46502872809799,46502872842567,46508489212231",
+        "explicit_order": "",
         "show_vendor": false,
         "enable_carousel": false,
         "grid": 4,
-        "rows": 2,
+        "rows": 4,
         "use_alt_bg": false,
         "show_view_all": false,
         "full_width": false
