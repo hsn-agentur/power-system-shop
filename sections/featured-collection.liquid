@@ -90,7 +90,7 @@
 
 
 
-                     <!-- for product in collection.products limit: product_limit -->
+                     <!-- for product in collection.products limit: product_limit {{ collection.products | size }}-->
             {% for product in collection.products limit: 1000000 %}
 
 
