@@ -7792,9 +7792,9 @@ var hsnRecoverProductHtml = function() {
   $(hsnProductHtml).each(function() {
       var $lastProduct = $('div.product-block').last();
       var html = this.html;
-      html = html.replace('script-block', 'script');
-      html = html.replace('class="product-block"', 'class="product-block variable-products"');
-      html = html.replace('product-block__title', 'product-block__title b4b-title');
+//      html = html.replace('script-block', 'script');
+//      html = html.replace('class="product-block"', 'class="product-block variable-products"');
+//      html = html.replace('product-block__title', 'product-block__title b4b-title');
       $lastProduct.after(html);
   });
 }
