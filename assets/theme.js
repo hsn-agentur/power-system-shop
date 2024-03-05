@@ -7785,6 +7785,18 @@ $(function() {
   }
 });
 
+var hsnRecoverProductHtml = function() {
+  if(!hsnProductHtml) {
+    return;
+  }
+  $(hsnProductHtml).each(function() {
+      var $lastProduct = $('div.product-block').last();
+      $lastProduct.after(this.html);
+    }
+  });
+}
+
+
 var hsnRecoverPriceHtml = function() {
   $(hsnProductPriceHtml).each(function() {
     var $el = $('div[data-url="' + this.ref + '"]');
