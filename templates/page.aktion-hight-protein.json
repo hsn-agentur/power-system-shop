@@ -76,6 +76,7 @@
       "settings": {
         "title": "",
         "collection": "aktion-high-protein",
+        "all_variants": true,
         "explicit_order": "",
         "show_vendor": false,
         "enable_carousel": false,
