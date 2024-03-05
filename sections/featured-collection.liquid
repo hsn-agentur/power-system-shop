@@ -84,12 +84,15 @@
 -%}
                     <!-- all variants: {{ all_variant_ids }} -->
 {% else %}
+
+               <!-- variable-products-block-featured-collection -->
                     {% render 'variable-products-block-featured-collection', collection: collection, section: section, chosen_aspect_ratio: chosen_aspect_ratio, variant_limit: product_limit %}
 
 
 
                      <!-- for product in collection.products limit: product_limit -->
             {% for product in collection.products limit: 10000 %}
+              <!-- product-block -->
               {% render 'product-block', product: product, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel %}
             {% endfor %}
 {% endif %}
