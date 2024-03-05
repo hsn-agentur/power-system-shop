@@ -93,8 +93,11 @@
                      <!-- for product in collection.products limit: product_limit {{ collection.products | size }}-->
             {% for product in collection.products limit: 1000000 %}
 
-
-
+              {% if section.settings.explicit_order != blank %}
+                {% for variant in product.variants %}
+                  {% render 'product-block', product: variant, manual_image_load: section.settings.enable_carousel, custom_aspect_ratio: chosen_aspect_ratio, no_swiping: section.settings.enable_carousel, no_quick_buy_markup: section.settings.enable_carousel %}
+                {% endfor %}
+              {% endif %}
               
               <!-- product-block -->
               {% capture product_html %}
