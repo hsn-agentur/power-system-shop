@@ -7792,8 +7792,8 @@ var hsnRecoverProductHtml = function() {
   $(hsnProductHtml).each(function() {
       var $lastProduct = $('div.product-block').last();
       var html = this.html;
-      // .replace('script-block', 'script')
-      $lastProduct.after(this.html);
+      html = html.replace('script-block', 'script')
+      $lastProduct.after(html);
   });
 }
 
