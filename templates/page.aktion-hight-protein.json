@@ -28,21 +28,6 @@
         "overlay_style": "shadow"
       }
     },
-    "featured_collection_ErKe8R": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "d",
-        "collection": "all",
-        "explicit_order": "46508489212231, 46502872842567, 46502872809799, 46502872777031",
-        "show_vendor": false,
-        "enable_carousel": false,
-        "grid": 4,
-        "rows": 2,
-        "use_alt_bg": false,
-        "show_view_all": false,
-        "full_width": false
-      }
-    },
     "b0f985d1-e51c-4017-a157-0daaccb36e78": {
       "type": "rich-text",
       "blocks": {
@@ -100,14 +85,29 @@
         "show_view_all": false,
         "full_width": false
       }
+    },
+    "featured_collection_ErKe8R": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "all",
+        "explicit_order": "46508489212231, 46502872842567, 46502872809799, 46502872777031",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 2,
+        "use_alt_bg": false,
+        "show_view_all": false,
+        "full_width": false
+      }
     }
   },
   "order": [
     "a444ce3c-4551-4732-b75c-5b4da7e715e9",
-    "featured_collection_ErKe8R",
     "b0f985d1-e51c-4017-a157-0daaccb36e78",
     "9f32275f-3a94-46be-8cff-2da8ad3a4fb4",
     "main",
-    "67ba3c25-2855-4b80-9c3a-2c8721d7fe1e"
+    "67ba3c25-2855-4b80-9c3a-2c8721d7fe1e",
+    "featured_collection_ErKe8R"
   ]
 }
