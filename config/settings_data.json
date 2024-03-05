@@ -1027,6 +1027,7 @@
     "prod_sold_out_show": true,
     "enable_product_reviews_collection": false,
     "swatch_enabled": false,
+    "social_instagram_url": "https:\/\/www.instagram.com\/powersystemsport\/",
     "search_type": "product,article,page",
     "enable_live_search": true,
     "live_search_show_vendor": false,
