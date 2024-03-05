@@ -7791,7 +7791,9 @@ var hsnRecoverProductHtml = function() {
   }
   $(hsnProductHtml).each(function() {
       var $lastProduct = $('div.product-block').last();
-      $lastProduct.after(this.html.replace('script-block', 'script'));
+      var html = this.html;
+      // .replace('script-block', 'script')
+      $lastProduct.after(this.html);
   });
 }
 
