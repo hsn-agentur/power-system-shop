@@ -7233,7 +7233,7 @@ shelfStart = 0;
 
       $(this).on('variantChanged', function (evt, variant, product) {
         // -- VLE
-      if(hsnActivatieReloadOnVariantChanged && (variant !== false)) {
+      if(window.hsnActivatieReloadOnVariantChanged && (variant !== false)) {
         location.reload();
       }
 
@@ -7826,7 +7826,7 @@ $(function() {
  // setTimeout(hsnRecoverProductHtml, 1000);
 
   setTimeout(function() {
-    hsnActivatieReloadOnVariantChanged = true;
+    window.hsnActivatieReloadOnVariantChanged = true;
   }, 1000);
 
 });
