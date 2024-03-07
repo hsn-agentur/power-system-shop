@@ -7232,6 +7232,15 @@ shelfStart = 0;
       // events on variant change
 
       $(this).on('variantChanged', function (evt, variant, product) {
+        // -- VLE
+      if(variant !== false) {
+        location.reload();
+      }
+
+        // -- /VLE
+
+
+        
         // change variant status classes
         var $labelCont = $productDetail.find('.product-label-list');
         $labelCont.find('.product-label-container').remove();
