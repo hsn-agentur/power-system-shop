@@ -7233,7 +7233,7 @@ shelfStart = 0;
 
       $(this).on('variantChanged', function (evt, variant, product) {
         // -- VLE
-      if(variant !== false) {
+      if(hsnActivatieReloadOnVariantChanged && variant !== false) {
      //   location.reload();
       }
 
@@ -7818,7 +7818,7 @@ var hsnRecoverPriceHtml = function() {
   });
 }
 
-
+hsnActivatieReloadOnVariantChanged = false;
 
 $(function() {
   hsnRecoverPriceHtml();
