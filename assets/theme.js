@@ -7818,12 +7818,10 @@ $(function() {
   hsnRecoverPriceHtml();
   setInterval(hsnRecoverPriceHtml, 1000);
  // setTimeout(hsnRecoverProductHtml, 1000);
-      $(document).on('load-product-form', '.product-form', function (e) {
 
-  $(this).on('variantChanged', function(e, variant) {
+  $(document).on('variantChanged', '.product-form', function(e, variant) {
     console.log(e);
     console.log(variant);
-  });
   });
 
 });
