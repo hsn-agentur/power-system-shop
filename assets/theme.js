@@ -1537,7 +1537,7 @@
       this.hideListbox();
 
       setTimeout(function() {
-        location.reload();
+ //       location.reload();
       }, 800);
     }}
 
