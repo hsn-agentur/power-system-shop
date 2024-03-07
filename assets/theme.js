@@ -7819,7 +7819,7 @@ $(function() {
   setInterval(hsnRecoverPriceHtml, 1000);
  // setTimeout(hsnRecoverProductHtml, 1000);
 
-  setTimeout(funtion() {
+  setTimeout(function() {
     $(document).on('variantChanged', '.product-form', function(e, variant) {
       console.log(e);
       console.log(variant);
