@@ -7817,7 +7817,7 @@ $(function() {
  // setTimeout(hsnRecoverProductHtml, 1000);
 
   setTimeout(function() {
-    $(document).on('variantChanged', '.product-form', function(e, variant) {
+    $('.product-form').on('variantChanged', function(e, variant) {
       if(variant !== false) {
         location.reload();
       }
