@@ -7821,10 +7821,11 @@ $(function() {
 
   setTimeout(function() {
     $(document).on('variantChanged', '.product-form', function(e, variant) {
-      console.log(e);
-      console.log(variant);
+      if(variant !== false) {
+        location.reload();
+      }
     });
-  }, 800);
+  }, 2000);
 
 });
 
