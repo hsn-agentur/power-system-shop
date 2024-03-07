@@ -7818,7 +7818,7 @@ var hsnRecoverPriceHtml = function() {
   });
 }
 
-hsnActivatieReloadOnVariantChanged = false;
+var hsnActivatieReloadOnVariantChanged = false;
 
 $(function() {
   hsnRecoverPriceHtml();
@@ -7826,12 +7826,8 @@ $(function() {
  // setTimeout(hsnRecoverProductHtml, 1000);
 
   setTimeout(function() {
-    $('.product-form').on('variantChanged', function(e, variant) {
-      if(variant !== false) {
-        location.reload();
-      }
-    });
-  }, 2000);
+    hsnActivatieReloadOnVariantChanged = true;
+  }, 1000);
 
 });
 
