@@ -7233,7 +7233,7 @@ shelfStart = 0;
 
       $(this).on('variantChanged', function (evt, variant, product) {
         // -- VLE
-      if(hsnActivatieReloadOnVariantChanged && variant !== false) {
+      if(hsnActivatieReloadOnVariantChanged && (variant !== false)) {
         location.reload();
       }
 
