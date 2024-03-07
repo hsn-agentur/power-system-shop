@@ -7825,10 +7825,12 @@ $(function() {
   setInterval(hsnRecoverPriceHtml, 1000);
  // setTimeout(hsnRecoverProductHtml, 1000);
 
+
+});
+
   setTimeout(function() {
     window.hsnActivatieReloadOnVariantChanged = true;
   }, 1000);
 
-});
 
 /* Built with Barry v1.0.8 */
