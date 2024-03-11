@@ -7236,19 +7236,8 @@ shelfStart = 0;
       if(window.hsnActivatieReloadOnVariantChanged && (variant !== false)) {
         location.reload();
       }
-
-      if((variant === false)) {
-        if($('.option-selector').eq(1).find('.cc-select__option.is-unavailable[aria-selected=true]').length > 0) {
-          var $el = $('.option-selector').eq(1).find('.cc-select__option:not(.is-unavailable)').first();
-          if($el.length) {
-            var value = $el.get(0).dataset.value;
-            $el.parents('.cc-select').get(0).dispatchEvent(
-            new CustomEvent('selectOption', { detail: { value: value } }));
-          //  $el.parents('.cc-select').trigger('selectOption', $el.get(0));
-          }
-        }
-      }
         // -- /VLE
+
 
 
         
@@ -7370,6 +7359,27 @@ shelfStart = 0;
         });
       }
 
+
+        // -- VLE
+
+        
+      if((variant === false)) {
+        if($('.option-selector').eq(1).find('.cc-select__option.is-unavailable[aria-selected=true]').length > 0) {
+          var $el = $('.option-selector').eq(1).find('.cc-select__option:not(.is-unavailable)').first();
+          if($el.length) {
+            var value = $el.get(0).dataset.value;
+            $el.parents('.cc-select').get(0).dispatchEvent(
+            new CustomEvent('selectOption', { detail: { value: value } }));
+          //  $el.parents('.cc-select').trigger('selectOption', $el.get(0));
+          }
+        }
+      }
+        // -- /VLE
+
+
+
+
+      
       // when option selector changes, update validation state, but only after first validation called
       $productFormContainer.on('change', '.option-selector', function () {
         if ($productFormContainer.hasClass('product-form--validation-started')) {
