@@ -7240,7 +7240,9 @@ shelfStart = 0;
       if((variant === false)) {
         if($('.option-selector').eq(1).find('.cc-select__option.is-unavailable[aria-selected=true]').length > 0) {
           $el = $('.option-selector').eq(1).find('.cc-select__option:not(.is-unavailable)').first();
-          $el.parents('.cc-select').trigger('click');
+          if($el.length) {
+            $el.parents('.cc-select').trigger('selectOption', $el.get(0));
+          }
         }
       }
         // -- /VLE
