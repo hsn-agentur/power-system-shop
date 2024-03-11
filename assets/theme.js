@@ -7241,7 +7241,7 @@ shelfStart = 0;
         if($('.option-selector').eq(1).find('.cc-select__option.is-unavailable[aria-selected=true]').length > 0) {
           var $el = $('.option-selector').eq(1).find('.cc-select__option:not(.is-unavailable)').first();
           if($el.length) {
-            var value = $el.attr('value');
+            var value = $el.get(0).value;
             this.querySelector('.cc-select').dispatchEvent(
             new CustomEvent('selectOption', { detail: { value: value } }));
           //  $el.parents('.cc-select').trigger('selectOption', $el.get(0));
