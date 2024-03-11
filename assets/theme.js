@@ -7237,6 +7237,11 @@ shelfStart = 0;
         location.reload();
       }
 
+      if((variant === false)) {
+        ($('.option-selector').eq(1).find('.cc-select__option.is-unavailable[aria-selected=true]').length > 0) {
+          $('.option-selector').eq(1).find('.cc-select__option:not(.is-unavailable)').first().trigger('click');
+        }
+      }
         // -- /VLE
 
 
