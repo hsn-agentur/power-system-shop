@@ -170,7 +170,7 @@
               -%}
               {% for item in search.results %}
                 {% if item.object_type == 'product' %}
-                  {% render 'product-block', full_product: item, custom_aspect_ratio: chosen_product_aspect_ratio, animate: true %}
+                  {% render 'product-block', variant: item, custom_aspect_ratio: chosen_product_aspect_ratio, animate: true %}
                 {% elsif item.object_type == 'collection' %}
                   {% render 'collection-block', collection: item, custom_aspect_ratio: chosen_collection_aspect_ratio, animate: true %}
                 {% else %}
