@@ -1209,12 +1209,14 @@
      */
     handleClick(e) {
       if (e.target.matches('.js-option')) {
+        // -- VLE modified
         if(!e.target.matches('.is-unavailable')) {
           this.selectOption(e.target);
         }
         else {
           this.hideListbox();
         }
+        // -- /VLE
       }
     }
 
