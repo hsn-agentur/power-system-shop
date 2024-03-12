@@ -1209,7 +1209,12 @@
      */
     handleClick(e) {
       if (e.target.matches('.js-option')) {
-        this.selectOption(e.target);
+        if(!e.target.matches('.is-unavailable')) {
+          this.selectOption(e.target);
+        }
+        else {
+          this.hideListbox();
+        }
       }
     }
 
