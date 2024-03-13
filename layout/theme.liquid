@@ -113,6 +113,10 @@
   <script src="{{ 'vendor.min.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
+{% if localization.country.iso_code == 'AT' %}
+<meta name="robots" content="noindex">
+{% endif %}
+  
   {{ content_for_header }}
   
  {% include 'variable-products-head-template' %}
