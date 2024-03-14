@@ -21,6 +21,12 @@
             "enable_product_reviews_by_price": false
           }
         },
+        "essential_countdown_app_block_cTid9z": {
+          "type": "shopify:\/\/apps\/essential-countdown\/blocks\/app-block\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": ""
+          }
+        },
         "divider": {
           "type": "divider",
           "settings": {
@@ -48,12 +54,6 @@
             "show_pickup_availability": true
           }
         },
-        "essential_countdown_app_block_cTid9z": {
-          "type": "shopify:\/\/apps\/essential-countdown\/blocks\/app-block\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
-          "settings": {
-            "id": ""
-          }
-        },
         "description": {
           "type": "description",
           "settings": {
@@ -68,10 +68,10 @@
         "title",
         "vendor",
         "price",
+        "essential_countdown_app_block_cTid9z",
         "divider",
         "variant_picker",
         "buy_buttons",
-        "essential_countdown_app_block_cTid9z",
         "description"
       ],
       "settings": {
