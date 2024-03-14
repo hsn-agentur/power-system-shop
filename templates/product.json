@@ -1,101 +1,110 @@
 {
-	"sections": {
-		"main": {
-			"type": "main-product",
-			"blocks": {
-				"title": {
-					"type": "title",
-					"settings": {}
-				},
-				"vendor": {
-					"type": "vendor",
-					"disabled": true,
-					"settings": {}
-				},
-				"price": {
-					"type": "price",
-					"settings": {
-						"show_tax_and_shipping": true,
-						"enable_product_reviews_by_price": false
-					}
-				},
-				"divider": {
-					"type": "divider",
-					"settings": {
-						"show_in_quickbuy": false
-					}
-				},
-				"variant_picker": {
-					"type": "variant_picker",
-					"settings": {
-						"show_single": true,
-						"select_first_variant": true,
-						"variant_style": "dropdown",
-						"disable_unavailable_variants": true,
-						"show_size_chart": false,
-						"size_chart_variant": "Size",
-						"size_chart_page": ""
-					}
-				},
-				"buy_buttons": {
-					"type": "buy_buttons",
-					"settings": {
-						"show_quantity_selector": true,
-						"enable_payment_button": false,
-						"show_backorder_text": true,
-						"show_pickup_availability": true
-					}
-				},
-				"description": {
-					"type": "description",
-					"settings": {
-						"show_in_tab": true,
-						"open_tab": true,
-						"icon": "",
-						"show_in_quickbuy": false
-					}
-				}
-			},
-			"block_order": [
-				"title",
-				"vendor",
-				"price",
-				"divider",
-				"variant_picker",
-				"buy_buttons",
-				"description"
-			],
-			"settings": {
-				"show_breadcrumbs": false,
-				"show_location_underneath": false,
-				"inventory_transfers_enable": true,
-				"enable_sticky_columns": false,
-				"gallery_size": "large",
-				"gallery_layout": "carousel-beside",
-				"enable_zoom": true,
-				"enable_video_looping": false,
-				"enable_var_img_grouping": false,
-				"var_img_grouping_option": "Color,Colour,Couleur,Farbe"
-			}
-		},
-		"16643513187e32fec9": {
-			"type": "apps",
-			"settings": {
-				"full_width": false
-			}
-		},
-		"recommendations": {
-			"type": "product-recommendations",
-			"settings": {
-				"title": "Kunden kauften dazu folgende Produkte",
-				"show_vendor": false,
-				"grid": 4
-			}
-		}
-	},
-	"order": [
-		"main",
-		"16643513187e32fec9",
-		"recommendations"
-	]
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "vendor": {
+          "type": "vendor",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_and_shipping": true,
+            "enable_product_reviews_by_price": false
+          }
+        },
+        "divider": {
+          "type": "divider",
+          "settings": {
+            "show_in_quickbuy": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "show_single": true,
+            "select_first_variant": true,
+            "variant_style": "dropdown",
+            "disable_unavailable_variants": true,
+            "show_size_chart": false,
+            "size_chart_variant": "Size",
+            "size_chart_page": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_quantity_selector": true,
+            "enable_payment_button": false,
+            "show_backorder_text": true,
+            "show_pickup_availability": true
+          }
+        },
+        "essential_countdown_app_block_cTid9z": {
+          "type": "shopify:\/\/apps\/essential-countdown\/blocks\/app-block\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "show_in_tab": true,
+            "open_tab": true,
+            "icon": "",
+            "show_in_quickbuy": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "vendor",
+        "price",
+        "divider",
+        "variant_picker",
+        "buy_buttons",
+        "essential_countdown_app_block_cTid9z",
+        "description"
+      ],
+      "settings": {
+        "show_breadcrumbs": false,
+        "show_location_underneath": false,
+        "inventory_transfers_enable": true,
+        "enable_sticky_columns": false,
+        "gallery_size": "large",
+        "gallery_layout": "carousel-beside",
+        "enable_zoom": true,
+        "enable_video_looping": false,
+        "enable_var_img_grouping": false,
+        "var_img_grouping_option": "Color,Colour,Couleur,Farbe"
+      }
+    },
+    "16643513187e32fec9": {
+      "type": "apps",
+      "settings": {
+        "full_width": false
+      }
+    },
+    "recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "title": "Kunden kauften dazu folgende Produkte",
+        "show_vendor": false,
+        "grid": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16643513187e32fec9",
+    "recommendations"
+  ]
 }
