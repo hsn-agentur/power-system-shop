@@ -5,6 +5,7 @@
       "blocks": {
         "image_jKxa7y": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Desktop_Ostern_2403183_83fbd9c2-c23c-48f8-bd78-fe1cefc35514.png",
             "mobile_image": "shopify:\/\/shop_images\/Mobil_Ostern_2403182.png",
