@@ -3,6 +3,27 @@
     "16359276425da8ce46": {
       "type": "slideshow",
       "blocks": {
+        "image_jKxa7y": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Desktop_Ostern_2403183_83fbd9c2-c23c-48f8-bd78-fe1cefc35514.png",
+            "mobile_image": "shopify:\/\/shop_images\/Mobil_Ostern_2403182.png",
+            "slide_link": "",
+            "subheading": "Tell your story",
+            "title": "Slide heading",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>And optional subtext<\/p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop this",
+            "button_url_1": "",
+            "button_label_2": "Shop all",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        },
         "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
           "type": "image",
           "settings": {
@@ -65,34 +86,13 @@
             "button_url_2": "",
             "text_alignment": "bottom center"
           }
-        },
-        "image_jKxa7y": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Desktop_Ostern_2403183_83fbd9c2-c23c-48f8-bd78-fe1cefc35514.png",
-            "mobile_image": "shopify:\/\/shop_images\/Mobil_Ostern_2403182.png",
-            "slide_link": "",
-            "subheading": "Tell your story",
-            "title": "Slide heading",
-            "heading_max_width": 800,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>And optional subtext<\/p>",
-            "enlarge_text": true,
-            "button_label_1": "Shop this",
-            "button_url_1": "",
-            "button_label_2": "Shop all",
-            "button_url_2": "",
-            "text_alignment": "center center"
-          }
         }
       },
       "block_order": [
+        "image_jKxa7y",
         "70c72871-cb7d-4a53-9ae3-195e5d316bea",
         "196bbe59-e163-4ffe-af22-a732b403f854",
-        "88c9e954-ab9b-4667-811e-6e097f485100",
-        "image_jKxa7y"
+        "88c9e954-ab9b-4667-811e-6e097f485100"
       ],
       "settings": {
         "height": "fixed",
