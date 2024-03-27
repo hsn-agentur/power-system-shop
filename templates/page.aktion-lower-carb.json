@@ -34,14 +34,14 @@
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1": {
           "type": "heading",
           "settings": {
-            "title": "Power System Lower Carb für dich",
+            "title": "Power System Lower Carb für dich - Jetzt mit 20% Rabatt!",
             "use_h1": false
           }
         },
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Bist du noch auf der Suche nach leckeren Snacks, die deine Fitnessziele unterstützen? Entdecke unsere Lower Carb Bars in vielen leckeren Sorten. Jetzt zugreifen!<\/p>",
+            "text": "<p>Bist du noch auf der Suche nach leckeren Snacks, die deine Fitnessziele unterstützen? Mit dem Aktionscode <strong>FIT20<\/strong> kannst Du jetzt exklusiv 20% auf alle unsere Lower Carb Riegel sparen.<\/p>",
             "enlarge_text": false
           }
         }
@@ -76,6 +76,7 @@
       "settings": {
         "title": "",
         "collection": "aktion-lower-carb",
+        "all_variants": false,
         "explicit_order": "",
         "show_vendor": false,
         "enable_carousel": false,
