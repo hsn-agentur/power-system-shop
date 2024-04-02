@@ -27,6 +27,7 @@
         },
         "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/02_Erdbeere_15_240228.png",
             "mobile_image": "shopify:\/\/shop_images\/02_Erdbeere_15_mobil_240228.png",
@@ -48,6 +49,7 @@
         },
         "196bbe59-e163-4ffe-af22-a732b403f854": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/02_Mango_15_240228.png",
             "mobile_image": "shopify:\/\/shop_images\/02_Mango_15_mobil_240228.png",
