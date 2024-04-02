@@ -5,7 +5,6 @@
       "blocks": {
         "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_240325_V2.png",
             "mobile_image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_mobil_240325_V2.png",
@@ -27,7 +26,6 @@
         },
         "image_jKxa7y": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_240325_V1_5e296cd9-4348-43d4-8f8b-df16d7117ae1.png",
             "mobile_image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_mobil_240325_V1.png",
@@ -40,8 +38,8 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": true,
-            "button_label_1": "",
-            "button_url_1": "",
+            "button_label_1": "Rabatt sichern",
+            "button_url_1": "shopify:\/\/collections\/angebote",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "center center"
