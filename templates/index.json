@@ -3,34 +3,12 @@
     "16359276425da8ce46": {
       "type": "slideshow",
       "blocks": {
-        "image_jKxa7y": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Desktop_Ostern_2403183_83fbd9c2-c23c-48f8-bd78-fe1cefc35514.png",
-            "mobile_image": "shopify:\/\/shop_images\/Mobil_Ostern_2403182.png",
-            "slide_link": "",
-            "subheading": "",
-            "title": "",
-            "heading_max_width": 800,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": true,
-            "button_label_1": "",
-            "button_url_1": "",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "center center"
-          }
-        },
         "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/02_Erdbeere_15_240228.png",
-            "mobile_image": "shopify:\/\/shop_images\/02_Erdbeere_15_mobil_240228.png",
+            "image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_240325_V2.png",
+            "mobile_image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_mobil_240325_V2.png",
             "slide_link": "shopify:\/\/collections\/angebote",
             "subheading": "",
             "title": "",
@@ -45,6 +23,28 @@
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
+          }
+        },
+        "image_jKxa7y": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_240325_V1_5e296cd9-4348-43d4-8f8b-df16d7117ae1.png",
+            "mobile_image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_mobil_240325_V1.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "center center"
           }
         },
         "196bbe59-e163-4ffe-af22-a732b403f854": {
@@ -91,8 +91,8 @@
         }
       },
       "block_order": [
-        "image_jKxa7y",
         "70c72871-cb7d-4a53-9ae3-195e5d316bea",
+        "image_jKxa7y",
         "196bbe59-e163-4ffe-af22-a732b403f854",
         "88c9e954-ab9b-4667-811e-6e097f485100"
       ],
