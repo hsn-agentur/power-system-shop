@@ -72,9 +72,9 @@
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/01_Trinkmahlzeit_240131.png",
-            "mobile_image": "shopify:\/\/shop_images\/01_Trinkmahlzeit_mobil_240131.png",
-            "slide_link": "shopify:\/\/collections\/neuheiten",
+            "image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_240327.png",
+            "mobile_image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_mobil_240327.png",
+            "slide_link": "shopify:\/\/products\/trinkmahlzeit",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -83,8 +83,8 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": false,
-            "button_label_1": "Gleich probieren",
-            "button_url_1": "shopify:\/\/collections\/neuheiten",
+            "button_label_1": "Jetzt probieren",
+            "button_url_1": "shopify:\/\/products\/trinkmahlzeit",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
