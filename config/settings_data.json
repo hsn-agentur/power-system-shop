@@ -1104,7 +1104,6 @@
             "type": "menu-promotion-small",
             "settings": {
               "dropdown_link_title": "Produkte",
-              "image": "shopify:\/\/shop_images\/Gutschein.png",
               "title": "Gutscheine",
               "link_url": "shopify:\/\/products\/geschenkgutschein"
             }
@@ -1219,14 +1218,14 @@
             "type": "menu",
             "settings": {
               "title": "Informationen",
-              "menu": "informationen"
+              "menu": ""
             }
           },
           "b6b93cfc-4155-42ae-9a46-a0a5b6e43f2b": {
             "type": "menu",
             "settings": {
               "title": "Unternehmen​",
-              "menu": "unternehmen"
+              "menu": ""
             }
           }
         },
@@ -1305,6 +1304,12 @@
       },
       "12657775114333427046": {
         "type": "shopify:\/\/apps\/essential-countdown\/blocks\/app_embed\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "6251270934270006384": {
+        "type": "shopify:\/\/apps\/stape-server-gtm\/blocks\/gtm\/7e13c847-7971-409d-8fe0-29ec14d5f048",
         "disabled": false,
         "settings": {
         }
