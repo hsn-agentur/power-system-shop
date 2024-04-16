@@ -51,7 +51,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/04_BigBlock_anpassung_V2.png",
             "mobile_image": "shopify:\/\/shop_images\/04_BigBlock_ohne_Aktion_mobil_V2_b27e5521-7278-4679-9918-8909b20e1b65.png",
-            "slide_link": "",
+            "slide_link": "shopify:\/\/products\/big-block-1",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -61,7 +61,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Jetzt bestellen",
-            "button_url_1": "shopify:\/\/collections\/angebote",
+            "button_url_1": "shopify:\/\/products\/big-block-1",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
