@@ -3,6 +3,27 @@
     "16359276425da8ce46": {
       "type": "slideshow",
       "blocks": {
+        "image_dbdQXx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/04_Hoodie_V2_a0152049-69b1-4c8a-975e-0ac1a688dc18.png",
+            "mobile_image": "shopify:\/\/shop_images\/04_Hoodie_mobil_V2.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "Gratis Hoodie ab 120€ sichern",
+            "button_url_1": "",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
+        },
         "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
           "type": "image",
           "settings": {
@@ -89,6 +110,7 @@
         }
       },
       "block_order": [
+        "image_dbdQXx",
         "70c72871-cb7d-4a53-9ae3-195e5d316bea",
         "image_jKxa7y",
         "196bbe59-e163-4ffe-af22-a732b403f854",
