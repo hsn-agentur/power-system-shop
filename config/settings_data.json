@@ -1326,14 +1326,6 @@
         "settings": {
         }
       },
-      "17410671050484012158": {
-        "type": "shopify:\/\/apps\/cartking-free-gifts\/blocks\/gift-embed-v2\/4831ea51-9f80-493d-8541-da4662a9e219",
-        "disabled": true,
-        "settings": {
-          "targetSelector": ".cart-item-list__body",
-          "targetLocation": "After"
-        }
-      },
       "16256948136948485038": {
         "type": "shopify:\/\/apps\/upcharge-surcharges\/blocks\/app-embed-block\/3660e544-1847-4d53-9b3b-f0cb50c2d9f7",
         "disabled": false,
@@ -1350,6 +1342,14 @@
         "type": "shopify:\/\/apps\/gropulse-gtm-data-layer\/blocks\/gropulse-gtm\/ec1066b4-8b00-4630-a216-c88f51204a28",
         "disabled": false,
         "settings": {
+        }
+      },
+      "17410671050484012158": {
+        "type": "shopify:\/\/apps\/cartking-free-gifts\/blocks\/gift-embed-v2\/4831ea51-9f80-493d-8541-da4662a9e219",
+        "disabled": false,
+        "settings": {
+          "targetSelector": ".cart-item-list__body",
+          "targetLocation": "After"
         }
       }
     }
