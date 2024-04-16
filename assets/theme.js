@@ -7867,7 +7867,7 @@ $(function() {
 
 
 $(function() {
-  $('offer.ck-row').on('click', function() {
+  $(document).on('click', 'offer.ck-row', function() {
     var href = $(this).find('a').attr('href');
     location.href = href;
   });
