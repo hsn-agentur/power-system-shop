@@ -49,8 +49,8 @@
         "image_jKxa7y": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_240325_V1_5e296cd9-4348-43d4-8f8b-df16d7117ae1.png",
-            "mobile_image": "shopify:\/\/shop_images\/03_BigBlock_anpassung_mobil_240325_V1.png",
+            "image": "shopify:\/\/shop_images\/04_BigBlock_anpassung_V2.png",
+            "mobile_image": "shopify:\/\/shop_images\/04_BigBlock_ohne_Aktion_mobil_V2_b27e5521-7278-4679-9918-8909b20e1b65.png",
             "slide_link": "",
             "subheading": "",
             "title": "",
@@ -60,7 +60,7 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": true,
-            "button_label_1": "Rabatt sichern",
+            "button_label_1": "Jetzt bestellen",
             "button_url_1": "shopify:\/\/collections\/angebote",
             "button_label_2": "",
             "button_url_2": "",
