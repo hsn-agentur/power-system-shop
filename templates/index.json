@@ -48,6 +48,7 @@
         },
         "image_jKxa7y": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/04_BigBlock_anpassung_V2.png",
             "mobile_image": "shopify:\/\/shop_images\/04_BigBlock_ohne_Aktion_mobil_V2_b27e5521-7278-4679-9918-8909b20e1b65.png",
@@ -69,7 +70,6 @@
         },
         "196bbe59-e163-4ffe-af22-a732b403f854": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_240327.png",
             "mobile_image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_mobil_240327.png",
