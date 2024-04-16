@@ -7866,4 +7866,11 @@ $(function() {
   }, 1000);
 
 
+$(function() {
+  $('offer.ck-row').on('click', function() {
+    var href = $(this).find('a').attr('href');
+    location.href = href;
+  });
+});
+
 /* Built with Barry v1.0.8 */
