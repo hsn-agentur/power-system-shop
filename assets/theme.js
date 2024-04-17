@@ -7240,7 +7240,7 @@ shelfStart = 0;
 
       $(this).on('variantChanged', function (evt, variant, product) {
         // -- VLE
-      if(window.hsnActivatieReloadOnVariantChanged && (variant !== false)) {
+      if(window.hsnActivatieReloadOnVariantChanged && (variant !== false) && (theme.currentQuickbuyRequest == undefined)) {
         location.reload();
       }
         // -- /VLE
