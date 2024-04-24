@@ -141,10 +141,10 @@
         "show_vendor": false,
         "enable_carousel": false,
         "grid": 4,
-        "rows": 4,
+        "rows": 1,
         "use_alt_bg": false,
-        "show_view_all": false,
-        "full_width": false
+        "show_view_all": true,
+        "full_width": true
       }
     },
     "16359285201c71bbb1": {
