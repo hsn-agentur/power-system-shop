@@ -183,7 +183,7 @@
         "enable_carousel": false,
         "grid": 4,
         "rows": 1,
-        "use_alt_bg": false,
+        "use_alt_bg": true,
         "show_view_all": true,
         "full_width": false
       }
