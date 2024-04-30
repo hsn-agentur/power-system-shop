@@ -5,6 +5,7 @@
       "blocks": {
         "image_dbdQXx": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/04_Hoodie_V2_a0152049-69b1-4c8a-975e-0ac1a688dc18.png",
             "mobile_image": "shopify:\/\/shop_images\/04_Hoodie_mobil_V2.png",

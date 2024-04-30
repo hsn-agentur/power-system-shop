@@ -1057,6 +1057,7 @@
           },
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "<p>Gratis Hoodie ab 120€ Einkaufswert<\/p>"
             }
