@@ -106,8 +106,9 @@
               {% endcapture %}
               {{ product_html }}
 
-                  
+{% if 0 %}}                  
 {% render 'hsn-deposit', product: product %}.
+{% endif %}
 
               {% render 'unit-price', variant: cheapest_variant %}
             {% endfor %}
