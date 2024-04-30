@@ -7841,6 +7841,7 @@ var hsnRecoverProductHtml = function() {
 
 
 var hsnRecoverPriceHtml = function() {
+  return; // deactivated
   $(hsnProductPriceHtml).each(function() {
     var $el = $('div[data-url="' + this.ref + '"]');
     if($el.length == 0) {
