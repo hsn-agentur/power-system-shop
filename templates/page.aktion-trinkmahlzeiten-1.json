@@ -30,7 +30,7 @@
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Jetzt 20% sparen – aber nur für kurze Zeit!<\/p>",
+            "text": "<p>Jetzt 20% sparen – aber nur für kurze Zeit mit dem <strong>Code: Trinkmahlzeit20<\/strong><\/p>",
             "enlarge_text": false
           }
         }
@@ -39,7 +39,6 @@
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-heading-1",
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1"
       ],
-      "disabled": true,
       "settings": {
         "height": "small",
         "text_alignment": "center",
@@ -78,6 +77,7 @@
       "settings": {
         "title": "",
         "collection": "trinkmahlzeiten-aktion",
+        "all_variants": false,
         "explicit_order": "",
         "show_vendor": false,
         "enable_carousel": false,
