@@ -106,15 +106,6 @@
               {% endcapture %}
               {{ product_html }}
 
-                  <script>
-                
-                if(!hsnProductHtml) {
-                  var hsnProductHtml = [];
-                }
-                
-            // (deactivated)    hsnProductHtml.push({ref: '{{ product.url  | sha256 }}', html: "{{ product_html | strip | strip_newlines | replace: 'script', 'script-block' | replace: '"', '\"' }}"});
-                
-                  </script>
                   
 {% render 'hsn-deposit', product: product %}
 
