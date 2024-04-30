@@ -7825,6 +7825,7 @@ $(function() {
 });
 
 var hsnRecoverProductHtml = function() {
+  return; // deactivated
   if(!hsnProductHtml) {
     return;
   }
