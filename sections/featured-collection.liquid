@@ -112,7 +112,7 @@
                   var hsnProductHtml = [];
                 }
                 
-                hsnProductHtml.push({ref: '{{ product.url  | sha256 }}', html: "{{ product_html | strip | strip_newlines | replace: 'script', 'script-block' | replace: '"', '\"' }}"});
+            // (deactivated)    hsnProductHtml.push({ref: '{{ product.url  | sha256 }}', html: "{{ product_html | strip | strip_newlines | replace: 'script', 'script-block' | replace: '"', '\"' }}"});
                 
                   </script>
                   
