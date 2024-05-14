@@ -1050,14 +1050,12 @@
         "blocks": {
           "42c280b1-df5e-4e32-acae-53c4b2f14e8c": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "<p>NEU: Big Block Mix Pack<\/p>"
             }
           },
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "<p>15% Rabatt auf Big Block Riegel<\/p>"
             }
