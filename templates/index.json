@@ -5,6 +5,7 @@
       "blocks": {
         "image_dbdQXx": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/KW18-19_LowerCarb.jpg",
             "mobile_image": "shopify:\/\/shop_images\/KW18-19_LowerCarb_mobil.png",
