@@ -3,27 +3,6 @@
     "16359276425da8ce46": {
       "type": "slideshow",
       "blocks": {
-        "image_dbdQXx": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/05_KW22-23_vanilla_stoerer.png",
-            "mobile_image": "shopify:\/\/shop_images\/05_KW22-23_vanilla_stoerer_mobil.png",
-            "slide_link": "shopify:\/\/collections\/angebote",
-            "subheading": "",
-            "title": "",
-            "heading_max_width": 800,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": true,
-            "button_label_1": "Rabatt sichern",
-            "button_url_1": "shopify:\/\/products\/trinkmahlzeit",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "bottom center"
-          }
-        },
         "196bbe59-e163-4ffe-af22-a732b403f854": {
           "type": "image",
           "settings": {
@@ -39,6 +18,27 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Jetzt testen",
+            "button_url_1": "shopify:\/\/collections\/angebote",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
+        },
+        "image_dbdQXx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/05_KW22-23_vanilla_stoerer.png",
+            "mobile_image": "shopify:\/\/shop_images\/05_KW22-23_vanilla_stoerer_mobil.png",
+            "slide_link": "shopify:\/\/collections\/angebote",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "Rabatt sichern",
             "button_url_1": "shopify:\/\/products\/trinkmahlzeit",
             "button_label_2": "",
             "button_url_2": "",
@@ -89,8 +89,8 @@
         }
       },
       "block_order": [
-        "image_dbdQXx",
         "196bbe59-e163-4ffe-af22-a732b403f854",
+        "image_dbdQXx",
         "88c9e954-ab9b-4667-811e-6e097f485100",
         "70c72871-cb7d-4a53-9ae3-195e5d316bea"
       ],
