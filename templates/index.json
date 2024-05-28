@@ -6,8 +6,8 @@
         "image_dbdQXx": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/05_Big_Block.png",
-            "mobile_image": "shopify:\/\/shop_images\/05_Big_Block_mobil.png",
+            "image": "shopify:\/\/shop_images\/05_KW22-23_vanilla_stoerer.png",
+            "mobile_image": "shopify:\/\/shop_images\/05_KW22-23_vanilla_stoerer_mobil.png",
             "slide_link": "shopify:\/\/collections\/angebote",
             "subheading": "",
             "title": "",
@@ -18,7 +18,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Rabatt sichern",
-            "button_url_1": "shopify:\/\/collections\/angebote",
+            "button_url_1": "shopify:\/\/products\/trinkmahlzeit",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
