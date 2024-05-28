@@ -1048,6 +1048,18 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
+          "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>20% Rabatt auf alle Whey & 5k Pulver<\/p>"
+            }
+          },
+          "e4c8bef2-2d68-4f55-9f02-e88dadecf17c": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>20% Rabatt Trinkmahlzeiten<\/p>"
+            }
+          },
           "42c280b1-df5e-4e32-acae-53c4b2f14e8c": {
             "type": "announcement",
             "disabled": true,
@@ -1055,23 +1067,10 @@
               "text": "<p>NEU: Big Block Mix Pack<\/p>"
             }
           },
-          "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
-            "type": "announcement",
-            "settings": {
-              "text": "<p>20% Rabatt auf alle Whey & 5k Pulver<\/p>"
-            }
-          },
           "9f47148d-50ff-4a7b-9d37-883d4296ff4c": {
             "type": "announcement",
             "settings": {
               "text": "<p><strong>Versandkostenfrei ab 75,00 €<\/strong> innerhalb Deutschlands!<\/p>"
-            }
-          },
-          "e4c8bef2-2d68-4f55-9f02-e88dadecf17c": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "text": "<p>15% Rabatt auf den Weight Gainer<\/p>"
             }
           },
           "announcement_mxtH9i": {
@@ -1083,10 +1082,10 @@
           }
         },
         "block_order": [
-          "42c280b1-df5e-4e32-acae-53c4b2f14e8c",
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff",
-          "9f47148d-50ff-4a7b-9d37-883d4296ff4c",
           "e4c8bef2-2d68-4f55-9f02-e88dadecf17c",
+          "42c280b1-df5e-4e32-acae-53c4b2f14e8c",
+          "9f47148d-50ff-4a7b-9d37-883d4296ff4c",
           "announcement_mxtH9i"
         ],
         "settings": {
