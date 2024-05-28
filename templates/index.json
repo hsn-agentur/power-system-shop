@@ -24,56 +24,12 @@
             "text_alignment": "bottom center"
           }
         },
-        "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/05_Big_Block_Mix_918318ff-a720-4f27-8731-919c3625d95b.png",
-            "mobile_image": "shopify:\/\/shop_images\/05_Big_Block_Mix_mobil.png",
-            "slide_link": "shopify:\/\/products\/big-block-mix-pack",
-            "subheading": "",
-            "title": "",
-            "heading_max_width": 800,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": false,
-            "button_label_1": "Jetzt testen",
-            "button_url_1": "shopify:\/\/products\/big-block-mix-pack",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "bottom center"
-          }
-        },
-        "image_jKxa7y": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify:\/\/shop_images\/04_BigBlock_anpassung_V2.png",
-            "mobile_image": "shopify:\/\/shop_images\/04_BigBlock_ohne_Aktion_mobil_V2_b27e5521-7278-4679-9918-8909b20e1b65.png",
-            "slide_link": "shopify:\/\/products\/big-block-1",
-            "subheading": "",
-            "title": "",
-            "heading_max_width": 800,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": true,
-            "button_label_1": "Jetzt bestellen",
-            "button_url_1": "shopify:\/\/products\/big-block-1",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "bottom center"
-          }
-        },
         "196bbe59-e163-4ffe-af22-a732b403f854": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_240327.png",
-            "mobile_image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_mobil_240327.png",
-            "slide_link": "shopify:\/\/products\/trinkmahlzeit",
+            "image": "shopify:\/\/shop_images\/05_KW22-23_Pulver.png",
+            "mobile_image": "shopify:\/\/shop_images\/05_KW22-23_Pulver_mobil.png",
+            "slide_link": "shopify:\/\/collections\/angebote",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -109,14 +65,34 @@
             "button_url_2": "",
             "text_alignment": "bottom center"
           }
+        },
+        "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/05_Big_Block_Mix_918318ff-a720-4f27-8731-919c3625d95b.png",
+            "mobile_image": "shopify:\/\/shop_images\/05_Big_Block_Mix_mobil.png",
+            "slide_link": "shopify:\/\/products\/big-block-mix-pack",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label_1": "Jetzt testen",
+            "button_url_1": "shopify:\/\/products\/big-block-mix-pack",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
         }
       },
       "block_order": [
         "image_dbdQXx",
-        "70c72871-cb7d-4a53-9ae3-195e5d316bea",
-        "image_jKxa7y",
         "196bbe59-e163-4ffe-af22-a732b403f854",
-        "88c9e954-ab9b-4667-811e-6e097f485100"
+        "88c9e954-ab9b-4667-811e-6e097f485100",
+        "70c72871-cb7d-4a53-9ae3-195e5d316bea"
       ],
       "settings": {
         "height": "fixed",
