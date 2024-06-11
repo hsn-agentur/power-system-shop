@@ -48,8 +48,8 @@
         "196bbe59-e163-4ffe-af22-a732b403f854": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/05_KW22-23_trinkmahlzeit_vanilla_ohne_stoerer.png",
-            "mobile_image": "shopify:\/\/shop_images\/05_KW22-23_trinkmahlzeit_vanilla_ohne_stoerer_mobil.png",
+            "image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_240327_0c91f2dc-c85c-49b5-91ea-45808454d255.png",
+            "mobile_image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_mobil_240327_28c53ca5-a841-4438-bc3b-aeb269571194.png",
             "slide_link": "shopify:\/\/products\/trinkmahlzeit",
             "subheading": "",
             "title": "",
@@ -59,7 +59,7 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": true,
-            "button_label_1": "Jetzt testen",
+            "button_label_1": "Jetzt probieren",
             "button_url_1": "shopify:\/\/products\/trinkmahlzeit",
             "button_label_2": "",
             "button_url_2": "",
