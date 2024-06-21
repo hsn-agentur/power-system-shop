@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "16359276425da8ce46": {
@@ -6,7 +15,7 @@
         "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Shirt_Zugabe_KW24-25_c5913f61-9d64-4a64-9914-a48e01877da9.png",
+            "image": "shopify:\/\/shop_images\/shirt-aktion.png",
             "mobile_image": "shopify:\/\/shop_images\/Shirt_Zugabe_KW24-25_mobil.png",
             "slide_link": "",
             "subheading": "",
@@ -27,7 +36,7 @@
         "image_dbdQXx": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Pulver_ohne_Stoerer_05_KW22-23.png",
+            "image": "shopify:\/\/shop_images\/protein-bedarf-decken.png",
             "mobile_image": "shopify:\/\/shop_images\/Pulver_ohne_Stoerer_KW22-23_mobil.png",
             "slide_link": "shopify:\/\/collections\/pulver",
             "subheading": "",
@@ -48,7 +57,7 @@
         "196bbe59-e163-4ffe-af22-a732b403f854": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_240327_0c91f2dc-c85c-49b5-91ea-45808454d255.png",
+            "image": "shopify:\/\/shop_images\/trinkmahlzeit-vanille.png",
             "mobile_image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_mobil_240327_28c53ca5-a841-4438-bc3b-aeb269571194.png",
             "slide_link": "shopify:\/\/products\/trinkmahlzeit",
             "subheading": "",
@@ -96,7 +105,7 @@
         "88c9e954-ab9b-4667-811e-6e097f485100"
       ],
       "settings": {
-        "height": "fixed",
+        "height": "adapt",
         "height_desktop": 540,
         "height_mobile": 460,
         "full_width": true,
@@ -121,7 +130,7 @@
         "rows": 1,
         "use_alt_bg": false,
         "show_view_all": false,
-        "full_width": true
+        "full_width": false
       }
     },
     "16359285201c71bbb1": {
@@ -162,7 +171,7 @@
         "rows": 1,
         "use_alt_bg": false,
         "show_view_all": false,
-        "full_width": true
+        "full_width": false
       }
     },
     "166426917788bb9d1e": {
