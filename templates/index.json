@@ -77,7 +77,6 @@
         },
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_240327.png",
             "mobile_image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_mobil_240327.png",
