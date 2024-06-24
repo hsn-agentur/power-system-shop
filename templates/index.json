@@ -201,9 +201,8 @@
         "collection_ctThkQ",
         "collection_gDrbUj"
       ],
-      "disabled": true,
       "settings": {
-        "title": "Wonau",
+        "title": "Was sind deine Ziele?",
         "enable_carousel": false,
         "grid": 3,
         "use_alt_bg": true,
