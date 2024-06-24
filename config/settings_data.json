@@ -1016,7 +1016,7 @@
     "font_size_logo_int": 24,
     "button_style": "normal",
     "button_shape": "sharp",
-    "coll_grid_image_shape": "landscape-32",
+    "coll_grid_image_shape": "landscape-54",
     "coll_grid_image_position": "center center",
     "coll_grid_show_count": false,
     "coll_thumb_text_align": "left",
