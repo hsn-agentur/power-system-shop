@@ -16,9 +16,9 @@
       {%- assign bc_cookie_list = data.bc_cookie_list.value -%}
     {%- endif %}
 
-    {% if data.size > 0 and bc_cookie_list._bc_c_set.live == '1' and content_for_header contains 'beeclever.app\/get-script.php' %}
-        <link rel="preconnect" href="https://gdpr-legal-cookie.beeclever.app">
-        <link rel="preload" as="script" href="https://gdpr-legal-cookie.beeclever.app/get-script.php?shop={{ shop.permanent_domain }}">    <script>
+    {% if data.size > 0 and bc_cookie_list._bc_c_set.live == '1' and content_for_header contains 'app.gdpr-legal-cookie.com\/get-script.php' %}
+        
+            <script>
             var sDomain = location.host;
 
             /****** Start thirdPartyScriptDefinition ******/
