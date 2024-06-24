@@ -174,6 +174,42 @@
         "full_width": false
       }
     },
+    "collection_list_gfERhf": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_q7aGEC": {
+          "type": "collection",
+          "settings": {
+            "collection": "muskelaufbau"
+          }
+        },
+        "collection_ctThkQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "ausdauer"
+          }
+        },
+        "collection_gDrbUj": {
+          "type": "collection",
+          "settings": {
+            "collection": "abnehmen-fitness"
+          }
+        }
+      },
+      "block_order": [
+        "collection_q7aGEC",
+        "collection_ctThkQ",
+        "collection_gDrbUj"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Wonau",
+        "enable_carousel": false,
+        "grid": 3,
+        "use_alt_bg": true,
+        "full_width": false
+      }
+    },
     "166426917788bb9d1e": {
       "type": "apps",
       "blocks": {
@@ -200,6 +236,7 @@
     "16359278676808bea5",
     "16359285201c71bbb1",
     "16642917088b0c9ba4",
+    "collection_list_gfERhf",
     "166426917788bb9d1e"
   ]
 }
