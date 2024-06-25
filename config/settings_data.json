@@ -1065,12 +1065,6 @@
               "text": "<p>20% Rabatt auf alle Whey & 5K Pulver<\/p>"
             }
           },
-          "e4c8bef2-2d68-4f55-9f02-e88dadecf17c": {
-            "type": "announcement",
-            "settings": {
-              "text": "<p>Gratis Shirt ab 50€ Einkaufswert<\/p>"
-            }
-          },
           "42c280b1-df5e-4e32-acae-53c4b2f14e8c": {
             "type": "announcement",
             "disabled": true,
@@ -1094,7 +1088,6 @@
         },
         "block_order": [
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff",
-          "e4c8bef2-2d68-4f55-9f02-e88dadecf17c",
           "42c280b1-df5e-4e32-acae-53c4b2f14e8c",
           "9f47148d-50ff-4a7b-9d37-883d4296ff4c",
           "announcement_mxtH9i"
