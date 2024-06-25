@@ -1315,23 +1315,6 @@
         "settings": {
         }
       },
-      "9454257942909505909": {
-        "type": "shopify:\/\/apps\/cartking-free-gifts\/blocks\/app-embed\/4831ea51-9f80-493d-8541-da4662a9e219",
-        "disabled": true,
-        "settings": {
-          "autoAdd": true,
-          "disallowUponAddition": false,
-          "ineligibleGiftRemove": false,
-          "cardColor": "#ffffff",
-          "cardTextColor": "#000000",
-          "buttonColor": "#000000",
-          "title": "Offers",
-          "cta": "Add offer",
-          "postAddTxt": "gift(s) added",
-          "targetSelector": "",
-          "targetLocation": "After"
-        }
-      },
       "18356332299842544250": {
         "type": "shopify:\/\/apps\/b4b-variable-products\/blocks\/variable_init\/4b5ec290-6de8-4c3d-b99f-b8721f30ea87",
         "disabled": false,
