@@ -255,19 +255,22 @@
         "collection_q7aGEC": {
           "type": "collection",
           "settings": {
-            "collection": "muskelaufbau"
+            "collection": "muskelaufbau",
+            "image": "shopify:\/\/shop_images\/muskelaufbau_adf9c979-d885-4dd2-a2ad-add8d9a00501.png"
           }
         },
         "collection_ctThkQ": {
           "type": "collection",
           "settings": {
-            "collection": "ausdauer"
+            "collection": "ausdauer",
+            "image": "shopify:\/\/shop_images\/ausdauer.png"
           }
         },
         "collection_gDrbUj": {
           "type": "collection",
           "settings": {
-            "collection": "abnehmen-fitness"
+            "collection": "abnehmen-fitness",
+            "image": "shopify:\/\/shop_images\/abnehmen-fitness.png"
           }
         }
       },
