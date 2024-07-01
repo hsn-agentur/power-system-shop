@@ -51,7 +51,7 @@
         "inventory_level_k8bNnC": {
           "type": "inventory_level",
           "settings": {
-            "show_inventory_notice": "low",
+            "show_inventory_notice": "always",
             "show_inventory_count": "low",
             "inventory_threshold": 10,
             "enable_box": false,
