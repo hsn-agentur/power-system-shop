@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -39,6 +48,17 @@
             "size_chart_page": ""
           }
         },
+        "inventory_level_k8bNnC": {
+          "type": "inventory_level",
+          "settings": {
+            "show_inventory_notice": "low",
+            "show_inventory_count": "low",
+            "inventory_threshold": 10,
+            "enable_box": false,
+            "enable_pulse": true,
+            "show_in_quickbuy": true
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -70,6 +90,7 @@
         "price",
         "divider",
         "variant_picker",
+        "inventory_level_k8bNnC",
         "buy_buttons",
         "description",
         "essential_countdown_app_block_cTid9z"
