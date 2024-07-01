@@ -1,0 +1,12 @@
+<div class="{{ container_class }}">
+     {% assign payment_icon_count_per_row = icons_per_row %}
+     {% assign payment_icon_index = 0 %}
+     {% for type in shop.enabled_payment_types %}
+       {{ type | payment_type_svg_tag: class: item_class }}
+       {% assign payment_icon_index = payment_icon_index | plus: 1 %}
+       {% if payment_icon_index >= payment_icon_count_per_row %}
+         <br />
+         {% assign payment_icon_index = 0 %}
+       {% endif %}
+     {% endfor %}
+</div>
