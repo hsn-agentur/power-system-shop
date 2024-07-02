@@ -140,6 +140,7 @@
           "type": "collection",
           "settings": {
             "collection": "riegel",
+            "image": "shopify:\/\/shop_images\/Big_Block_Kokos_100g.png",
             "title_override": ""
           }
         },
