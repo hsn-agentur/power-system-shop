@@ -12916,7 +12916,7 @@ offer.ck-row {
   gap: 20px;
   overflow: hidden;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .hsn-collection-list-home-tile {
@@ -12951,6 +12951,9 @@ offer.ck-row {
 }
 
 @media (max-width: 768px) {
+  .hsn-collection-list-home {
+    flex-wrap: wrap;
+  }
   .hsn-collection-list-home-tile {
     width: 171px;
     height: 116px;
