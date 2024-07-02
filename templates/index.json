@@ -180,6 +180,8 @@
         "enable_carousel": true,
         "grid": 4,
         "use_alt_bg": true,
+        "custom_layout_home": true,
+        "add_arrow": false,
         "full_width": true
       }
     },
@@ -337,6 +339,8 @@
         "enable_carousel": false,
         "grid": 3,
         "use_alt_bg": true,
+        "custom_layout_home": false,
+        "add_arrow": false,
         "full_width": false
       }
     },
