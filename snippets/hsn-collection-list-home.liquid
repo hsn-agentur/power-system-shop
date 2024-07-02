@@ -11,8 +11,8 @@
     endif
   
   %}
-  <img class="rimage__image" src="{{ image | img_url: '1024x1024' }}" alt="{{ altText | escape }}" width="" height="" />
-  {title}
+  <img class="rimage__image" src="{{ image | img_url: '300x300' }}" alt="{{ altText | escape }}" width="300" height="300" />
+  {{ title }}
   <br />
-  {collection.url}
+  {{ collection.url }}
 {% endfor %}
