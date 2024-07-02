@@ -14,9 +14,11 @@
   
   %}
   <div class="hsn-collection-list-home-tile">
+    <div class="hsn-collection-list-home-image">
     <a href="{{ collection.url }}">
       <img src="{{ image | img_url: '300x300' }}" alt="{{ altText | escape }}" width="300" height="300" />
     </a>
+    </div>
     <a href="{{ collection.url }}">
       <div class="hsn-collection-list-home-title">{{ title }}</div>
     </a>
