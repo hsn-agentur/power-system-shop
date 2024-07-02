@@ -1,3 +1,15 @@
 {% for block in section.blocks %}
-
+  {% liquid
+    assign collection = collections[block.settings.collection]
+    assign title = collection.title
+    if block.settings.title_override
+      assign title = block.settings.title_override
+    endif
+    assign image = collection.featured_image
+    if block.settings.image
+      assign image = block.settings.image
+    endif
+  
+  %}
+  
 {% endfor %}
