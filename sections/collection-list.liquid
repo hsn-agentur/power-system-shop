@@ -1,4 +1,6 @@
 <div class="section-id-{{ section.id }} collection-slider-row for-collections {% if section.settings.use_alt_bg %}use-alt-bg{% endif %}" data-section-type="featured-collections">
+  {% if section.settings.custom_layout_home %}
+  {% else %}
   <div class="container{% if section.settings.enable_carousel %} container--not-mobile{% endif %}{% if section.settings.full_width %} container--no-max{% endif %}">
     <div class="{% if section.settings.enable_carousel %}collection-slider{% endif %}">
       <h2 class="hometitle h4-style align-center has-paging" data-cc-animate>
@@ -70,6 +72,7 @@
       </div>
     </div>
   </div>
+  {% endif %}
 </div>
 
 
