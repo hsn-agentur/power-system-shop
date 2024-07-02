@@ -4,7 +4,7 @@
   {% liquid
     assign collection = collections[block.settings.collection]
     assign title = collection.title
-    if block.settings.title_override
+    if block.settings.title_override != blank
       assign title = block.settings.title_override
     endif
     assign image = collection.featured_image
