@@ -1,3 +1,5 @@
+<div class="hsn-collection-list-home">
+
 {% for block in section.blocks %}
   {% liquid
     assign collection = collections[block.settings.collection]
@@ -11,8 +13,14 @@
     endif
   
   %}
-  <img class="rimage__image" src="{{ image | img_url: '300x300' }}" alt="{{ altText | escape }}" width="300" height="300" />
-  {{ title }}
-  <br />
-  {{ collection.url }}
+  <div class="hsn-collection-list-home-tile">
+    <a href="{{ collection.url }}">
+      <img src="{{ image | img_url: '300x300' }}" alt="{{ altText | escape }}" width="300" height="300" />
+    </a>
+    <a href="{{ collection.url }}">
+      <div class="hsn-collection-list-home-title">{{ title }}</p>
+    </a>
+  </div>
 {% endfor %}
+
+</div>
