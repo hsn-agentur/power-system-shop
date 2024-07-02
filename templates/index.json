@@ -177,13 +177,13 @@
       ],
       "disabled": true,
       "settings": {
-        "title": "Collection list",
-        "enable_carousel": true,
+        "title": "Wonach suchst du?",
+        "enable_carousel": false,
         "grid": 4,
-        "use_alt_bg": true,
+        "use_alt_bg": false,
         "custom_layout_home": true,
         "add_arrow": false,
-        "full_width": true
+        "full_width": false
       }
     },
     "featured_product_NiN6mR": {
