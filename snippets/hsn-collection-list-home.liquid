@@ -19,9 +19,10 @@
       <img src="{{ image | img_url: '300x300' }}" alt="{{ altText | escape }}" width="300" height="300" />
     </a>
     </div>
-    <a href="{{ collection.url }}">
-      <div class="hsn-collection-list-home-title">{{ title }}</div>
-    </a>
+    
+      <div class="hsn-collection-list-home-title">
+        <a href="{{ collection.url }}">{{ title }}</a>
+      </div>
   </div>
 {% endfor %}
 
