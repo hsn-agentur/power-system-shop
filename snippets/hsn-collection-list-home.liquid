@@ -12,5 +12,7 @@
   
   %}
   <img class="rimage__image" src="{{ image | img_url: '1024x1024' }}" alt="{{ altText | escape }}" width="" height="" />
-  {}
+  {title}
+  <br />
+  {collection.url}
 {% endfor %}
