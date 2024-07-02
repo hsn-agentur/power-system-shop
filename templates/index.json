@@ -139,28 +139,32 @@
         "collection_NN4yYV": {
           "type": "collection",
           "settings": {
-            "collection": "riegel"
+            "collection": "riegel",
+            "title_override": ""
           }
         },
         "collection_RipBVy": {
           "type": "collection",
           "settings": {
             "collection": "pulver",
-            "image": "shopify:\/\/shop_images\/whey-protein-vanille-min_Protein_Shake.jpg"
+            "image": "shopify:\/\/shop_images\/whey-protein-vanille-min_Protein_Shake.jpg",
+            "title_override": "Proteinpulver"
           }
         },
         "collection_dxNjAt": {
           "type": "collection",
           "settings": {
             "collection": "supplements",
-            "image": "shopify:\/\/shop_images\/bcaa-811-min.jpg"
+            "image": "shopify:\/\/shop_images\/bcaa-811-min.jpg",
+            "title_override": ""
           }
         },
         "collection_7ytMXh": {
           "type": "collection",
           "settings": {
             "collection": "trinkmahlzeiten-aktion",
-            "image": "shopify:\/\/shop_images\/Tray-Trinkmahlzeit-Classic-Vanilla-500ml_2000px_0c43f2b9-de81-47a2-a45e-f6d63b3f9089.jpg"
+            "image": "shopify:\/\/shop_images\/Tray-Trinkmahlzeit-Classic-Vanilla-500ml_2000px_0c43f2b9-de81-47a2-a45e-f6d63b3f9089.jpg",
+            "title_override": ""
           }
         }
       },
@@ -302,21 +306,24 @@
           "type": "collection",
           "settings": {
             "collection": "muskelaufbau",
-            "image": "shopify:\/\/shop_images\/muskelaufbau_adf9c979-d885-4dd2-a2ad-add8d9a00501.png"
+            "image": "shopify:\/\/shop_images\/muskelaufbau_adf9c979-d885-4dd2-a2ad-add8d9a00501.png",
+            "title_override": ""
           }
         },
         "collection_ctThkQ": {
           "type": "collection",
           "settings": {
             "collection": "ausdauer",
-            "image": "shopify:\/\/shop_images\/ausdauer.png"
+            "image": "shopify:\/\/shop_images\/ausdauer.png",
+            "title_override": ""
           }
         },
         "collection_gDrbUj": {
           "type": "collection",
           "settings": {
             "collection": "abnehmen-fitness",
-            "image": "shopify:\/\/shop_images\/abnehmen-fitness.png"
+            "image": "shopify:\/\/shop_images\/abnehmen-fitness.png",
+            "title_override": ""
           }
         }
       },
