@@ -24,6 +24,9 @@
         <a href="{{ collection.url }}">{{ title }}</a>
       </div>
   </div>
+  {% if forloop.index0 == 1 %}
+    <br class="conditional" />
+  {% endif %}
 {% endfor %}
 
 </div>
