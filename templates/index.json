@@ -133,6 +133,49 @@
         "full_width": false
       }
     },
+    "collection_list_gfERhf": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_q7aGEC": {
+          "type": "collection",
+          "settings": {
+            "collection": "muskelaufbau",
+            "image": "shopify:\/\/shop_images\/muskelaufbau_adf9c979-d885-4dd2-a2ad-add8d9a00501.png",
+            "title_override": ""
+          }
+        },
+        "collection_ctThkQ": {
+          "type": "collection",
+          "settings": {
+            "collection": "ausdauer",
+            "image": "shopify:\/\/shop_images\/ausdauer.png",
+            "title_override": ""
+          }
+        },
+        "collection_gDrbUj": {
+          "type": "collection",
+          "settings": {
+            "collection": "abnehmen-fitness",
+            "image": "shopify:\/\/shop_images\/abnehmen-fitness.png",
+            "title_override": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_q7aGEC",
+        "collection_ctThkQ",
+        "collection_gDrbUj"
+      ],
+      "settings": {
+        "title": "Was sind deine Ziele?",
+        "enable_carousel": false,
+        "grid": 3,
+        "use_alt_bg": true,
+        "custom_layout_home": false,
+        "add_arrow": false,
+        "full_width": false
+      }
+    },
     "collection_list_Np6ke7": {
       "type": "collection-list",
       "blocks": {
@@ -262,6 +305,7 @@
     },
     "16359285201c71bbb1": {
       "type": "background-video",
+      "disabled": true,
       "settings": {
         "video_shopify": "shopify:\/\/files\/videos\/9400971f21874b6fadd7013a66790747.mp4",
         "video_external": "",
@@ -301,49 +345,6 @@
         "full_width": false
       }
     },
-    "collection_list_gfERhf": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_q7aGEC": {
-          "type": "collection",
-          "settings": {
-            "collection": "muskelaufbau",
-            "image": "shopify:\/\/shop_images\/muskelaufbau_adf9c979-d885-4dd2-a2ad-add8d9a00501.png",
-            "title_override": ""
-          }
-        },
-        "collection_ctThkQ": {
-          "type": "collection",
-          "settings": {
-            "collection": "ausdauer",
-            "image": "shopify:\/\/shop_images\/ausdauer.png",
-            "title_override": ""
-          }
-        },
-        "collection_gDrbUj": {
-          "type": "collection",
-          "settings": {
-            "collection": "abnehmen-fitness",
-            "image": "shopify:\/\/shop_images\/abnehmen-fitness.png",
-            "title_override": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection_q7aGEC",
-        "collection_ctThkQ",
-        "collection_gDrbUj"
-      ],
-      "settings": {
-        "title": "Was sind deine Ziele?",
-        "enable_carousel": false,
-        "grid": 3,
-        "use_alt_bg": true,
-        "custom_layout_home": false,
-        "add_arrow": false,
-        "full_width": false
-      }
-    },
     "166426917788bb9d1e": {
       "type": "apps",
       "blocks": {
@@ -368,11 +369,11 @@
   "order": [
     "16359276425da8ce46",
     "16359278676808bea5",
+    "collection_list_gfERhf",
     "collection_list_Np6ke7",
     "featured_product_NiN6mR",
     "16359285201c71bbb1",
     "16642917088b0c9ba4",
-    "collection_list_gfERhf",
     "166426917788bb9d1e"
   ]
 }
