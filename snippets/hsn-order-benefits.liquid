@@ -10,7 +10,8 @@
        {% if blacklist contains type %}
           <!-- blacklist contains {{ type }} -->
        {% else %}
-       {{ type | payment_type_svg_tag: class: item_class }}
+          <!-- {{ type }} -->
+         {{ type | payment_type_svg_tag: class: item_class }}
        {% endif %}
      {% endfor %}
     </div>
