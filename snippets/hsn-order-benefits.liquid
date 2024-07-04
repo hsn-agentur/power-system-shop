@@ -6,7 +6,7 @@
   </ul>
 </div>
 
-  <div class="hsn-order-benefits-paymenticons" style="display: none">
+  <div class="hsn-order-benefits-paymenticons" style="">
     {% assign blacklist = "american_express klarna paypal unionpay" %}
     {% for type in shop.enabled_payment_types %}
        {% if blacklist contains type %}
