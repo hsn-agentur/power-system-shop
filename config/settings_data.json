@@ -1080,7 +1080,6 @@
           },
           "announcement_mxtH9i": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "<p>SUMMER SALE - spare bis zu 70%<\/p>"
             }
