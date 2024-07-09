@@ -1048,7 +1048,7 @@
     "favicon": "shopify:\/\/shop_images\/favicon.png",
     "cart_type": "drawer",
     "after_add_to_cart": "drawer",
-    "show_free_shipping_bar": false,
+    "show_free_shipping_bar": true,
     "product_currency_code_enabled": true,
     "checkout_logo_image": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
     "checkout_accent_color": "#09728c",
