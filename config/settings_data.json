@@ -1074,6 +1074,7 @@
           },
           "9f47148d-50ff-4a7b-9d37-883d4296ff4c": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "text": "<p><strong>Versandkostenfrei ab 75,00 €<\/strong> innerhalb Deutschlands!<\/p>"
             }
