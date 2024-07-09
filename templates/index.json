@@ -16,9 +16,9 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/06_KW26-27_Desktop.png",
-            "mobile_image": "shopify:\/\/shop_images\/06_KW26-27_Mobil.png",
-            "slide_link": "",
+            "image": "shopify:\/\/shop_images\/06_KW28-29_Header-Desktop.png",
+            "mobile_image": "shopify:\/\/shop_images\/06_KW28-29_Header-Mobil.jpg",
+            "slide_link": "shopify:\/\/collections\/angebote",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -27,8 +27,8 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": false,
-            "button_label_1": "Jetzt shoppen",
-            "button_url_1": "shopify:\/\/collections\/all",
+            "button_label_1": "Rabatt sichern",
+            "button_url_1": "shopify:\/\/collections\/angebote",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
