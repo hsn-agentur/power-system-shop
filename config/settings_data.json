@@ -1067,13 +1067,13 @@
           },
           "42c280b1-df5e-4e32-acae-53c4b2f14e8c": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
-              "text": "<p>Gratis Versand ohne Mindestbestellwert - nur für kurze Zeit<\/p>"
+              "text": ""
             }
           },
           "9f47148d-50ff-4a7b-9d37-883d4296ff4c": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "<p><strong>Versandkostenfrei ab 75,00 €<\/strong> innerhalb Deutschlands!<\/p>"
             }
