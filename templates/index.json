@@ -169,7 +169,7 @@
       "settings": {
         "title": "Was sind deine Ziele?",
         "enable_carousel": false,
-        "grid": 2,
+        "grid": 3,
         "use_alt_bg": true,
         "custom_layout_home": false,
         "add_arrow": false,
