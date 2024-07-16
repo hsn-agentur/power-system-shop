@@ -176,6 +176,23 @@
         "full_width": false
       }
     },
+    "featured_collection_7HWFyP": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Probier Sets",
+        "collection": "probier-sets",
+        "all_variants": false,
+        "explicit_order": "",
+        "show_vendor": false,
+        "enable_carousel": false,
+        "grid": 4,
+        "rows": 1,
+        "use_alt_bg": false,
+        "show_view_all": false,
+        "full_width": false
+      }
+    },
     "collection_list_Np6ke7": {
       "type": "collection-list",
       "blocks": {
@@ -269,6 +286,7 @@
     "16359276425da8ce46",
     "16359278676808bea5",
     "collection_list_gfERhf",
+    "featured_collection_7HWFyP",
     "collection_list_Np6ke7",
     "16642917088b0c9ba4",
     "166426917788bb9d1e"
