@@ -297,7 +297,7 @@
 
 <div class="hsn-benefits">
 {% assign product_benefits_array =  product.metafields.custom.benefits.value | newline_to_br | split: '<br />' %}
-{% assign variant_benefits_array =  variant.metafields.custom.benefits.value | newline_to_br | split: '<br />' %}
+{% assign variant_benefits_array =  current_variant.metafields.custom.benefits.value | newline_to_br | split: '<br />' %}
 <ul>  
 {% for single_line in variant_benefits_array %}
   <li><span class="sign">✅</span> <span class="text">{{ single_line | strip }}</span></li>
