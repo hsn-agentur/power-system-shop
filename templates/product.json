@@ -32,6 +32,7 @@
         },
         "divider": {
           "type": "divider",
+          "disabled": true,
           "settings": {
             "show_in_quickbuy": false
           }
