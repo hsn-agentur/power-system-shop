@@ -296,10 +296,9 @@
 
 <div style="display: none">
 {% assign product_benefits_array =  product.metafields.custom.benefits.value | newline_to_br | split: '<br />' %}
-  {{ product_benefits_array }}
 <ul>  
 {% for single_line in product_benefits_array %}
-  <li>{{ single_line }}</li>
+  <li>{{ single_line | strip }}</li>
 {% endfor %}
 </ul>
 </div>
