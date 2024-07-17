@@ -297,8 +297,8 @@
 <div style="display: none">
 {% assign product_benefits_array =  product.metafields.benefits | newline_to_br | split: "<br />" %}
 <ul>  
-{% for line in product_benefits_array %}
-  <li>{{ line }}</li>
+{% for single_line in product_benefits_array %}
+  <li>{{ single_line }}</li>
 {% endfor %}
 </ul>
 </div>
