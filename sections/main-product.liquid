@@ -292,8 +292,17 @@
                   {%- endif -%}
                 {%- endif -%}
             
--@-
               </div>
+
+<div style="display: none">
+{% assign product_benefits_array =  product.metafields.benefits | newline_to_br | split: "<br />" %}
+<ul>  
+{% for line in product_benefits_array %}
+  <li>{{ line }}</li>
+{% endfor %}
+</ul>
+</div>
+            
 
             {% when 'description' %}
               <div class="{% unless block.settings.show_in_quickbuy %}not-in-quickbuy{% endunless %}{% if block.settings.show_in_tab %} product-detail-accordion{% endif %}" {{ block.shopify_attributes }}>
