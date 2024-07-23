@@ -1060,9 +1060,8 @@
         "blocks": {
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
-              "text": "<p>20% Rabatt auf alle Whey & 5K Pulver<\/p>"
+              "text": "<p>20€ Rabatt ab 100€ Einkaufswert<\/p>"
             }
           },
           "42c280b1-df5e-4e32-acae-53c4b2f14e8c": {
