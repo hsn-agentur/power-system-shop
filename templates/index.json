@@ -57,11 +57,10 @@
         },
         "image_dbdQXx": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/protein-bedarf-decken.png",
-            "mobile_image": "shopify:\/\/shop_images\/Pulver_ohne_Stoerer_KW22-23_mobil.png",
-            "slide_link": "shopify:\/\/collections\/pulver",
+            "image": "shopify:\/\/shop_images\/08_KW33_BB_Header-Desktop.png",
+            "mobile_image": "shopify:\/\/shop_images\/08_KW33_BB_Header-Mobil.png",
+            "slide_link": "shopify:\/\/products\/big-block-1",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -71,7 +70,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Jetzt zugreifen",
-            "button_url_1": "shopify:\/\/collections\/pulver",
+            "button_url_1": "shopify:\/\/products\/big-block-1",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -271,6 +270,7 @@
             "title": "",
             "title_color": "",
             "alignment": "center",
+            "background_color": "",
             "html_area": "<script>\n(function ($) {\n  var $ = jQuery = $;\n$(function()  {\n    var $instaLnk = $('#insta-feed h2');\n    $instaLnk.on('click', function() {\n      \/\/window.location.href = \"https:\/\/www.instagram.com\/powersystemsport\/\";\n      window.open('https:\/\/www.instagram.com\/powersystemsport\/', '_blank'); \n    });\n  });\n})(theme.jQuery);  \n<\/script>"
           }
         }
