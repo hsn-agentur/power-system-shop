@@ -57,6 +57,7 @@
         },
         "image_dbdQXx": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/08_KW33_BB_Header-Desktop.png",
             "mobile_image": "shopify:\/\/shop_images\/08_KW33_BB_Header-Mobil.png",
