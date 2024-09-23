@@ -12,13 +12,32 @@
     "16359276425da8ce46": {
       "type": "slideshow",
       "blocks": {
-        "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
+        "image_UKXWF3": {
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/SummerSale-XXL.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/SummerSaleXXl.jpg",
-            "slide_link": "shopify:\/\/collections\/all",
+            "slide_link": "",
+            "subheading": "Tell your story",
+            "title": "Slide heading",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>And optional subtext<\/p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop this",
+            "button_url_1": "",
+            "button_label_2": "Shop all",
+            "button_url_2": "",
+            "text_alignment": "center center"
+          }
+        },
+        "88c9e954-ab9b-4667-811e-6e097f485100": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Header_TMZ_2_382a0e09-9101-430b-a595-12267fe97cb0.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_mobil_240327_28c53ca5-a841-4438-bc3b-aeb269571194.png",
+            "slide_link": "shopify:\/\/products\/trinkmahlzeit",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -27,11 +46,51 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": false,
-            "button_label_1": "Rabatt sichern",
-            "button_url_1": "shopify:\/\/collections\/all",
+            "button_label_1": "Jetzt bestellen",
+            "button_url_1": "shopify:\/\/products\/trinkmahlzeit",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
+          }
+        },
+        "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MixPacks.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/MixPacks_mobil.jpg",
+            "slide_link": "shopify:\/\/collections\/probier-sets",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label_1": "Jetzt probieren",
+            "button_url_1": "shopify:\/\/collections\/probier-sets",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
+        },
+        "image_h6xmM3": {
+          "type": "image",
+          "settings": {
+            "slide_link": "",
+            "subheading": "Tell your story",
+            "title": "Slide heading",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "<p>And optional subtext<\/p>",
+            "enlarge_text": true,
+            "button_label_1": "Shop this",
+            "button_url_1": "",
+            "button_label_2": "Shop all",
+            "button_url_2": "",
+            "text_alignment": "center center"
           }
         },
         "image_z8AGJH": {
@@ -76,34 +135,15 @@
             "button_url_2": "",
             "text_alignment": "bottom center"
           }
-        },
-        "88c9e954-ab9b-4667-811e-6e097f485100": {
-          "type": "image",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Header_TMZ_2_382a0e09-9101-430b-a595-12267fe97cb0.jpg",
-            "mobile_image": "shopify:\/\/shop_images\/03_Trinkmahlzeit_vanilla_mobil_240327_28c53ca5-a841-4438-bc3b-aeb269571194.png",
-            "slide_link": "shopify:\/\/products\/trinkmahlzeit",
-            "subheading": "",
-            "title": "",
-            "heading_max_width": 800,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": false,
-            "button_label_1": "Jetzt probieren",
-            "button_url_1": "shopify:\/\/products\/trinkmahlzeit",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "bottom center"
-          }
         }
       },
       "block_order": [
+        "image_UKXWF3",
+        "88c9e954-ab9b-4667-811e-6e097f485100",
         "70c72871-cb7d-4a53-9ae3-195e5d316bea",
+        "image_h6xmM3",
         "image_z8AGJH",
-        "image_dbdQXx",
-        "88c9e954-ab9b-4667-811e-6e097f485100"
+        "image_dbdQXx"
       ],
       "settings": {
         "height": "adapt",
