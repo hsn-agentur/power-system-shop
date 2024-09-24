@@ -54,25 +54,6 @@
             "text_alignment": "bottom center"
           }
         },
-        "image_h6xmM3": {
-          "type": "image",
-          "settings": {
-            "slide_link": "",
-            "subheading": "Tell your story",
-            "title": "Slide heading",
-            "heading_max_width": 800,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "<p>And optional subtext</p>",
-            "enlarge_text": true,
-            "button_label_1": "Shop this",
-            "button_url_1": "",
-            "button_label_2": "Shop all",
-            "button_url_2": "",
-            "text_alignment": "center center"
-          }
-        },
         "image_z8AGJH": {
           "type": "image",
           "disabled": true,
@@ -119,7 +100,6 @@
       "block_order": [
         "88c9e954-ab9b-4667-811e-6e097f485100",
         "70c72871-cb7d-4a53-9ae3-195e5d316bea",
-        "image_h6xmM3",
         "image_z8AGJH",
         "image_dbdQXx"
       ],
