@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "presets": {
     "Chantilly": {
@@ -96,13 +96,13 @@
             "1478526632860": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Welcome to our store<\/p>"
+                "text": "<p>Welcome to our store</p>"
               }
             },
             "1478526632861": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Announce <a href=\"#\">something<\/a> here<\/p>"
+                "text": "<p>Announce <a href=\"#\">something</a> here</p>"
               }
             }
           },
@@ -313,13 +313,13 @@
             "1478526632860": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Welcome to our store<\/p>"
+                "text": "<p>Welcome to our store</p>"
               }
             },
             "1478526632861": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Announce <a href=\"#\">something<\/a> here<\/p>"
+                "text": "<p>Announce <a href=\"#\">something</a> here</p>"
               }
             }
           },
@@ -657,13 +657,13 @@
             "1478526632860": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Welcome to our store<\/p>"
+                "text": "<p>Welcome to our store</p>"
               }
             },
             "1478526632861": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Announce <a href=\"#\">something<\/a> here<\/p>"
+                "text": "<p>Announce <a href=\"#\">something</a> here</p>"
               }
             }
           },
@@ -788,13 +788,13 @@
             "1478526632860": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Welcome to our store<\/p>"
+                "text": "<p>Welcome to our store</p>"
               }
             },
             "1478526632861": {
               "type": "announcement",
               "settings": {
-                "text": "<p>Announce <a href=\"#\">something<\/a> here<\/p>"
+                "text": "<p>Announce <a href=\"#\">something</a> here</p>"
               }
             }
           },
@@ -1038,19 +1038,19 @@
     "prod_pre_order_label_show": true,
     "enable_product_reviews_collection": false,
     "swatch_enabled": false,
-    "social_facebook_url": "https:\/\/www.facebook.com\/PowerSystemSport\/",
-    "social_instagram_url": "https:\/\/www.instagram.com\/powersystemsport\/",
+    "social_facebook_url": "https://www.facebook.com/PowerSystemSport/",
+    "social_instagram_url": "https://www.instagram.com/powersystemsport/",
     "search_type": "product,article,page",
     "enable_live_search": true,
     "live_search_show_vendor": false,
     "live_search_show_price": false,
     "live_search_search_meta": true,
-    "favicon": "shopify:\/\/shop_images\/favicon.png",
+    "favicon": "shopify://shop_images/favicon.png",
     "cart_type": "drawer",
     "after_add_to_cart": "drawer",
     "show_free_shipping_bar": true,
     "product_currency_code_enabled": true,
-    "checkout_logo_image": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
+    "checkout_logo_image": "shopify://shop_images/211018_PowerSystem_Logo_1.png",
     "checkout_accent_color": "#09728c",
     "checkout_button_color": "#e31515",
     "not_shade_bg": "#f7f7f8",
@@ -1058,17 +1058,16 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
+          "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Pre Black Week - bis zu 50% Rabatt</p>"
+            }
+          },
           "9f47148d-50ff-4a7b-9d37-883d4296ff4c": {
             "type": "announcement",
             "settings": {
-              "text": "<p><strong>Versandkostenfrei ab 60 €<\/strong> innerhalb Deutschlands!<\/p>"
-            }
-          },
-          "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "text": "<p>20€ Rabatt ab 100€ Einkaufswert<\/p>"
+              "text": "<p><strong>Versandkostenfrei ab 60 €</strong> innerhalb Deutschlands!</p>"
             }
           },
           "42c280b1-df5e-4e32-acae-53c4b2f14e8c": {
@@ -1082,13 +1081,13 @@
             "type": "announcement",
             "disabled": true,
             "settings": {
-              "text": "<p>SUMMER SALE - spare bis zu 70%<\/p>"
+              "text": "<p>SUMMER SALE - spare bis zu 70%</p>"
             }
           }
         },
         "block_order": [
-          "9f47148d-50ff-4a7b-9d37-883d4296ff4c",
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff",
+          "9f47148d-50ff-4a7b-9d37-883d4296ff4c",
           "42c280b1-df5e-4e32-acae-53c4b2f14e8c",
           "announcement_mxtH9i"
         ],
@@ -1109,9 +1108,9 @@
             "type": "menu-promotion-small",
             "settings": {
               "dropdown_link_title": "Produkte",
-              "image": "shopify:\/\/shop_images\/Gutschein.png",
+              "image": "shopify://shop_images/Gutschein.png",
               "title": "Gutscheine",
-              "link_url": "shopify:\/\/products\/geschenkgutschein"
+              "link_url": "shopify://products/geschenkgutschein"
             }
           }
         },
@@ -1119,14 +1118,14 @@
           "52cf1ed7-8843-46d1-a5e3-764d255565dc"
         ],
         "settings": {
-          "logo": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
+          "logo": "shopify://shop_images/211018_PowerSystem_Logo_1.png",
           "logo_img_width_int": 200,
           "mobile_logo_img_width_int": 125,
           "logo_h1": true,
           "enable_sticky": false,
           "enable_transparent": false,
           "transparent_color": "#ffffff",
-          "transparent_logo": "shopify:\/\/shop_images\/211018_PowerSystem_Logo_1.png",
+          "transparent_logo": "shopify://shop_images/211018_PowerSystem_Logo_1.png",
           "menu_linklist": "main-menu",
           "menu_linklist_mobile": "",
           "menu_layout": "inline-menu-center",
@@ -1207,7 +1206,7 @@
             "type": "newsletter",
             "settings": {
               "title": "Newsletter",
-              "text": "<p><strong>5€ Willkommensgutschein<\/strong> bei der Newsletteranmeldung sichern & keine Infos und Angebote mehr verpassen.<\/p>",
+              "text": "<p><strong>5€ Willkommensgutschein</strong> bei der Newsletteranmeldung sichern & keine Infos und Angebote mehr verpassen.</p>",
               "button_style": "primary",
               "show_social_icons": true,
               "soc_icons_large": false
@@ -1256,7 +1255,7 @@
           "popup_dismiss_for_days": 2,
           "position": "center",
           "title": "Sign up and save",
-          "text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers.<\/p>",
+          "text": "<p>Entice customers to sign up for your mailing list with discounts or exclusive offers.</p>",
           "show_newsletter": true,
           "show_social_icons": true
         }
@@ -1283,7 +1282,7 @@
           "empty_heading": "Warenkorb leer",
           "empty_text": "",
           "empty_button_text": "Jetzt shoppen",
-          "empty_button_link": "shopify:\/\/collections\/all",
+          "empty_button_link": "shopify://collections/all",
           "empty_button_style": "primary",
           "empty_enable_custom_colors": false,
           "empty_color_background": "",
@@ -1303,37 +1302,37 @@
     ],
     "blocks": {
       "6279071938380501511": {
-        "type": "shopify:\/\/apps\/powerful-contact-form-builder\/blocks\/app-embed\/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
+        "type": "shopify://apps/powerful-contact-form-builder/blocks/app-embed/e4bcb1eb-35b2-42e6-bc37-bfe0e1542c9d",
         "disabled": false,
         "settings": {
         }
       },
       "18356332299842544250": {
-        "type": "shopify:\/\/apps\/b4b-variable-products\/blocks\/variable_init\/4b5ec290-6de8-4c3d-b99f-b8721f30ea87",
+        "type": "shopify://apps/b4b-variable-products/blocks/variable_init/4b5ec290-6de8-4c3d-b99f-b8721f30ea87",
         "disabled": false,
         "settings": {
         }
       },
       "16256948136948485038": {
-        "type": "shopify:\/\/apps\/upcharge-surcharges\/blocks\/app-embed-block\/3660e544-1847-4d53-9b3b-f0cb50c2d9f7",
+        "type": "shopify://apps/upcharge-surcharges/blocks/app-embed-block/3660e544-1847-4d53-9b3b-f0cb50c2d9f7",
         "disabled": false,
         "settings": {
         }
       },
       "12657775114333427046": {
-        "type": "shopify:\/\/apps\/essential-countdown\/blocks\/app_embed\/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+        "type": "shopify://apps/essential-countdown/blocks/app_embed/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
         "disabled": false,
         "settings": {
         }
       },
       "5269207691391943459": {
-        "type": "shopify:\/\/apps\/gropulse-gtm-data-layer\/blocks\/gropulse-gtm\/ec1066b4-8b00-4630-a216-c88f51204a28",
+        "type": "shopify://apps/gropulse-gtm-data-layer/blocks/gropulse-gtm/ec1066b4-8b00-4630-a216-c88f51204a28",
         "disabled": false,
         "settings": {
         }
       },
       "17410671050484012158": {
-        "type": "shopify:\/\/apps\/cartking-free-gifts\/blocks\/gift-embed-v2\/4831ea51-9f80-493d-8541-da4662a9e219",
+        "type": "shopify://apps/cartking-free-gifts/blocks/gift-embed-v2/4831ea51-9f80-493d-8541-da4662a9e219",
         "disabled": false,
         "settings": {
           "targetSelector": ".cart-item-list__body",
