@@ -1060,7 +1060,6 @@
         "blocks": {
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
             "type": "announcement",
-            "disabled": true,
             "settings": {
               "text": "<p>Pre Black Week - bis zu 50% Rabatt</p>"
             }
