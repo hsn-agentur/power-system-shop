@@ -77,7 +77,6 @@
         },
         "image_dbdQXx": {
           "type": "image",
-          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/Probiersets.jpg",
             "mobile_image": "shopify://shop_images/UNSERE_PROBIERSETS_mobil.jpg",
