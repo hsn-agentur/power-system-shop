@@ -14,10 +14,9 @@
       "blocks": {
         "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/V2_-_Black_Week.png",
-            "mobile_image": "shopify://shop_images/black-week-aktion-mobile.png",
+            "image": "shopify://shop_images/Sportswear_14017cf8-9461-4839-be71-989cd9364edc.png",
+            "mobile_image": "shopify://shop_images/Sportswear_mobil.png",
             "slide_link": "shopify://collections/angebote",
             "subheading": "",
             "title": "",
@@ -27,7 +26,7 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": false,
-            "button_label_1": "Rabatte sichern",
+            "button_label_1": "Jetzt shoppen",
             "button_url_1": "shopify://collections/angebote",
             "button_label_2": "",
             "button_url_2": "",
