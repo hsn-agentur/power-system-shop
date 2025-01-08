@@ -9,7 +9,7 @@
   endif
 -%}
 <html lang="{{ request.locale.iso_code }}" dir="{{ lang_dir }}">
-<head>{% render "load-metafields" %}
+<head>
   <!-- Symmetry 6.0.3 -->
 
   <title>
@@ -209,5 +209,5 @@ if($('body').hasClass('template-product')) {
       </added-notification>
     </template>
   {%- endif -%}
-{% render "bc_banner" %}</body>
+</body>
 </html>
