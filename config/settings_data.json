@@ -1328,6 +1328,11 @@
           "targetSelector": ".cart-item-list__body",
           "targetLocation": "After"
         }
+      },
+      "13180643132867056963": {
+        "type": "shopify://apps/gdpr-legal-cookie/blocks/bc-block/e49729f0-d37d-4e24-ac65-e0e2f472ac27",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
