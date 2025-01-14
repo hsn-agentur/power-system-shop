@@ -33,27 +33,6 @@
             "text_alignment": "bottom center"
           }
         },
-        "70c72871-cb7d-4a53-9ae3-195e5d316bea": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/DS_-2025.jpg",
-            "mobile_image": "shopify://shop_images/DS-mobil_1.jpg",
-            "slide_link": "shopify://collections/angebote",
-            "subheading": "",
-            "title": "",
-            "heading_max_width": 800,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": false,
-            "button_label_1": "Jetzt shoppen",
-            "button_url_1": "shopify://collections/angebote",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "bottom center"
-          }
-        },
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
           "disabled": true,
@@ -99,7 +78,6 @@
       },
       "block_order": [
         "image_dbdQXx",
-        "70c72871-cb7d-4a53-9ae3-195e5d316bea",
         "88c9e954-ab9b-4667-811e-6e097f485100",
         "image_z8AGJH"
       ],
