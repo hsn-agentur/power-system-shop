@@ -12,27 +12,6 @@
     "16359276425da8ce46": {
       "type": "slideshow",
       "blocks": {
-        "image_dbdQXx": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Kopie_von_MOTIV_Desktop_1.png",
-            "mobile_image": "shopify://shop_images/LC-mobil.jpg",
-            "slide_link": "shopify://collections/angebote",
-            "subheading": "",
-            "title": "",
-            "heading_max_width": 800,
-            "title_size": 84,
-            "title_size_mobile": 46,
-            "use_h1": false,
-            "text": "",
-            "enlarge_text": true,
-            "button_label_1": "Jetzt sparen",
-            "button_url_1": "shopify://collections/angebote",
-            "button_label_2": "",
-            "button_url_2": "",
-            "text_alignment": "bottom center"
-          }
-        },
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
           "disabled": true,
@@ -50,6 +29,27 @@
             "enlarge_text": false,
             "button_label_1": "Jetzt probieren",
             "button_url_1": "shopify://products/trinkmahlzeit",
+            "button_label_2": "",
+            "button_url_2": "",
+            "text_alignment": "bottom center"
+          }
+        },
+        "image_dbdQXx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kopie_von_MOTIV_Desktop_1.png",
+            "mobile_image": "shopify://shop_images/LC-mobil.jpg",
+            "slide_link": "shopify://collections/angebote",
+            "subheading": "",
+            "title": "",
+            "heading_max_width": 800,
+            "title_size": 84,
+            "title_size_mobile": 46,
+            "use_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label_1": "Jetzt sparen",
+            "button_url_1": "shopify://collections/angebote",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -77,8 +77,8 @@
         }
       },
       "block_order": [
-        "image_dbdQXx",
         "88c9e954-ab9b-4667-811e-6e097f485100",
+        "image_dbdQXx",
         "image_z8AGJH"
       ],
       "settings": {
