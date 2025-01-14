@@ -1058,6 +1058,12 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
+          "announcement_mxtH9i": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>NEU: Trinkmahlzeit Erdbeere</p>"
+            }
+          },
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
             "type": "announcement",
             "settings": {
@@ -1069,19 +1075,12 @@
             "settings": {
               "text": "<p><strong>Versandkostenfrei ab 60 €</strong> innerhalb Deutschlands!</p>"
             }
-          },
-          "announcement_mxtH9i": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "text": "<p>SUMMER SALE - spare bis zu 70%</p>"
-            }
           }
         },
         "block_order": [
+          "announcement_mxtH9i",
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff",
-          "9f47148d-50ff-4a7b-9d37-883d4296ff4c",
-          "announcement_mxtH9i"
+          "9f47148d-50ff-4a7b-9d37-883d4296ff4c"
         ],
         "settings": {
           "announcement_bar_col": "#171717",
