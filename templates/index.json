@@ -36,20 +36,22 @@
         "image_rEKPHT": {
           "type": "image",
           "settings": {
-            "slide_link": "",
-            "subheading": "Tell your story",
-            "title": "Slide heading",
+            "image": "shopify://shop_images/6_4a9275ab-292d-4a97-86c9-fec6df2fdf02.png",
+            "mobile_image": "shopify://shop_images/4.png",
+            "slide_link": "shopify://products/trinkmahlzeit",
+            "subheading": "",
+            "title": "",
             "heading_max_width": 800,
             "title_size": 84,
             "title_size_mobile": 46,
             "use_h1": false,
-            "text": "<p>And optional subtext</p>",
+            "text": "",
             "enlarge_text": true,
-            "button_label_1": "Shop this",
-            "button_url_1": "",
-            "button_label_2": "Shop all",
+            "button_label_1": "Jetzt genießen",
+            "button_url_1": "shopify://products/trinkmahlzeit",
+            "button_label_2": "",
             "button_url_2": "",
-            "text_alignment": "center center"
+            "text_alignment": "bottom center"
           }
         },
         "image_dbdQXx": {
