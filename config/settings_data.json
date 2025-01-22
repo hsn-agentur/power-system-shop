@@ -1314,18 +1314,18 @@
         "disabled": false,
         "settings": {}
       },
-      "17410671050484012158": {
-        "type": "shopify://apps/cartking-free-gifts/blocks/gift-embed-v2/4831ea51-9f80-493d-8541-da4662a9e219",
-        "disabled": false,
-        "settings": {
-          "targetSelector": ".cart-item-list__body",
-          "targetLocation": "After"
-        }
-      },
       "13180643132867056963": {
         "type": "shopify://apps/gdpr-legal-cookie/blocks/bc-block/e49729f0-d37d-4e24-ac65-e0e2f472ac27",
         "disabled": false,
         "settings": {}
+      },
+      "17410671050484012158": {
+        "type": "shopify://apps/cartking-free-gift-buy-x-get-y/blocks/gift-embed-v2/4831ea51-9f80-493d-8541-da4662a9e219",
+        "disabled": true,
+        "settings": {
+          "targetSelector": ".cart-item-list__body",
+          "targetLocation": "After"
+        }
       }
     }
   },
