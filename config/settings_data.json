@@ -1040,7 +1040,7 @@
     "swatch_enabled": false,
     "social_facebook_url": "https://www.facebook.com/PowerSystemSport/",
     "social_instagram_url": "https://www.instagram.com/powersystemsport/",
-    "search_type": "product,article,page",
+    "search_type": "product",
     "enable_live_search": true,
     "live_search_show_vendor": false,
     "live_search_show_price": false,
