@@ -14,11 +14,10 @@
       "blocks": {
         "image_rEKPHT": {
           "type": "image",
-          "disabled": true,
           "settings": {
-            "image": "shopify://shop_images/6_4a9275ab-292d-4a97-86c9-fec6df2fdf02.png",
-            "mobile_image": "shopify://shop_images/4.png",
-            "slide_link": "shopify://products/trinkmahlzeit",
+            "image": "shopify://shop_images/Lagerverkauf_2560_x_856_px.jpg",
+            "mobile_image": "shopify://shop_images/Lagerverkauf_900_x_1058_px_3.jpg",
+            "slide_link": "shopify://collections/angebote",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -27,8 +26,8 @@
             "use_h1": false,
             "text": "",
             "enlarge_text": true,
-            "button_label_1": "Jetzt genießen",
-            "button_url_1": "shopify://products/trinkmahlzeit",
+            "button_label_1": "Rabatte sichern",
+            "button_url_1": "shopify://collections/angebote",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
