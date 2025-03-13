@@ -15,9 +15,9 @@
         "image_rEKPHT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Lagerverkauf_2560_x_856_px.jpg",
-            "mobile_image": "shopify://shop_images/Lagerverkauf_900_x_1058_px_3.jpg",
-            "slide_link": "shopify://collections/angebote",
+            "image": "shopify://shop_images/20_Rabatt_Desktop3.jpg",
+            "mobile_image": "shopify://shop_images/20_Rabatt_mobil1.jpg",
+            "slide_link": "shopify://collections/alle-produkte",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
