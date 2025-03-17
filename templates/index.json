@@ -15,8 +15,8 @@
         "image_rEKPHT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/20_Rabatt_Desktop3.jpg",
-            "mobile_image": "shopify://shop_images/20_Rabatt_mobil2.jpg",
+            "image": "shopify://shop_images/20_Rabatt_Desktop_1.jpg",
+            "mobile_image": "shopify://shop_images/20_Rabatt_Newsletter_2.jpg",
             "slide_link": "shopify://collections/alle-produkte",
             "subheading": "",
             "title": "",
