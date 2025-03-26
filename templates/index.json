@@ -15,8 +15,8 @@
         "image_rEKPHT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/20_Rabatt_Desktop_1.jpg",
-            "mobile_image": "shopify://shop_images/20_Rabatt_Newsletter_2.jpg",
+            "image": "shopify://shop_images/Header_Desktop.png",
+            "mobile_image": "shopify://shop_images/Header_Mobil.png",
             "slide_link": "shopify://collections/alle-produkte",
             "subheading": "",
             "title": "",
@@ -35,6 +35,7 @@
         },
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
+          "disabled": true,
           "settings": {
             "image": "shopify://shop_images/5_52becd69-5f1f-42c2-a1ff-d1c7e900f824.png",
             "mobile_image": "shopify://shop_images/3.png",
