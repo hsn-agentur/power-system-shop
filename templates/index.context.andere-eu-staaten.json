@@ -12,5 +12,16 @@
   "context": {
     "market": "andere-eu-staaten"
   },
-  "sections": {}
+  "sections": {
+    "16359276425da8ce46": {
+      "settings": {},
+      "blocks": {
+        "image_rEKPHT": {
+          "settings": {
+            "image": "shopify://shop_images/TRINK-MAHLZEITEN.jpg"
+          }
+        }
+      }
+    }
+  }
 }
