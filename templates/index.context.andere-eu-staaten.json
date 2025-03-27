@@ -18,8 +18,21 @@
       "blocks": {
         "image_rEKPHT": {
           "settings": {
-            "image": "shopify://shop_images/TRINK-MAHLZEITEN.jpg"
+            "image": "shopify://shop_images/Header_Desktop.png"
           }
+        }
+      }
+    },
+    "collection_list_Np6ke7": {
+      "settings": {},
+      "blocks": {
+        "collection_7ytMXh": {
+          "disabled": true,
+          "settings": {}
+        },
+        "collection_dxNjAt": {
+          "disabled": true,
+          "settings": {}
         }
       }
     }
