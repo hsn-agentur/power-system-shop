@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -15,7 +15,7 @@
         "hide_heading": false,
         "show_image_behind_heading": true,
         "heading_image_height": "large",
-        "overlay_style": "shadow",
+        "overlay_style": "no_background",
         "coll_num_per_page_int": 24,
         "grid": 4,
         "show_vendor": false,
@@ -63,7 +63,7 @@
         "ad5a35a4-a459-4c4b-9dff-bd2defef9982": {
           "type": "text",
           "settings": {
-            "text": "<p>Du möchtest abnehmen und deine Fitnessziele erreichen, ohne<br\/>dabei auf Genuss zu verzichten? Hier findest du eine breite Auswahl an leckeren<br\/>Power System Produkten, die deine Low Carb Ernährung perfekt unterstützen.<br\/>Unsere Lower Carb Proteinriegel sind ideal, um deine bewusste Ernährung zu<br\/>unterstützen. Sie sind nicht nur unglaublich lecker, sondern auch High Protein,<br\/>Low Carb und Low Sugar. <\/p><p>Die Daily Shape Proteinpulver sind sogar speziell darauf<br\/>abgestimmt, dir beim Abnehmen zu helfen – natürlich ohne Kompromisse beim<br\/>Geschmack einzugehen. Die Shakes sind vollgepackt mit wichtigen Proteinen,<br\/>Nährstoffen und Mineralien und dienen als vollwertiger Mahlzeitersatz. Sie<br\/>helfen dir, Kalorien zu reduzieren und unterstützen dich gleichzeitig dabei,<br\/>deinen Körper mit allem zu versorgen, was er braucht.<\/p><p> Mit den Produkten von Power System bekommst du beides:<br\/>bewusste Ernährung und gleichzeitig echten Genuss. So kommst du deinem Ziel und<br\/>deinem Wohlfühlkörper Tag für Tag näher.<br\/><\/p>",
+            "text": "<p>Du möchtest abnehmen und deine Fitnessziele erreichen, ohne<br/>dabei auf Genuss zu verzichten? Hier findest du eine breite Auswahl an leckeren<br/>Power System Produkten, die deine Low Carb Ernährung perfekt unterstützen.<br/>Unsere Lower Carb Proteinriegel sind ideal, um deine bewusste Ernährung zu<br/>unterstützen. Sie sind nicht nur unglaublich lecker, sondern auch High Protein,<br/>Low Carb und Low Sugar. </p><p>Die Daily Shape Proteinpulver sind sogar speziell darauf<br/>abgestimmt, dir beim Abnehmen zu helfen – natürlich ohne Kompromisse beim<br/>Geschmack einzugehen. Die Shakes sind vollgepackt mit wichtigen Proteinen,<br/>Nährstoffen und Mineralien und dienen als vollwertiger Mahlzeitersatz. Sie<br/>helfen dir, Kalorien zu reduzieren und unterstützen dich gleichzeitig dabei,<br/>deinen Körper mit allem zu versorgen, was er braucht.</p><p> Mit den Produkten von Power System bekommst du beides:<br/>bewusste Ernährung und gleichzeitig echten Genuss. So kommst du deinem Ziel und<br/>deinem Wohlfühlkörper Tag für Tag näher.<br/></p>",
             "enlarge_text": false
           }
         }
