@@ -251,7 +251,7 @@
         "title": "Unsere Pulver",
         "collection": "pulver-highlights",
         "all_variants": false,
-        "explicit_order": "46508501598535,46508480332103,46508489212231,46508432818503",
+        "explicit_order": "46508501598535,46508480332103,46508489212231,46508432752967",
         "show_vendor": false,
         "enable_carousel": false,
         "grid": 4,
@@ -269,7 +269,14 @@
           "settings": {
             "title": "",
             "title_color": "",
+            "title_size_v2": 0,
             "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
             "background_color": "",
             "feed_id": "",
             "html_area": "<script>\n(function ($) {\n  var $ = jQuery = $;\n$(function()  {\n    var $instaLnk = $('#insta-feed h2');\n    $instaLnk.on('click', function() {\n      //window.location.href = \"https://www.instagram.com/powersystemsport/\";\n      window.open('https://www.instagram.com/powersystemsport/', '_blank'); \n    });\n  });\n})(theme.jQuery);  \n</script>"
