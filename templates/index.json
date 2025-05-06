@@ -15,9 +15,9 @@
         "image_rEKPHT": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Header_Desktop.png",
-            "mobile_image": "shopify://shop_images/Header_Mobil.png",
-            "slide_link": "shopify://collections/alle-produkte",
+            "image": "shopify://shop_images/Landing_Page_Lower_Carb_-15.png",
+            "mobile_image": "shopify://shop_images/Landing_Page_Lower_Carb_Mobile_-15.png",
+            "slide_link": "shopify://products/lower-carb-bar",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -27,7 +27,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Rabatte sichern",
-            "button_url_1": "shopify://collections/angebote",
+            "button_url_1": "shopify://products/lower-carb-bar",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
