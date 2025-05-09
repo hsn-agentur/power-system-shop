@@ -82,6 +82,7 @@
         },
         "vendor_QCVDwb": {
           "type": "vendor",
+          "disabled": true,
           "settings": {}
         },
         "divider_n8DVK3": {
@@ -107,14 +108,6 @@
             "enable_payment_button": true,
             "show_backorder_text": true
           }
-        },
-        "description_fWUJN4": {
-          "type": "description",
-          "settings": {
-            "show_in_tab": false,
-            "open_tab": false,
-            "icon": ""
-          }
         }
       },
       "block_order": [
@@ -123,8 +116,7 @@
         "vendor_QCVDwb",
         "divider_n8DVK3",
         "variant_picker_Me8Gci",
-        "buy_buttons_QrNqQm",
-        "description_fWUJN4"
+        "buy_buttons_QrNqQm"
       ],
       "name": "Featured product",
       "settings": {
