@@ -9,6 +9,34 @@
  */
 {
   "sections": {
+    "image_with_text_overlay_gKX6t7": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/Whey_Lemon_Launch.png",
+        "mobile_image": "shopify://shop_images/Whey_Lemon_Launch_1.png",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "subheading": "",
+        "title": "",
+        "heading_max_width": 800,
+        "title_size": 84,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -123,6 +151,7 @@
     }
   },
   "order": [
+    "image_with_text_overlay_gKX6t7",
     "main",
     "16643513187e32fec9",
     "recommendations"
