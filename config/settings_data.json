@@ -1020,7 +1020,7 @@
     "coll_grid_image_shape": "landscape-32",
     "coll_grid_image_position": "center center",
     "coll_grid_show_count": false,
-    "coll_thumb_text_align": "left",
+    "coll_thumb_text_align": "center",
     "prod_thumb_shape": "square",
     "prod_thumb_crop": true,
     "prod_thumb_mob_per_row": "2",
