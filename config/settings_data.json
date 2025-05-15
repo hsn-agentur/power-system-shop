@@ -1334,7 +1334,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "cartkingblock h3 {font-size: 22px; margin-top: 25px;}"
+      "cartkingblock h3 {font-size: 22px; margin-top: 25px;}",
+      ".collection-header__title {display: none;"
     ]
   }
 }
