@@ -1024,7 +1024,7 @@
     "prod_thumb_shape": "square",
     "prod_thumb_crop": true,
     "prod_thumb_mob_per_row": "2",
-    "prod_thumb_text_align": "left",
+    "prod_thumb_text_align": "center",
     "prod_thumb_hover_image": false,
     "quickbuy_style": "button",
     "prod_block_label_loc": "top left",
@@ -1108,6 +1108,9 @@
         },
         "block_order": [
           "52cf1ed7-8843-46d1-a5e3-764d255565dc"
+        ],
+        "custom_css": [
+          ".collection-header__title {display: none;}"
         ],
         "settings": {
           "logo": "shopify://shop_images/211018_PowerSystem_Logo_1.png",

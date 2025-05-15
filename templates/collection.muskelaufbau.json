@@ -1,16 +1,17 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-collection",
+      "custom_css": [],
       "settings": {
         "hide_heading": false,
         "show_image_behind_heading": true,
@@ -63,7 +64,7 @@
         "910c2b70-d5ec-4c9f-b9d6-3bb5d46157a4": {
           "type": "text",
           "settings": {
-            "text": "<p>Du möchtest deinen Körper stärken und trainierst aktiv für<br\/>deinen Muskelaufbau? Dann sind unsere Protein Eiweißriegel, Proteinshakes und Proteinpulver genau das Richtige für dich: sie unterstützen deinen<br\/>Muskelzuwachs optimal, tragen ergänzend zu deinem Muskeltraining zum<br\/>gewünschten Erfolg bei und schmecken dabei super lecker.<\/p><p><strong>High Protein für deinen Muskelaufbau<\/strong><\/p><p>Unsere High Protein Eiweißriegel, Proteinshakes und Pulver sind speziell darauf abgestimmt, dir die nötige Proteinmenge zu liefern, die dein Körper für den Muskelaufbau benötigt. Proteine sind die Bausteine deiner Muskeln und spielen eine entscheidende Rolle, wenn es darum geht, deine Fitnessziele zu erreichen. Mit jedem Proteinriegel und jedem Eiweißshake führst du deinem Körper eine konzentrierte Portion Eiweiß zu, die ihn beim Wachstum und der Regeneration deiner Muskeln unterstützt.<\/p><p>Mit unseren Power System Produkten bist du immer optimal versorgt und auf dem richtigen Weg zu deinem Wunschkörper.<\/p><p>Entdecke jetzt die High Protein Produkte von Power System und mach den nächsten Schritt in Richtung Muskelzuwachs und sportlicher Erfolg<\/p>",
+            "text": "<p>Du möchtest deinen Körper stärken und trainierst aktiv für<br/>deinen Muskelaufbau? Dann sind unsere Protein Eiweißriegel, Proteinshakes und Proteinpulver genau das Richtige für dich: sie unterstützen deinen<br/>Muskelzuwachs optimal, tragen ergänzend zu deinem Muskeltraining zum<br/>gewünschten Erfolg bei und schmecken dabei super lecker.</p><p><strong>High Protein für deinen Muskelaufbau</strong></p><p>Unsere High Protein Eiweißriegel, Proteinshakes und Pulver sind speziell darauf abgestimmt, dir die nötige Proteinmenge zu liefern, die dein Körper für den Muskelaufbau benötigt. Proteine sind die Bausteine deiner Muskeln und spielen eine entscheidende Rolle, wenn es darum geht, deine Fitnessziele zu erreichen. Mit jedem Proteinriegel und jedem Eiweißshake führst du deinem Körper eine konzentrierte Portion Eiweiß zu, die ihn beim Wachstum und der Regeneration deiner Muskeln unterstützt.</p><p>Mit unseren Power System Produkten bist du immer optimal versorgt und auf dem richtigen Weg zu deinem Wunschkörper.</p><p>Entdecke jetzt die High Protein Produkte von Power System und mach den nächsten Schritt in Richtung Muskelzuwachs und sportlicher Erfolg</p>",
             "enlarge_text": false
           }
         }
