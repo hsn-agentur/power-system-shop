@@ -9,6 +9,33 @@
  */
 {
   "sections": {
+    "image_with_text_overlay_bChRyc": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/Kategorie_Muskelaufbau_72f754cb-705f-4085-ba9b-f2185f4f14ec.png",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "subheading": "",
+        "title": "",
+        "heading_max_width": 800,
+        "title_size": 84,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
     "main": {
       "type": "main-collection",
       "custom_css": [],
@@ -83,6 +110,7 @@
     }
   },
   "order": [
+    "image_with_text_overlay_bChRyc",
     "main",
     "486ff0a4-1d27-49f0-aaa2-1dbd3291f64b"
   ]
