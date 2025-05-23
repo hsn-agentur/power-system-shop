@@ -1,14 +1,41 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
+    "image_with_text_overlay_riQHbN": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/Kategorie_Probiersets.png",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "subheading": "",
+        "title": "",
+        "heading_max_width": 800,
+        "title_size": 84,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -46,8 +73,8 @@
     "background_video_bMTXYn": {
       "type": "background-video",
       "settings": {
-        "video_shopify": "shopify:\/\/files\/videos\/9400971f21874b6fadd7013a66790747.mp4",
-        "video_external": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "video_shopify": "shopify://files/videos/9400971f21874b6fadd7013a66790747.mp4",
+        "video_external": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "subheading": "",
         "title": "",
         "heading_max_width": 800,
@@ -80,7 +107,7 @@
         "7828a09a-f8c6-494a-b97e-ffde3441d198": {
           "type": "text",
           "settings": {
-            "text": "<p>Ob beim Muskelaufbau, in der Definitionsphase, beim<br\/>Ausdauertraining oder beim Abnehmen– unsere Power System Pulver unterstützen<br\/>dich bei deiner Ziel Erreichung. Entdecke vom Whey Protein bis zum Daily Shape Shake<br\/>unsere leckeren Sorten ganz nach deinem Geschmack. <\/p>",
+            "text": "<p>Ob beim Muskelaufbau, in der Definitionsphase, beim<br/>Ausdauertraining oder beim Abnehmen– unsere Power System Pulver unterstützen<br/>dich bei deiner Ziel Erreichung. Entdecke vom Whey Protein bis zum Daily Shape Shake<br/>unsere leckeren Sorten ganz nach deinem Geschmack. </p>",
             "enlarge_text": false
           }
         }
@@ -98,6 +125,7 @@
     }
   },
   "order": [
+    "image_with_text_overlay_riQHbN",
     "main",
     "background_video_bMTXYn",
     "f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4"
