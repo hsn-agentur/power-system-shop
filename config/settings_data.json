@@ -1046,7 +1046,7 @@
     "live_search_show_vendor": false,
     "live_search_show_price": false,
     "live_search_search_meta": true,
-    "favicon": "shopify://shop_images/Favicon_4b6fd00c-91a8-4a60-8cb4-cc4ff881b41a.png",
+    "favicon": "shopify://shop_images/Favicon_Shop.png",
     "cart_type": "drawer",
     "after_add_to_cart": "drawer",
     "show_free_shipping_bar": true,
