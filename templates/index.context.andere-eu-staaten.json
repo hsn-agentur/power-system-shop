@@ -18,7 +18,8 @@
       "blocks": {
         "image_rEKPHT": {
           "settings": {
-            "image": "shopify://shop_images/Header_Desktop.png"
+            "image": "shopify://shop_images/Vorlage.png",
+            "mobile_image": "shopify://shop_images/Whey_Lemon_Launch_32b7924e-d6c9-447d-805d-0967a68ccd19.jpg"
           }
         }
       }
@@ -26,11 +27,11 @@
     "collection_list_Np6ke7": {
       "settings": {},
       "blocks": {
-        "collection_7ytMXh": {
+        "collection_dxNjAt": {
           "disabled": true,
           "settings": {}
         },
-        "collection_dxNjAt": {
+        "collection_7ytMXh": {
           "disabled": true,
           "settings": {}
         }
