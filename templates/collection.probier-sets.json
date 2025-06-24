@@ -9,6 +9,33 @@
  */
 {
   "sections": {
+    "image_with_text_overlay_g9arA3": {
+      "type": "image-with-text-overlay",
+      "name": "Image with text overlay",
+      "settings": {
+        "image": "shopify://shop_images/Kategorie_Probiersets.png",
+        "height": "fixed",
+        "height_desktop": 600,
+        "height_mobile": 460,
+        "image_link": "",
+        "subheading": "",
+        "title": "",
+        "heading_max_width": 800,
+        "title_size": 84,
+        "title_size_mobile": 46,
+        "use_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label_1": "",
+        "button_url_1": "",
+        "button_label_2": "",
+        "button_url_2": "",
+        "text_alignment": "center center",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style": "shadow"
+      }
+    },
     "main": {
       "type": "main-collection",
       "settings": {
@@ -71,38 +98,11 @@
         "full_width": false,
         "use_alt_bg": false
       }
-    },
-    "image_with_text_overlay_g9arA3": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
-      "settings": {
-        "image": "shopify://shop_images/Kategorie_Probiersets.png",
-        "height": "fixed",
-        "height_desktop": 600,
-        "height_mobile": 460,
-        "image_link": "",
-        "subheading": "",
-        "title": "",
-        "heading_max_width": 800,
-        "title_size": 84,
-        "title_size_mobile": 46,
-        "use_h1": false,
-        "text": "",
-        "enlarge_text": true,
-        "button_label_1": "",
-        "button_url_1": "",
-        "button_label_2": "",
-        "button_url_2": "",
-        "text_alignment": "center center",
-        "full_width": true,
-        "mobile_overlay_under": false,
-        "overlay_style": "shadow"
-      }
     }
   },
   "order": [
+    "image_with_text_overlay_g9arA3",
     "main",
-    "f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4",
-    "image_with_text_overlay_g9arA3"
+    "f35c1b28-1a4c-4dcc-b40f-1f19e1e703c4"
   ]
 }
