@@ -13,7 +13,7 @@
       "type": "image-with-text-overlay",
       "name": "Image with text overlay",
       "settings": {
-        "image": "shopify://shop_images/Kategorie_Probiersets.png",
+        "image": "shopify://shop_images/Kategorie_Pulver.png",
         "height": "adapt",
         "height_desktop": 600,
         "height_mobile": 460,
