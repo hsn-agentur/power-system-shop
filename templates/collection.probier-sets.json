@@ -14,7 +14,7 @@
       "name": "Image with text overlay",
       "settings": {
         "image": "shopify://shop_images/Kategorie_Probiersets.png",
-        "height": "fixed",
+        "height": "adapt",
         "height_desktop": 600,
         "height_mobile": 460,
         "image_link": "",
