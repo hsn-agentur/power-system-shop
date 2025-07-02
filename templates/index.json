@@ -15,8 +15,7 @@
         "88c9e954-ab9b-4667-811e-6e097f485100": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/15_Snack_Power_Header_rosa.png",
-            "mobile_image": "shopify://shop_images/15_Snack_Power_1.png",
+            "image": "shopify://shop_images/Header_Big_Block_minus_15_Prozent.jpg",
             "slide_link": "shopify://collections/angebote",
             "subheading": "",
             "title": "",
@@ -27,7 +26,7 @@
             "text": "",
             "enlarge_text": false,
             "button_label_1": "Rabatt sichern",
-            "button_url_1": "",
+            "button_url_1": "shopify://collections/angebote",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -37,7 +36,6 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Teaser_auf_Lower_Carb_Landingpage.jpg",
-            "mobile_image": "shopify://shop_images/Whey_Lemon_Launch_32b7924e-d6c9-447d-805d-0967a68ccd19.jpg",
             "slide_link": "shopify://products/whey-protein-pulver-lemon-cheesecake",
             "subheading": "",
             "title": "",
@@ -149,6 +147,59 @@
         "full_width": false
       }
     },
+    "multi_column_pbAywg": {
+      "type": "multi-column",
+      "blocks": {
+        "text_block_HpTwAp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Muskelaufbau_24877ecb-0b23-4138-aa8c-f95b6a73ea6e.png",
+            "image_width": 700,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": "shopify://collections/muskelaufbau"
+          }
+        },
+        "text_block_wMUGEp": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Ausdauer_56e15aa3-11be-4654-88ca-0417dc999a0f.png",
+            "image_width": 700,
+            "title": "",
+            "text": "",
+            "button_label": "",
+            "link": "shopify://collections/ausdauer"
+          }
+        },
+        "text_block_BxT7Wi": {
+          "type": "text_block",
+          "settings": {
+            "enable_image": true,
+            "image": "shopify://shop_images/Abnehmen_Fitness_fd7bb34a-2ea3-446c-930f-cfcbd60ef1ec.png",
+            "image_width": 700,
+            "title": "Add a title or tagline",
+            "text": "",
+            "button_label": "",
+            "link": "shopify://collections/abnehmen-fitness"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_HpTwAp",
+        "text_block_wMUGEp",
+        "text_block_BxT7Wi"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "title": "Was sind deine Ziele?",
+        "text_alignment": "center",
+        "button_style": "primary",
+        "use_alt_bg": false
+      }
+    },
     "collection_list_Np6ke7": {
       "type": "collection-list",
       "blocks": {
@@ -244,59 +295,6 @@
       ],
       "settings": {
         "full_width": false
-      }
-    },
-    "multi_column_pbAywg": {
-      "type": "multi-column",
-      "blocks": {
-        "text_block_HpTwAp": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Muskelaufbau_24877ecb-0b23-4138-aa8c-f95b6a73ea6e.png",
-            "image_width": 700,
-            "title": "",
-            "text": "",
-            "button_label": "",
-            "link": "shopify://collections/muskelaufbau"
-          }
-        },
-        "text_block_wMUGEp": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Ausdauer_56e15aa3-11be-4654-88ca-0417dc999a0f.png",
-            "image_width": 700,
-            "title": "",
-            "text": "",
-            "button_label": "",
-            "link": "shopify://collections/ausdauer"
-          }
-        },
-        "text_block_BxT7Wi": {
-          "type": "text_block",
-          "settings": {
-            "enable_image": true,
-            "image": "shopify://shop_images/Abnehmen_Fitness_fd7bb34a-2ea3-446c-930f-cfcbd60ef1ec.png",
-            "image_width": 700,
-            "title": "Add a title or tagline",
-            "text": "",
-            "button_label": "",
-            "link": "shopify://collections/abnehmen-fitness"
-          }
-        }
-      },
-      "block_order": [
-        "text_block_HpTwAp",
-        "text_block_wMUGEp",
-        "text_block_BxT7Wi"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "title": "Was sind deine Ziele?",
-        "text_alignment": "center",
-        "button_style": "primary",
-        "use_alt_bg": false
       }
     }
   },
