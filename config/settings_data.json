@@ -1059,31 +1059,29 @@
       "announcement-bar": {
         "type": "announcement-bar",
         "blocks": {
-          "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "text": "<p>20% Rabatt ab 100€ Einkaufswert</p>"
-            }
-          },
-          "announcement_mxtH9i": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "text": "<p>NEU: Trinkmahlzeit Erdbeere</p>"
-            }
-          },
           "9f47148d-50ff-4a7b-9d37-883d4296ff4c": {
             "type": "announcement",
             "settings": {
               "text": "<p><strong>Versandkostenfrei ab 60 €</strong> innerhalb Deutschlands!</p>"
             }
+          },
+          "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>Schneller Versand 🚚</p>"
+            }
+          },
+          "announcement_mxtH9i": {
+            "type": "announcement",
+            "settings": {
+              "text": "<p>NEU: Whey Protein Lemon Cheescake</p>"
+            }
           }
         },
         "block_order": [
+          "9f47148d-50ff-4a7b-9d37-883d4296ff4c",
           "4c3f9dcb-3d4c-4cb7-8b73-6138278f89ff",
-          "announcement_mxtH9i",
-          "9f47148d-50ff-4a7b-9d37-883d4296ff4c"
+          "announcement_mxtH9i"
         ],
         "settings": {
           "announcement_bar_col": "#171717",
