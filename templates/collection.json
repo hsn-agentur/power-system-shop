@@ -11,6 +11,7 @@
   "sections": {
     "image_with_text_overlay_Mk8hUF": {
       "type": "image-with-text-overlay",
+      "disabled": true,
       "name": "Image with text overlay",
       "settings": {
         "image": "shopify://shop_images/Kategorie_Kleidung.png",
