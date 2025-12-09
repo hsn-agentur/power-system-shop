@@ -120,7 +120,7 @@
       ],
       "name": "Featured product",
       "settings": {
-        "product": "whey-protein-pulver-lemon-cheesecake",
+        "product": "old-whey-protein-pulver-lemon-cheesecake",
         "inventory_transfers_enable": true,
         "gallery_size": "large",
         "gallery_layout": "carousel-under",

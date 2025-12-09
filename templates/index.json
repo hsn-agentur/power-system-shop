@@ -36,7 +36,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Teaser_auf_Lower_Carb_Landingpage.jpg",
-            "slide_link": "shopify://products/whey-protein-pulver-lemon-cheesecake",
+            "slide_link": "shopify://products/old-whey-protein-pulver-lemon-cheesecake",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -46,7 +46,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Jetzt probieren",
-            "button_url_1": "shopify://products/whey-protein-pulver-lemon-cheesecake",
+            "button_url_1": "shopify://products/old-whey-protein-pulver-lemon-cheesecake",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
