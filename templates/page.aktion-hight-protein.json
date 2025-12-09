@@ -1,11 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "a444ce3c-4551-4732-b75c-5b4da7e715e9": {
       "type": "image-with-text-overlay",
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/01_Landingpage_Kampagne_BigBlock_240117.png",
-        "mobile_image": "shopify:\/\/shop_images\/01_Landingpage_Kampagne_BigBlock_mobil_240117.png",
+        "image": "shopify://shop_images/01_Landingpage_Kampagne_BigBlock_240117.png",
+        "mobile_image": "shopify://shop_images/01_Landingpage_Kampagne_BigBlock_mobil_240117.png",
         "height": "fixed",
         "height_desktop": 500,
         "height_mobile": 460,
@@ -41,7 +50,7 @@
         "template--20337907269959__b0f985d1-e51c-4017-a157-0daaccb36e78-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Suchst du noch einen Begleiter für dein Krafttraining? Entdecke unsere Vielfalt an High Protein Produkten mit super leckerem Geschmack. <\/p><p>Mit dem Code<strong> Power15<\/strong> erhältst du 15% Rabatt auf deine nächste Power System Bestellung. Jetzt zugreifen & Angebot sichern!<\/p>",
+            "text": "<p>Suchst du noch einen Begleiter für dein Krafttraining? Entdecke unsere Vielfalt an High Protein Produkten mit super leckerem Geschmack. </p><p>Mit dem Code<strong> Power15</strong> erhältst du 15% Rabatt auf deine nächste Power System Bestellung. Jetzt zugreifen & Angebot sichern!</p>",
             "enlarge_text": false
           }
         }
@@ -61,7 +70,7 @@
       "type": "custom-liquid",
       "settings": {
         "full_width": true,
-        "code": "<div class=\"countdown-timer-block\" countdown-timer-id=\"clmt2iz8f1666391jxlaikd5ygr\"><\/div>"
+        "code": "<div class=\"countdown-timer-block\" countdown-timer-id=\"clmt2iz8f1666391jxlaikd5ygr\"></div>"
       }
     },
     "main": {
@@ -75,7 +84,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "",
-        "collection": "aktion-high-protein",
+        "collection": "old-aktion-high-protein",
         "all_variants": true,
         "explicit_order": "",
         "show_vendor": false,

@@ -1,10 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "c25380bb-94c3-4960-bc14-17500b90f7ad": {
       "type": "image-with-text-overlay",
       "settings": {
-        "image": "shopify:\/\/shop_images\/11_Black_Week_231121.png",
-        "mobile_image": "shopify:\/\/shop_images\/11_Black_Week_mobil_231121.png",
+        "image": "shopify://shop_images/11_Black_Week_231121.png",
+        "mobile_image": "shopify://shop_images/11_Black_Week_mobil_231121.png",
         "height": "fixed",
         "height_desktop": 480,
         "height_mobile": 460,
@@ -31,7 +40,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "FIT INS NEUE JAHR",
-        "collection": "aktion-lower-carb",
+        "collection": "old-aktion-lower-carb",
         "explicit_order": "",
         "show_vendor": false,
         "enable_carousel": false,
@@ -55,7 +64,7 @@
         "7828a09a-f8c6-494a-b97e-ffde3441d198": {
           "type": "text",
           "settings": {
-            "text": "<p>Willkommen in einem gesünderen Jahr! Mit unseren Lower Carb Riegeln <br\/>erlebst Du, wie lecker bewusste Ernährung sein kann. Ob beim Shaping, <br\/>Abnehmen oder einfach nur Genießen - unsere Sortenvielfalt bietet für <br\/>jeden Geschmack das Richtige. Wähle aus einer großen Auswahl und genieße<br\/> den leckeren Geschmack unserer sorgfältig zubereiteten Riegel. Mach den<br\/> Schritt zu einem fitteren Du mit Lower Carb!<\/p>",
+            "text": "<p>Willkommen in einem gesünderen Jahr! Mit unseren Lower Carb Riegeln <br/>erlebst Du, wie lecker bewusste Ernährung sein kann. Ob beim Shaping, <br/>Abnehmen oder einfach nur Genießen - unsere Sortenvielfalt bietet für <br/>jeden Geschmack das Richtige. Wähle aus einer großen Auswahl und genieße<br/> den leckeren Geschmack unserer sorgfältig zubereiteten Riegel. Mach den<br/> Schritt zu einem fitteren Du mit Lower Carb!</p>",
             "enlarge_text": false
           }
         }

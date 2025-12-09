@@ -206,7 +206,7 @@
         "collection_NN4yYV": {
           "type": "collection",
           "settings": {
-            "collection": "riegel",
+            "collection": "old-riegel",
             "image": "shopify://shop_images/Big_Block_Kokos_100g_d5e4d990-25d5-4be9-bd18-45a1ea81e3c2.png",
             "title_override": ""
           }
@@ -256,7 +256,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Unsere Pulver",
-        "collection": "pulver-highlights",
+        "collection": "old-pulver-highlights",
         "all_variants": false,
         "explicit_order": "46508501598535,46508480332103,46508489212231,46508432752967",
         "show_vendor": false,
