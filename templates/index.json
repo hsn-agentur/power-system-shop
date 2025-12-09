@@ -16,7 +16,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/Header_Big_Block_minus_15_Prozent.jpg",
-            "slide_link": "shopify://collections/angebote",
+            "slide_link": "shopify://collections/old-angebote",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -26,7 +26,7 @@
             "text": "",
             "enlarge_text": false,
             "button_label_1": "Rabatt sichern",
-            "button_url_1": "shopify://collections/angebote",
+            "button_url_1": "shopify://collections/old-angebote",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -58,7 +58,7 @@
           "settings": {
             "image": "shopify://shop_images/Kopie_von_MOTIV_Desktop_1.png",
             "mobile_image": "shopify://shop_images/LC-mobil.jpg",
-            "slide_link": "shopify://collections/angebote",
+            "slide_link": "shopify://collections/old-angebote",
             "subheading": "",
             "title": "",
             "heading_max_width": 800,
@@ -68,7 +68,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label_1": "Jetzt sparen",
-            "button_url_1": "shopify://collections/angebote",
+            "button_url_1": "shopify://collections/old-angebote",
             "button_label_2": "",
             "button_url_2": "",
             "text_alignment": "bottom center"
@@ -118,7 +118,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Unsere Bestseller",
-        "collection": "bestseller",
+        "collection": "old-bestseller",
         "all_variants": false,
         "explicit_order": "",
         "show_vendor": false,
@@ -159,7 +159,7 @@
             "title": "",
             "text": "",
             "button_label": "",
-            "link": "shopify://collections/muskelaufbau"
+            "link": "shopify://collections/old-muskelaufbau"
           }
         },
         "text_block_wMUGEp": {
@@ -171,7 +171,7 @@
             "title": "",
             "text": "",
             "button_label": "",
-            "link": "shopify://collections/ausdauer"
+            "link": "shopify://collections/old-ausdauer"
           }
         },
         "text_block_BxT7Wi": {
@@ -214,7 +214,7 @@
         "collection_RipBVy": {
           "type": "collection",
           "settings": {
-            "collection": "pulver",
+            "collection": "old-pulver",
             "image": "shopify://shop_images/28614_Whey_Protein_Schoko_420g.png",
             "title_override": "Proteinpulver"
           }
@@ -222,7 +222,7 @@
         "collection_dxNjAt": {
           "type": "collection",
           "settings": {
-            "collection": "supplements",
+            "collection": "old-supplements",
             "image": "shopify://shop_images/26830_BCAA_811_Tabletten_139g_1_9bc7a30d-0736-478c-82fd-87f36b1f9790.png",
             "title_override": "Supplements"
           }
@@ -230,7 +230,7 @@
         "collection_7ytMXh": {
           "type": "collection",
           "settings": {
-            "collection": "trinkmahlzeiten-aktion",
+            "collection": "old-trinkmahlzeiten-aktion",
             "image": "shopify://shop_images/Trinkmahlzeit_Vanilla.png",
             "title_override": ""
           }
